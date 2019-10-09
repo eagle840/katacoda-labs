@@ -1,10 +1,10 @@
-Install ruby and jekyll
+In this scenario ruby is already installed, but to install it on your system:
 
-`apt install ruby -y'{{execute}}
+`apt install ruby -y`
 
 Install jekyll
 
-'gem install jekyll bundler'{{execute}}
+`gem install jekyll bundler`{{execute}}
 
 Generate a Gemfile
 
@@ -12,11 +12,11 @@ Generate a Gemfile
 
 Edit the gemfile
 CHECK THIS
-`echo 'gem "jekyll"' >> Gemfile
+`echo 'gem "jekyll"' >> Gemfile`{{execute}}
 
 Bundle it
 
-`bundle'{{execute}}
+`bundle`{{execute}}
 
 Create a index.html
 
@@ -26,11 +26,13 @@ and lets build, and then serve:
 
 `jekyll build`{{execute}}
 
+To serve this website up on the localhost only, use:
 `jekyll serve`{{execute}}
+But since we have no web browser on this host, we'll allow any connection.
+`jekyll serve --host 0.0.0.0`{{execute}}
 
-SHOULD WE JOB THE ABOVE?
-Open a  new terminal tab
-and 
+
+Open a  new terminal tab and 
 `curl http://localhost:4000`{{execute}}
 
 
