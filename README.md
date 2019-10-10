@@ -16,7 +16,7 @@ Katacoda scenarios code
 2. create your scenario folder and files with cmd:  `katacoda scenarios:create`
     (when asked,  'friendURL' is local folder name to create)
 3. Sync with your github as needed, katacoda will automatically pull the code.
-4. You should see you should see your 1st katacode scenario show up under your profile.
+4. You should see your 1st katacode scenario show up under your profile.
 
 Useful training/coding links:
 * [Getting started - create scenario-101](https://katacoda.com/scenario-examples/scenarios/create-scenario-101)
