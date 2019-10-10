@@ -1,25 +1,24 @@
 # katacoda-labs
-Katacoda scenarios  
+Katacoda scenarios code 
 
 
 ## notes on getting katacoda working
 
-need a git hub account
-need to setup webhook between git and katacoda
-need node
-npm install katacoda-cli --global
+*[rtfm @ www.katacoda.com/docs](https://www.katacoda.com/docs)*
 
-run:
-katacoda scenarios:create
-('friendURL' is local folder to create)
+1. need a github account, and understand how to use git
+2. need to setup webhook between git and katacoda (see your katacoda profile)
+3. need to install nodejs to use the katacoda cli  [Install instructions/download at nodejs.org](nodejs.org)
+4. command to install Katacode cli, run at the command line:  npm install katacoda-cli --global
 
-Sync with your github as needed
+## run katacode cli to generate a scenerio folder 
+1. help cmd: katacoda help
+2. create your scenario folder and files with cmd:  `katacoda scenarios:create`
+    (when asked,  'friendURL' is local folder name to create)
+3. Sync with your github as needed, katacoda will automatically pull the code.
+4. You should see you should see your 1st katacode scenario show up under your profile.
 
-should see your 1st katacode show up
-https://katacoda.com/scenario-examples/scenarios/create-scenario-101
-
-see:
-https://github.com/katacoda/scenario-examples
-and
-for a list of training examples
-https://katacoda.com/scenario-examples
+Useful training/coding links:
+* [Getting started - create scenario-101](https://katacoda.com/scenario-examples/scenarios/create-scenario-101)
+* [A list of scenarios to help you get started using Katacoda](https://katacoda.com/scenario-examples)
+* [The github repo for these scenarios](https://github.com/katacoda/scenario-examples)
