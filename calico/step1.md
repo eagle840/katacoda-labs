@@ -1,4 +1,7 @@
 # PRE-SETUP
+
+This scenario is presently in the design process, please do not use
+
 download calicoctl 
 install the calico ctl
   

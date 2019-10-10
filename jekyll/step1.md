@@ -26,10 +26,14 @@ and lets build, and then serve:
 
 `jekyll build`{{execute}}
 
+
 To serve this website up on the localhost only, use:
 `jekyll serve`{{execute}}
+ADD AN EXIT COMMAND HERE
+
 But since we have no web browser on this host, we'll allow any connection.
 `jekyll serve --host 0.0.0.0`{{execute}}
+ADD AN EXIT COMMAND HERE
 
 
 Open a  new terminal tab and 

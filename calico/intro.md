@@ -1,5 +1,11 @@
 # IN PROGRESS 9th oct. expected completion 14th
 
+This scenario is presently in the design process, please do not use.
+
+
+ADD REVIEW OF CNI
+ADD REVIEW OF HOW TO CHECK K8S config for CNI
+
 This scenario follows the instructions as provided in the Calico project:
 https://docs.projectcalico.org/v3.9/getting-started/kubernetes/installation/
 
