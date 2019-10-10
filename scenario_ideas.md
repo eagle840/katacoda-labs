@@ -8,3 +8,6 @@ Course: **databases:**
   5. Graph: Neo4j
   6. DB storage/backup
   *  for each of the db systems, you'll need a cli, ui, (windows app?) and a code test to access db
+  
+Scenario: **your first custom controller**
+  * Use https://www.youtube.com/watch?v=_BuqPMlXfpE   to create this scenario
