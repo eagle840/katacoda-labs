@@ -1,5 +1,11 @@
 ## A list of scenarios for new scenarios/courses to create.
 
+Courses: **CNI**
+  1. Basic CNI overview with weave-net
+  2. Calico setup (IN PROGRESS)
+  3. Flannel setup
+  4. troubleshooting cni (see: Troubleshooting On-Premise Kubernetes Network: Underlay, Overlay and Pod - Tomofumi Hayashi, RedHat)
+
 Course: **databases:**
   1. sql
   2. KV - redis
