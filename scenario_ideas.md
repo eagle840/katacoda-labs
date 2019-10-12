@@ -17,3 +17,7 @@ Course: **databases:**
   
 Scenario: **your first custom controller**
   * Use https://www.youtube.com/watch?v=_BuqPMlXfpE   to create this scenario
+  
+ Scenario: **RabbitMQ**
+ 
+ Scenario: Use with M$ IOT Demo hub
