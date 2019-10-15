@@ -20,4 +20,7 @@ Scenario: **your first custom controller**
   
  Scenario: **RabbitMQ**
  
- Scenario: Use with M$ IOT Demo hub
+ Scenario: **Use with M$ IOT Demo hub**
+
+Course: **Linux cmds**
+   1. tcpdump and netcat (in progress)
