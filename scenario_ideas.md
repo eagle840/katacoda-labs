@@ -25,5 +25,14 @@ Scenario: **your first custom controller**
 Course: **Linux cmds**
    1. tcpdump and netcat (in progress)
    
-Course Authenication systems:
+Course **Authenication systems**
    1. LDAP     use?  https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-a-basic-ldap-server-on-an-ubuntu-12-04-vps        need: ubuntu, port 80 open
+
+Scenario: **APIs and webhooks**
+   intro: over view of using api's and webhooks
+   step1:  curl, gwet, browser, postman other tools
+   step2:   api's   - starwars and other database. 
+   step3:  webhooks  - webhook test websites
+   step4:  trigger a github webhook
+   step5:  ???M$devops
+   finish:  other resources 
