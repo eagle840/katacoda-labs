@@ -24,3 +24,6 @@ Scenario: **your first custom controller**
 
 Course: **Linux cmds**
    1. tcpdump and netcat (in progress)
+   
+Course Authenication systems:
+   1. LDAP     use?  https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-a-basic-ldap-server-on-an-ubuntu-12-04-vps        need: ubuntu, port 80 open
