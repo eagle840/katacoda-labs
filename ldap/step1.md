@@ -6,17 +6,13 @@ lets check the docker version and make sure it's working
 
 `docker version`{{execute}}
 
-we'll be using the ldap lam, so lets pull the image, from:
-[https://hub.docker.com/r/ldapaccountmanager/lam](https://hub.docker.com/r/ldapaccountmanager/lam)
 
-`docker pull ldapaccountmanager/lam`{{execute}}
+lets use [https://github.com/osixia/docker-openldap](https://github.com/osixia/docker-openldap) docker image
 
-run start the container
-'docker run -p 8080:80 -it -d ldapaccountmanager/lam:stable'{{execute}}
+`docker run -p 389:389 -p 636:636 --name my-openldap-container --detach osixia/openldap:1.3.0`{{execute}}
 
-Confirm it's up and running
-`curl localhost:8080`{{excute}}
 
-lets connect
-https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+lets confirm it's working
+`docker exec my-openldap-container ldapsearch -x -H ldap://localhost -b dc=example,dc=org -D "cn=admin,dc=example,dc=org" -w admin`{{execute}}
+
 
