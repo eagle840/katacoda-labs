@@ -1,12 +1,12 @@
 {
-  "title": "Using jekyll to generate static content (coming soon)",
-  "description": "Follow the jekyll step-by-step",
+  "title": "Using tcpdump and netcat",
+  "description": "Learn to use tcpdump and netcat and both together. (in progress)",
   "difficulty": "Beginner",
-  "time": "15",
+  "time": "60 minutes",
   "details": {
     "steps": [
       {
-        "title": "Step 1 Setup Jekyll",
+        "title": "Step 1",
         "text": "step1.md"
       },
       {
@@ -16,10 +16,6 @@
       {
         "title": "Step 3",
         "text": "step3.md"
-      },
-      {
-        "title": "Step 4",
-        "text": "step4.md"
       }
     ],
     "intro": {
@@ -30,7 +26,7 @@
     }
   },
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "terminal-terminal"
   },
   "backend": {
     "imageid": "ubuntu1804"
