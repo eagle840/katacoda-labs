@@ -20,6 +20,19 @@ Bundle it
 
 Create a index.html
 
+`cat <<EOF > index.html
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>
+EOF`
+
 If you need to brush up on your html, ccs and javascript,
 head over to [w3schools](https://www.w3schools.com/) and checkout thier interactive tutorials
 
