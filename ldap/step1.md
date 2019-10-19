@@ -15,4 +15,8 @@ lets use [https://github.com/osixia/docker-openldap](https://github.com/osixia/d
 lets confirm it's working
 `docker exec my-openldap-container ldapsearch -x -H ldap://localhost -b dc=example,dc=org -D "cn=admin,dc=example,dc=org" -w admin`{{execute}}
 
+and take a look at the startup log
+`docker logs my-openldap-container`{{execute}}
 
+and moke a note of the ip  - jq will prettyify the output
+`docker network inspect bridge | jq`{{execute}}

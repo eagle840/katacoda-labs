@@ -10,8 +10,9 @@ After the install on the master is compleat, copy the cmd to init a second compu
 
 We'll need the generated config file in the std kubectl config file
 
-mkdir $HOME/.kube
-master $ cp /etc/kubernetes/admin.conf $HOME/.kube/config
+`mkdir $HOME/.kube`{{execute}}
+
+`cp /etc/kubernetes/admin.conf $HOME/.kube/config`{{execute}}
 
 and config it's working.
 
