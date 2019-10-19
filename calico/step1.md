@@ -10,9 +10,9 @@ After the install on the master is compleat, copy the cmd to init a second compu
 
 We'll need the generated config file in the std kubectl config file
 
-`mkdir $HOME/.kube`{{execute}}
-
-`cp /etc/kubernetes/admin.conf $HOME/.kube/config`{{execute}}
+`mkdir -p $HOME/.kube`{{execute}}
+`sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config`{{execute}}
+`sudo chown $(id -u):$(id -g) $HOME/.kube/config`{{execute}}
 
 and config it's working.
 
@@ -38,5 +38,9 @@ We'll connect to the k8s in the next step
 
 
    VERSION TWO
+
+   (https://docs.projectcalico.org/v3.10/getting-started/kubernetes/)[https://docs.projectcalico.org/v3.10/getting-started/kubernetes/]
+
+   `kubectl apply -f https://docs.projectcalico.org/v3.10/manifests/calico.yaml`{{execute}}
 
    curl https://docs.projectcalico.org/v3.9/manifests/calico.yaml -O
