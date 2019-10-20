@@ -1,4 +1,4 @@
-# IN PROGRESS 9th oct. expected completion 14th
+# IN PROGRESS 
 
 This scenario is presently in the design process, please do not use.
 

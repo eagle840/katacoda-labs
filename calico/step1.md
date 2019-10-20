@@ -10,37 +10,26 @@ After the install on the master is compleat, copy the cmd to init a second compu
 
 We'll need the generated config file in the std kubectl config file
 
-`mkdir -p $HOME/.kube`{{execute}}
-`sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config`{{execute}}
-`sudo chown $(id -u):$(id -g) $HOME/.kube/config`{{execute}}
+`mkdir $HOME/.kube`{{execute}}
+
+`cp /etc/kubernetes/admin.conf $HOME/.kube/config`{{execute}}
 
 and config it's working.
 
 The second node should have finished by now, lets check
 
-`k get nodes`{{execute}}
+`k get nodes --all-namespaces`{{execute}}
 
+Your'll notice that the dns pods are waiting for a network to come up
 
+Since the kubelet is one of the first components to come up and is responcable for starting all pods, lets look at the startup
+`ps -aux | grep /usr/bin/kubelet`{{execute}}
+lets make it easier to read
+`ps -aux | grep /usr/bin/kubelet | sed 's/--/\n--/g'`{{execute}}
 
-VERSION ONE 
-download calicoctl 
+the CNI plugin will be responable for the IPAM of the pods(containers), we'll see that in the next step
 
-install the calico ctl
-  
-     https://docs.projectcalico.org/v3.9/getting-started/calicoctl/install 
-  download calicoctl
-  chmod
-  path
+k8s services and their IPs (clusterIP and Nodeport) are handed out by the api-server (--service-cluster-ip-range=10.96.0.0/12)
+`k describe pod kube-apiserver-master  -n kube-system`{{execute}} 
 
-We'll connect to the k8s in the next step
-   https://docs.projectcalico.org/v3.9/getting-started/calicoctl/configure/kdd
-   
-
-
-   VERSION TWO
-
-   (https://docs.projectcalico.org/v3.10/getting-started/kubernetes/)[https://docs.projectcalico.org/v3.10/getting-started/kubernetes/]
-
-   `kubectl apply -f https://docs.projectcalico.org/v3.10/manifests/calico.yaml`{{execute}}
-
-   curl https://docs.projectcalico.org/v3.9/manifests/calico.yaml -O
+when creating your k8 cluster from scratch, it's important that you don't conflict these while the CNI IPAM setup.
