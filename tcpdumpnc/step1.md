@@ -2,6 +2,8 @@ Overview of tcpdump
 
 uses libpcap library
 
+Any time you need to break out of a cmd, click here:
+`echo stop`{{ execute }}
 ### version check
 
  `tcpdump -h`
@@ -10,7 +12,7 @@ and lets see what interfaces are available on this machine
 
 `tcpdump -D`
 
-since ens3 is our main interface, we'll be using the option -i ens3 
+since ens3 is our main interface, we'll be using the option `-i ens3` 
 
 lets capture the next 5 packets transvering ens3
 
@@ -19,6 +21,8 @@ lets capture the next 5 packets transvering ens3
 I don't want to see the dns entries
 
 `tcpdump -i ens3 -c 5 -n`
+
+and lets really shorten it with -q minimum, -t no time stamps
 
 
 ### Lets try some basic filters
@@ -30,7 +34,8 @@ as usual `man tcpdump` is your friend
 
 ### basic commands
 
- `tcpdump    
+'''bash
+ tcpdump    
     -D  # list the available interfaces
     -i <int name>  or any
     -c<#>  number of packets to capture
@@ -42,7 +47,9 @@ as usual `man tcpdump` is your friend
     -q      minimum output
     -t      no time,  -tt -ttttt max time info
     -w <filename.pcap>   ## capture into a file, -v to show # of pkts capture while in progress
-    -r <file>   read file`
+    -r <file>   read file
+    '''
+
 ### filters
 
   1. host <ip> or <dns name>
