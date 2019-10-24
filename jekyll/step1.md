@@ -1,26 +1,29 @@
-In this scenario ruby is already installed, but to install it on your system:
-
+In this scenario ruby is already installed, but to install it on your system (linux):
 `apt install ruby -y`
 
 Install jekyll (takes  a couple of minutes)
-
 `gem install jekyll bundler`{{execute}}
 
 Generate a Gemfile
-
 `bundle init`{{execute}}
 
 Edit the gemfile
-CHECK THIS
 `echo 'gem "jekyll"' >> Gemfile`{{execute}}
 
 Bundle it
-
 `bundle`{{execute}}
+
+
+We could work on the pwd, but we'll create a new folder with
+`jekyll new newsite`{{execute}}
+
+and change to that directry
+`cd newsite`{{execute}}
 
 Create a index.html
 
-`cat <<EOF > index.html
+```bash
+cat <<EOF > index.html
 <!doctype html>
 <html>
   <head>
@@ -31,7 +34,8 @@ Create a index.html
     {{ content }}
   </body>
 </html>
-EOF`
+EOF
+```
 
 If you need to brush up on your html, ccs and javascript,
 head over to [w3schools](https://www.w3schools.com/) and checkout their interactive tutorials
@@ -53,7 +57,7 @@ and lets build, and then serve (only run it in your home folder):
 
 `jekyll build`{{execute}}
 
-you'll notice that a folder _site has been created. Make sure you make no changes in this folder for now, it's the content for the generated site.
+you'll notice that a folder _site has been created. Make sure you make no changes in this folder for now, it's the content for the generated site. (the option --watch will continue to update)
 Look at the index.html in _site, you'll notice its the same in your home folder.
 
 Lets add some liquid template code. In the index.html file in your home folder (not _site - it's an easy mistake to make)
