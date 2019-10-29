@@ -1,40 +1,27 @@
 # Setup Calico network
 
-download yaml
-and create deployment
+Install the calico manifest
+`curl https://docs.projectcalico.org/v3.9/manifests/calico.yaml -O`{{execute}}
+
+`kubectl apply -f calico.yaml`{execute}
+
+or you can just do it directly
+'kubectl apply -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml`
+
+`k get pods --all-namespaces`{{execute}}
+
+install the calico ctl
+  
+     https://docs.projectcalico.org/v3.9/getting-started/calicoctl/install 
+  download calicoctl
+  chmod
+  path
+
+We'll connect to the k8s in the next step
+   https://docs.projectcalico.org/v3.9/getting-started/calicoctl/configure/kdd
+   
 
 
-lets look at the cni
+   VERSION TWO
 
-The k8s service responcable for networking and containers is the kubelet
-
-lets look at the startup config
-/etc/kubernetes/manifest/kubelet
-
-
-note the lines
---network plugin=cni
---cni-bin-dir=/opt/cni/bin    # contains the availble plugins
---cni-conf-dir=/etc/cni/net.d # contains the conf for plugin to use
-
-Lets look at the bins:
-
-
-Lets look at the cni config
-    net-script
-    plugin config
-
-see:
-https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/
-
-and:
-
-
-https://kubernetes.io/docs/concepts/cluster-administration/networking/
-
-itnext has an articule on performance:
-https://itnext.io/benchmark-results-of-kubernetes-network-plugins-cni-over-10gbit-s-network-updated-april-2019-4a9886efe9c4
-
-
-Has an good support matrix:
-https://chrislovecnm.com/kubernetes/cni/choosing-a-cni-provider/
+   curl https://docs.projectcalico.org/v3.9/manifests/calico.yaml -O

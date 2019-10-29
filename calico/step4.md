@@ -1,1 +1,1 @@
-# Test Calico Network
+# review CNI settings
