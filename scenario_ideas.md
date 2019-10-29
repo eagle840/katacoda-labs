@@ -36,3 +36,9 @@ Scenario: **APIs and webhooks**
    step4:  trigger a github webhook
    step5:  ???M$devops
    finish:  other resources 
+   
+Scenario: K8S rbac service accounts
+   from: Kubernetes Auth and Access Control by Eric Chiang, CoreOS
+
+Scenario: k8s certs
+   from: Certifik8s: All You Need to Know About Certificates in Kubernetes [I] - Alexander Brand, Apprenda
