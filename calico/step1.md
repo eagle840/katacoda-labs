@@ -2,30 +2,22 @@
 
 This scenario is presently in the design process, things may not work
 
-Step 1a: setp a k8s cluster with kubeadm - this will take a minute
-in this case we will be setting the pod network to a custom cidr since calico is already to use it
-Pull images:
-`kubeadm config images pull`{execute}
+Setup the k8s cluster with kubeadm - this will take a minute
+in this case we will be setting the pod network to a custom cidr since calico is already to use it:
+
+`kubeadm config images pull`{execute}  # used for troubleshooting at this time
 `kubeadm init --pod-network-cidr 192.168.0.0/16`{{execute}}
 
-After the install on the master is compleat, copy the cmd to init a second computer and paste/exe in the other computer
+After the install on the master is complete, copy the cmd at the end of the output to init a second node in the bottom terminal.
 
-We'll need the generated config file in the std kubectl config file
+Scroll up a little more in the top terminal output, and you'll see three lines to setup the kubectl config, starting with mkdir. Run these three cmds in the top terminal.
 
-`mkdir $HOME/.kube`{{execute}}
-
-`cp /etc/kubernetes/admin.conf $HOME/.kube/config`{{execute}}
-
-and config it's working.
-
-The second node should have finished by now, lets check
-
-`k get nodes --all-namespaces`{{execute}}
+Lets check the nodes:
+`k get nodes`{{execute}}
 You'll see it's not totally ready since we don't have a network solution working.
 
 And lets see what control plane pods are runnning:
 `k get pods --all-namespaces`{{execute}}
-
 Your'll notice that the dns pods are waiting for a network to come up
-and there are no networking pods running (eg weave-net)
+and there are no networking pods running (in this case calico)
 

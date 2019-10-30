@@ -1,27 +1,27 @@
 # Setup Calico network
 
-Install the calico manifest
+OK, lets install the calico manifest
 `curl https://docs.projectcalico.org/v3.9/manifests/calico.yaml -O`{{execute}}
 
-`kubectl apply -f calico.yaml`{execute}
+`kubectl apply -f calico.yaml`{{execute}}
 
-or you can just do it directly
-'kubectl apply -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml`
+or you can just do it directly from the repo with:
+`kubectl apply -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml`
 
+And check they are up:
 `k get pods --all-namespaces`{{execute}}
 
-install the calico ctl
-  
-     https://docs.projectcalico.org/v3.9/getting-started/calicoctl/install 
-  download calicoctl
-  chmod
-  path
+Let's take a look at the logs for the calico pods
 
-We'll connect to the k8s in the next step
-   https://docs.projectcalico.org/v3.9/getting-started/calicoctl/configure/kdd
-   
+`k logs pod/container -n kube-system'
+MAKE SURE NS IS CORRECT, nothing of interest in these
+
+`ps -aux | grep calico`{{execute}}
 
 
-   VERSION TWO
+You'll see a deployment has created a pod
+`k describe pod calico-kube-controllers-5d4bc9cd89-4767z -n kube-system`{{execute}}
 
-   curl https://docs.projectcalico.org/v3.9/manifests/calico.yaml -O
+And you'll see that a daemonset has been created
+`k get ds --all-namespaces`{{execute}}
+
