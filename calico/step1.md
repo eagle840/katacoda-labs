@@ -5,7 +5,7 @@ This scenario is presently in the design process, things may not work
 Setup the k8s cluster with kubeadm - this will take a minute
 in this case we will be setting the pod network to a custom cidr since calico is already to use it:
 
-`kubeadm config images pull`{execute}  # used for troubleshooting at this time
+`kubeadm config images pull`{{execute}}  # used for troubleshooting at this time
 `kubeadm init --pod-network-cidr 192.168.0.0/16`{{execute}}
 
 After the install on the master is complete, copy the cmd at the end of the output to init a second node in the bottom terminal.
