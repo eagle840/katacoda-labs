@@ -18,6 +18,7 @@ You'll see it's not totally ready since we don't have a network solution working
 
 And lets see what control plane pods are runnning:
 `k get pods --all-namespaces`{{execute}}
-Your'll notice that the dns pods are waiting for a network to come up
-and there are no networking pods running (in this case calico)
+Wait a minute or two, you should see all 8 pods up and running.
+
+
 

@@ -6,12 +6,13 @@ Lets remove the taint on the master so it can run pods.
 And deploy a simple nginx deployment 
 `k run http --image=nginx --replicas=2`{{execute}}
 
+Take a quick look at the Ip's on the pods on node01 and master
+`k get pods -o wide`
+
 Lets pull a couple of troubleshooting images
 `docker pull busybox`{{execute}}
 `docker pull nicolaka/netshoot`{{execute}}
 ON BOTH TERMINALSS
-
-
 
 
 
@@ -29,5 +30,7 @@ install the calico ctl  I THINK I'LL REMOVE THIS,
 We'll connect to the k8s in the next step
    https://docs.projectcalico.org/v3.9/getting-started/calicoctl/configure/kdd
    
-
+RESOURCES:
+https://schoolofdevops.github.io/zero-to-docker/troubleshooting-toolkit/
+https://github.com/nicolaka/netshoot
    
