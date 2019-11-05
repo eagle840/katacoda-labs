@@ -44,22 +44,33 @@ and lets use jekyll to  build, and then serve (only run it in your home folder):
 
 `jekyll build`{{execute}}
 
+`tree`{{execute}}
+
 you'll notice that a folder _site has been created. Make sure you make no changes in this folder for now, it's the content for the generated site. (the option --watch will continue to update)
 Look at the index.html in _site, you'll notice its the same in your home folder.
 
 
 
-## front matter tells Jekyll to process Liquid
+### A little bit of Liquid
 
-
+Front matter in the beginning of a page tells Jekyll to process the contents of a page.
 Lets add some Liquid template code. In the index.html file in your home folder (not in _site - it's an easy mistake to make)
 
-replace <h1>Hello World!</h1>  in index.html     with
-<h1>{{ "Hello World!" | downcase }}</h1>
+Add the following to the top of index.html
+```
+---
+# front matter
+---
+```
+
+and replace 
+`<h1>Hello World!</h1>`  in index.html with
+`<h1>{{ "Hello World!" | downcase }}</h1>`
 
 run `jekyll build`{{execute}}   again
 and check the _site/index.html,  and you'll see it as shown above.
 
+`cat ./_site/index.html`{{execute}}
 We need Jekyll to process this so lets add some 'front matter' to the top of the orginal index.html (in home)
 
 

@@ -21,7 +21,7 @@ Lets learn a little about the Liquid Templating language at:
 
 Feel free to try out adding some changes .
 
-###Layouts
+### Layouts
 Lets create your 1st layout, _layouts/default.html
 ```html
 <!doctype html>
@@ -37,7 +37,7 @@ Lets create your 1st layout, _layouts/default.html
 ```
 Notice the two liquid cmds: page.title (from front matter) and content.
 
-###General Content
+### General Content
 You'll be placing your content into 1 of two groups:
 posts: in the _posts folder, these are chronlogicaly listed html or md documents, in the form YYYY-MM-DD-post-title.md
 and pages: html/md files placed anywhere in the folders
@@ -46,13 +46,14 @@ But before we add that, lets go over the _layouts folder.
 This is going to be basicly the main templates for generating pages,
 (see here for more:)[https://jekyllrb.com/docs/step-by-step/04-layouts/]
 
-###Includes
+### Includes
 Another folder is the _includes, allowing you to have a repo of snippets of code to include in to other files.
 (Includes)[https://jekyllrb.com/docs/step-by-step/05-includes/]
 
 
 
-collections: related documents under a collection name
+### Collections: MOVE TO LATER STEP
+related documents under a collection name
 [see Ben Balters blog for an overview](https://ben.balter.com/2015/02/20/jekyll-collections/)
 ^^^^  move this  down to step 4??  ^^^^^
 
