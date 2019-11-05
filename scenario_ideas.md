@@ -42,3 +42,6 @@ Scenario: K8S rbac service accounts
 
 Scenario: k8s certs
    from: Certifik8s: All You Need to Know About Certificates in Kubernetes [I] - Alexander Brand, Apprenda
+
+Scenario: etcd HA
+   github.com/etcd-io/etcd/tree/master/Documentation
