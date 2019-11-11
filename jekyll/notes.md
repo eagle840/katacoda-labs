@@ -8,3 +8,37 @@ _layout    this folder contains a list of html (md?) that generates the main htm
 
 _includes   this folder contains  a list of html docs that cab be included with an 'include' tage
                 {% include navigation.html %}  declared in other documents
+
+
+katacode markdown
+`this command`{{copy}}   copy to clipbord
+`echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
+<kbd>Ctrl</kbd>+<kbd>C</kbd>    # show keyboard keys in text
+`echo "Run in Terminal 1"`{{execute T1}}
+
+# to copy  a lrg chunk of text
+<pre class="file" data-target="clipboard">
+Copy Me To The Clipboard!!
+</pre>
+
+Dashboard (horizontal above the terminal)
+in index.json
+
+"environment": {
+    "showdashboard": true,
+    "dashboards": [{"name": "URL", "href": "https://www.google.co.uk"},
+        {"name": "Port 80", "port": 80},
+        {"name": "Placeholder", "href": "https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com"}]
+}
+#    Displaying External Webpages
+#    Rendering Proxied Port
+#    Rendering Proxied URL
+
+
+Terminal Tabs
+https://katacoda.com/scenario-examples/scenarios/dashboard-tabs
+
+"environment": {
+  "terminals": [{"name": "Terminal 2", "target": "host01"}]
+}
+

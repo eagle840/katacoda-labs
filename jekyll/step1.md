@@ -3,10 +3,10 @@
 In this scenario ruby is already installed, but to install it on your system (linux):
 `apt install ruby -y`
 
-Install jekyll (takes  a couple of minutes)
+Install jekyll  using the ruby package manager 'gem' (takes  a couple of minutes)
 `gem install jekyll bundler`{{execute}}
 
-Generate a Gemfile
+Generate a Gemfile with:
 `bundle init`{{execute}}
 
 Edit the gemfile
@@ -27,10 +27,10 @@ cat <<EOF > index.html
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>Home</title>
   </head>
   <body>
-    {{ content }}
+    <h1>Hello World!</h1>
   </body>
 </html>
 EOF
@@ -40,15 +40,20 @@ If you need to brush up on your html, ccs and javascript,
 head over to [w3schools](https://www.w3schools.com/) and checkout their interactive tutorials
 
 
-and lets use jekyll to  build, and then serve (only run it in your home folder):
+Lets start using jekyll to  build, and then serve  our website (only run it in your home folder for now):
 
 `jekyll build`{{execute}}
 
 `tree`{{execute}}
 
-you'll notice that a folder _site has been created. Make sure you make no changes in this folder for now, it's the content for the generated site. (the option --watch will continue to update)
-Look at the index.html in _site, you'll notice its the same in your home folder.
 
+
+you'll notice that a folder _site has been created. Make sure you make no changes in this folder for now, it's the content for the generated site. (the option --watch will continue to update)
+Look at the index.html in _site, you'll notice its the same in your home folder right now. As we add content it will auto generate pages.
+
+`cat ~/_site/index.html`{{execute}}
+
+It should be the same as the orginal index.html
 
 
 ### A little bit of Liquid
@@ -68,15 +73,12 @@ and replace
 `<h1>{{ "Hello World!" | downcase }}</h1>`
 
 run `jekyll build`{{execute}}   again
-and check the _site/index.html,  and you'll see it as shown above.
+and check the _site/index.html,  and you'll see it's removed the front matter and processed Hello World to lower case.
 
-`cat ./_site/index.html`{{execute}}
-We need Jekyll to process this so lets add some 'front matter' to the top of the orginal index.html (in home)
+`cat ~/_site/index.html`{{execute}}
 
 
-`jekyll build`{{execute}}
-You'll now see jekyll has lower cased the whole line.
-If you use 'jekyll serve' jekyll will run a webserver, and continually adjust the code as your update it.
+If you use 'jekyll serve' jekyll will run a webserver (on port 4000), and continually adjust the code as you update it.
 
 To serve this website up on the localhost only on the default 4000 port, use:
 `jekyll serve`
@@ -89,7 +91,7 @@ Lets open this up in a new browser tab:
 
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com
 
-Any changes done will automatically show (except changes to _config/yaml which needs a restart)
+Any changes done will automatically show (except changes to _config.yaml which needs a restart)
 
 
 Open a  new terminal tab and lets check the service is running

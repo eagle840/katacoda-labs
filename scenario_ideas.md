@@ -27,7 +27,16 @@ Course: **Linux cmds**
    
 Course **Authenication systems**
    1. LDAP     use?  https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-a-basic-ldap-server-on-an-ubuntu-12-04-vps        need: ubuntu, port 80 open
-
+      vs 386-ds   from redhat?
+   2. Dogtag PKI (and with vault)
+      - vault has a playground
+      - vault option for pki: https://learn.hashicorp.com/vault/secrets-management/sm-pki-engine
+      - docker image for dogtagpki
+      - you can use vault with a pki
+      - installing dogtag (quickstar)[https://www.dogtagpki.org/wiki/Quick_Start]
+         - install ds 1st (html is messed up)
+         - then install  dogtag
+      - uses 386-ds   (see from 2014)[https://www.youtube.com/watch?v=2qkhm7B01iA]
 Scenario: **APIs and webhooks**
    intro: over view of using api's and webhooks
    step1:  curl, gwet, browser, postman other tools

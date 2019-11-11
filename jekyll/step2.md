@@ -1,17 +1,16 @@
 step-by-step 2 thro 5
 
+### new blog
+Lets start an entirely new site with the command:
+`jekyll new my_blog`{{execute}}
+You'll notice a new folder my_blog creater with jekyll creating some default content in it
+
+Lets quickly copy index over to the new site and delete the orginal content.
+`cp ~/index.html ~/my_blog/index.html`{{execute}}
+`rm -r _site`{{execute}}
+`rm _config.yaml`{{exeute}}
 
 
-After running the build/serve from the last step, you'll notice that it was generated a _site folder.
-Do not change anything in here, since it may mess things up.
-Basicly it's taking everything in the root folder and processing most of the files/folders, with the exception of my _site folder.
-
-You'll see that Jekyll has directly place the index.html into the site. For jekyll to process a file we'll need to add some 'front matter'
-```
----
-# front matter goes here, usually key:value 
----
-```
 rest of html or md here which may include instruction.
 Two of the most command used K:V pairs used are: title and layout.
 With layout, you should have a _layouts folder with files of the same name.
@@ -23,6 +22,9 @@ Feel free to try out adding some changes .
 
 ### Layouts
 Lets create your 1st layout, _layouts/default.html
+
+`mkdir ~/_layouts`{{execute}}
+
 ```html
 <!doctype html>
 <html>
