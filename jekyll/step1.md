@@ -93,9 +93,8 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com
 
 Any changes done will automatically show (except changes to _config.yaml which needs a restart)
 
+To stop this server, we'll be starting a new server in the next section.
+`echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
 
-Open a  new terminal tab and lets check the service is running
-`curl http://localhost:4000`{{execute}}
-
-To stop this server
-`clear`{{execute}}
+Lets cleanup a little
+`rm inndex.html; rm -r _site`{{execute}}
