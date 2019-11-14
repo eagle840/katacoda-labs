@@ -5,10 +5,16 @@ Lets start an entirely new site with the command:
 `jekyll new my_blog`{{execute}}
 You'll notice a new folder my_blog creater with jekyll creating some default content in it
 
+Lets cd to that folder
+`cd ./my_blog`{{execute}}
+
 `tree ~/my_blog`{{execute}}
 
 You'll also markdown files in here, jekyll process' these into html files for the website.
+and an additional ruby gem (pachage) has been addded to the gemfile to add a theme to the site.
+We'll need to rebundle jekyll.
 
+`bundle`{{execute}}
 
 
 lets add 'hello world', or Feel free to try your own content.
@@ -18,11 +24,17 @@ lets add 'hello world', or Feel free to try your own content.
 We'll open a new terminal window and get jekyll serve running
 On the top of the terminal, next to 'terminal' click on the + sign and 'open new terminal' 
 and start up the jekyll serve
+
+`cd ~/my_blog`{{execute}}
+
 `jekyll serve --host 0.0.0.0`{{execute}}
+
 You should see the new content the web page you opened in the last stage.
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com
 
-Jump back to the orginal window, and we''l continue.
+Jump back to the orginal terminal 1, and we'll continue.
+
+Note that jekyll should be run in the folder you have the contents in.
 
 ### Layouts
 Lets create your 1st layout, _layouts/default.html
@@ -34,6 +46,7 @@ and define our 1st layout of
 `touch #/my_site/_layouts/default.html`
 
 ```html
+cat <<EOF > _layouts/default.html
 <!doctype html>
 <html>
   <head>
@@ -44,6 +57,7 @@ and define our 1st layout of
     {{ content }}
   </body>
 </html>
+EOF
 ```
 Notice the two liquid cmds: page.title (from front matter) and content.
 (see here for more:)[https://jekyllrb.com/docs/step-by-step/04-layouts/]

@@ -97,4 +97,4 @@ To stop this server, we'll be starting a new server in the next section.
 `echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
 
 Lets cleanup a little
-`rm inndex.html; rm -r _site`{{execute}}
+`rm index.html; rm -r _site`{{execute}}
