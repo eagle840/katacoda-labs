@@ -57,6 +57,12 @@ Lets look the the command and args:
 
 when creating your k8 cluster from scratch, it's important that you don't conflict these while the CNI IPAM setup.
 
+## spin up some pods without a network
+
+`k run nettools --image=nicolaka/netshoot --replicas 2 -- sleep 3600`{{execute}}
+and take a look at there ip address'
+`k get pods -o wide`{{execute}}
+APPEARS TO BE WAY OUT OF DATE - PERHAPS USE BUSYBOX?
 
 
 RESOURCES
@@ -64,6 +70,9 @@ see:
 https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/
 
 https://kubernetes.io/docs/concepts/cluster-administration/networking/
+
+Netshoot immage:
+https://github.com/nicolaka/netshoot
 
 itnext has an articule on performance:
 https://itnext.io/benchmark-results-of-kubernetes-network-plugins-cni-over-10gbit-s-network-updated-april-2019-4a9886efe9c4
