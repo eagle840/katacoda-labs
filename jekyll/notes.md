@@ -21,6 +21,14 @@ katacode markdown
 Copy Me To The Clipboard!!
 </pre>
 
+Intro
+Step1: install Jekyll and generate single page
+step2: generate blank (default) site, includes and layouts
+step3: 
+
+
+
+
 Dashboard (horizontal above the terminal)
 in index.json
 
