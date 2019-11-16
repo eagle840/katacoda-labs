@@ -16,9 +16,7 @@ We'll need to rebundle jekyll.
 
 `bundle`{{execute}}
 
-
-lets add 'hello world', or Feel free to try your own content.
-
+The additional ruby gem is 'minina', which we'll take a look at a little further down.
 
 
 We'll open a new terminal window and get jekyll serve running
@@ -36,14 +34,34 @@ Jump back to the orginal terminal 1, and we'll continue.
 
 Note that jekyll should be run in the folder you have the contents in.
 
+Looking at the webpage you'll notice that a post is presented, jekyll/minina display as default the posts in the _posts folder.
+Lets add another post.
+
+```html
+cat <<EOF > _posts/2018-08-20-bananas.md
+---
+layout: post
+author: jill
+---
+A banana is an edible fruit - botanically a berry - produced by several kinds
+of large herbaceous flowering plants in the genus Musa.
+
+In some countries, bananas used for cooking may be called "plantains",
+distinguishing them from dessert bananas. The fruit is variable in size, color,
+and firmness, but is usually elongated and curved, with soft flesh rich in
+starch covered with a rind, which may be green, yellow, red, purple, or brown
+when ripe.
+EOF
+```
+
+refreshing the web page, you'll see the post added.
+
 ### Layouts
 Lets create your 1st layout, _layouts/default.html
 Layouts lets you define templates for your content, setting a layout on the front matter of the lay your working on allow you to define the layout templete for that page.
 
 `mkdir ~/my_blog/_layouts`{{execute}}
 
-and define our 1st layout of 
-`touch #/my_site/_layouts/default.html`
 
 ```html
 cat <<EOF > _layouts/default.html
