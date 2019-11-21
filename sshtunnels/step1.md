@@ -16,6 +16,10 @@ get ip
 
 make sure ssh server is running
 systemctl status ssh.service
+check /etc/ssh/sshd.config
+   AllowTcpForwarding yes
+    Gateway ports yes
+
 
 try curl from host 1  for workcomputer
 curl <IP>:3386
