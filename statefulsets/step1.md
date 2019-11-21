@@ -2,7 +2,7 @@ Stateful sets require dynamic provisioning to use volumes,  however in this scen
 
 `apt-get update`{{execute}}
 
-`apt-get install`{{execute}}
+`apt-get install nfs-kernel-server`{{execute}}
 
 `systemctl status nfs-kernel-server`{{execute}}
 
@@ -19,10 +19,10 @@ add the following to /etc/exports
 `exportfs -v`{{execute}}
 `showmount -e`{{execute}}
 
-`ip addr | grep -A5 inet`{{execute}}
+`ip addr | grep ens3`{{execute}}
 
 ## TEST
 ssh to node01
-mount -t nfs <ip>:/src/nfs/kubedata  /mnt
+mount -t nfs /<ip>:/src/nfs/kubedata  /mnt
 ls /mnt  # show see pv0->4
 umount /mnt

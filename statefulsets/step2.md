@@ -2,6 +2,8 @@
 
 if you can enabled a storageClass, the following PV's would be automatically created when the app asked for them.
 
+Put these vols on the node01 ???
+
 apiVersion: v1
 kind: PersistentVolume
 metadata:
