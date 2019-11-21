@@ -1,30 +1,36 @@
 PICTURE HERE
 
+### AT HOME
 We''ll start a nginx http server on host 2, our home server
 
-`docker run -dp 80:3386 nginx`
+`docker run   -dp 80:80 nginx`{{execute}}
 
 check its working
 
-curl localhost:3386
+`curl localhost`{{execute}}
+and we should get back some html
 
 check nginx is listening on 80
-`netstat -tl`
+`netstat -tal`{{execute}}
 
-get ip
-`ip addr`
+lets get ip (with direct connection to internet, or forward 22 to your PC from your router/firewall)
+`ip addr`{{execute}}
 
+
+### CHECK SSH SERVER
 make sure ssh server is running
-systemctl status ssh.service
-check /etc/ssh/sshd.config
-   AllowTcpForwarding yes
+`systemctl status ssh.service`{{execute}}
+check `/etc/ssh/sshd_config`
+    AllowTcpForwarding yes
     Gateway ports yes
 
 
-try curl from host 1  for workcomputer
-curl <IP>:3386
+### AT WORK
 
-block outgoing port on host01 to 80
+try curl from host 1  for workcomputer
+`curl <IP>`
+
+WIP: block outgoing port on host01 to 80
 
 check
 
