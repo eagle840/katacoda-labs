@@ -10,7 +10,7 @@ click on the admin console
 
 and login with  `user: admin` & `password:pass`
 
-WIP:
+# WIP:
 admin login page is loading, but browser refusing to load 'unsafe script'
 when allowing 'unsafe script' getting the following message on the page
 We are sorry...
