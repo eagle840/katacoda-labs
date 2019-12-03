@@ -7,13 +7,14 @@ Lets start an entirely new site with the command:
 You'll notice a new folder, my_blog created with jekyll creating some default content in it
 
 Lets cd to that folder and take a look
-`cd ./my_blog`{{execute}}
+`cd ~/my_blog`{{execute}}
 
 `tree ~/my_blog`{{execute}}
 
 You'll also note markdown files in here, jekyll process' these into html files for the website on build
 and an additional ruby gem (package) has been added to the gemfile to add a theme to the site.
 We'll need to rebundle jekyll.
+(more about the theme)[https://rubygems.org/gems/minima]
 
 `bundle`{{execute}}
 
@@ -33,10 +34,15 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com
 
 Jump back to the orginal terminal 1, and we'll continue.
 
+`cd ~/my_blog`{{execute T1}}
+
 Note that jekyll should be run in the folder you have the contents in, in this case my_blog. 
 
+
+### Creating Posts
+
 Looking at the webpage you'll notice that a post is presented, jekyll/minina display as default the posts in the _posts folder.
-Lets add another post.
+Lets add another post, note the format of the file name, which is required.
 
 ```html
 cat <<EOF > _posts/2018-08-20-bananas.md

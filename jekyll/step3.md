@@ -37,3 +37,9 @@ cat <<EOF > _includes/navigation.html
 
 Assets cover the other parts of a website, javascript, css and images
 (and the assets)[https://jekyllrb.com/docs/step-by-step/07-assets/]
+
+### Drafts
+
+to create content that you don't want in your website, create a folder `_drafts`
+The folder won't be rendered  into the web page unless you add --draft to the jekyll servce command.
+* files in the draft folder don't need a date in the file name.
