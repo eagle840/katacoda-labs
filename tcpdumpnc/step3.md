@@ -22,3 +22,10 @@ ping while running speed test (to local asn router)
 
 
 report to your isp,  request a 'line test'
+
+## wireshark
+
+Lets install wireshark for console (tshark)
+
+`apt-get update -y`{{execute}}
+`apt install tshark -y`{{execute}}

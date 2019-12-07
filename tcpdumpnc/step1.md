@@ -1,18 +1,17 @@
-Overview of tcpdump
+# Overview of tcpdump
 
 tip!
 try not to use the 'auto execute', but actually type the commands in, you'll retain the information for longer.
 
 hint:
 ctrl-L refreshes the terminal
-
-uses libpcap library
+you may need to run these with sudo needing on your setup
 
 Any time you need to break out of a cmd, click here:
 `echo stop`{{ execute }}
-### version check
+### simple commands
 
- `tcpdump -h`
+ `tcpdump -h`{{execute}}
 
 and lets see what interfaces are available on this machine
 
@@ -22,7 +21,7 @@ since ens3 is our main interface, we'll be using the option `-i ens3`  or -i 1
 
 lets capture the next 5 packets transvering ens3
 
-`tcpdump -i ens3 -c 5` {{ execute }}
+`tcpdump -i ens3 -c 5`{{ execute }}
 
 I don't want to see the dns entries
 
