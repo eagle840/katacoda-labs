@@ -1,6 +1,10 @@
 Overview of tcpdump
 
-try not to use the execute, but actually type the commands in, you'll retain the information for longer.
+tip!
+try not to use the 'auto execute', but actually type the commands in, you'll retain the information for longer.
+
+hint:
+ctrl-L refreshes the terminal
 
 uses libpcap library
 
@@ -24,7 +28,7 @@ I don't want to see the dns entries
 
 `tcpdump -i ens3 -c 5 -n`{{ execute }}
 
-and lets really shorten it with -q minimum, -t no time stamps
+to really shorten up the output try `-q` minimum,  `-t` no time stamps
 
 
 ### Lets try some basic filters

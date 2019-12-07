@@ -1,0 +1,2 @@
+nc  ideas
+https://www.linode.com/docs/networking/diagnostics/netcat/netcat/
