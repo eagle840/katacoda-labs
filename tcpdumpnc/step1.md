@@ -10,9 +10,11 @@ you may need to run these with sudo needing on your setup
 Lets check if you have tcpdump
 
 `$ which tcpdump`
+
 /usr/sbin/tcpdump
 
 And install  if not
+
 `sudo apt install -y tcpdump`
 
 Any time you need to break out of a cmd, click here:
@@ -45,7 +47,7 @@ the more complex ones you should inc in ""
 `tcpdump -i ens3 -c 20 -nt port 22`{{ execute }}
 
 You can always check the offical man page for more details:
-`https://www.tcpdump.org/manpages/tcpdump.1.html`
+()[https://www.tcpdump.org/manpages/tcpdump.1.html]
 
 ### basic commands
 
