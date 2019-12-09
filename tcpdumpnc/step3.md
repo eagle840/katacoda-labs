@@ -25,7 +25,20 @@ report to your isp,  request a 'line test'
 
 ## wireshark
 
-Lets install wireshark for console (tshark)
+Lets capture some packets (stop after 30s ctrl-c)
+`tcpdump -s 0 -i ens3 -w tcpdump.pcap ; ping -c 5 8.8.8.8`{{ execute }}
 
-`apt-get update -y`{{execute}}
-`apt install tshark -y`{{execute}}
+NOT WORKING tcpdump -s0 -c 1000 -nn -w - not port 22 | tshark -k -i -
+
+`tshark -r tcpdump.pcap` {{ execute }}
+
+
+Lets install wireshark for console (tshark)
+`apt-get update -y`{{ execute }}
+`apt-get install tshark -y`{{ excute }}
+Press `enter` when you see the purple screen
+and check its installed
+`which tshark`{{ execute }}
+/usr/bin/tshark
+
+
