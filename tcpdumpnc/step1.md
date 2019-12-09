@@ -1,11 +1,14 @@
 # Overview of tcpdump
 
 tip!
-try not to use the 'auto execute', but actually type the commands in, you'll retain the information for longer.
+try not to use the 'auto execute', but actually type the commands in, you'll retain the information for longer.   ctrl-l does the same thing as clear
 
 hint:
 ctrl-L refreshes the terminal
 you may need to run these with sudo needing on your setup
+
+warning:
+as usual, don't try on production systems unless you know what you're doing!
 
 Lets check if you have tcpdump
 
@@ -17,7 +20,7 @@ And install  if not
 
 `sudo apt install -y tcpdump`
 
-Any time you need to break out of a cmd, click here:
+Any time you need to break out of a cmd use ctrl-c, or click here:
 `echo stop`{{ execute }}
 
 ### simple commands

@@ -11,24 +11,27 @@ we'll see a responce back from the server `SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0
 `echo stop`{{ execute }}
 
 
-### FIX HOST 2 FIRST
+
 Lets setup a simple server on host2 with `-l` for listen and on port 1234 `-p 1234
 
 `nc -l -p 1234`{{execute}}
 
-and connect to it on the other server
+and connect to it on the other server - host2
 
-`nc host2 123`{{execute host2}}
+#WIP  fix execute host2
+`nc host01 1234`{{ execute host02 }}
+
+Now try sending messages between each server, 
 
 if you're not getting the output you expect you can use `-v` or `-vv` for verbose output to help trouble shoot.
 
 in fact, lets try connecting to  googles dns service on UDP 53
-
+# WIP not working, swarm env?
 `nc -u –vv  8.8.8.8 53`{{execute}}
 
 Next up, lets try a little port scanning with `-z`, and this time like tcpdump we'll use `-n` to suppress name resolution. The last argument here specifies the port range 1 to 30
-
-`netcat -z -vv -n 127.0.0.1 1-30`{{execute}}
+# WIP isn't resolving host02 - ip addr works
+`nc -z -vv -n host02 1-30`{{execute}}
 
 
 ### resources
