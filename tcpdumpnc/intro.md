@@ -1,15 +1,16 @@
 ## (in progress)
 
-In this scenario we will learn to use tcpdump and netcat (nc) on an ubuntu linux server
+In this scenario we will learn to use some simple tcpdump, netcat (nc) & wireshark(tshark) on a couple of  Ubuntu linux servers.
+
+There is a bug in katacoda that may show up as not showing what you type in, try ctrl-L to fix it.
 
 offical sites
 (tcpdump.org)[https://www.tcpdump.org/]
 (netcat)[http://netcat.sourceforge.net/]
-(wireshark)[]
+(wireshark)[https://www.wireshark.org/]
 
 general list of network admin tools
 (netadmintools.com)[https://www.netadmintools.com/]
 
 
-can we add a step 4 for analysis of files/streams - perhaps with elasticstack   or wireshark
-and what about the windows version?
+Verion 0.9.1

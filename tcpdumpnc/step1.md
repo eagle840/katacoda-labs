@@ -1,10 +1,10 @@
 # Overview of tcpdump
 
 tip!
-try not to use the 'auto execute', but actually type the commands in, you'll retain the information for longer.   ctrl-l does the same thing as clear
+try not to use the 'auto execute', but actually type the commands in, you'll retain the information for longer.   
 
 hint:
-ctrl-L refreshes the terminal
+ctrl-L refreshes the terminal, just like `clear`
 you may need to run these with sudo needing on your setup
 
 warning:
@@ -12,7 +12,7 @@ as usual, don't try on production systems unless you know what you're doing!
 
 Lets check if you have tcpdump
 
-`$ which tcpdump`
+`$ which tcpdump`{{ execute }}
 
 /usr/sbin/tcpdump
 
@@ -31,7 +31,7 @@ and lets see what interfaces are available on this machine
 
 `tcpdump -D`{{ execute }}
 
-since ens3 is our main interface, we'll be using the option `-i ens3`  or -i 1
+since ens3 is our main interface, we'll be using the option `-i ens3`  or `-i 1`
 
 lets capture the next 5 packets transvering ens3
 
@@ -43,17 +43,39 @@ I don't want to see the dns entries
 
 to really shorten up the output try `-q` minimum,  `-t` no time stamps
 
+`tcpdump -i ens3 -c 5 -nqt`{{ execute }}
+
 
 ### Lets try some basic filters
-the more complex ones you should inc in ""
 
-`tcpdump -i ens3 -c 20 -nt port 22`{{ execute }}
+Look for just SSH, which is port 22 (tcp is default)
+`tcpdump -i ens3 -c 10 -nt port 22`{{ execute }}
+
+Not getting any output? Try a ping in another terminal (remember that the system will cache the result so you'll need to ping another site to get a new dns request)
+`ping www.bbc.com -c 3`{{ execute T2}}
+
+Look for DNS traffic using UDP on port 53
+`tcpdump -i ens3 udp -c 3 -nt port 53` {{ execute }}
+
+Lets look for incoming traffic from host02
+`tcpdump -i ens3  -c 3 -v -nt src host host02`{{ execute }}
+
+And lets send a ping from host02
+`ping host01 -c 4`{{ execute host02 }}
+
+the more complex ones you should inc in "", so lets look for incoming traffic of type ssh.
+`tcpdump -i ens3  -c 3 -v -nt "src host host02 || src port 22"`{{ execute }}
+
+lets take a look at what sending in those ssh packets.
+
+WIP COMPLETE LAST STATEMENT
 
 You can always check the offical man page for more details:
-()[https://www.tcpdump.org/manpages/tcpdump.1.html]
+(www.tcpdump.org)[https://www.tcpdump.org/manpages/tcpdump.1.html]
 
-### basic commands
+#### basic commands
 
+WIP: BUT THE FOLLOWING ABOVE
 ```
  tcpdump    
     -D  # list the available interfaces
@@ -81,3 +103,4 @@ You can always check the offical man page for more details:
   7. ether host <mac>    to filter my mac
   8. tcp udp      ipv6
   9. you can also filer on flags (see man)
+  10. logical operaters AND = &&, OR = ||, NOT = !  

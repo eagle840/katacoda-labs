@@ -1,6 +1,6 @@
 ## overview of nc
 
-Netcat (nc) is a utility for reading and righting directly from a network connection (tcp and udp)
+Netcat (nc) is a utility for reading and writing directly from a network connection (tcp and udp)
 
 Lets see if ssh is running on port 22 on this server, since tcp protocol is the default there is no need to define it. (-u will specify UDP)
 
@@ -12,13 +12,13 @@ we'll see a responce back from the server `SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0
 
 
 
-Lets setup a simple server on host2 with `-l` for listen and on port 1234 `-p 1234
+Lets setup a simple server on host1 with `-l` for listen and on port 1234 `-p 1234
 
 `nc -l -p 1234`{{execute}}
 
 and connect to it on the other server - host2
 
-#WIP  fix execute host2
+Connnect to host02 and run.
 `nc host01 1234`{{ execute host02 }}
 
 Now try sending messages between each server, 
