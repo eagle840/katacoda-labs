@@ -12,7 +12,7 @@ as usual, don't try on production systems unless you know what you're doing!
 
 Lets check if you have tcpdump
 
-`$ which tcpdump`{{ execute }}
+`which tcpdump`{{ execute }}
 
 /usr/sbin/tcpdump
 
@@ -48,14 +48,12 @@ to really shorten up the output try `-q` minimum,  `-t` no time stamps
 
 ### Lets try some basic filters
 
-Look for just SSH, which is port 22 (tcp is default)
-`tcpdump -i ens3 -c 10 -nt port 22`{{ execute }}
+Look for DNS traffic using UDP on port 53
+`tcpdump -i ens3 udp -c 3 -nt -u port 53` {{ execute }}
 
 Not getting any output? Try a ping in another terminal (remember that the system will cache the result so you'll need to ping another site to get a new dns request)
-`ping www.bbc.com -c 3`{{ execute T2}}
+`ping www.bbc.com -c 4`{{ execute T2}}
 
-Look for DNS traffic using UDP on port 53
-`tcpdump -i ens3 udp -c 3 -nt port 53` {{ execute }}
 
 Lets look for incoming traffic from host02
 `tcpdump -i ens3  -c 3 -v -nt src host host02`{{ execute }}

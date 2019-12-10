@@ -5,12 +5,12 @@ In this scenario we will learn to use some simple tcpdump, netcat (nc) & wiresha
 There is a bug in katacoda that may show up as not showing what you type in, try ctrl-L to fix it.
 
 offical sites
-(tcpdump.org)[https://www.tcpdump.org/]
-(netcat)[http://netcat.sourceforge.net/]
-(wireshark)[https://www.wireshark.org/]
+- [tcpdump.org](https://www.tcpdump.org/)
+- [netcat](http://netcat.sourceforge.net/)
+- (wireshark)[https://www.wireshark.org/]
 
 general list of network admin tools
-(netadmintools.com)[https://www.netadmintools.com/]
+- (netadmintools.com)[https://www.netadmintools.com/]
 
 
 Verion 0.9.1

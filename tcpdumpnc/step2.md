@@ -25,13 +25,14 @@ Now try sending messages between each server,
 
 if you're not getting the output you expect you can use `-v` or `-vv` for verbose output to help trouble shoot.
 
-in fact, lets try connecting to  googles dns service on UDP 53
-# WIP not working, swarm env?
-`nc -u –vv  8.8.8.8 53`{{execute}}
+in fact, lets try connecting to  googles dns service on UDP 53 (put the -u before the host)
+
+`nc -vv -u 8.8.8.8 53`{{execute}}
 
 Next up, lets try a little port scanning with `-z`, and this time like tcpdump we'll use `-n` to suppress name resolution. The last argument here specifies the port range 1 to 30
 # WIP isn't resolving host02 - ip addr works
-`nc -z -vv -n host02 1-30`{{execute}}
+`nc -vv -z  host02 1-30`{{execute}}
+Looks like ssh is only open in this range
 
 
 ### resources
