@@ -20,7 +20,7 @@ Lets setup a simple server on host1 with `-l` for listen and on port 1234 `-p 12
 and connect to it on the other server - host2
 
 Connnect to host02 and run.
-`nc host01 1234`{{ execute host02 }}
+`nc host01 1234`{{ execute HOST02 }}
 
 Now try sending messages between each server, 
 
@@ -29,6 +29,8 @@ if you're not getting the output you expect you can use `-v` or `-vv` for verbos
 in fact, lets try connecting to  googles dns service on UDP 53 (put the -u before the host)
 
 `nc -vv -u 8.8.8.8 53`{{execute}}
+
+should return: Connection to 8.8.8.8 53 port [udp/domain] succeeded!
 
 Next up, lets try a little port scanning with `-z`, and this time like tcpdump we'll use `-n` to suppress name resolution. The last argument here specifies the port range 1 to 30
 # WIP isn't resolving host02 - ip addr works

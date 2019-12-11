@@ -4,8 +4,8 @@ tip!
 try not to use the 'auto execute', but actually type the commands in, you'll retain the information for longer.   
 
 hint:
-ctrl-L refreshes the terminal, just like `clear`
-you may need to run these with sudo needing on your setup
+ctrl-L refreshes the terminal, just like `clear`,
+not seeing the prompt? press enter.
 
 warning:
 as usual, don't try on production systems unless you know what you're doing!
@@ -52,14 +52,14 @@ Look for DNS traffic using UDP on port 53
 `tcpdump -i ens3 udp -c 3 -nt -u port 53`{{ execute }}
 
 Not getting any output? Try a ping in another terminal (remember that the system will cache the result so you'll need to ping another site to get a new dns request)
-`ping www.bbc.com -c 10`{{ execute HOST01 T2}}
+`ping www.bbc.com -c 10`{{ execute T2}}
 
 
 Lets look for incoming traffic from host02
 `tcpdump -i ens3  -c 3 -v -nt src host host02`{{ execute }}
 
 And lets send a ping from host02
-`ping host01 -c 4`{{ execute host02 }}
+`ping host01 -c 4`{{ execute HOST02 }}
 
 the more complex ones you should inc in "", so lets look for incoming traffic of type ssh.
 `tcpdump -i ens3  -c 3 -v -nt "src host host02 || src port 22"`{{ execute }}
