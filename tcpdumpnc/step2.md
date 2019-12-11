@@ -8,7 +8,8 @@ Lets see if ssh is running on port 22 on this server, since tcp protocol is the 
 
 we'll see a responce back from the server `SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3` 
 
-`echo stop`{{ execute }}
+`echo stop`{{ execute }} 
+or ctrl-L
 
 
 
@@ -37,5 +38,5 @@ Looks like ssh is only open in this range
 
 ### resources
 
-(wikipedia with examples)[https://en.wikipedia.org/wiki/Netcat]
-(netcat offical site)[http://nc110.sourceforge.net/]
+[wikipedia with examples](https://en.wikipedia.org/wiki/Netcat)
+[netcat offical site](http://nc110.sourceforge.net/)

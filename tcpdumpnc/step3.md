@@ -13,8 +13,10 @@ Enter yes when prompted.
 
 Lets capture some packets (stop after 30s ctrl-c)
 
-`tcpdump -i ens3 -c 5 -w tcpdump.pcap` {{ execute }}
+`tcpdump -i ens3 -c 5 -w tcpdump.pcap`{{ execute }}
 
 And take a look through tshark
 `tshark -r tcpdump.pcap`{{ execute }}
+
+WIP Remove finiah json
 

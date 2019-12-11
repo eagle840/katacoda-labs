@@ -49,10 +49,10 @@ to really shorten up the output try `-q` minimum,  `-t` no time stamps
 ### Lets try some basic filters
 
 Look for DNS traffic using UDP on port 53
-`tcpdump -i ens3 udp -c 3 -nt -u port 53` {{ execute }}
+`tcpdump -i ens3 udp -c 3 -nt -u port 53`{{ execute }}
 
 Not getting any output? Try a ping in another terminal (remember that the system will cache the result so you'll need to ping another site to get a new dns request)
-`ping www.bbc.com -c 4`{{ execute T2}}
+`ping www.bbc.com -c 10`{{ execute HOST01 T2}}
 
 
 Lets look for incoming traffic from host02
@@ -69,7 +69,7 @@ lets take a look at what sending in those ssh packets.
 WIP COMPLETE LAST STATEMENT
 
 You can always check the offical man page for more details:
-(www.tcpdump.org)[https://www.tcpdump.org/manpages/tcpdump.1.html]
+[www.tcpdump.org](https://www.tcpdump.org/manpages/tcpdump.1.html)
 
 #### basic commands
 
@@ -101,4 +101,4 @@ WIP: BUT THE FOLLOWING ABOVE
   7. ether host <mac>    to filter my mac
   8. tcp udp      ipv6
   9. you can also filer on flags (see man)
-  10. logical operaters AND = &&, OR = ||, NOT = !  
+  10. logical operaters (depending on the os) and = &&, or = ||, not = !  

@@ -1,5 +1,5 @@
 ## Install Jekyll
-
+### WIP: do I need the editor, but just one terminal
 In this scenario ruby is already installed, but to install it on your system (linux):
 `apt install ruby -y`
 
