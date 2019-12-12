@@ -51,18 +51,21 @@ to really shorten up the output try `-q` minimum,  `-t` no time stamps
 Look for DNS traffic using UDP on port 53
 `tcpdump -i ens3 udp -c 3 -nt -u port 53`{{ execute }}
 
-Not getting any output? Try a ping in another terminal (remember that the system will cache the result so you'll need to ping another site to get a new dns request)
 
-execute T3 `ping www.bbc.com -c 3`{{ execute T3}}
-
+And lets send a ping to trigger a dns request (type yes when prompted)
+`ssh root@host01 ping -c 5 www.bbc.com`{{execute HOST2}}
 
 
 
 Lets look for incoming traffic from host02
+
 `tcpdump -i ens3  -c 3 -v -nt src host host02`{{ execute }}
 
-And lets send a ping from host02
-`ping host01 -c 4`{{ execute HOST02 T1}}
+And lets send a ping (type yes when prompted)
+
+`ssh root@host01 ping -c 5 www.bbc.com`{{execute HOST2}}
+ 
+
 
 the more complex ones you should inc in "", so lets look for incoming traffic of type ssh.
 `tcpdump -i ens3  -c 3 -v -nt "src host host02 || src port 22"`{{ execute }}

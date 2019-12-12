@@ -20,7 +20,7 @@ Lets setup a simple server on host1 with `-l` for listen and on port 1234 `-p 12
 and connect to it on the other server - host2
 
 Connnect to host02 and run.
-`nc host01 1234`{{ execute HOST02 }}
+`nc host01 1234`{{ execute HOST2 }}
 
 Now try sending messages between each server, 
 
