@@ -1,14 +1,14 @@
 `echo "plain execute"`{{execute}}
 
-`echo "execute T1"`{{ excute T1 }}
+`echo "execute T1"`{{ execute T1 }}
 
-`echo "execute T2"`{{ excute T2 }}
+`echo "execute T2"`{{ execute T2 }}
 
-`echo "execute T3"`{{ excute T3 }}
+`echo "execute T3"`{{ execute T3 }}
 
-`echo "execute HOST01"`{{ execute HOST01 }}
+`echo "execute HOST1"`{{ execute HOST1 }}
 
 
-`echo "execute HOST02"`{{ execute HOST02 }}
+`echo "execute HOST2"`{{ execute HOST2 }}
 
-`echo "execute HOST02 T1"`{{ execute HOST02 T1 }}
+`echo "execute HOST2 T1"`{{ execute HOST2 T1 }}
