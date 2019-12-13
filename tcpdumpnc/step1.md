@@ -45,6 +45,24 @@ to really shorten up the output try `-q` minimum,  `-t` no time stamps
 
 `tcpdump -i ens3 -c 5 -nqt`{{ execute }}
 
+#### basic commands
+
+```
+ tcpdump    
+    -D  # list the available interfaces
+    -i <int name>  or any
+    -c<#>  number of packets to capture
+    -n      do not look up dns
+    -s<#>   capture this much of a packet   max: 65335 just header: 64   0: max
+    -S      do not show seq numbers, first capture shows complete seq num, rest show relipahte
+    -e      show macs\' 
+    -XX     more pkt detail   -A    more compact   -v -vv -vvv  -K ignore tcpdump collection errors
+    -q      minimum output
+    -t      no time,  -tt -ttttt max time info
+    -w <filename.pcap>   # capture into a file, -v to show \ of pkts capture while in progress
+    -r <file>   read file
+```
+
 
 ### Lets try some basic filters
 
@@ -70,33 +88,12 @@ And lets send a ping (type yes when prompted)
 the more complex ones you should inc in "", so lets look for incoming traffic of type ssh.
 `tcpdump -i ens3  -c 3 -v -nt "src host host02 || src port 22"`{{ execute }}
 
-lets take a look at what sending in those ssh packets.
 
-WIP COMPLETE LAST STATEMENT
-
-You can always check the offical man page for more details:
 [www.tcpdump.org](https://www.tcpdump.org/manpages/tcpdump.1.html)
 
-#### basic commands
 
-WIP: BUT THE FOLLOWING ABOVE
-```
- tcpdump    
-    -D  # list the available interfaces
-    -i <int name>  or any
-    -c<#>  number of packets to capture
-    -n      do not look up dns
-    -s<#>   capture this much of a packet   max: 65335 just header: 64   0: max
-    -S      do not show seq numbers, first capture shows complete seq num, rest show relipahte
-    -e      show macs\' 
-    -XX     more pkt detail   -A    more compact   -v -vv -vvv  -K ignore tcpdump collection errors
-    -q      minimum output
-    -t      no time,  -tt -ttttt max time info
-    -w <filename.pcap>   # capture into a file, -v to show \ of pkts capture while in progress
-    -r <file>   read file
-    ```
 
-### filters
+#### filters
 
   1. host \<ip> or <dns name>
   2. net <cidr addr eg 10.0.0.0/24>

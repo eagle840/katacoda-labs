@@ -12,7 +12,6 @@ we'll see a responce back from the server `SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0
 or ctrl-L
 
 
-
 Lets setup a simple server on host1 with `-l` for listen and on port 1234 `-p 1234
 
 `nc -l -p 1234`{{execute}}
@@ -33,8 +32,9 @@ in fact, lets try connecting to  googles dns service on UDP 53 (put the -u befor
 should return: Connection to 8.8.8.8 53 port [udp/domain] succeeded!
 
 Next up, lets try a little port scanning with `-z`, and this time like tcpdump we'll use `-n` to suppress name resolution. The last argument here specifies the port range 1 to 30
-# WIP isn't resolving host02 - ip addr works
+
 `nc -vv -z  host02 1-30`{{execute}}
+
 Looks like ssh is only open in this range
 
 
