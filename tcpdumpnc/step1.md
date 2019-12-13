@@ -86,10 +86,10 @@ And lets send a ping (type yes when prompted)
 
 
 the more complex ones you should inc in "", so lets look for incoming traffic of type ssh.
-`tcpdump -i ens3  -c 3 -v -nt "src host host02 || src port 22"`{{ execute }}
+`tcpdump -i ens3  -c 3 -v -nt "src host host02 || src port 22"`{{ execute HOST1 }}
 
 
-[www.tcpdump.org](https://www.tcpdump.org/manpages/tcpdump.1.html)
+[www.tcpdump.org  man page for tcpdump](https://www.tcpdump.org/manpages/tcpdump.1.html)
 
 
 

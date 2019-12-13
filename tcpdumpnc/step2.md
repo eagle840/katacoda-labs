@@ -21,7 +21,7 @@ and connect to it on the other server - host2
 Connnect to host02 and run.
 `nc host01 1234`{{ execute HOST2 }}
 
-Now try sending messages between each server, 
+Now try sending messages between each server, to quit just use ctrl-L
 
 if you're not getting the output you expect you can use `-v` or `-vv` for verbose output to help trouble shoot.
 
@@ -41,4 +41,5 @@ Looks like ssh is only open in this range
 ### resources
 
 [wikipedia with examples](https://en.wikipedia.org/wiki/Netcat)
+
 [netcat offical site](http://nc110.sourceforge.net/)

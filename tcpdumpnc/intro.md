@@ -1,4 +1,4 @@
-## (in progress)
+
 
 In this scenario/lab we will get an overview of three networking troubleshooting tools: tcpdump, netcat (nc) & wireshark(tshark) on a couple of  Ubuntu linux servers.
 

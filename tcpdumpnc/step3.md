@@ -18,5 +18,9 @@ Lets capture some packets (stop after 30s ctrl-c)
 And take a look through tshark
 `tshark -r tcpdump.pcap`{{ execute }}
 
+And finally we'll all done with this lab. Feel free to play around, the lab is available for 1hr and nothing is saved. 
+
+As usually Google is your friend, to find some examples to play around with.
+
 
 
