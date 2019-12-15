@@ -1,0 +1,1 @@
+Install a single standalone spark server and try a few python and scala commands

@@ -8,9 +8,20 @@ in this case we will be setting the pod network to a custom cidr since calico is
 `kubeadm config images pull`{{execute}}  # used for troubleshooting at this time
 `kubeadm init --pod-network-cidr 192.168.0.0/16`{{execute}}
 
-After the install on the master is complete, copy the cmd at the end of the output to init a second node in the bottom terminal.
+After kubeadmin completes we need to complete two other process', copy the config to the ~/.kube file and run the join command on the second node.
 
-Scroll up a little more in the top terminal output, and you'll see three lines to setup the kubectl config, starting with mkdir. Run these three cmds in the top terminal.
+
+You'll see the join command at the end off the kubeadm init, copy that and paste it into the second node in the bottom terminal.
+
+To config the config file over just  look a little further up in the kubeadm init, or just copy and paste this into the top terminal.
+
+```
+mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```{{copy}}
+
+
 
 Lets check the nodes:
 `k get nodes`{{execute}}
