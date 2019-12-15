@@ -31,8 +31,10 @@ export PATH=$PATH:$SPARK_HOME/bin
 check JAVA
 `echo $JAVA_HOME`{{execute}}
 shoud equal
-`JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre`
+`JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre`{{execute}}
 
 spark-shell
 
-http://ipaddress:4040
+
+
+ https://[[HOST_SUBDOMAIN]]-4040-[[KATACODA_HOST]].environments.katacoda.com
