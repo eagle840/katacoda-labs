@@ -18,9 +18,13 @@ FOLLOW the url link and select a http (ie non ssl) resource
 
 ```
 mv spark-2.4.4-bin-hadoop2.7 /usr/local/ # should /spark  not spark-2.4.4.....
+
 sudo ln -s /usr/local/spark-2.4.4-bin-hadoop2.7/ /usr/local/spark   # create link
+
 export SPARK_HOME=/usr/local/spark
+
 export PATH=$PATH:$SPARK_HOME/bin
+
 . ~/.profile
 ```
 
