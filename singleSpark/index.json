@@ -26,7 +26,10 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal",
+    "dashboards": [{"name": "URL", "href": "https://www.google.co.uk"},
+      {"name": "Port 80", "port": 80},
+      {"name": "Placeholder", "href": "https://[[HOST_SUBDOMAIN]]-4040-[[KATACODA_HOST]].environments.katacoda.com"}]
   },
   "backend": {
     "imageid": "ubuntu"
