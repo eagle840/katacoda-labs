@@ -1,3 +1,16 @@
+## Local Port Forwarding.
+
+try curl from host 1  for workcomputer
+`curl <IP>`
+
+iptables -A OUTPUT -d <ip of node01> -p tcp --dport:80 -j REJECT
+WIP: block outgoing port on host01 to 80
+
+check
+
+curl <IP>
+
+
 
 
 We're at work on host 1

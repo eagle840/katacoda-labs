@@ -5,6 +5,12 @@ step 4: reverse tunneling
 
 free reverse ssh tunnel at https://serveo.net
 
+SSH client: 
+
+SSH server:
+   [openSSH (now on windows 10)](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_overview) 
+
+
 
 resources:
 https://www.youtube.com/watch?v=AtuAdk4MwWw
