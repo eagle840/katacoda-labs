@@ -19,8 +19,8 @@ and we should get back some html
 
 
 ### CHECK SSH SERVER
-make sure ssh server is running
-`system status | grep -i ssh`{{execute}}
+Lets see if a ssh service is running on this machine.
+`systemctl status | grep -i ssh`{{execute}}
 
 It appears ssh is running as ssh.service
 

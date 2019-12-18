@@ -30,11 +30,11 @@ damn it, those admin's at work are blocking us!
 since 3386 is blocked outgoing from were we are, lets try port 8181 to connect to our ssh server.
 Our ssh server will then 'reconnect' to our home server with 3386
 
-`ssh -L 8181:host01:80`  root@host01
+`ssh -L 8181:host01:80  root@host01'{{execute HOST2}}
 
 Lets take a look at the man for ssh -L
 
- 
+``` 
 -L \[Bind_address:]port:remote_socket
  
 -L local_socket:host:hostport
@@ -44,4 +44,4 @@ Specifies that connections to the given TCP port or Unix socket on the local (cl
 Port forwardings can also be specified in the configuration file. Only the superuser can forward privileged ports. IPv6 addresses can be specified by enclosing the address in square brackets.
 
 By default, the local port is bound in accordance with the GatewayPorts setting. However, an explicit bind_address may be used to bind the connection to a specific address. The bind_address of “localhost” indicates that the listening port be bound for local use only, while an empty address or ‘*’ indicates that the port should be available from all interfaces.
-
+```

@@ -2,7 +2,7 @@
 
 to bypass work proxy/fw for 80/443?
 
-`ssh -D 8181 root@host01`{{execute HOST02}}
+`ssh -D 8181 root@host01`{{execute HOST2}}
 
 and set your work browser socks proxy to localhost:8181
 
