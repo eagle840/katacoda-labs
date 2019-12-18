@@ -6,7 +6,11 @@ In this scenario ruby is already installed, but to install it on your system (li
 Lets do a quick version check to  make sure ruby, and it's package manager are installed,
 `ruby -v ; gem -v`{{execute}}
 
-Install jekyll  using the ruby package manager 'gem' (takes  a couple of minutes)
+Lets take a quick look at that 'Gems' are installed.
+
+`gem install jekyll-theme-cayman`{{execute}}
+
+Install jekyll (& bundler)  using the ruby package manager 'gem' (takes  a couple of minutes)
 `gem install jekyll bundler`{{execute}}
 
 And check the version/install.
