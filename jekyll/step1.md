@@ -8,7 +8,7 @@ Lets do a quick version check to  make sure ruby, and it's package manager are i
 
 Lets take a quick look at that 'Gems' are installed.
 
-`gem install jekyll-theme-cayman`{{execute}}
+`gem list --local`{{execute}}
 
 Install jekyll (& bundler)  using the ruby package manager 'gem' (takes  a couple of minutes)
 `gem install jekyll bundler`{{execute}}
