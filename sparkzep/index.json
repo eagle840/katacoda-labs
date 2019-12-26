@@ -1,5 +1,5 @@
 {
-  "title": "Setup a spark /w zepelin",
+  "title": "Setup a spark /w zepelin (in progress)",
   "description": "setup a small spark cluster on k8s with Zepelin",
   "difficulty": "Advanced",
   "time": "60",
