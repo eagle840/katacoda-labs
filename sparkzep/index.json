@@ -22,6 +22,12 @@
         "text": "step4.md"
       }
     ],
+    "assets": {
+      "master": [
+        {"file": "webui-svc.yaml", "target": "/root/"},
+        {"file": "zeppelin-svc.yaml", "target": "/root/"}
+      ]
+    },
     "intro": {
       "text": "intro.md"
     },
@@ -34,13 +40,6 @@
   },
   "backend": {
     "imageid": "kubernetes-cluster-running"
-  },
-  "details": {
-    "assets": {
-      "master": [
-        {"file": "webui-svc.yaml", "target": "/root/"},
-        {"file": "zeppelin-svc.yaml", "target": "/root/"}
-      ]
-    }
   }
+  
 }
