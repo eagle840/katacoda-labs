@@ -38,7 +38,7 @@
   "details": {
     "assets": {
       "master": [
-        {"file": "webui.svc.yaml", "target": "/root/"},
+        {"file": "webui-svc.yaml", "target": "/root/"},
         {"file": "zeppelin-svc.yaml", "target": "/root/"}
       ]
     }
