@@ -1,5 +1,5 @@
 {
-  "title": "Setup a spark /w zepelin (in progress)",
+  "title": "Setup a spark /w zeppelin (in progress)",
   "description": "setup a small spark cluster on k8s with Zepelin",
   "difficulty": "Advanced",
   "time": "60",
@@ -37,7 +37,7 @@
   },
   "details": {
     "assets": {
-      "host01": [
+      "master": [
         {"file": "webui.svc.yaml", "target": "/root/"},
         {"file": "zeppelin-svc.yaml", "target": "/root/"}
       ]
