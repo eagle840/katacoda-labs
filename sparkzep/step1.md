@@ -28,7 +28,7 @@ WIP: code for the yaml files into the project
 
 `k create -f webui-svc.yaml`{{execute}}
 
-and connect to http 32329   to view the spark master status
+and connect to http 32329   to view the spark master status (takes a minute or two to come up)
 
 https://[[HOST_SUBDOMAIN]]-32329-[[KATACODA_HOST]].environments.katacoda.com
 
@@ -36,7 +36,13 @@ https://[[HOST_SUBDOMAIN]]-32329-[[KATACODA_HOST]].environments.katacoda.com
 
 WIP: why are the worker nodes showing  1024, it should be 512?
 
-https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
+`k get svc sparkzep-zeppelin-contro`{{execute}}
+
+`k delete svc sparkzep-zeppelin-contro`{{execute}}
+
+`k create -f zeppelin-svc.yaml`{{execute}}
+
+https://[[HOST_SUBDOMAIN]]-30466-[[KATACODA_HOST]].environments.katacoda.com
 
 
 
