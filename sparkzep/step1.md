@@ -22,17 +22,23 @@ The helm chart for this deployment creats 2 ext LB's but we need to change them 
 
 WIP: code for the yaml files into the project
 
-k get svc sparkzep-spark-webui
+`k get svc sparkzep-spark-webui`{{execute}}
 
-k delete svc sparkzep-spark-webui
+`k delete svc sparkzep-spark-webui`{{execute}}
 
-k create -f webui-svc.yaml
+`k create -f webui-svc.yaml`{{execute}}
 
 and connect to http 32329   to view the spark master status
+
+https://[[HOST_SUBDOMAIN]]-32329-[[KATACODA_HOST]].environments.katacoda.com
 
 /* note that the web ui shows 7077, k8s is redirecting this to 32329 and that you can't conect to any node 
 
 WIP: why are the worker nodes showing  1024, it should be 512?
+
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
+
+
 
 
 

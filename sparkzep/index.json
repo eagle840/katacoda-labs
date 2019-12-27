@@ -34,5 +34,13 @@
   },
   "backend": {
     "imageid": "kubernetes-cluster-running"
+  },
+  "details": {
+    "assets": {
+      "host01": [
+        {"file": "webui.svc.yaml", "target": "/root/"},
+        {"file": "zeppelin-svc.yaml", "target": "/root/"}
+      ]
+    }
   }
 }
