@@ -23,6 +23,11 @@ wip `python -m pip install findspark`{{execute}}
 wip: appears to be running on localhost:4040 only, change to allow internet
 `jupyter lab` or  notebook
 
+lets start jupyter with the --ip option, since the default it only for localhost
+`jupyter lab --allow-root --ip=0.0.0.0`{{execute}}
+
+- starts on port 8888
+
 Download Spark:
 `curl -O http://apache.mirrors.nublue.co.uk/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz`{{execute}}
 OR grab the url from https://spark.apache.org/downloads.html
