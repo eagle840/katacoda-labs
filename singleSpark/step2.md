@@ -4,16 +4,18 @@ and well do the scala demo's
 
 You should now see: scala>
 
+Let's check out the help function:
 
+`:help`{{execute}}
 
-`val textFile = spark.read.textFile("README.md")`{{execute}}
+`val textFile = spark.read.textFile("/usr/local/spark/README.md")`{{execute}}
 
 `textFile.count()`{{execute}}
 
-`textFile.count() // Number of items in this Dataset`{{execute}}
+wip remove line `textFile.count() // Number of items in this Dataset`{{execute}}`
 
-textFile.first() // First item in this Dataset
+`textFile.first()`{{execute}} // First item in this Dataset
 
-val linesWithSpark = textFile.filter(line => line.contains("Spark"))
+`val linesWithSpark = textFile.filter(line => line.contains("Spark"))`{{execute}}
 
-textFile.filter(line => line.contains("Spark")).count() // How many lines contain "Spark"?
+`textFile.filter(line => line.contains("Spark")).count()`{{execute}} // How many lines contain "Spark"?

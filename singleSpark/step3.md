@@ -1,6 +1,6 @@
 Now we'll the Python demo.
 
-exit scale
+exit scale with `:quit`
 
 and run 
 `pyspark`{{execute}}
