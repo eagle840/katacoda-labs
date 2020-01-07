@@ -25,6 +25,8 @@ Any time you need to break out of a cmd use ctrl-c, or click here:
 
 ### simple commands
 
+Lets take a quick look at help,
+
  `tcpdump -h`{{execute}}
 
 and lets see what interfaces are available on this machine
@@ -81,7 +83,7 @@ Lets look for incoming traffic from host02
 
 And lets send a ping (type yes when prompted)
 
-`ssh root@host01 ping -c 5 www.bbc.com`{{execute HOST2}}
+`ssh root@host01 ping -c 3 www.bbc.com`{{execute HOST2}}
  
 
 

@@ -5,7 +5,7 @@ exit scale with `:quit`
 and run 
 `pyspark`{{execute}}
 
-`textFile = spark.read.text("spark/README.md")`{{execute}}
+`textFile = spark.read.text("/usr/local/spark/README.md")`{{execute}}
 
 `textFile.count()  # Number of rows in this DataFrame`{{execute}}
 

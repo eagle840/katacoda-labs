@@ -9,7 +9,7 @@ Lets see if ssh is running on port 22 on this server, since tcp protocol is the 
 we'll see a responce back from the server `SSH-2.0-OpenSSH_7.6p1 Ubuntu-4ubuntu0.3` 
 
 `echo stop`{{ execute }} 
-or ctrl-L
+or ctrl-C
 
 
 Lets setup a simple server on host1 with `-l` for listen and on port 1234 `-p 1234
@@ -18,7 +18,7 @@ Lets setup a simple server on host1 with `-l` for listen and on port 1234 `-p 12
 
 and connect to it on the other server - host2
 
-Connnect to host02 and run.
+Connnect to Terminal Host 2 and run.
 `nc host01 1234`{{ execute HOST2 }}
 
 Now try sending messages between each server, to quit just use ctrl-L
