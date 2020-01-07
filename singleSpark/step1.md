@@ -60,7 +60,7 @@ check JAVA
 shoud equal
 `JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre`{{execute}}
 
-Lets start spark
+Lets start the spark shell (scala), with includes the webui (you'll see logs)
 `spark-shell`{{execute}}
 
 
