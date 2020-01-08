@@ -1,29 +1,29 @@
 # PRE-SETUP
 
-This scenario is presently in the design process, things may not work
+This scenario is presently in the design process, things may not work.
 
-Setup the k8s cluster with kubeadm - this will take a minute
-in this case we will be setting the pod network to a custom cidr since calico is already to use it:
+WIP: Work In Progress
 
-`kubeadm config images pull`{{execute}}  # used for troubleshooting at this time
+First lets setup the k8s cluster with kubeadm - this will take a minute -
+in this case we will be setting the pod network to a custom cidr since calico is already to use it, and downloading the images before executing the kubeadm init.
+
+`kubeadm config images pull`{{execute}}  
 `kubeadm init --pod-network-cidr 192.168.0.0/16`{{execute}}
 
-After kubeadmin completes we need to complete two other process', copy the config to the ~/.kube file and run the join command on the second node.
+After kubeadmin completes we need to complete two other process', 
+* copy the config to the ~/.kube file and 
+* run the join command on the second node.
 
 
-You'll see the join command at the end off the kubeadm init, copy that and paste it into the second node in the bottom terminal.
+You'll see the join command at the end off the `kubeadm init` stdout, but  if you scroll up alittle you'll see the commands to setup the config file to have kubectl work with this cluster. Copy that and paste it into the second node in the bottom terminal.
 
-To config the config file over just  look a little further up in the kubeadm init, or just copy and paste this into the top terminal.
+If you run `kubectl get nodes` you should see the master running
 
-```
-mkdir -p $HOME/.kube
-  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-  sudo chown $(id -u):$(id -g) $HOME/.kube/config
-```{{copy}}
+Now copy the kubeadmin init command at the end of the stdout on the lower terminal and it will install kubernetes on that node for this cluster.
 
 
 
-Lets check the nodes:
+Now lets check the nodes running on this cluster again, you should see two.:
 `k get nodes`{{execute}}
 You'll see it's not totally ready since we don't have a network solution working.
 
