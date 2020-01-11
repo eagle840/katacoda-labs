@@ -1,8 +1,9 @@
 # Setup keycloak
 
 Let's do some updates
+
 `apt update -y`{{execute}}
-`apt install openjdk-8-jre-headless`{{execute}}
+`apt install openjdk-8-jre-headless -y`{{execute}}
 
 
 Let's start by downloading the Keycloak distribution:
@@ -11,16 +12,16 @@ Let's start by downloading the Keycloak distribution:
 
 and unzip it:
 
-`unzip keycloak-7.0.0.zip`
+`unzip keycloak-7.0.0.zip`{{execute}}
 
-`cd keycloak-7.0.0/bin`
+`cd keycloak-7.0.0/bin`{{execute}}
 
 And run this script to add a admin user:
 
-`./add-user-keycloak.sh -r master -u admin -p admin`
+`./add-user-keycloak.sh -r master -u admin -p admin`{{execute}}
 
-and the server
-`./standalone.sh -b 0.0.0.0`
+and start the server (about 2mins)
+`./standalone.sh -b 0.0.0.0`{{execute}}
 
 
 Login to the Keycloak Admin Console at:
