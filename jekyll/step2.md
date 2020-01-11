@@ -11,9 +11,11 @@ Lets cd to that folder and take a look
 
 `tree ~/my_blog`{{execute}}
 
-You'll also note markdown files in here, jekyll process' these into html files for the website on build
-and an additional ruby gem (package) has been added to the gemfile to add a theme to the site.
-We'll need to rebundle jekyll.
+
+The `new` command has automatically created the gem files, you'll also note markdown files in here, jekyll process' these into html files for the website on build
+and an additional ruby gem (package) has been added to the gemfile to add a theme to the site - which was been configured into the _config file.
+
+We'll need to rebundle jekyll to account for the new gem files.
 (more about the theme)[https://rubygems.org/gems/minima]
 
 `bundle`{{execute}}
