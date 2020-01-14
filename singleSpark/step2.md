@@ -1,8 +1,15 @@
+# Run Scala 
 Head over to 
 https://spark.apache.org/docs/latest/quick-start.html
-and well do the scala demo's
+and we'll do the scala demo's
 
-You should now see: scala>
+To run spark-shell on this machine, just type spark-shell
+
+`spark-shell`{{execute}}
+You should now see: `scala>`
+
+to exit just type `:q`
+
 [need a refresher on scala?, try leanxinyminutes.com](https://learnxinyminutes.com/docs/scala/)
 
 Let's check out the help function:
