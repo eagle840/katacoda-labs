@@ -16,6 +16,10 @@
       {
         "title": "Step 3",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
       }
     ],
     "intro": {
@@ -27,8 +31,16 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "dashboards": [{"name": "URL", "href": "https://www.google.co.uk"},
-      {"name": "Placeholder", "href": "https://[[HOST_SUBDOMAIN]]-4040-[[KATACODA_HOST]].environments.katacoda.com"}]
+    "dashboards": [
+      {
+        "name": "URL",
+        "href": "https://www.google.co.uk"
+      },
+      {
+        "name": "Placeholder",
+        "href": "https://[[HOST_SUBDOMAIN]]-4040-[[KATACODA_HOST]].environments.katacoda.com"
+      }
+    ]
   },
   "backend": {
     "imageid": "ubuntu"
