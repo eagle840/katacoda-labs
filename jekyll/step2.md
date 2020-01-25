@@ -22,8 +22,16 @@ We'll need to rebundle jekyll to account for the new gem files.
 
 The additional ruby gem is 'minina', which we'll take a look at a little further down.
 
+The new site we've created is a scaffold, and you'll see that there is no _site folder in here 
+and we need to create our new site with the build command:
 
-We'll open a new terminal window and get jekyll serve running
+`jekyll build`{{execute}}
+
+`tree ~/my_blog`{{execute}}
+
+
+We'll open a new terminal window and get jekyll serve running to view the site.
+
 On the top of the terminal, next to 'terminal' click on the + sign and 'open new terminal' 
 and start up the jekyll serve
 

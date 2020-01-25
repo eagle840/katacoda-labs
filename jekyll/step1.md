@@ -1,13 +1,12 @@
 ## Install Jekyll
-### WIP: do I need the editor, but just one terminal
+
 In this scenario ruby is already installed, but to install it on your system (linux):
 `apt install ruby -y`
 
 Lets do a quick version check to  make sure ruby, and it's package manager are installed,
 `ruby -v ; gem -v`{{execute}}
 
-Lets take a quick look at that 'Gems' are installed.
-
+Lets take a quick look at that 'Gems' are installed. 
 `gem list --local`{{execute}}
 
 Install jekyll (& bundler)  using the ruby package manager 'gem' (takes  a couple of minutes)
@@ -29,7 +28,7 @@ Bundle it
 
 
 ## Build out first website
-Create a index.html
+Create a index.html (note that jekyll will process markdown as well, and process over html)
 
 ```bash
 cat <<EOF > index.html
@@ -58,12 +57,12 @@ Lets start using jekyll to  build, and then serve  our website (only run it in y
 
 
 
-you'll notice that a folder _site has been created. Make sure you make no changes in this folder for now, it's the content for the generated site. (the option --watch will continue to update)
+you'll notice that a folder _site has been created. Make sure you make no changes in this folder for now, it's the content for the generated site. 
 Look at the index.html in _site, you'll notice its the same in your home folder right now. As we add content it will auto generate pages.
 
 `cat ~/_site/index.html`{{execute}}
 
-It should be the same as the orginal index.html
+For now it should be the same as the orginal index.html
 
 
 ### A little bit of Liquid
