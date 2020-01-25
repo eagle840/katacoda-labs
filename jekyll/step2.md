@@ -11,10 +11,17 @@ Lets cd to that folder and take a look
 
 `tree ~/my_blog`{{execute}}
 
-
-The `new` command has automatically created the gem files, you'll also note markdown files in here, jekyll process' these into html files for the website on build
+The `new` command has automatically created the gem files, you'll also note markdown/html files in here, 
 and an additional ruby gem (package) has been added to the gemfile to add a theme to the site - which was been configured into the _config file.
+For this new site a theme has automatically been installed called 'minina'.
+Take  a look at the _config and gem file to see where they are listed.
 
+`cat _config.yml`{{execute}}
+`cat Gemfile`{{exexute}}
+
+Themes are used a lot in jekyll, and you'll need to read the info on it before you use it. For 'minina' see https://github.com/jekyll/minima. 
+
+WIP: why do we need to bundle? I ran serve and it shows correct!
 We'll need to rebundle jekyll to account for the new gem files.
 (more about the theme)[https://rubygems.org/gems/minima]
 
@@ -37,6 +44,7 @@ and start up the jekyll serve
 
 `cd ~/my_blog`{{execute T2}}
 
+WIP lets run this as a job in the background as opposed to a new terminal
 `jekyll serve --host 0.0.0.0`{{execute T2}}
 
 You should see the new content the web page you opened in the last stage.
@@ -51,8 +59,13 @@ Note that jekyll should be run in the folder you have the contents in, in this c
 
 ### Creating Posts
 
-Looking at the webpage you'll notice that a post is presented, jekyll/minina display as default the posts in the _posts folder.
-Lets add another post, note the format of the file name, which is required.
+Lets take a look at the webpage, you'll notice 'Posts' right in the middle, (we'll get to general pages in the next part).
+
+Posts are all kept in the _post folder, as you can see there is one already there.
+
+`tree`{{execute}}
+
+Lets add another post, note the format of the file name: YYYY-MM-DD-post-title.md, which is required. (spaces should be replaces with dashes)
 
 ```html
 cat <<EOF > _posts/2018-08-20-bananas.md
@@ -73,29 +86,6 @@ EOF
 
 refreshing the web page, you'll see the post added.
 
-### Layouts
-Lets create your 1st layout, _layouts/default.html
-Layouts lets you define templates for your content, setting a layout on the front matter of the lay your working on allow you to define the layout templete for that page.
-
-`mkdir ~/my_blog/_layouts`{{execute}}
-
-
-```html
-cat <<EOF > _layouts/default.html
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-  </head>
-  <body>
-    {{ content }}
-  </body>
-</html>
-EOF
-```
-Notice the two liquid cmds: page.title (from front matter) and content.
-(see here for more:)[https://jekyllrb.com/docs/step-by-step/04-layouts/]
 
 
 
@@ -103,6 +93,13 @@ Notice the two liquid cmds: page.title (from front matter) and content.
 You'll be placing your content into 1 of two groups:
 posts: in the _posts folder, these are chronlogicaly listed html or md documents, in the form YYYY-MM-DD-post-title.md - you'll see an example has already been placed, and
 pages: html/md files placed anywhere in the folders
+
+
+### WIP    where is this section???
+
+
+### should we do nav right here?
+
 
 ### Includes
 Another folder is the _includes, allowing you to have a repo of snippets of code to include in to other files.

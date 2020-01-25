@@ -28,7 +28,7 @@ Bundle it
 
 
 ## Build out first website
-Create a index.html (note that jekyll will process markdown as well, and process over html)
+Create a index.html (note that jekyll will process markdown as well as html) by cut (ctrl-insert) and paste (shift-insert) into the terminal.
 
 ```bash
 cat <<EOF > index.html
@@ -57,7 +57,7 @@ Lets start using jekyll to  build, and then serve  our website (only run it in y
 
 
 
-you'll notice that a folder _site has been created. Make sure you make no changes in this folder for now, it's the content for the generated site. 
+you'll notice that a `_site` folder  has been created. Make sure you make no changes in this folder for now, it's the content for the generated site. 
 Look at the index.html in _site, you'll notice its the same in your home folder right now. As we add content it will auto generate pages.
 
 `cat ~/_site/index.html`{{execute}}
@@ -76,10 +76,15 @@ Add the following to the top of index.html
 # front matter
 ---
 ```
+you can use nano to edit the file
+
+`nano index.html`{{execute}}
 
 and replace 
 `<h1>Hello World!</h1>`  in index.html with
 `<h1>{{ "Hello World!" | downcase }}</h1>`
+
+hint: ctrl-o to save and ctrl-x to exit when using nano
 
 run `jekyll build`{{execute}}   again
 and check the _site/index.html,  and you'll see it's removed the front matter and processed Hello World to lower case.
@@ -100,10 +105,27 @@ Lets open this up in a new browser tab:
 
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com
 
-Any changes done will automatically show (except changes to _config.yaml which needs a restart)
+Note the server will output the logs straight to the terminal, and we need to ctrl-c to continue to enter commands.
 
-To stop this server, we'll be starting a new server in the next section.
+Lets stop the service with ctrl-c
 `echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
 
-Lets cleanup a little
-`rm index.html; rm -r _site`{{execute}}
+and start the same process, run running it in the background by adding '&' to the end of the command. 
+
+`jekyll serve --host 0.0.0.0 &`{{execute}}
+
+we can look at the jobs running the the background with:
+
+`jobs`{{execute}}
+
+and using the 'kill' command to end the service (with job number 1)
+`kill %1`{{}}
+
+
+
+When running jekyll serve, any changes to the directory  will automatically show (except changes to _config.yaml which needs a restart of the service)
+
+
+
+We've finished with this section, lets cleanup a little
+`rm index.html; rm -r _site; rm Gemfile; rm Gemfile.lock`{{execute}}
