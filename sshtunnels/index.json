@@ -1,6 +1,6 @@
 {
   "title": "ssh Tunnels",
-  "description": "useing ssh tunnels",
+  "description": "Using ssh tunnels",
   "difficulty": "Intermediate",
   "time": "15 minutes",
   "details": {
@@ -16,6 +16,10 @@
       {
         "title": "Step 3",
         "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step3.md"
       }
     ],
     "intro": {
@@ -29,6 +33,6 @@
     "uilayout": "terminal-terminal"
   },
   "backend": {
-    "imageid": "kubernetes-cluster"
+    "imageid": "docker-swarm"
   }
 }

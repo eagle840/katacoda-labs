@@ -1,24 +1,26 @@
-## use both tcpdump and nc together
+### wireshark
+
+Lets install wireshark for console (tshark)
+`apt-get update -y`{{ execute }}
+
+
+`apt-get install tshark -y`{{ execute }}
+Enter yes when prompted.
+
+
+`which tshark`{{ execute }}
+/usr/bin/tshark
+
+Lets capture some packets (stop after 30s ctrl-c) to file tcpdump.pcap
+
+`tcpdump -i ens3 -c 5 -w tcpdump.pcap`{{ execute }}
+
+And take a look at that file through tshark
+`tshark -r tcpdump.pcap`{{ execute }}
+
+And finally we'll all done with this lab. Feel free to play around, the lab is available for 1hr and nothing is saved. 
+
+As usually Google is your friend, to find some examples to play around with.
 
 
 
-ts isp connections
-
-ping  checking the timeouts for
-    local gw
-    8.8.8.8
-
-    tracert 8.8.8.8
-
-    check router for its, ISP ip and gw
-    try pinging those 2 see timeout
-    try pinging with '-l'  allows your to set size (what about fragmenst)
-
-hopefully the tracert will return an ASN number
-lookit up  - give websites
-Try connecting to looking glass server and back tracert
-try a speed test - give websites
-ping while running speed test (to local asn router)
-
-
-report to your isp,  request a 'line test'

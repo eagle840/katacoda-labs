@@ -3,16 +3,20 @@ step-by-step 2 thro 5
 ### new blog
 Lets start an entirely new site with the command:
 `jekyll new my_blog`{{execute}}
-You'll notice a new folder my_blog creater with jekyll creating some default content in it
 
-Lets cd to that folder
-`cd ./my_blog`{{execute}}
+You'll notice a new folder, my_blog created with jekyll creating some default content in it
+
+Lets cd to that folder and take a look
+`cd ~/my_blog`{{execute}}
 
 `tree ~/my_blog`{{execute}}
 
-You'll also markdown files in here, jekyll process' these into html files for the website.
-and an additional ruby gem (pachage) has been addded to the gemfile to add a theme to the site.
-We'll need to rebundle jekyll.
+
+The `new` command has automatically created the gem files, you'll also note markdown files in here, jekyll process' these into html files for the website on build
+and an additional ruby gem (package) has been added to the gemfile to add a theme to the site - which was been configured into the _config file.
+
+We'll need to rebundle jekyll to account for the new gem files.
+(more about the theme)[https://rubygems.org/gems/minima]
 
 `bundle`{{execute}}
 
@@ -23,19 +27,24 @@ We'll open a new terminal window and get jekyll serve running
 On the top of the terminal, next to 'terminal' click on the + sign and 'open new terminal' 
 and start up the jekyll serve
 
-`cd ~/my_blog`{{execute}}
+`cd ~/my_blog`{{execute T2}}
 
-`jekyll serve --host 0.0.0.0`{{execute}}
+`jekyll serve --host 0.0.0.0`{{execute T2}}
 
 You should see the new content the web page you opened in the last stage.
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com
 
 Jump back to the orginal terminal 1, and we'll continue.
 
-Note that jekyll should be run in the folder you have the contents in.
+`cd ~/my_blog`{{execute T1}}
+
+Note that jekyll should be run in the folder you have the contents in, in this case my_blog. 
+
+
+### Creating Posts
 
 Looking at the webpage you'll notice that a post is presented, jekyll/minina display as default the posts in the _posts folder.
-Lets add another post.
+Lets add another post, note the format of the file name, which is required.
 
 ```html
 cat <<EOF > _posts/2018-08-20-bananas.md

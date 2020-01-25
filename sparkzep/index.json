@@ -1,12 +1,12 @@
 {
-  "title": "Using jekyll to generate static content",
-  "description": "(coming soon) Follow the jekyll step-by-step",
-  "difficulty": "Beginner",
-  "time": "15",
+  "title": "Setup a spark /w zeppelin (in progress)",
+  "description": "setup a small spark cluster on k8s with Zepelin",
+  "difficulty": "Advanced",
+  "time": "60",
   "details": {
     "steps": [
       {
-        "title": "Step 1 Setup Jekyll",
+        "title": "Step 1",
         "text": "step1.md"
       },
       {
@@ -22,6 +22,12 @@
         "text": "step4.md"
       }
     ],
+    "assets": {
+      "master": [
+        {"file": "webui-svc.yaml", "target": "/root/"},
+        {"file": "zeppelin-svc.yaml", "target": "/root/"}
+      ]
+    },
     "intro": {
       "text": "intro.md"
     },
@@ -33,6 +39,7 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "ubuntu1804"
+    "imageid": "kubernetes-cluster-running"
   }
+  
 }

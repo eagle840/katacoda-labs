@@ -12,11 +12,12 @@ Take a quick look at the Ip's on the pods on node01 and master
 Lets pull a couple of troubleshooting images
 `docker pull busybox`{{execute}}
 `docker pull nicolaka/netshoot`{{execute}}
+
 ON BOTH TERMINALSS
 
 
 
-docker run -it --net host nicolaka/netshoot
+`docker run -it --net host nicolaka/netshoot`
 
 
 

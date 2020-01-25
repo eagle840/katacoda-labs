@@ -1,6 +1,6 @@
 # Review CNI & k8S settings
 
-One of the things kubeadm doesn't do is setup the pod networking,  in step 3 we'll getup calico,
+One of the things kubeadm doesn't do is setup the pod networking,  in step 3 we'll setup calico,
 but lets take a quick look at the present system.
 
 ### Check Bridges

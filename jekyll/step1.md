@@ -1,10 +1,20 @@
 ## Install Jekyll
-
+### WIP: do I need the editor, but just one terminal
 In this scenario ruby is already installed, but to install it on your system (linux):
 `apt install ruby -y`
 
-Install jekyll  using the ruby package manager 'gem' (takes  a couple of minutes)
+Lets do a quick version check to  make sure ruby, and it's package manager are installed,
+`ruby -v ; gem -v`{{execute}}
+
+Lets take a quick look at that 'Gems' are installed.
+
+`gem list --local`{{execute}}
+
+Install jekyll (& bundler)  using the ruby package manager 'gem' (takes  a couple of minutes)
 `gem install jekyll bundler`{{execute}}
+
+And check the version/install.
+`jekyll -v`{{execute}}
 
 Generate a Gemfile with:
 `bundle init`{{execute}}
@@ -58,7 +68,7 @@ It should be the same as the orginal index.html
 
 ### A little bit of Liquid
 
-Front matter in the beginning of a page tells Jekyll to process the contents of a page.
+Front matter in the beginning of a page tells Jekyll to process the contents of a page. This front matter can be JSON or YAML.
 Lets add some Liquid template code. In the index.html file in your home folder (not in _site - it's an easy mistake to make)
 
 Add the following to the top of index.html

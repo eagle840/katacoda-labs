@@ -1,40 +1,53 @@
-Overview of tcpdump
+# Overview of tcpdump
 
-try not to use the execute, but actually type the commands in, you'll retain the information for longer.
+tip!
+try not to use the 'auto execute', but actually type the commands in, you'll retain the information for longer.   
 
-uses libpcap library
+hint:
+ctrl-L refreshes the terminal, just like `clear`,
+not seeing the prompt? press enter.
 
-Any time you need to break out of a cmd, click here:
+warning:
+as usual, don't try on production systems unless you know what you're doing!
+
+Lets check if you have tcpdump
+
+`which tcpdump`{{ execute }}
+
+/usr/sbin/tcpdump
+
+And install  if not
+
+`sudo apt install -y tcpdump`
+
+Any time you need to break out of a cmd use ctrl-c, or click here:
 `echo stop`{{ execute }}
-### version check
 
- `tcpdump -h`
+### simple commands
+
+Lets take a quick look at help,
+
+ `tcpdump -h`{{execute}}
 
 and lets see what interfaces are available on this machine
 
 `tcpdump -D`{{ execute }}
 
-since ens3 is our main interface, we'll be using the option `-i ens3`  or -i 1
+since ens3 is our main interface, we'll be using the option `-i ens3`  or `-i 1`
 
 lets capture the next 5 packets transvering ens3
 
-`tcpdump -i ens3 -c 5` {{ execute }}
+`tcpdump -i ens3 -c 5`{{ execute }}
 
 I don't want to see the dns entries
 
 `tcpdump -i ens3 -c 5 -n`{{ execute }}
 
-and lets really shorten it with -q minimum, -t no time stamps
+to really shorten up the output try `-q` minimum,  `-t` no time stamps
 
+`tcpdump -i ens3 -c 5 -nqt`{{ execute }}
 
-### Lets try some basic filters
-the more complex ones you should inc in ""
-
-`tcpdump -i ens3 -c 20 -nt port 22`{{ execute }}
-
-as usual `man tcpdump -h` is your friend
-
-### basic commands
+#### basic commands
 
 ```
  tcpdump    
@@ -50,9 +63,39 @@ as usual `man tcpdump -h` is your friend
     -t      no time,  -tt -ttttt max time info
     -w <filename.pcap>   # capture into a file, -v to show \ of pkts capture while in progress
     -r <file>   read file
-    ```
+```
 
-### filters
+
+### Lets try some basic filters
+
+Look for DNS traffic using UDP on port 53
+`tcpdump -i ens3 udp -c 3 -nt -u port 53`{{ execute }}
+
+
+And lets send a ping to trigger a dns request (type yes when prompted)
+`ssh root@host01 ping -c 5 www.bbc.com`{{execute HOST2}}
+
+
+
+Lets look for incoming traffic from host02
+
+`tcpdump -i ens3  -c 3 -v -nt src host host02`{{ execute }}
+
+And lets send a ping (type yes when prompted)
+
+`ssh root@host01 ping -c 3 www.bbc.com`{{execute HOST2}}
+ 
+
+
+the more complex ones you should inc in "", so lets look for incoming traffic of type ssh.
+`tcpdump -i ens3  -c 3 -v -nt "src host host02 || src port 22"`{{ execute HOST1 }}
+
+
+[www.tcpdump.org  man page for tcpdump](https://www.tcpdump.org/manpages/tcpdump.1.html)
+
+
+
+#### filters
 
   1. host \<ip> or <dns name>
   2. net <cidr addr eg 10.0.0.0/24>
@@ -63,3 +106,4 @@ as usual `man tcpdump -h` is your friend
   7. ether host <mac>    to filter my mac
   8. tcp udp      ipv6
   9. you can also filer on flags (see man)
+  10. logical operaters (depending on the os) and = &&, or = ||, not = !  

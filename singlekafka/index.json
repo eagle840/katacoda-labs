@@ -1,8 +1,8 @@
 {
-  "title": "Using tcpdump, netcat & wireshark",
-  "description": "An introduction to using tcpdump, netcat and wireshark",
-  "difficulty": "Beginner",
-  "time": "30 minutes",
+  "title": "Single kafka install",
+  "description": "Setup kafka on a single ubuntu machine (in progress)",
+  "difficulty": "Intermediate",
+  "time": "1",
   "details": {
     "steps": [
       {
@@ -26,10 +26,9 @@
     }
   },
   "environment": {
-    "uilayout": "terminal-terminal",
-    "hidefinish": true
+    "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "docker-swarm"
+    "imageid": "ubuntu1804"
   }
 }
