@@ -45,6 +45,8 @@ cat <<EOF > index.html
 EOF
 ```
 
+WIP index.html will override the jekyll theme, and not the priority list of the index files and reactions of each
+
 If you need to brush up on your html, ccs and javascript,
 head over to [w3schools](https://www.w3schools.com/) and checkout their interactive tutorials
 

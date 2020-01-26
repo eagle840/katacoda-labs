@@ -13,13 +13,18 @@ Lets cd to that folder and take a look
 
 The `new` command has automatically created the gem files, you'll also note markdown/html files in here, 
 and an additional ruby gem (package) has been added to the gemfile to add a theme to the site - which was been configured into the _config file.
-For this new site a theme has automatically been installed called 'minina'.
+For this new site a theme has automatically been installed called 'minima'.
 Take  a look at the _config and gem file to see where they are listed.
 
 `cat _config.yml`{{execute}}
-`cat Gemfile`{{exexute}}
+`cat Gemfile`{{execute}}
 
-Themes are used a lot in jekyll, and you'll need to read the info on it before you use it. For 'minina' see https://github.com/jekyll/minima. 
+Lets take a look at the gem file for minima, note that it's version 2.5.
+`gem list --local | grep minima`{{execute}}
+
+Themes are used a lot in jekyll, and you'll need to read the info on it before you use it. For 'minima' see https://github.com/jekyll/minima. You'll need to pay attention to the version you're using since they work differently.
+
+WIP https://github.com/jekyll/minima/blob/v2.5.0/README.md
 
 WIP: why do we need to bundle? I ran serve and it shows correct!
 We'll need to rebundle jekyll to account for the new gem files.
