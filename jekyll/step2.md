@@ -42,17 +42,17 @@ We'll open a new terminal window and get jekyll serve running to view the site.
 On the top of the terminal, next to 'terminal' click on the + sign and 'open new terminal' 
 and start up the jekyll serve
 
-`cd ~/my_blog`{{execute T2}}
+`cd ~/my_blog`{{execute}}
 
 WIP lets run this as a job in the background as opposed to a new terminal
-`jekyll serve --host 0.0.0.0`{{execute T2}}
+`jekyll serve --host 0.0.0.0`{{execute}}
 
 You should see the new content the web page you opened in the last stage.
 https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com
 
 Jump back to the orginal terminal 1, and we'll continue.
 
-`cd ~/my_blog`{{execute T1}}
+`cd ~/my_blog`{{execute}}
 
 Note that jekyll should be run in the folder you have the contents in, in this case my_blog. 
 

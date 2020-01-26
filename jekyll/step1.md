@@ -119,7 +119,7 @@ we can look at the jobs running the the background with:
 `jobs`{{execute}}
 
 and using the 'kill' command to end the service (with job number 1)
-`kill %1`{{}}
+`kill %1`{{execute}}
 
 
 

@@ -4,6 +4,10 @@ step-by-step 6 throu 7
 
 ### Layouts   WIP moved to step 3
 
+
+see
+https://stackoverflow.com/questions/38891463/jekyll-default-installation-doesnt-have-layouts-directory
+
 ### WIP: this will destroy the minina layout
 Lets create your 1st layout, _layouts/default.html
 Layouts lets you define templates for your content, setting a layout on the front matter of the lay your working on allow you to define the layout templete for that page.
