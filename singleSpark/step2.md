@@ -33,14 +33,19 @@ Lets run a filter and find the lines with Spark in them
 
 `textFile.filter(line => line.contains("Spark")).count()`{{execute}} 
 
-#STEP 3 - RDDs and Sparkcontent
+#STEP 3 - RDDs and Sparkcontent (WIP)
 
-In the last section we used a simple data-set, a readme time (just a set of lines, could have been a csv)
+In the this section we used a simple data-set, a readme time (just a set of lines, could have been a csv)
 
-What  Spark is know for is RDD's. RDD's have TRANSFORMS and OPERATIONS. Transformations are 
+What  Spark is know for is RDD's. 
+
+See https://spark.apache.org/docs/latest/rdd-programming-guide.html 
+
+ RDD's have TRANSFORMS and OPERATIONS. 
 
 
-we're done with this section, lets exit scala with 
+
+### We're done with this section, lets exit scala with 
 
 `:quit`{{execute}}
 
