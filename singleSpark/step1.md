@@ -15,13 +15,9 @@ and update it:
 `pip3 install --upgrade pip`{{execute}}
 
 
-Download Spark:
+Download Spark (we're using release 2.4, package 2.7):
 `curl -O http://apache.mirrors.nublue.co.uk/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz`{{execute}}
 
-OR grab the url from https://spark.apache.org/downloads.html
-USING  release: 2.4
-      package 2.7
-FOLLOW the url link and select a http (ie non ssl) resource
 
 Extract it:
 `tar -xvf spark-2.4.4-bin-hadoop2.7.tgz`{{execute}}
@@ -35,7 +31,7 @@ wip REMOVE THIS LINE sudo ln -s /usr/local/spark-2.4.4-bin-hadoop2.7/ /usr/local
 
 `export PATH=$PATH:$SPARK_HOME/bin`{{execute}}
 
-. ~/.profile  WIP
+. ~/.profile  WIP remove
 
 WIP: java_home has bin on the end, and the error msg has bin/bin, figure on why, below is  a temp fix
 check JAVA

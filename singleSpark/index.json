@@ -1,5 +1,5 @@
 {
-  "title": "Running Spark on a single server",
+  "title": "Running Spark on a single server (v0.9)",
   "description": "Setup Spark on a Ubuntu server and try a few Python and Scala commands(in progress)",
   "difficulty": "Intermediate",
   "time": "30",

@@ -1,1 +1,1 @@
-Install a single standalone spark server and try a few python and scala commands, then install jupyter and confirm it is working.
+In this lab we'll install a single standalone spark server and try a few scala and python  commands, then install jupyter and confirm it is working. The lab is active for hour so feel free to do some of the examples on the spark website.
