@@ -1,4 +1,15 @@
+
+There are three main things to configure for a statefulSet, provision the PV's, Setup a headless service and setup a STS
+
+
+# Setup the PV's
+
+for this lab we'll setup 5 PV's (pv0 -> pv5)
+
+# Setup the Headless service
+
 # Setup application
+
 
 if you can enabled a storageClass, the following PV's would be automatically created when the app asked for them.
 
