@@ -2,6 +2,8 @@
 
 We've already confirmed that we have the correct version of java and python installed, we'll now install `findspark' to help jupyter work with spark and then install that
 
+
+
 wip  USE NEXT LINE `python -m pip install findspark`{{execute}}
 or `pip3 install findspark`{{execute}}
 
@@ -23,6 +25,20 @@ and connect to the ui
  You'll see the notebook added to the file list
 
  WIP: spark cmds not running
+
+
+in juypter run:
+!pip install findspark
+!pip install pyspark
+
+import findspark
+import pyspark
+findspark.init()
+sc = pyspark.SparkContext.getOrCreate()
+
+
+jupyter allows tab completion (although it maybe alittle slow)
+sc. {tab} and select  version. and then shift=enter to run that cammond
 
 Enter each command and then press the play button, or shift-enter to exexcute the command.
 
