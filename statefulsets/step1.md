@@ -18,29 +18,31 @@ Install nfs
 
 Setup some share folders:
 
-`mkdir -p /srv/nfs/kubedata`
-`mkdir /srv/nfs/kubedata/{pv0,pv1,pv2,pv3,pv4}`
-`chmod -R 777 /srv/nfs`
+`mkdir -p /srv/nfs/kubedata`{{execute}}
+`mkdir /srv/nfs/kubedata/{pv0,pv1,pv2,pv3,pv4}`{{execute}}
+`chmod -R 777 /srv/nfs`{{execute}}
 
 Update the nfs share configuration:
 
-`echo "/srv/nfs/kubedata    *(rw,sync,no_subtree_check,insecure)" >> /etc/exports`
-`exportfs -rav`
-`exportfs -v`
-`showmount -e`
+`echo "/srv/nfs/kubedata    *(rw,sync,no_subtree_check,insecure)" >> /etc/exports`{{execute}}
+`exportfs -rav`{{execute}}
+`exportfs -v`{{execute}}
+`showmount -e`{{execute}}
 
 Take a just check of the server is up and running   111 2049 tcp&udp
-`netstat -tlp`
+`netstat -tlp`{{execute}}
 
+And let's set an env for the nfs server which we'll use in the next steps.
 `ip addr | grep ens3`{{execute}}
+`NFSIP=$(ip addr show ens3  | awk '$1 == "inet" { print $2 }' | cut -d/ -f1)`{{execute}}
 
 
-
-## TEST
+## TEST (WIP)
 Connect to node01
 `ssh node01`
 mount the nfs share
-`mount -t nfs /<ip>:/src/nfs/kubedata  /mnt`
+WIP fix following
+`ssh root@node01 mount -t nfs $NFSIP:/srv/nfs/kubedata  /mnt`{{execute}}
 
-`ls /mnt  # show see pv0->4`
-`umount /mnt`
+`ssh root@node01 ls /mnt  # show see pv0->4`{{execute}}
+`ssh root@node01 umount /mnt`{{execute}}
