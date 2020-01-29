@@ -1,6 +1,4 @@
-# IN PROGRESS 
-
-This scenario is present under construction.
+# Calico on K98S
 
 Kubernetes imposes the following fundamental requirements on any networking implementation (barring any intentional network segmentation policies):
 
@@ -17,4 +15,3 @@ and reviewing  the CNI settings.
 
 Basic understanding of CNI and kubeadm is expected
 
-v.5.301019

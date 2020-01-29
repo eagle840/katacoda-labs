@@ -18,11 +18,11 @@ and since we're using docker as the Container Runtime lets look at the configura
 
 `docker network ls`{{execute}}
 
-`docker network inspect bridge`{{execute}}
-
 and on the second host:
 
 `docker network ls`{{execute HOST2}}
+
+`docker network inspect bridge`{{execute}}
 
 Note that under containers, there are no containers listed, and the IPAM settings
 Execute the same cmd on the lower terminal, you see the IPAM address range the same.
