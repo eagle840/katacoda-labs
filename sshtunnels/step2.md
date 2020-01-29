@@ -1,22 +1,24 @@
 ## Local Port Forwarding.
 
-host01 is home
-host02 is work
+Lets pretend that the top terminal, host01, is your home PC 
+and host02 is your work.
 
 try curl from host 2  for workcomputer
-`curl host01`{{exceute HOST2}}
+`curl host01`{{execute HOST2}}
 
 
 Let say our boss is a real meany, and blocks out interwebs access'
 WIP: run cmd to add ip of host01:
-iptables -A OUTPUT -d <ip of node01> -p tcp --dport:80 -j REJECT
+
+HOST01IP=$(cat /etc/hosts | grep host01 | awk '{print $1}')
+
+WIP: error - multiple d flags
+iptables -A OUTPUT -d $HOST01IP -p tcp --dport:80 -j REJECT
 
 
 check
 
 `curl host01`{{execute HOST2}}
-
-
 
 
 We're at work on host 1
