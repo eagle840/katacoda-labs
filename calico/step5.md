@@ -11,23 +11,25 @@ And deploy a simple nginx deployment
 Take a quick look at the Ip's on the pods on node01 and master
 `k get pods -o wide`{{execute}}
 
-Lets pull a couple of troubleshooting images
+## Here are a couple of tools to help you play around with the enviroment:
 
-WIP: use One of the below (busybox?)
+#### BusyBox:
+"BusyBox combines tiny versions of many common UNIX utilities into a single small executable"  [Docker Hub](https://hub.docker.com/_/busybox)
 `docker pull busybox`{{execute}}
+
+#### netshoot
+An image for troubleshooting docker and K8S, [github](https://github.com/nicolaka/netshoot)
 `docker pull nicolaka/netshoot`{{execute}}
 
-ON BOTH TERMINALS
+try running them on the host, EG:
 
-run busybox on host and docker bridge and in k8s pod?, test ping and dns, and server(http?)
+`docker run -it --net host busybox`
 
-`docker run -it --net host busybox`{{execute}}
-`docker run -it --net host nicolaka/netshoot`{{execute}}
+or  on a pod.
 
-test ping and dns with these
+`kubectl run -it   nicolaka/netshoot`
 
-
-RESOURCES:
+if you need a little help with netshoot, try:
 https://schoolofdevops.github.io/zero-to-docker/troubleshooting-toolkit/
-https://github.com/nicolaka/netshoot
+
    

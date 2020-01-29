@@ -10,7 +10,7 @@ now we have files in here, their names assocoated with binaries in the dir `/opt
 
 `ls /opt/cni/bin`{{execute}}
 
-Since kubelets run on all nodes, you can run the same commands on the lower terminal and get the same results.
+Since kubelets run on all nodes, you can run the same commands on the lower terminal and get the almost the same results (you'll see a crio plugin too).
 
 
 `ls /etc/cni/net.d`{{execute HOST2}}
@@ -19,14 +19,3 @@ Since kubelets run on all nodes, you can run the same commands on the lower term
 
 `ls /opt/cni/bin`{{execute HOST2}}
 
-Lets load up busyboxx3 or netshoot?
-
-
-
-Look at the pod bridge IPs, IPAM on cluster/pods
-Can use the cni plugin: "host-host" and "DHCP"
-The selected one you'll find in `/etc/cnu/net.d/`  under IPAM type:
-
-`cat /etc/cni/net.d`{{execute}}
-
-(weave gives out 10.32.0.0/12 split between nodes)

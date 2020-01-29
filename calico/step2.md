@@ -82,10 +82,10 @@ when creating your k8 cluster from scratch, it's important that you don't confli
 ## spin up some pods without a network (WIP)
 
 
-`k run nettools --image=nicolaka/netshoot --replicas 2 -- sleep 3600`{{execute}}
+`k run nettools --image=busybox --replicas 2 -- sleep 3600`{{execute}}
 and take a look at there ip address'
 `k get pods -o wide`{{execute}}
-APPEARS TO BE WAY OUT OF DATE - PERHAPS USE BUSYBOX?
+
 
 
 
