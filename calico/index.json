@@ -1,6 +1,6 @@
 {
   "title": "Using Calico on kubenetes",
-  "description": "Setting up Calico on Kubernetes following the calico instructions.(in progress, complete)",
+  "description": "(v0.9) Setting up Calico on Kubernetes following the calico instructions.(in progress, complete)",
   "difficulty": "Beginner",
   "time": "15",
   "details": {

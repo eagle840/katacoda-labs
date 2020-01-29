@@ -1,6 +1,6 @@
 {
   "title": "Setup a ldap server",
-  "description": "(in progress) Setting up an ldap server on docker",
+  "description": "(coming soon) Setting up an ldap server on docker",
   "difficulty": "Beginner",
   "time": "60 minutes",
   "details": {

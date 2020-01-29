@@ -1,6 +1,6 @@
 {
-  "title": "Setup a spark /w zeppelin (in progress)",
-  "description": "setup a small spark cluster on k8s with Zepelin",
+  "title": "Setup a spark /w zeppelin",
+  "description": "(coming soon) Setup a small spark cluster on k8s with Zepelin",
   "difficulty": "Advanced",
   "time": "60",
   "details": {
