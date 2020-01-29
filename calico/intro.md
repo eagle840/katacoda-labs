@@ -13,5 +13,8 @@ https://docs.projectcalico.org/v3.9/getting-started/kubernetes/installation/
 specifically for: Installing Calico for policy and networking (recommended)
 and reviewing  the CNI settings.
 
+Feel free to play around with the setting and pods, refreshing the page will give you a new start over.
+
 Basic understanding of CNI and kubeadm is expected
+
 

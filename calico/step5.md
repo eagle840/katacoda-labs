@@ -1,5 +1,7 @@
 # Test Calico Network
 
+WIP: SHOULD WE DO A LITTLE TCPDUMP to look at the pod traffic on the hosts?
+
 Lets remove the taint on the master so it can run pods.
 `k taint node master node-role.kubernetes.io/master-`{{execute}}
 
@@ -22,18 +24,9 @@ run busybox on host and docker bridge and in k8s pod?, test ping and dns, and se
 `docker run -it --net host busybox`{{execute}}
 `docker run -it --net host nicolaka/netshoot`{{execute}}
 
+test ping and dns with these
 
 
-install the calico ctl  I THINK I'LL REMOVE THIS, 
-  
-     https://docs.projectcalico.org/v3.9/getting-started/calicoctl/install 
-  download calicoctl
-  chmod
-  path
-
-We'll connect to the k8s in the next step
-   https://docs.projectcalico.org/v3.9/getting-started/calicoctl/configure/kdd
-   
 RESOURCES:
 https://schoolofdevops.github.io/zero-to-docker/troubleshooting-toolkit/
 https://github.com/nicolaka/netshoot
