@@ -11,7 +11,7 @@ And check the pods and daemonsets are up:
 `k get ds -n kube-system`{{execute}}
 
 and the pods are controlled by rs'
-`k get rs -n kube-system`
+`k get rs -n kube-system`{{execute}}
 
 Let's take a look at the logs for the calico pods
 `k logs  -n kube-system -l k8s-app=calico-node`{{execute}}
