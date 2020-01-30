@@ -75,7 +75,7 @@ k8s services and their IPs (clusterIP and Nodeport) are handed out by the api-se
 `k describe pod kube-apiserver-master  -n kube-system`{{execute}} 
 
 Lets look the the command and args:
-`k get pod kube-apiserver-master  -n kube-system -o json | jq .spec.containers[0].command`{{excute}}
+`k get pod kube-apiserver-master  -n kube-system -o json | jq .spec.containers[0].command`{{execute}}
 
 when creating your k8 cluster from scratch, it's important that you don't conflict these while the CNI IPAM setup.
 

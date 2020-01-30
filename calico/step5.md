@@ -11,7 +11,10 @@ And deploy a simple nginx deployment
 Take a quick look at the Ip's on the pods on node01 and master
 `k get pods -o wide`{{execute}}
 
-## Here are a couple of tools to help you play around with the enviroment:
+
+## Troubleshooting
+
+Here are a couple of tools to help you play around with the enviroment:
 
 #### BusyBox:
 "BusyBox combines tiny versions of many common UNIX utilities into a single small executable"  [Docker Hub](https://hub.docker.com/_/busybox)
