@@ -26,6 +26,8 @@ and start the server (about 2mins)
 
 Login to the Keycloak Admin Console at:
 
+WIP: some deployments fail, restart the lab if problems logging into the admin console.
+
 https://[[HOST_SUBDOMAIN]]-8443-[[KATACODA_HOST]].environments.katacoda.com
 
 
