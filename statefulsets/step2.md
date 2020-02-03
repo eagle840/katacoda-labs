@@ -7,7 +7,7 @@ There are three main things to configure for a statefulSet, provision the PV's, 
 for this lab we'll setup 5 PV's (pv0 -> pv5)
 we'll need the IP of the nfs server, which we got in the previous step: NFSIP.
 
-copy below into pvs.yaml
+copy below into pvX.yaml
 
 ```
 apiVersion: v1
@@ -27,8 +27,14 @@ spec:
       path: "/srv/nfs/kubedata/pvX"
 ```
 
-`sed "s/serverIP/$NFSIP/" pvs.yaml`{{execute}}  #WIP arg to change file
-for loop 0 to 4, replace pvX
+
+Lets replace serverIP with the real NFS server address:
+
+`sed -i "s/serverIP/$NFSIP/" pvX.yaml`{{execute}}  #WIP arg to change file
+
+Now with this default yaml file, we'll create a yaml for each PV with a small script.
+
+for var in 0 1 2 3 4; do ; sed "s/pvX/pv$var/g" > pv$var.yaml ; done 
 
 
 
