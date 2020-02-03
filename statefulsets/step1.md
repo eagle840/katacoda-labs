@@ -35,15 +35,13 @@ Update the nfs share configuration:
 
 `showmount -e`{{execute}}
 
-Take a just check of the server is up and running   111 2049 tcp&udp
-`netstat -tlp`{{execute}}
 
 And let's set an env for the nfs server which we'll use in the next steps.
 `ip addr | grep ens3`{{execute}}
 
 `NFSIP=$(ip addr show ens3  | awk '$1 == "inet" { print $2 }' | cut -d/ -f1)`{{execute}}
 
-echo $NFSIP
+`echo $NFSIP`{{execute}}
 
 ## TEST NFS 
 Connect to node01 and test the mount for nfs share (type yes when prompted)

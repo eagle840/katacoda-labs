@@ -1,5 +1,5 @@
 
-There are three main things to configure for a statefulSet, provision the PV's, Setup a headless service and setup a STS
+There are three main things to configure for a statefulSet, provision the PV's, Setup a headless service and setup a STS deployment
 
 
 # Setup the PV's
@@ -7,7 +7,9 @@ There are three main things to configure for a statefulSet, provision the PV's, 
 for this lab we'll setup 5 PV's (pv0 -> pv5)
 we'll need the IP of the nfs server, which we got in the previous step: NFSIP.
 
-copy below into pvX.yaml
+copy below into pvX.yaml (copy:ctrl-insert, past:shft-insert, save:ctrl-o, exit:ctrl-x)
+
+`nano pvX.yaml`{{execute}}
 
 ```
 apiVersion: v1
@@ -30,16 +32,27 @@ spec:
 
 Lets replace serverIP with the real NFS server address:
 
-`sed -i "s/serverIP/$NFSIP/" pvX.yaml`{{execute}}  #WIP arg to change file
+`sed -i "s/serverIP/$NFSIP/" pvX.yaml`{{execute}} 
+
+can confirm:
+
+`cat pvX.yaml`{{execute}}
 
 Now with this default yaml file, we'll create a yaml for each PV with a small script.
 
-for var in 0 1 2 3 4; do ; sed "s/pvX/pv$var/g" > pv$var.yaml ; done 
+`for var in 0 1 2 3 4; do  sed "s/pvX/pv$var/g" pvX.yaml > pv$var.yaml ; done `{{execute}}
 
+`ls`{{execute}}
 
+and create them:
 
+`for var in 0 1 2 3 4; do k create -f pv$var.yaml; done`{{execute}}
+
+`k get pv`{{execute}}
 
 # Setup the Headless service
+
+`nano headless.yaml`{{execute}}
 
 ```
 apiVersion: v1
@@ -57,9 +70,15 @@ spec:
      run:  nginx-sts-demo
 ```
 
+`k create -f headless.yaml`{{execute}}
+
+`k get service`{{execute}}
+
 # Setup application
 
 note the volume claim templete used in this sts, it will setup the volumes
+
+`nano sts.yaml`{{execute}}
 
 ```
 apiVersion: apps/v1
@@ -97,41 +116,17 @@ spec:
 ```
 
 
-# Old
+`k create -f sts.yaml`{{execute}}
 
+You'll notice in the yaml, it's only going to create 2 replicas
 
-if you can enabled a storageClass, the following PV's would be automatically created when the app asked for them.
+`k get pods`{{execute}}
 
-Put these vols on the node01 ???
+`k get sts`{{execute}}
 
-apiVersion: v1
-kind: PersistentVolume
-metadata:
-    name: pv-nfs-pv0
-    labels:
-       type: local
-spec:
-    storageClassName: manual
-    capacity:
-       storage: 200Mi
-    accessModes:
-       - ReadWriteOnce
-    nfs:
-       server: 172.17.0.48
-       path: "/srv/nfs/katadata/pv0
+Lets scale up the replicas and see what happens:
 
-see
-https://github.com/justmeandopensource/kubernetes.git
-under yamls, 9-sts
+`k scale --replicas=3 sts/nginx-sts`{{execute}}
 
-Still need to generate a service to get access (int and/or ext)
+`k get sts`{{execute}}
 
-use k get sts   to view
-use k get all 
-scale up and down and see watch and changes (need PV's since no dynamic provisioning)
-sts on delete takes down highs \# first, stops if a volume problem
-    PVC's have to be delelted manually
-    Should really scale down to zero   CHECK!
-remove PV's and see if data still in NFS,
-    recreate PV's, and sts and see if data is still there?
-Should you put a simple website up?
