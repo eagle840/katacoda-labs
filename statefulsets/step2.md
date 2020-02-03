@@ -120,15 +120,21 @@ spec:
 
 `k create -f sts.yaml`{{execute}}
 
+`k get sts`{{execute}}
+
 You'll notice in the yaml, it's only going to create 2 replicas
 
 `k get pods`{{execute}}
 
-`k get sts`{{execute}}
+note the pod names are `<statefulset name>-<ordinal index>`
+
+
 
 Lets scale up the replicas and see what happens:
 
 `k scale --replicas=3 sts/nginx-sts`{{execute}}
 
 `k get sts`{{execute}}
+
+`k get pods`{{execute}}
 

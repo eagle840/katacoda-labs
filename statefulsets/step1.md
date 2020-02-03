@@ -7,7 +7,7 @@ Run Ubuntu updates:
 
 Install nfs and start the server
 
-`apt install nfs-kernel-server --fix-missing`{{execute}}
+`apt install nfs-kernel-server --fix-missing -y`{{execute}}
 
 `systemctl enable nfs-server`{{execute}}
 

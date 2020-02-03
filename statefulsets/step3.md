@@ -2,18 +2,24 @@
 
 Lets take a look and the PV's and PVC's
 
-`k get pv.pvc`{{execute}}
+`k get pv,pvc`{{execute}}
+
+and the deployed resources
+
+`k get all`{{execute}}
+
+Take a note of the claims in the PV's and the pods shown.
 
 
 and delete one of the pods, and see it come back and claim the same pv
 
 Lets connect to one of the pods create a  file
 
-`k exec -it nginx-sts-3 -- /bin/sh`{{execute}}
+`k exec -it nginx-sts-1 -- /bin/sh`{{execute}}
 
 can create a file
 
-`cd /var/wwww; touch vip.html; ls`{{execute}}
+`cd /var/www; touch vip.html; ls`{{execute}}
 
 exit out of the session
 
@@ -21,6 +27,24 @@ exit out of the session
 
 Lets delete the pod
 
-`k delete pod nginx-sts-3`{{execute}}
+`k get pods`{{execute}}
+
+`k delete pod nginx-sts-1`{{execute}}
+
+`k get pods`{{execute}}
+
+Note the deleted pod is quickly recreated.
 
 and in a few moments you'll see it recreated with the same pv, pvc
+
+And the VIP file is still present.
+
+`k exec -it nginx-sts-1 -- /bin/sh`{{execute}}
+
+`ls /var/www`{{execute}}
+
+`exit`{{execute}}
+
+
+
+
