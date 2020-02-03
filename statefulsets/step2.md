@@ -52,6 +52,8 @@ and create them:
 
 # Setup the Headless service
 
+note that clusterIp is None, and that you''l have to create a seperate service for access.
+
 `nano headless.yaml`{{execute}}
 
 ```
