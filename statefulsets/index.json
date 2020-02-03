@@ -1,6 +1,6 @@
 {
   "title": "K8S Stateful Sets",
-  "description": "(V0.7)Setup a setful set on a K8S cluster",
+  "description": "(V0.8)Setup a setful set on a K8S cluster",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {

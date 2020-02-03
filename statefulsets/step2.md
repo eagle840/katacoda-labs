@@ -34,7 +34,7 @@ Lets replace serverIP with the real NFS server address:
 
 `sed -i "s/serverIP/$NFSIP/" pvX.yaml`{{execute}} 
 
-can confirm:
+and confirm:
 
 `cat pvX.yaml`{{execute}}
 
@@ -128,6 +128,8 @@ You'll notice in the yaml, it's only going to create 2 replicas
 
 note the pod names are `<statefulset name>-<ordinal index>`
 
+Wait a minute or two for the pods to come fully up.
+
 
 
 Lets scale up the replicas and see what happens:
@@ -138,3 +140,18 @@ Lets scale up the replicas and see what happens:
 
 `k get pods`{{execute}}
 
+And finally we'll scale the set down to zero and delete it.
+
+`k scale --replicas=0 sts/nginx-sts`{{execute}}
+
+You can see the pods closing down one by one
+
+`k get pods`{{execute}}
+
+And delete the sts:
+
+`k delete sts nginx-sts`{{execute}}
+
+But the PV's,  PVC's, and service are still in the system.
+
+`k get pv,pvc,service`{{execute}}

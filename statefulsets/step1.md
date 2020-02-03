@@ -3,7 +3,7 @@ Stateful sets require dynamic provisioning to use volumes,  however in this scen
 
 Run Ubuntu updates:
 
-`apt-get update`{{execute}}
+`apt-get update -y`{{execute}}
 
 Install nfs and start the server
 
