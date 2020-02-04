@@ -1,30 +1,49 @@
-Let's first update Ubunte
+# Install spark
 
-`apt update`{{execute}}
+Lets update Ubuntu first:
 
-and check requirements:
+`sudo apt-get update`{{execute}}
 
-`python --version`{{execute}}      #2.7+ or 3.5+
+For full functionality, spark needs java 8
 
-`pip --version`{{execute}}
+`java -version`{{execute}}
 
-If less than v7 run
+We'll also need python 3:
+`python3 -V`{{execute}}
 
-`pip install --upgrade pip`{{execute}}
+and update it:
+`pip3 install --upgrade pip`{{execute}}
 
-Install Python virtual environment
 
-`pip install --upgrade virtualenv`{{execute}}
+Download Spark (we're using release 2.4, package 2.7):
+`curl -O http://apache.mirrors.nublue.co.uk/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz`{{execute}}
 
-Create and activate a virtual environment
 
-`virtualenv /path/to/directory`{{execute}}
+Extract it:
+`tar -xvf spark-2.4.4-bin-hadoop2.7.tgz`{{execute}}
 
-`. /path/to/directory/bin/activate`{{execute}}
+And set it up for execution:
+`mv spark-2.4.4-bin-hadoop2.7 /usr/local/spark`{{execute}} 
 
-And install apache-beam for python
+wip REMOVE THIS LINE sudo ln -s /usr/local/spark-2.4.4-bin-hadoop2.7/ /usr/local/spark   # create link
 
-`pip install apache-beam`{{execute}}
+`export SPARK_HOME=/usr/local/spark`{{execute}}
+
+`export PATH=$PATH:$SPARK_HOME/bin`{{execute}}
+
+. ~/.profile  WIP remove
+
+WIP: java_home has bin on the end, and the error msg has bin/bin, figure on why, below is  a temp fix
+check JAVA
+`echo $JAVA_HOME`{{execute}}
+should equal
+`JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre`{{execute}}
+
+And finally lets check spark (for scala) is installed and working:
+`spark-shell --version`{{execute}} 
+
+and for python:
+`pyspark --version`{{execute}}
 
 
 
