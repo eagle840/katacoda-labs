@@ -1,4 +1,30 @@
+Let's first update Ubunte
 
-check spark lab 1st, and put it in here
+`apt update`{{execute}}
 
-https://beam.apache.org/get-started/quickstart-py/
+and check requirements:
+
+`python --version`{{execute}}      #2.7+ or 3.5+
+
+`pip --version`{{execute}}
+
+If less than v7 run
+
+`pip install --upgrade pip`{{execute}}
+
+Install Python virtual environment
+
+`pip install --upgrade virtualenv`{{execute}}
+
+Create and activate a virtual environment
+
+`virtualenv /path/to/directory`{{execute}}
+
+`. /path/to/directory/bin/activate`{{execute}}
+
+And install apache-beam for python
+
+`pip install apache-beam`{{execute}}
+
+
+
