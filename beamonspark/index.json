@@ -1,6 +1,6 @@
 {
   "title": "Running Beam on Spark",
-  "description": "(coming soon)Setup apache Beam on Spark and run a few simple tests",
+  "description": "(v0.3)Setup Apache Beam on Spark and run a few simple tests",
   "difficulty": "Intermediate",
   "time": "60",
   "details": {
