@@ -38,7 +38,8 @@ You are now on the Master realm configuration page, but let's create our own rea
 At the top of the left menu, hover over Master. When a button to add a Realm appears, click it. Give the realm a name, such as katacoda, and click create. Congratulations! You have created your first realm.
 
 
-Creating a realm role
+# Creating a realm role
+
 Now we need to create a realm role.
 
 On the left menu, click on Roles. You see a list of roles. On the upper right of the table, look for Add Role and click that button.
@@ -62,4 +63,12 @@ Click on the Credentials tab and add a new password: test. Confirm the password.
 
 Assign the Realm Role to the User
 The last step is to assign the role user to our test user. Click on the tab Role Mappings. In Available Roles, you see the user role.
+
+# Create an OAuth client
+
+On the lhs, click on clients, and then create
+
+lets call it 'kube-cluster'
+
+WIP need the openID Connect discovery std end point keyclockserver.com:socket443/auth/realms/<realmName>
 
