@@ -27,4 +27,4 @@ Run a filter and find the lines with Spark in them
 
 And we've finished the python demo.
 
-`quit()`
+`quit()`{{execute}}

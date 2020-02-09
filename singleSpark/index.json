@@ -1,6 +1,6 @@
 {
   "title": "Running Spark on a single server",
-  "description": "(v0.8)Setup Spark on a Ubuntu server and try a few Python and Scala commands",
+  "description": "(In progress)Setup Spark on a Ubuntu server and try a few Python and Scala commands",
   "difficulty": "Intermediate",
   "time": "30",
   "details": {

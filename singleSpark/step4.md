@@ -1,21 +1,25 @@
-# Install jupyter and run the same python commands
+# WIP Install Jupyter lab and run the same python commands
 
 We've already confirmed that we have the correct version of java and python installed, we'll now install `findspark' to help jupyter work with spark and then install that
 
+Note: JupyterLab is the new and upgraded version of Jypyter Note
 
+WIP   USE NEXT LINE `python -m pip install findspark`
+WIP `pip3 install findspark`
+WIP `pip install findspark`
 
-wip  USE NEXT LINE `python -m pip install findspark`{{execute}}
-or `pip3 install findspark`{{execute}}
-
-`pip3 install jupyterlab`{{execute}}
+`pip install jupyterlab`{{execute}}
 
 
 lets start jupyter with the --ip option, since the default it only for localhost:888
 
 `jupyter lab --allow-root --no-browser --ip=0.0.0.0`{{execute}}
 
-You'll need to copy the token outputted from the cmd to login to Jupyterlab. (ctrl-insert, shift-insert)
+In the stdout you'll see the url and token needed to access the website.
 
+But we can get the token with this command as well:
+
+`cat .local/share/jupyter/runtime/nbserver-6290.json | jq .token -r`{{execute T2}}
 
 and connect to the ui
 

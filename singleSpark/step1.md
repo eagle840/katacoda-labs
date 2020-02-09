@@ -8,11 +8,11 @@ For full functionality, spark needs java 8
 
 `java -version`{{execute}}
 
-We'll also need python 3:
-`python3 -V`{{execute}}
+We'll also need python:
+`python -V`{{execute}}
 
 and update it:
-`pip3 install --upgrade pip`{{execute}}
+`pip install --upgrade pip`{{execute}}
 
 
 Download Spark (we're using release 2.4, package 2.7):
