@@ -31,4 +31,4 @@ And we've finished the python demo.
 
 Congrats, you've finished the lab.
 
-Head over to <spark.apache.org> to learn more and try out more examples. 
+Head over to spark.apache.org to learn more and try out more examples. 
