@@ -1,5 +1,5 @@
 {
-  "title": "Setup a spark /w zeppelin",
+  "title": "Setup a spark on K8S /w zeppelin",
   "description": "(coming soon) Setup a small spark cluster on k8s with Zepelin",
   "difficulty": "Advanced",
   "time": "60",
