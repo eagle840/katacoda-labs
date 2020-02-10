@@ -4,6 +4,18 @@
   "difficulty": "Beginner",
   "time": "60",
   "details": {
+    "assets":{
+      "host01": [
+        {
+          "file": "AAPL.csv",
+          "target": "~/"
+        },
+        {
+          "file": "IBM.csv",
+          "target": "~/"
+        }
+      ]
+    }
     "steps": [
       {
         "title": "Step 1",
