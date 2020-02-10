@@ -19,7 +19,7 @@ In the stdout you'll see the url and token needed to access the website.
 
 But we can get the token with this command as well:
 
-`cat .local/share/jupyter/runtime/nbserver-6290.json | jq .token -r`{{execute T2}}
+`cat .local/share/jupyter/runtime/nbserver-*.json | jq .token -r`{{execute T2}}
 
 and connect to the ui
 
