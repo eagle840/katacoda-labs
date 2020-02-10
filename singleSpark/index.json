@@ -1,6 +1,6 @@
 {
   "title": "Running Spark on a single server",
-  "description": "(In progress)Setup Spark on a Ubuntu server and try a few Python and Scala commands",
+  "description": "Setup Spark in stand-alone modeon a Ubuntu server and try a few  Python and Scala commands",
   "difficulty": "Intermediate",
   "time": "30",
   "details": {
@@ -16,11 +16,8 @@
       {
         "title": "Step 3",
         "text": "step3.md"
-      },
-      {
-        "title": "Step 4",
-        "text": "step4.md"
       }
+ 
     ],
     "intro": {
       "text": "intro.md"

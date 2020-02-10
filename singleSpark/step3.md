@@ -28,3 +28,7 @@ Run a filter and find the lines with Spark in them
 And we've finished the python demo.
 
 `quit()`{{execute}}
+
+Congrats, you've finished the lab.
+
+Head over to <spark.apache.org> to learn more and try out more examples. 

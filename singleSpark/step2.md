@@ -9,7 +9,7 @@ To run spark-shell on this machine, just type spark-shell
 
 You should now see: `scala>`, to exit just type `:q`
 
-[need a refresher on scala?, try leanxinyminutes.com](https://learnxinyminutes.com/docs/scala/)
+need a refresher on scala?, try leanxinyminutes.com <https://learnxinyminutes.com/docs/scala/>
 
 Let's check out the help function:
 
@@ -33,15 +33,6 @@ Lets run a filter and find the lines with Spark in them
 
 `textFile.filter(line => line.contains("Spark")).count()`{{execute}} 
 
-#STEP 3 - RDDs and Sparkcontent (WIP)
-
-In the this section we used a simple data-set, a readme time (just a set of lines, could have been a csv)
-
-What  Spark is know for is RDD's. 
-
-See https://spark.apache.org/docs/latest/rdd-programming-guide.html 
-
- RDD's have TRANSFORMS and OPERATIONS. 
 
 
 

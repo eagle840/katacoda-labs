@@ -25,15 +25,13 @@ Extract it:
 And set it up for execution:
 `mv spark-2.4.4-bin-hadoop2.7 /usr/local/spark`{{execute}} 
 
-wip REMOVE THIS LINE sudo ln -s /usr/local/spark-2.4.4-bin-hadoop2.7/ /usr/local/spark   # create link
+
 
 `export SPARK_HOME=/usr/local/spark`{{execute}}
 
 `export PATH=$PATH:$SPARK_HOME/bin`{{execute}}
 
-. ~/.profile  WIP remove
 
-WIP: java_home has bin on the end, and the error msg has bin/bin, figure on why, below is  a temp fix
 check JAVA
 `echo $JAVA_HOME`{{execute}}
 should equal
