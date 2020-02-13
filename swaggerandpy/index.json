@@ -1,0 +1,38 @@
+{
+  "title": "Getting started with python, swagger and apis",
+  "description": "(coming soon)In this lab we will generate a python program with flask, and include swagger to intergret the APIs",
+  "difficulty": "Intermediate",
+  "time": "60 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4",
+        "text": "step4.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu1904"
+  }
+}
