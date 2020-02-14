@@ -14,6 +14,8 @@ lets install some of the python packages we'll need using python's package manag
 
 `pip install  numpy flask flasgger`{{execute}}
 
+## Install Swagger codegen
+
 install swagger code gen to allow use to generate a basic python frame work from a swagger configuration file. Swagger code gen requires Java 7+
 
 `java --version`{{execute}}
@@ -25,6 +27,9 @@ and check the help function works.
 `java -jar swagger-codegen-cli.jar help`{{execute}}
 
 We'll be using  bhattbhavesh91/ swagger-python-flask-app demo on github, he also as a video on this.
+https://www.youtube.com/watch?v=rIsEbsvuOlM
+
+The help page for codegen: https://swagger.io/docs/open-source-tools/swagger-codegen/
 
 `git clone https://github.com/bhattbhavesh91/swagger-python-flask-app.git`{{execute}}
 
