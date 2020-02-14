@@ -1,6 +1,6 @@
 # Run the simple python program.
 
-This particular python program has had flasgger called, which allows you to take a swagger config file and incorperate into the program.
+This particular python program has had flasgger imported/used, which allows you to take a swagger config file and incorperate into the program.
 
 `ls`{{execute}}
 
@@ -36,7 +36,7 @@ when ready you can **ctrl-c** to exit the running program
 
 lets open another terminal and check we are serving out this program to all incoming requests:
 
-`netstat -tap`{{execute}}
+`netstat -tap`{{execute T2}}
 
 (t: tcp, a: all, P: include the porcesss listing)
 
@@ -44,12 +44,45 @@ you should a python process running on 'local address' 0.0.0.0 and port 8500
 
 https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/
 
-WIP: the last time I ran this it worked, now it's not. (was on 5000)
+The initial page will only show 'Add 2 numbers!", this is normal, since it's only an api program
 
-you can also see swagger serving up it's page at:
+However we can look at the swagger program that was also installed (takes a min to load):
+
 
 https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/swagger
 
-https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/swagger/#!/default/post_add_2_numbers
+
+
+Click on default and then post.
 
 In the right hand side you'll see an example, click on it and it'll populate the 'body' on the left and then click 'try it out' at the bottom of the page.
+
+We can also use the command curl to get the same results:
+
+WIP: change the url to the katacoda server url
+
+KATAURL=$(https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/)
+
+WIP:orginal:
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: text/html' -d '{ \ 
+   "x1": 45, \ 
+   "x2": 451 \ 
+ }' 'https://2886795319-8500-ollie02.environments.katacoda.com/add_2_numbers'
+
+
+
+WIP: test with 3 quote
+```
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: text/html' -d '{ \ 
+   "x1": 45, \ 
+   "x2": 451 \ 
+ }' 'https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/add_2_numbers'
+```{{copy}}
+
+WIP plan text
+
+
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: text/html' -d '{ \ 
+   "x1": 45, \ 
+   "x2": 451 \ 
+ }' 'https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/add_2_numbers'

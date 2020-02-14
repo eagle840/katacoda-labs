@@ -27,7 +27,15 @@
     },
     "finish": {
       "text": "finish.md"
-    }
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "titanic.csv",
+          "target": "~/"
+        }
+      ]
+    }    
   },
   "environment": {
     "uilayout": "terminal"
