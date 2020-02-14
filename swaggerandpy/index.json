@@ -33,6 +33,10 @@
         {
           "file": "titanic.csv",
           "target": "~/"
+        },
+        {
+          "file": "my.cnf",
+          "target": "~/"
         }
       ]
     }    
