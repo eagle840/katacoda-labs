@@ -3,7 +3,24 @@ cp sim to v2
 
 nano 
 
-FIRST add  a simple GET to return a simplee text line
+FIRST add  a simple GET to return a simplee text line, insert the following under the index section:
+
+```
+@app.route("/hello")
+def  hello():
+     return "hello world!"
+```{{copy}}
+
+https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/hello
+
+should return hello world
+
+add '@swag_from("swagger_config.yml")'
+and you can now open swagger and see it in there
+
+https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/swagger
+
+*WIP* why?
 
 ```
 def multiple_2_numbers(num1, num2):
