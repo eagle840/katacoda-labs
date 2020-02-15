@@ -2,9 +2,17 @@
 
 goto editor.swagger.io and delete the contents,
 
+take a couple of minutes to read over  
+https://swagger.io/docs/specification/2-0/basic-structure/
+
 now try and write your own, the RHS will let you know what to write
 
 hints: 
+
+I created a correct.yaml, it appears to work, but doesn't populate the swagger ui page right, are the consumers/producers in the right place? - remember you have validated it
+
+ideas:  
+- generate a flask file from editor and save it here and work from that
 
 
 *WIP*  soltuion:
