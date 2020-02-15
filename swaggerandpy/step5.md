@@ -2,6 +2,8 @@
 
 goto editor.swagger.io and delete the contents,
 
+*WIP* check for autogen tab?
+
 take a couple of minutes to read over  
 https://swagger.io/docs/specification/2-0/basic-structure/
 

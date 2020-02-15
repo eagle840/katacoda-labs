@@ -1,7 +1,11 @@
 
 # Generate a database
 
-In tis step we'll generate a database from a csv file to serve as the backend. (titantic.csv)
+In this step we'll generate a database from a csv file to serve as the backend. (titantic.csv)
+
+Off course the easir way is to just use a csv to sql converter like:
+
+https://codebeautify.org/csv-to-sql-converter#
 
 ## create docker
 

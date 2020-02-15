@@ -12,3 +12,7 @@ http://troels.arvin.dk/db/rdbms/
 
 Michał Karzyński - Building beautiful RESTful APIs using Flask
 https://www.youtube.com/watch?v=OTWs0wPHU-g
+
+
+video showing openapi v3 swagger, inspector, editor, hub, SWAPI
+https://www.youtube.com/watch?v=gQY_p2birpo
