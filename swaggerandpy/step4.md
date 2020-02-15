@@ -22,6 +22,26 @@ https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/swag
 
 *WIP* why?
 
+## lets make it interactive
+
+In the follow is a piece of code that will take a number as an input with the url /12/return.
+However it will generate an erro, see if you can fix the code to return the number.
+
+```
+@app.route("/<int:id>/return")
+def  returnnum(id):
+     return "returned number!"
+```{{copy}}
+
+*WIP* do a solution for below: (note have to return a string and add try and except)
+
+```
+@app.route("/<int:id>/return")
+def  returnnum(id):
+     numstring = str(id)
+     return numstring
+```
+
 ```
 def multiple_2_numbers(num1, num2):
     output = {"multiply_2_numbers": 0}

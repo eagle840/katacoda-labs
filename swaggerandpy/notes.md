@@ -9,3 +9,6 @@ used engineer man https://www.youtube.com/watch?v=4oMJIyVOWL4
 
 Comparison of different SQL implementations
 http://troels.arvin.dk/db/rdbms/
+
+Michał Karzyński - Building beautiful RESTful APIs using Flask
+https://www.youtube.com/watch?v=OTWs0wPHU-g
