@@ -35,6 +35,3 @@ The help page for codegen: https://swagger.io/docs/open-source-tools/swagger-cod
 
 You can also use the codegen on the editor.swagger.io page, and it will gnerate the code/files and allow you to download them.
 
-and move into the folder we'll be using
-
-`cd swagger-python-flask-app/swagger_with_flask/`{{execute}}

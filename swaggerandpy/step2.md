@@ -2,6 +2,8 @@
 
 This particular python program has had flasgger imported/used, which allows you to take a swagger config file and incorperate into the program.
 
+`cd swagger-python-flask-app/swagger_with_flask/`{{execute}}
+
 `ls`{{execute}}
 
 lets take a look at the python program first.   Take note of the 'swagger_config.yml' file.
@@ -59,19 +61,14 @@ In the right hand side you'll see an example, click on it and it'll populate the
 
 We can also use the command curl to get the same results:
 
-WIP: change the url to the katacoda server url
+*WIP:* change the url to the katacoda server url
 
 KATAURL=$(https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/)
 
-WIP:orginal:
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: text/html' -d '{ \ 
-   "x1": 45, \ 
-   "x2": 451 \ 
- }' 'https://2886795319-8500-ollie02.environments.katacoda.com/add_2_numbers'
+
+*WIP*  getting an error on the below
 
 
-
-WIP: test with 3 quote
 ```
 curl -X POST --header 'Content-Type: application/json' --header 'Accept: text/html' -d '{ \ 
    "x1": 45, \ 
@@ -79,10 +76,3 @@ curl -X POST --header 'Content-Type: application/json' --header 'Accept: text/ht
  }' 'https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/add_2_numbers'
 ```{{copy}}
 
-WIP plan text
-
-
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: text/html' -d '{ \ 
-   "x1": 45, \ 
-   "x2": 451 \ 
- }' 'https://[[HOST_SUBDOMAIN]]-8500-[[KATACODA_HOST]].environments.katacoda.com/add_2_numbers'

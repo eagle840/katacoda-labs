@@ -1,4 +1,10 @@
 
+
+**********************
+STEP 3 BEFORE CLEAN UP
+**********************
+
+
 # Generate a database
 
 In tis step we'll generate a database from a csv file to serve as the backend. (titantic.csv)
@@ -11,11 +17,11 @@ Lets pull the mysql image
 
 and start it 
 
-`docker run --name my_mysql -v $PWD/titanic.csv:/ -e MYSQL_ROOT_PASSWORD=password -d mysql`{{execute}}
+`docker run --name my_mysql -v titanic.csv:/ -e MYSQL_ROOT_PASSWORD=password -d mysql`{{execute}}
 
 Out of the box mysql will not allow to load in data (LOAD DATA), so we need to make some adjustments to my.conf
 
-we need the /etc/mysql/my.cnf   file to advise it to allow loading external data
+we need the /etc/mysql/my.cnf   file to advise it to allow loading exturnal datat
 
 `docker cp my_mysql:/etc/mysql/my.cnf .`{{execute}}
  
@@ -74,24 +80,37 @@ create table passengers (
      primary key (uuid),
      key name (name)
      )engine=innodb
-     default charset=utf8;
-     
-```{{copy}}
+     default charset=utf8;```{{copy}}
 
 Note (in linux copy/paste is ctrl-insert/shift-insert)
 
-and check it
-
-`describe passengers;`{{execute}}
-
 ### load titantic database
 
+https://medium.com/@AviGoom/how-to-import-a-csv-file-into-a-mysql-database-ef8860878a68
+
+LOAD DATA LOCAL INFILE '/Users/miguelgomez/Desktop/mock_data.csv' INTO TABLE users FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS (id, first_name, last_name, email, transactions, @account_creation)SET account_creation  = STR_TO_DATE(@account_creation, '%m/%d/%y');
+
+offical ref: https://dev.mysql.com/doc/refman/8.0/en/load-data.html
+
+
+LOAD DATA LOCAL INFILE '/titanic.csv' INTO TABLE passengers FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS (Survived,Pclass,Name,Sex,Age,S_Aboard,P_Aboard,Fare);
+
+WIP getting error:
+ERROR 3948 (42000): Loading local data is disabled; this must be enabled on both the client and server sides
+WIP ^^^^ Fixed
+https://stackoverflow.com/questions/10762239/mysql-enable-load-data-local-infile
+
+
+WIP survived col is not correct,  containes 0x30
+WIP: possible fix:
 
 ```
 LOAD DATA LOCAL INFILE '/titanic.csv' INTO TABLE passengers FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n' IGNORE 1 ROWS (@Survived,Pclass,Name,Sex,Age,S_Aboard,P_Aboard,Fare)  SET Survived = UNHEX(@Survived) ;
 ```{{copy}}
 
-*WIP* survived is NOT boolean, using boolean is datatype results in all 0's
+taken from (need to confirm results):
+https://stackoverflow.com/questions/12038814/import-hex-binary-data-into-mysql
+
 
 can lets check the table entries:
 
