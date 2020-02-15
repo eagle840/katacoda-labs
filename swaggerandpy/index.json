@@ -1,6 +1,6 @@
 {
   "title": "Getting started with python, swagger and apis",
-  "description": "(coming soon)In this lab we will generate a python program with flask, and include swagger to intergret the APIs",
+  "description": "(coming soon @v0.3)In this lab we will generate a python program with flask, and include swagger to intergret the APIs",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {
