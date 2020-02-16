@@ -45,6 +45,10 @@ and lets restart the docker container to apply the changes
 
 `docker exec -it my_mysql bash`{{execute}}  
 
+Lets make sure the titanic file copied across:
+
+`ls`{{execute}}
+
 `mysql -p`{{execute}}
 
 enter the password: 'password'
@@ -67,7 +71,7 @@ Note that the 'current database' is blank
 ```
 create table passengers (
      uuid int unsigned not null auto_increment,
-     Survived binary not null,
+     Survived bool not null, 
      Pclass  tinyint not null,
      Name  varchar(50) not null,
      Sex varchar(10) not null,
