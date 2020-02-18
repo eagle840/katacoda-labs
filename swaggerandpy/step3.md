@@ -68,6 +68,20 @@ Note that the 'current database' is blank
 
 ### create table
 
+**should be data types according to swagger yaml**
+
+survived	boolean
+passengerClass	integer
+name	string
+sex	string
+Enum:
+[ male, female, other ]
+age	integer
+siblingsOrSpousesAboard	integer
+parentsOrChildrenAboard	integer
+fare	number
+uuid	string($uuid)
+
 ```
 create table passengers (
      uuid int unsigned not null auto_increment,
