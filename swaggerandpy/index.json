@@ -39,6 +39,14 @@
           "target": "~/"
         },
         {
+          "file": "Dockerfile",
+          "target": "~/"
+        },
+        {
+          "file": "script.sql",
+          "target": "~/"
+        },
+        {
           "file": "my.cnf",
           "target": "~/"
         },
