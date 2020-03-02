@@ -16,14 +16,15 @@ and update it:
 
 
 Download Spark (we're using release 2.4, package 2.7):
-`curl -O http://apache.mirrors.nublue.co.uk/spark/spark-2.4.4/spark-2.4.4-bin-hadoop2.7.tgz`{{execute}}
+`curl -O http://apache.mirrors.nublue.co.uk/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz`{{execute}}
+
 
 
 Extract it:
-`tar -xvf spark-2.4.4-bin-hadoop2.7.tgz`{{execute}}
+`tar -xvf spark-2.4.5-bin-hadoop2.7.tgz`{{execute}}
 
 And set it up for execution:
-`mv spark-2.4.4-bin-hadoop2.7 /usr/local/spark`{{execute}} 
+`mv spark-2.4.5-bin-hadoop2.7 /usr/local/spark`{{execute}} 
 
 
 
