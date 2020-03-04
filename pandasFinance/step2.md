@@ -1,3 +1,32 @@
+If not already connect with the jupiyter notebote
+
+https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com
+
+And lets open our first notebook.  
+SHOW JPG OF IMAGE TO CLICK ON
+(see how it populates file in terminal)
+
+Lets first install the python package pandas
+
+In the notebook enter
+
+NO! WRITE A NOTE BOOK WITH THSES INSTRUCTIONS
+
+
+
+You'll notice we've already included a couple of stocks, Apple and IBM
+
+'''
+def test_run():
+    df = pd.read_csv("AAPL.csv")
+    # print (df)
+'''
+`test_run()`
+
+
+
+
+
 locate and download data
 
 finance yahoo aapl
@@ -20,7 +49,7 @@ WIP ERROR on creation
 import pandas as pd
 
 def test_run():
-    df = pd.read_csv("appl.csv")
+    df = pd.read_csv("AAPL.csv")
     print (df)
 
 if __name__ == "__main__":

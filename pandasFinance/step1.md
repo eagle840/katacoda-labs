@@ -8,74 +8,36 @@ check  python
 
 `python -V`{{execute}}
 
+WIP switch commands to python3
+
 `python3 -V`{{execute}}
-
-
-For full functionality, spark needs java 8
-
-`java -version`{{execute}}
-
-We'll also need python:
-`python -V`{{execute}}
 
 and update it:
 `pip install --upgrade pip`{{execute}}
 
+Install pandas
+
+`pip install pandas` {{execute}}
+
+Info on pandas: https://pypi.org/project/pandas/
+
+Note that there webpage and docs are linked on this page
+
 Note: JupyterLab is the new and upgraded version of Jypyter Note
 
-WIP   USE NEXT LINE `python -m pip install findspark`
-WIP `pip3 install findspark`
-WIP `pip install findspark`
-
 `pip install jupyterlab`{{execute}}
-
 
 lets start jupyter with the --ip option, since the default it only for localhost:888
 
 `jupyter lab --allow-root --no-browser --ip=0.0.0.0`{{execute}}
 
-In the stdout you'll see the url and token needed to access the website.
+In the stdout you'll see the url and token needed to access the website, copy it (ctrl-insert)
 
-But we can get the token with this command as well:
-
-`cat .local/share/jupyter/runtime/nbserver-*.json | jq .token -r`{{execute T2}}
-
-and connect to the ui
+Once you copy the token, goto the following link and copy the token (shift-insert)
 
  https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com
 
- In the left hand side you'll see the spark file we downloaded earlier, and lets open a Notebook.
- You'll see the notebook added to the file list
+If you can't find the token, the following cmd will exe in a seperate terminal and pull the token 
 
+`cat .local/share/jupyter/runtime/nbserver-*.json | jq .token -r`{{execute T2}}
 
-
-
-
-
-
-# install 
-
-we'll be using jupyter classic in this lab
-
-https://jupyter.org/install
-
-`pip install notebook`{{execute}}
-
-what start up options do we have:
-
-`jupyter notebook -h`{{execute}}
-
-
-WIP: see next page for error
-use jupyter.org  
-use clasic
-
-run 
-
-`jupyter notebook` # need root access
-
-`jupyter notebook --allow-root --ip=0.0.0.0`
-
-you need the token to login to page
-
-insert url for page here

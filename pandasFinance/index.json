@@ -7,6 +7,10 @@
     "assets":{
       "host01": [
         {
+          "file": "new.ipynb",
+          "target": "~/"
+        },
+        {
           "file": "AAPL.csv",
           "target": "~/"
         },
