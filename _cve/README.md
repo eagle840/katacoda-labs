@@ -8,6 +8,8 @@ might not have been pulled in the pull policy has been set.
 
 other cve sw: neuvector, twistlock
 
+what about https://metasploit.help.rapid7.com/docs/quick-start-guide       ie metasploit
+
 ? how do you pull an image my hash digest?
 
 Establishing Image Provenance and Security in Kubernetes - Adrian Mouat, Container Solutions
