@@ -10,13 +10,12 @@
           "file": "send.py",
           "target": "~/"
         },
-       
         {
           "file": "receive.py",
           "target": "~/"
         }
       ]
-    }
+    },
     "steps": [
       {
         "title": "Step 1",
