@@ -8,7 +8,7 @@ https://hub.docker.com/_/rabbitmq
 
 `docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 rabbitmq:3-management`{{execute}}
 
-`docker ps`
+`docker ps`{{execute}}
 
 docker exec some-rabbit cat /etc/rabbitmq/rabbitmq.conf
 
