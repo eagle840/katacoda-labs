@@ -5,12 +5,16 @@
 
  `docker run -it -p 8888:8888 tensorflow/tensorflow:latest-py3-jupyter  # Start Jupyter server`{{execute}}
 
- copy the token from the output
+ copy the token from the output to connect to the webserver
 
+ or directly print the token
+
+`docker exec -it $(docker ps --format '{{json .}}' | jq -r .ID) cat /root/.local/share/jupyter/runtime/notebook_cookie_secret`{{execute}}
+ 
  connect to port 8888
 
  https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
- and your ready to go
+ and you're ready to go
 
  
