@@ -1,0 +1,1 @@
+Spin up tensorflow and juypter on docker
