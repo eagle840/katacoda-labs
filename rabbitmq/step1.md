@@ -8,11 +8,17 @@ https://hub.docker.com/_/rabbitmq
 
 `docker run -d --hostname my-rabbit --name some-rabbit -p 8080:15672 rabbitmq:3-management`{{execute}}
 
+make sure it started
+
 `docker ps`{{execute}}
 
-docker exec some-rabbit cat /etc/rabbitmq/rabbitmq.conf
+and check the config file
 
-and head over to port 8080 and login  un:guest pw:guest
+`docker exec some-rabbit cat /etc/rabbitmq/rabbitmq.conf`{{execute}}
+
+and head over to port 8080 and login   
+un:guest   
+pw:guest  
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 

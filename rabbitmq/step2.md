@@ -29,8 +29,6 @@ Let's receive that msg,
 
 `python receive.py`{{execute}}
 
-
-
  Lets another terminal and exe send 3 times:
 
 `python send.py`{{execute T2}}
