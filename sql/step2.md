@@ -1,31 +1,51 @@
 # Save And Restore
 
-
-## Save
+so we don't have to be prompted everytime we run a backup, we'll create a .my.cnf file with the un and pw
 
 store mysql root password in /root/.my.cnf   (chmod 600 .my.cnf)
 
+echo > .my.conf
 [client]
 user=root
 password=1234
 
+and allow only root
+
+`chmod 600 .my.cnf`
+
 
 ### backup one db
 
-mysqldump --add-drop-table --database <name>  > ~/backups/db/$(/bin/date '+\%Y-%m-\%d').sql.bak
+we'll create a backup folder  
+`mkdir -p backups/db/`
+
+we'll use the mysqldump command to generate a txt backup file:
+
+`mysqldump --add-drop-table --database <name>  > ~/backups/db/$(/bin/date +\%Y-%m-\%d).sql.bak`
 
 * pw pulled from .my.cnf
 
 ### backup all
 
-mysqldump --all-databases --all-routines > ~/backups/allbds/fulldump.sql
+`mysqldump --all-databases --all-routines > ~/backups/allbds/fulldump.sql`
+
+### delete the db
+
+`docker exec -it  some-mysql mysql -uroot -e "drop database test1"`{{execute}} 
 
 ## Restore
 
-mysql -uroot -p [database name] < <backupname>.sql
+`mysql -uroot  [database name] < <backupname>.sql`
 
-mysql -uroot -p < fulldump.sql
+**WIP** correctly mount the volume for restore
 
+`mysql -uroot -p < fulldump.sql`
+
+### schedule it with crontab
+
+`nano /etc/crontab`
+
+(8:06)
 
 
 ## Reset password

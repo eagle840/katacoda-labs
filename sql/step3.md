@@ -8,7 +8,9 @@ and Others?
 create the file: docker-compose.yml  
 since we're already using port 3306, lets publish on port 3308
 
-''' yaml
+**WIP** move into it's own folder, since docker-compose uses folders in the names'
+
+```yaml
 version: '3'
 
 services:
@@ -22,23 +24,30 @@ services:
            - "3306:3308"
         volumes:
            - "./data:/var/lib/mysql:rw"
-'''
+```
+
+`docker-compose up`{{execute}}
 
 confirm ruuning  
 `docker-compose ps`{{execute}}
 
 `docker exec -it root_mysql-dev_1 /bin/bash`{{execute}}
 
+`docker-compose exec  mysql-dev /bin/bash`{{execute}}
 
-add service to docker-compose.yml
 
-''' yaml
+## add service to docker-compose.yml
+
+``` yaml
     client:
         image: mysql:8.0.2
         depends_on:
             - mysql-dev
         command: mysql -uroot -p1234 -hmysql-dev blogapp
-'''
+```
+
+**WIP** the following captures to terminal
+
 `docker-compose up `{{execute}}
 
 note that the client will exit
@@ -60,7 +69,7 @@ mysql-legacy:
         MYSQL_ROOT_PASSWORD: 1234
         MYSQL_DATABASE: 2014app
     ports:
-      - "3309:3306"
+    - "3309:3306"
 '''
 
 lets' check
@@ -75,10 +84,10 @@ lets' check
 Lets add another service to the yml
 
 ''' yaml
-admin:
-    image: adminer
-    ports:
-      - 8080:8080
+    admin:
+        image: adminer
+        ports:
+        - 8080:8080
 '''
 
 `docker-compose up`{{execute}}
@@ -99,12 +108,12 @@ and the 2014data database
 Lets add a postgres db   url for postgres on docker hub 
 
 ''' yaml
-postgres1:
-    image: postgres
-    environment:
-        POSTGRES_USER: root
-        POSTGRES_PASSWORD: 1234
-        POSTGRES_DB: blogapp
+    postgres1:
+        image: postgres
+        environment:
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: 1234
+            POSTGRES_DB: blogapp
 ''''
 
 connect with adminer
