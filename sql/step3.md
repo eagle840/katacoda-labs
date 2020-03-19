@@ -1,12 +1,7 @@
-# Admin with Adminer
-
 ## docker compose
 
 
-and Others?
-
 create the file: docker-compose.yml  
-since we're already using port 3306, lets publish on port 3308
 
 **WIP** move into it's own folder, since docker-compose uses folders in the names'
 
@@ -21,7 +16,7 @@ services:
             MYSQL_ROOT_PASSWORD: 1234
             MYSQL_DATABASE: blogapp
         ports:
-           - "3306:3308"
+           - "3308:3306"
         volumes:
            - "./data:/var/lib/mysql:rw"
 ```
@@ -31,6 +26,8 @@ services:
 confirm ruuning  
 `docker-compose ps`{{execute}}
 
+
+you can connect to the container in either way:  
 `docker exec -it root_mysql-dev_1 /bin/bash`{{execute}}
 
 `docker-compose exec  mysql-dev /bin/bash`{{execute}}
@@ -62,7 +59,7 @@ shows a new container running
 
 Perhaps we need to add another legacy db:
 
-''' yaml
+``` yaml
 mysql-legacy:
     image: mysql:5.7
     envirnoment:
@@ -70,7 +67,7 @@ mysql-legacy:
         MYSQL_DATABASE: 2014app
     ports:
     - "3309:3306"
-'''
+```
 
 lets' check
 
@@ -83,23 +80,24 @@ lets' check
 
 Lets add another service to the yml
 
-''' yaml
+``` yaml
     admin:
         image: adminer
         ports:
         - 8080:8080
-'''
+```
 
 `docker-compose up`{{execute}}
 
 url for 8080
 
+```
 system: mysql
 server: mysql-dev   (the name of the service)
-un:
-pw:
+un: root
+pw: password
 database: blogapp
-
+```
 and the 2014data database
 
 
@@ -107,14 +105,14 @@ and the 2014data database
 
 Lets add a postgres db   url for postgres on docker hub 
 
-''' yaml
+```yaml
     postgres1:
         image: postgres
         environment:
             POSTGRES_USER: root
             POSTGRES_PASSWORD: 1234
             POSTGRES_DB: blogapp
-''''
+```
 
 connect with adminer
 
@@ -122,6 +120,3 @@ connect with cli
 
 `docker-compose exec postgres1 psql -U root -W blogapp`{{execute}}
 
-\d 
-
-links to w3s and learnXinY for postgres

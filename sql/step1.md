@@ -38,9 +38,9 @@ lets stop and remove the container
 `docker rm some-mysql `{{execute}}
 
 and start it so  the database is preserves on a local volume  
-`mkdir data`  {{execute}}
+`mkdir data`{{execute}}
   
-`docker run --name some-mysql -v pwd/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql`{{execute}}
+`docker run --name some-mysql -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql`{{execute}}
 
 
 
@@ -60,4 +60,10 @@ mount vol
 ### option 2
 
 new custom image
+
+lets stop and remove the container ready for the next step.
+
+`docker stop some-mysql`{{execute}}
+
+`docker rm some-mysql `{{execute}}
 
