@@ -16,12 +16,20 @@ Docker-compose is not upto date in apt, so remove and manually install the lates
 
 Install instructions can be found at https://docs.docker.com/compose/install/
 
-`sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
+`sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`{{execute}}
 
 `sudo chmod +x /usr/local/bin/docker-compose`{{execute}}
 
-and lets start docker-compose
+#### Clone seuperset
+
+`git clone https://github.com/apache/incubator-superset/`{{execute}}
+`cd incubator-superset`{{execute}}
+
+
+and lets start docker-compose - it'll take about 5 minutes
 
 ** WIP needs 3GB? **
 
 `docker-compose up`{{execute}}
+
+now jump over to port 8088
