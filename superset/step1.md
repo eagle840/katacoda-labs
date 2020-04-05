@@ -32,4 +32,6 @@ and lets start docker-compose - it'll take about 5 minutes
 
 `docker-compose up`{{execute}}
 
-now jump over to port 8088
+now jump over to port 8088  
+username: admin  
+password: admin  
