@@ -1,4 +1,7 @@
-setup of a ldap server
+In this lab we'll be setting up a openLDAP server in a docker container
+
+
+- in progress, last update 14042020
 
 resources used:
 
