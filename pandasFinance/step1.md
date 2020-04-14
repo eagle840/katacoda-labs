@@ -17,7 +17,7 @@ and update it:
 
 Install pandas
 
-`pip install pandas` {{execute}}
+`pip install pandas`{{execute}}
 
 Info on pandas: https://pypi.org/project/pandas/
 
