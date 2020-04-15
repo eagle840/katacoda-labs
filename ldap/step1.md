@@ -11,7 +11,9 @@ lets use the docker container provided by [https://github.com/osixia/docker-open
 
 `docker run -p 389:389 -p 636:636 --name my-openldap-container --detach osixia/openldap:1.3.0`{{execute}}
 
-Note that it's using the standard ports for LDAP; 389 and secure 636
+the default ps is admin, but your can add --env LDAP_ADMIN_PASSWORD="1234"   to change it.  
+
+Note that it's using the standard ports for LDAP; 389 (and secure 636)
 
 lets confirm it's working by running a ldapseach query against it
 `docker exec my-openldap-container ldapsearch -x -H ldap://localhost -b dc=example,dc=org -D "cn=admin,dc=example,dc=org" -w admin`{{execute}}
@@ -21,3 +23,5 @@ and take a look at the startup log
 
 and moke a note of the ip of the 'my-openldap-container' - jq will prettyify the output
 `docker network inspect bridge | jq`{{execute}}
+
+`apt install ldap-utils`{execute}
