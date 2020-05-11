@@ -25,7 +25,7 @@ def test_run():
     symbols = ['GOOG','IBM','GLD']
     
     for symbol in symbols:
-        df_temp=pd.read_csv("{}.csv".format(symbol), index_col='DATE',
+        df_temp=pd.read_csv("{}.csv".format(symbol), index_col="Date",
                            parse_dates=True, usecols=['Date', 'Adj Close'], na_values=['nan'])
         #rename 'adj close' to avoid clash
         df_temp = df_temp.rename(columns={'Adj Close': symbol})

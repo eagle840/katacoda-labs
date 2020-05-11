@@ -11,6 +11,10 @@
           "target": "~/"
         },
         {
+          "file": "fin.ipynb",
+          "target": "~/"
+        },
+        {
           "file": "AAPL.csv",
           "target": "~/"
         },
