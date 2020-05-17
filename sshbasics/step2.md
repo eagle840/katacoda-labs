@@ -1,12 +1,15 @@
-`ssh nodoe01`{{execute}}
+Lets connect to node01 (as root)   
+`ssh node01`{{execute}}   
 
-`useradd -m -c "this is nicholas" -s /bin/bash userx`{{execute}}
-
+And make a new user:   
+`useradd -m -c "this is userx" -s /bin/bash userx`{{execute}}   
+   
 `passwd userx`{{execute}}
 
-`exit`{{execute}}
-
-`ssh userx@node01`{{execute}}
+And return to master.   
+`exit`{{execute}}  
+Lets try connecting with a password:   
+`ssh userx@node01`{{execute}}     
 
 so this shows I can ssh from the same network
 

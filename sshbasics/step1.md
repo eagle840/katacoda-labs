@@ -1,25 +1,18 @@
 the system has been setup and logined in with root
 
+alexissetup alexis
 
-lets create an admin account
-useradd -m -c "comment for alexis" -s /bin/bash admin
- SEE VIDEO FOR SUDO SETUP
-
-
-lets change sudo for admin
-
-
-
-setup alexis
-
-useradd -m -c "comment for alexis" -s /bin/bash alexis
-
+`useradd -m -c "comment for alexis" -s /bin/bash alexis`{{execute}}
 
 password change for current user is
 
-passwd
+'passwd'
 
 passwd <username>  will change that users password
+
+`passwd alexis`{{execute}}
+
+and enter a password 1234
 
 login to alexis
 su alexis    
