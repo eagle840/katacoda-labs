@@ -19,3 +19,19 @@ so this shows I can ssh from the same network
 open putty and try to connect  > error
 
 create ssh keys and try to connect
+
+
+Generate your key
+`ssh-keygen`
+Configure ssh to use the key
+`vim ~/.ssh/config`   
+
+Host SERVERNAME
+Hostname ip-or-domain-of-server
+User USERNAME
+PubKeyAuthentication yes
+IdentityFile ./path/to/key
+
+
+Copy your key to your server
+`ssh-copy-id -i /path/to/key.pub SERVERNAME`
