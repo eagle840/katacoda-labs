@@ -9,6 +9,8 @@ https://www.w3schools.com/sql/
 https://learnxinyminutes.com/docs/sql/
 
 
+
+
 ### mysql workbench
 
 

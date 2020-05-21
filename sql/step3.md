@@ -120,3 +120,6 @@ connect with cli
 
 `docker-compose exec postgres1 psql -U root -W blogapp`{{execute}}
 
+## connect to mysql and postgres with adminer
+
+
