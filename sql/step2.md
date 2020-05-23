@@ -1,6 +1,6 @@
-# Save And Restore
+# Save And Restore - Manual
 
-In this step we'll backup a the databases, remove them and then restore
+In this step we'll manually backup  the databases, remove them and then restore
 
 Lets create a backup folder on the local host
 
@@ -65,7 +65,7 @@ and connect
 `mysql -uroot -p < fulldump.sql`
 
 
-# SETUP AUTO BACKUP
+# Save And Restore - Auto
 
 In this part we'll setup a cron job to automatically run backups
 

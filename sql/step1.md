@@ -30,9 +30,7 @@ It'll take a minute to pull the image, so wait until you see a container up and 
 
 and exit mysql/container
 
-`exit`{{execute}} to leave mysql
-
-`exit`{{execute}}  to leave the container
+`exit`{{execute}} 
 
 (need some help on sql? try: https://www.w3schools.com/sql/default.asp)   
 
@@ -71,4 +69,8 @@ lets stop and remove the container ready for the next step.
 `docker stop some-mysql`{{execute}}
 
 `docker rm some-mysql `{{execute}}
+
+If you take a look in the data folder you'll see the files created my mysql
+
+`ls data`{{execute}}
 
