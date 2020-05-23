@@ -14,7 +14,7 @@ It'll take a minute to pull the image, so wait until you see a container up and 
 
 ## Connect to mySQL
 
-`docker exec -it  some-mysql mysql -uroot -p`{{execute}} 
+`docker exec -it  some-mysql mysql -uroot -p1234`{{execute}} 
 
 -uroot   => user root  
 -p       => prompt for password, or -p1234
@@ -27,9 +27,14 @@ It'll take a minute to pull the image, so wait until you see a container up and 
 
 `show databases;`{{execute}}
 
+
 and exit mysql/container
 
-`exit`{{execute}}
+`exit`{{execute}} to leave mysql
+
+`exit`{{execute}}  to leave the container
+
+(need some help on sql? try: https://www.w3schools.com/sql/default.asp)   
 
 lets stop and remove the container
 
@@ -37,7 +42,7 @@ lets stop and remove the container
 
 `docker rm some-mysql `{{execute}}
 
-and start it so  the database is preserves on a local volume  
+and start it so  the database is preserved on a local volume  
 `mkdir data`{{execute}}
   
 `docker run --name some-mysql -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql`{{execute}}
