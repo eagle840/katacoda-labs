@@ -2,6 +2,9 @@ If not already connect with the jupiyter notebote
 
 https://[[HOST_SUBDOMAIN]]-8888-[[KATACODA_HOST]].environments.katacoda.com
 
+
+https://pandas.pydata.org/docs/getting_started/index.html
+
 And lets open our first notebook.  
 SHOW JPG OF IMAGE TO CLICK ON
 (see how it populates file in terminal)
