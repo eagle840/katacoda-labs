@@ -20,9 +20,9 @@ https://www.apache.org/dyn/closer.cgi?path=/kafka/2.4.0/kafka_2.12-2.4.0.tgz
 
 start zookeeper, then kafka
 
-`bin/zookeeper-server-start.sh config/zookeeper.properties`{{execute}}
+`bin/zookeeper-server-start.sh config/zookeeper.properties &`{{execute}}
 
-`bin/kafka-server-start.sh config/server.properties`{{execute}}
+`bin/kafka-server-start.sh config/server.properties &`{{execute}}
 
 Create a topic
 
