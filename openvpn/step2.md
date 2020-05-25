@@ -1,10 +1,17 @@
+# Run OPENVPN from windows.
+
+You'll need to install openvpn form:   
+
+https://openvpn.net/community-downloads/ 
+
+`cat client.ovpn`{{execute}}
+
 now copy the file over to your home directory
 
 copy the contents of client.ovpn to your own file on your computer.
 `cat client.opvn`
 
-You'll need to install openvpn form:   
-https://openvpn.net/community-downloads/   
+
 
 And then rightclick the client.ovpn file and start openvpn.
 
