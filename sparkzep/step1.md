@@ -4,8 +4,7 @@
 tar -xvf helm-v2.8.2-linux-amd64.tar.gz
 mv linux-amd64/helm /usr/local/bin/`{{execute}}
 
-`helm init
-helm repo update`{{execute}}
+`helm init && helm repo update`{{execute}}
 
 ### install spark
 
