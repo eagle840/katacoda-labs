@@ -1,9 +1,18 @@
 ## docker compose
 
+In this step we'll be using docker-compose.
 
-create the file: docker-compose.yml  
+first create a folder to hold your composer files:
 
-**WIP** move into it's own folder, since docker-compose uses folders in the names'
+
+`mkdir compose1 && cd compose1`{{execute}}
+
+create the file: docker-compose.yml  and paste the yaml file in.
+
+`nano docker-compose.yml`{{execute}}
+
+(ctrl-insert:copy shift-insert:paste)
+
 
 ```yaml
 version: '3'
@@ -21,6 +30,10 @@ services:
            - "./data:/var/lib/mysql:rw"
 ```
 
+lets copy across the data folder we created in step 1
+
+`cp ../data /data`
+
 `docker-compose up`{{execute}}
 
 confirm ruuning  
@@ -34,6 +47,10 @@ you can connect to the container in either way:
 
 
 ## add service to docker-compose.yml
+
+Add   the following test to the end of the docker-compose file.
+
+`nano docker-compose.yml`{{execute}}
 
 ``` yaml
     client:
@@ -89,16 +106,16 @@ Lets add another service to the yml
 
 `docker-compose up`{{execute}}
 
-url for 8080
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
 ```
 system: mysql
-server: mysql-dev   (the name of the service)
+server: compose1_mysql-dev_1   (from docker-compose ps)
 un: root
-pw: password
-database: blogapp
+pw: 1234
+database: test1
 ```
-and the 2014data database
+
 
 
 ## postgres

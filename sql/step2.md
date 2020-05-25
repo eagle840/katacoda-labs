@@ -65,7 +65,11 @@ and run the restore:
 
 `mysql -uroot -p1234 < /backups/fulldump.sql`{{execute}}
 
-`ysql -uroot -p1234 -e "show databases; use test1; show tables;"`{{execute}}
+`mysql -uroot -p1234 -e "show databases; use test1; show tables;"`{{execute}}
+
+and exit the container:
+
+`exit`{{execute}}
 
 
 # Save And Restore - Auto
