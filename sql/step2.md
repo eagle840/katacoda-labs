@@ -6,9 +6,9 @@ Lets create a backup folder on the local host
 
 `mkdir backups`{{execute}}
 
-and start mysql in docker, setting up a volume for the database and one for the backup.
+and start mysql in docker, using the data/ volume for the database and backups/ for the backup.
 
-Since the sql data is still in the data volume from the last step, we'll be using that as the db. ***WIP*** no its not
+Since the sql data is still in the data volume from the last step, we'll be using that as the db. 
 
 `docker run --name some-mysql -v /root/data:/var/lib/mysql -v /root/backups:/backups -e MYSQL_ROOT_PASSWORD=1234 -d mysql`{{execute}}
 
@@ -32,6 +32,9 @@ Lets connect to the docker container and use the mysqldump to backup the databas
 
 `mysqldump --all-databases --password=1234  > /backups/fulldump.sql`{{execute}}
 
+and check we have the backup files:
+
+ls backups
 
 Lets go ahead and destroy the container   
 
@@ -46,23 +49,23 @@ Lets go ahead and destroy the container
 
 Lets remove the data folder
 
-`rm -r /data/`
+`rm -r data/`{{execute}}
 
 ## Restore
 
 Startup the docker container:   
 
-`docker run --name some-mysql -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql`{{execute}}
+`docker run --name some-mysql -v /root/data:/var/lib/mysql -v /root/backups:/backups -e MYSQL_ROOT_PASSWORD=1234 -d mysql`{{execute}}
 
 and connect
 
 `docker exec -it some-mysql bash`{{execute}}   
 
-`mysql -uroot -p1234 [database name] < <backupname>.sql`
+and run the restore:
 
-**WIP** correctly mount the volume for restore
+`mysql -uroot -p1234 < /backups/fulldump.sql`{{execute}}
 
-`mysql -uroot -p < fulldump.sql`
+`ysql -uroot -p1234 -e "show databases; use test1; show tables;"`{{execute}}
 
 
 # Save And Restore - Auto

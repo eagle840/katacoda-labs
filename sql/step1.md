@@ -30,7 +30,7 @@ It'll take a minute to pull the image, so wait until you see a container up and 
 
 and exit mysql/container
 
-`exit`{{execute}} 
+`exit;`{{execute}} 
 
 (need some help on sql? try: https://www.w3schools.com/sql/default.asp)   
 
@@ -45,26 +45,30 @@ and start it so  the database is preserved on a local volume
   
 `docker run --name some-mysql -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql`{{execute}}
 
+and connect to the container:
 
+`docker exec -it  some-mysql mysql -uroot -p1234`{{execute}}   
+
+``create database test1;`{{execute}}
 
 ## Create  a couple of simple tables.
 
+`use test1;`{{execute}}
 
+'
+CREATE TABLE Persons (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);'
 
+`SELECT * FROM Customers;`{{execute}}
 
+and now exit and deletel the container:
 
-## configs  (start 14:28)
-
-
-### option 1
-
-mount vol
-
-### option 2
-
-new custom image
-
-lets stop and remove the container ready for the next step.
+`exit;`{{execute}}
 
 `docker stop some-mysql`{{execute}}
 
