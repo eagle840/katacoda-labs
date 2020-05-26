@@ -1,8 +1,6 @@
 
-<<<<<<< HEAD
 In this scenario we will learn to use tcpdump and netcat (nc) on a couple  ubuntu linux server
-=======
->>>>>>> 6e1441eb4de043d5bec5f58d2e12956f0dcd99b3
+
 
 In this scenario/lab we will get an overview of three networking troubleshooting tools: tcpdump, netcat (nc) & wireshark(tshark) on a couple of  Ubuntu linux servers.
 

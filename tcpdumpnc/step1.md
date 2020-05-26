@@ -81,7 +81,7 @@ Lets look for incoming traffic from host02
 
 `tcpdump -i ens3  -c 3 -v -nt src host host02`{{ execute }}
 
-And lets send a ping (type yes when prompted)
+And lets send a ping (type yes when prompted) using ssh from the 2nd host.
 
 `ssh root@host01 ping -c 3 www.bbc.com`{{execute HOST2}}
  

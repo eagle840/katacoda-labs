@@ -21,7 +21,7 @@ and connect to it on the other server - host2
 Connnect to Terminal Host 2 and run.
 `nc host01 1234`{{ execute HOST2 }}
 
-Now try sending messages between each server, to quit just use ctrl-L
+Now try sending messages between each server, to quit just use **ctrl-c**
 
 if you're not getting the output you expect you can use `-v` or `-vv` for verbose output to help trouble shoot.
 
@@ -30,6 +30,8 @@ in fact, lets try connecting to  googles dns service on UDP 53 (put the -u befor
 `nc -vv -u 8.8.8.8 53`{{execute}}
 
 should return: Connection to 8.8.8.8 53 port [udp/domain] succeeded!
+
+and disconnect **ctrl-C**
 
 Next up, lets try a little port scanning with `-z`, and this time like tcpdump we'll use `-n` to suppress name resolution. The last argument here specifies the port range 1 to 30
 
