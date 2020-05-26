@@ -34,6 +34,8 @@ Now lets jump over to node01
 ssh node02
 
 
+www.ssh.com
+
 ----------
 Lets generate show ssh keys:
 

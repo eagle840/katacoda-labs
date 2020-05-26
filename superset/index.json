@@ -1,6 +1,6 @@
 {
   "title": "Apache Superset",
-  "description": "Run Apache Superset Docker-Compose",
+  "description": "(v.05) Run Apache Superset Docker-Compose",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {
