@@ -1,6 +1,6 @@
 {
   "title": "ssh basics",
-  "description": "under construction setup small ssh cert login",
+  "description": "(v0.5) setup a user account and ssh cert login",
   "difficulty": "Beginner",
   "time": "60 minutes",
   "details": {
