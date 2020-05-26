@@ -1,6 +1,6 @@
 {
   "title": "Tensorflow on k8s",
-  "description": "setup Tensorflow on k8s and run a few examples",
+  "description": "(v0.3) setup Tensorflow on k8s and run a few examples",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {

@@ -32,6 +32,8 @@
 
 see 'https://hub.helm.sh/charts/stable/distributed-tensorflow' for updated versions
 
-Now wait until all the pods show ready (1/1)
+Now wait until all the pods show ready, about 10 minutes, STATUS = Running
+
+`k get pods`{{execute}}
 
 
