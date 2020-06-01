@@ -49,22 +49,18 @@ and connect to the container:
 
 `docker exec -it  some-mysql mysql -uroot -p1234`{{execute}}   
 
-``create database test1;`{{execute}}
+`create database test1;`{{execute}}
 
 ## Create  a couple of simple tables.
 
 `use test1;`{{execute}}
 
-'
-CREATE TABLE Persons (
-    PersonID int,
-    LastName varchar(255),
-    FirstName varchar(255),
-    Address varchar(255),
-    City varchar(255)
-);'
+`CREATE TABLE Persons (PersonID int, LastName varchar(255), FirstName varchar(255), Address varchar(255), City varchar(255) );`{{execute}}
+ 
 
-`SELECT * FROM Customers;`{{execute}}
+`SELECT * FROM Persons;`{{execute}}
+
+`INSERT INTO Persons VALUES ('4006', 'Smith', 'John', '123 any street', 'anywhere');`{{execute}}
 
 and now exit and deletel the container:
 

@@ -34,7 +34,7 @@ Lets connect to the docker container and use the mysqldump to backup the databas
 
 and check we have the backup files:
 
-ls backups
+`ls backups`{{execute}}
 
 Lets go ahead and destroy the container   
 
@@ -65,14 +65,14 @@ and run the restore:
 
 `mysql -uroot -p1234 < /backups/fulldump.sql`{{execute}}
 
-`mysql -uroot -p1234 -e "show databases; use test1; show tables;"`{{execute}}
+`mysql -uroot -p1234 -e "SHOW databases; USE test1; SHOW tables; SELECT * FROM Persons;"`{{execute}}
 
 and exit the container:
 
 `exit`{{execute}}
 
 
-# Save And Restore - Auto
+# Save And Restore - Auto (IN PROGRESS)
 
 In this part we'll setup a cron job to automatically run backups
 

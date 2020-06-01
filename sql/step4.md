@@ -1,4 +1,4 @@
-# SQL queries and more
+# SQL queries and more (IN-PROGRESS)
 
 ## Resources
 

@@ -32,7 +32,9 @@ services:
 
 lets copy across the data folder we created in step 1
 
-`cp ../data /data`
+**WIP**  the following is breaking the docker compose
+
+`cp -r /root/data/ /root/compose1/data/`{{execute}}
 
 `docker-compose up`{{execute}}
 
