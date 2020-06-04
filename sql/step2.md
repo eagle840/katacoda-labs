@@ -74,6 +74,16 @@ and exit the container:
 
 # Save And Restore - Auto (IN PROGRESS)
 
+Lets create a command that can be run in a script
+
+`cd backup`   
+`nano backup.sh`   
+copy  'mysqldump --add-drop-table --password=1234 --databases test1  > /backups/$(/bin/date +\%Y-%m-\%d).sql.bak'  into it and save   
+`chmod 0777 backup.sh'   
+`cd ..`   
+`docker exec some-mysql /backups/backup.sh`   
+and confirm that new file is written
+
 In this part we'll setup a cron job to automatically run backups
 
 so we don't have to be prompted everytime we run a backup, we'll create a .my.cnf file with the un and pw
@@ -94,7 +104,13 @@ and allow only root
 
 `nano /etc/crontab`
 
-(8:06)
+'13 55 * * * docker exec some-mysql /backups/backup.sh'   
+13: hr
+55: min
+'* * * : every ....fill in'
+then the command to run 
+
+(8:06) How to backup
 
 
 ## Reset password

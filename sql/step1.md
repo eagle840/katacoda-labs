@@ -47,7 +47,9 @@ and start it so  the database is preserved on a local volume
 
 and connect to the container:
 
-`docker exec -it  some-mysql mysql -uroot -p1234`{{execute}}   
+`docker exec -it  some-mysql mysql -uroot -p1234`{{execute}}  
+
+You should see the prompt: 'mysql>'
 
 `create database test1;`{{execute}}
 
