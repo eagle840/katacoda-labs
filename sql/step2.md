@@ -25,8 +25,7 @@ Lets connect to the docker container and use the mysqldump to backup the databas
 `mysqldump --add-drop-table --password=1234 --databases test1  > /backups/$(/bin/date +\%Y-%m-\%d).sql.bak`{{execute}}
 
 (note: using this script will overwrite the backup if run again over the same day)
-
-***WIP IS DROP-TABLE needed**
+(--add-drop-table: will make the restore remove the table before restoring it)
 
 ### backup all
 
@@ -74,7 +73,10 @@ and exit the container:
 
 # Save And Restore - Auto (IN PROGRESS)
 
-Lets create a command that can be run in a script
+Lets create a command that can be run in a script.
+
+
+`docker exec -it some-mysql -- mysqldump --add-drop-table --password=1234 --databases test1  > backups/$(/bin/date +\%Y-%m-\%d).sql.bak`{{execute}}
 
 `cd backup`   
 `nano backup.sh`   
@@ -102,13 +104,21 @@ and allow only root
 
 ### schedule it with crontab
 
+Lets 1st get a time check:`date`{{execute}}
+
 `nano /etc/crontab`
+
+and add a couple on minutes to the time:
 
 '13 55 * * * docker exec some-mysql /backups/backup.sh'   
 13: hr
 55: min
 '* * * : every ....fill in'
 then the command to run 
+
+we can check the logs to see   
+
+`grep CRON /var/log/syslog`{{execute}}
 
 (8:06) How to backup
 
