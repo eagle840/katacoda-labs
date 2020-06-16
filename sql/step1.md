@@ -45,7 +45,7 @@ and start it so  the database is preserved on a local volume
   
 `docker run --name some-mysql -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql`{{execute}}
 
-and connect to the container:
+and connect to the container (you may have to try several times to get the mysql prompt):
 
 `docker exec -it  some-mysql mysql -uroot -p1234`{{execute}}  
 
