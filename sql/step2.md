@@ -10,7 +10,7 @@ and start mysql in docker, using the data/ volume for the database and backups/ 
 
 Since the sql data is still in the data volume from the last step, we'll be using that as the db. 
 
-`docker run --name some-mysql -v /root/data:/var/lib/mysql -v /root/backups:/backups -e MYSQL_ROOT_PASSWORD=1234 -d mysql`{{execute}}
+`docker run --name some-mysql -v /root/data:/var/lib/mysql -v /root/backups:/backups -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0.2`{{execute}}
 
 
 ### backup one db
@@ -54,7 +54,7 @@ Lets remove the data folder
 
 Startup the docker container:   
 
-`docker run --name some-mysql -v /root/data:/var/lib/mysql -v /root/backups:/backups -e MYSQL_ROOT_PASSWORD=1234 -d mysql`{{execute}}
+`docker run --name some-mysql -v /root/data:/var/lib/mysql -v /root/backups:/backups -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0.2`{{execute}}
 
 and connect
 
@@ -71,46 +71,50 @@ and exit the container:
 `exit`{{execute}}
 
 
-# Save And Restore - Auto (IN PROGRESS)
+# Save And Restore - Auto 
 
 Lets create a command that can be run in a script.
 
 
-`docker exec -it some-mysql -- mysqldump --add-drop-table --password=1234 --databases test1  > backups/$(/bin/date +\%Y-%m-\%d).sql.bak`{{execute}}
+`docker exec -it some-mysql -- mysqldump --add-drop-table --password=1234 --databases test1  > backups/$(/bin/date +\%Y-%m-\%d-\%H-\%M).sql.bak`
 
-`cd backup`   
-`nano backup.sh`   
-copy  'mysqldump --add-drop-table --password=1234 --databases test1  > /backups/$(/bin/date +\%Y-%m-\%d).sql.bak'  into it and save   
-`chmod 0777 backup.sh'   
-`cd ..`   
-`docker exec some-mysql /backups/backup.sh`   
-and confirm that new file is written
+`cd backup`{{execute}}
+
+`nano backup.sh`{{execute}}   
+copy  the above command  into it and save, then change the execute mode   
+`chmod 0777 backup.sh`{{execute}}   
+`cd ..`{{execute}}    
+`./backups/backup.sh`{{execute}}   
+and confirm that new file is written   
+`ls backup`{{execute}}   
+
+## schedule it with crontab (in progress)
 
 In this part we'll setup a cron job to automatically run backups
 
 so we don't have to be prompted everytime we run a backup, we'll create a .my.cnf file with the un and pw
 
-store mysql root password in /root/.my.cnf   (chmod 600 .my.cnf)  
-**WIP*** needs to go into container  
-copy and paste into  .my.conf  
+store mysql root password in /root/.my.cnf   (chmod 600 .my.cnf)   
+**WIP*** needs to go into container   
+copy and paste into  .my.conf   
 
-'''yaml
+```yaml
 [client]
 user=root
 password=1234
-'''
-and allow only root  
-`chmod 600 .my.cnf`{{execute}}
+```   
+and allow only root    
+`chmod 600 .my.cnf`{{execute}}   
 
-### schedule it with crontab
 
-Lets 1st get a time check:`date`{{execute}}
 
-`nano /etc/crontab`
+Lets 1st get a time check:`date`{{execute}}   
+
+`nano /etc/crontab`{{execute}}
 
 and add a couple on minutes to the time:
 
-'13 55 * * * docker exec some-mysql /backups/backup.sh'   
+`13 55 * * *  root/backups/backup.sh`   
 13: hr
 55: min
 '* * * : every ....fill in'

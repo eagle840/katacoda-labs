@@ -6,7 +6,7 @@ You should end up here: https://hub.docker.com/_/mysql
 
 Looking through the notes you'll see  how to startup mysql, 
 
-`docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql`{{execute}}
+`docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0.2`{{execute}}
 
 It'll take a minute to pull the image, so wait until you see a container up and running with
 
@@ -43,9 +43,9 @@ lets stop and remove the container
 and start it so  the database is preserved on a local volume  
 `mkdir data`{{execute}}
   
-`docker run --name some-mysql -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql`{{execute}}
+`docker run --name some-mysql -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0.2`{{execute}}
 
-and connect to the container (you may have to try several times to get the mysql prompt):
+wait 30secs and connect to the container (you may have to try several times to get the mysql prompt):
 
 `docker exec -it  some-mysql mysql -uroot -p1234`{{execute}}  
 
@@ -63,6 +63,8 @@ You should see the prompt: 'mysql>'
 `SELECT * FROM Persons;`{{execute}}
 
 `INSERT INTO Persons VALUES ('4006', 'Smith', 'John', '123 any street', 'anywhere');`{{execute}}
+
+`SELECT * FROM Persons;`{{execute}}
 
 and now exit and deletel the container:
 
