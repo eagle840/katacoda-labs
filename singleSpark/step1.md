@@ -18,7 +18,7 @@ and update it:
 
 
 Download Spark (we're using release 2.4, package 2.7):
-`curl -O http://apache.mirrors.nublue.co.uk/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz`{{execute}}
+`curl -O https://archive.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz`{{execute}}
 
 
 

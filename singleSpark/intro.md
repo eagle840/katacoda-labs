@@ -3,4 +3,4 @@ Spark is one of the premier opensource data processing tools and is used extensi
 In this lab we'll install a single standalone spark server and try a few scala and python commands. The lab is active for hour so feel free to do some of the examples on the spark website.
 
 
-updated: 02032020
+updated: 018062020
