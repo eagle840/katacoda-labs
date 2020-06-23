@@ -64,7 +64,9 @@ Add   the following test to the end of the docker-compose file.
 
 **WIP** the following captures to terminal
 
-`docker-compose up `{{execute}}
+`docker-compose up -d`{{execute}}
+
+`docker-compose ps`{{execute}}
 
 note that the client will exit
 
@@ -76,19 +78,21 @@ will connect you
 
 shows a new container running 
 
-Perhaps we need to add another legacy db:
+Let's  add another legacy SQL server, but use a different port:
+
+`nano docker-compose.yml`{{execute}}
 
 ``` yaml
-mysql-legacy:
-    image: mysql:5.7
-    envirnoment:
-        MYSQL_ROOT_PASSWORD: 1234
-        MYSQL_DATABASE: 2014app
-    ports:
-    - "3309:3306"
+    mysql-legacy:
+        image: mysql:5.7
+        environment:
+            MYSQL_ROOT_PASSWORD: 1234
+            MYSQL_DATABASE: 2014app
+        ports:
+        - "3309:3306"
 ```
 
-lets' check
+`docker-compose up -d`{{execute}}
 
 `docker-compose ps`{{execute}}
 
@@ -106,7 +110,7 @@ Lets add another service to the yml
         - 8080:8080
 ```
 
-`docker-compose up`{{execute}}
+`docker-compose up -d `{{execute}}
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
@@ -133,9 +137,13 @@ Lets add a postgres db   url for postgres on docker hub
             POSTGRES_DB: blogapp
 ```
 
-connect with adminer
+`docker-compose up -d`{{execute}}
 
-connect with cli
+`docker-compose ps`{{execute}}
+
+try connecting with adminer
+
+connect with cli:
 
 `docker-compose exec postgres1 psql -U root -W blogapp`{{execute}}
 
