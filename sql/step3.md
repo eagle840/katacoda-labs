@@ -23,7 +23,7 @@ services:
         image: mysql:8.0.2
         environment:
             MYSQL_ROOT_PASSWORD: 1234
-            MYSQL_DATABASE: blogapp
+            MYSQL_DATABASE: test1
         ports:
            - "3308:3306"
         volumes:
@@ -36,14 +36,14 @@ lets copy across the data folder we created in step 1
 
 `cp -r /root/data/ /root/compose1/data/`{{execute}}
 
-`docker-compose up`{{execute}}
+`docker-compose up -d`{{execute}}
 
 confirm ruuning  
 `docker-compose ps`{{execute}}
 
 
 you can connect to the container in either way:  
-`docker exec -it root_mysql-dev_1 /bin/bash`{{execute}}
+`docker exec -it compose1_mysql-dev_1 /bin/bash`{{execute}}
 
 `docker-compose exec  mysql-dev /bin/bash`{{execute}}
 
@@ -59,7 +59,7 @@ Add   the following test to the end of the docker-compose file.
         image: mysql:8.0.2
         depends_on:
             - mysql-dev
-        command: mysql -uroot -p1234 -hmysql-dev blogapp
+        command: mysql -uroot -p1234 -hmysql-dev test1
 ```
 
 **WIP** the following captures to terminal

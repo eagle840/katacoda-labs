@@ -78,7 +78,7 @@ Lets create a command that can be run in a script.
 
 `docker exec -it some-mysql -- mysqldump --add-drop-table --password=1234 --databases test1  > backups/$(/bin/date +\%Y-%m-\%d-\%H-\%M).sql.bak`
 
-`cd backup`{{execute}}
+`cd backups`{{execute}}
 
 `nano backup.sh`{{execute}}   
 copy  the above command  into it and save, then change the execute mode   
@@ -86,7 +86,7 @@ copy  the above command  into it and save, then change the execute mode
 `cd ..`{{execute}}    
 `./backups/backup.sh`{{execute}}   
 and confirm that new file is written   
-`ls backup`{{execute}}   
+`ls backups`{{execute}}   
 
 ## schedule it with crontab (in progress)
 
@@ -113,6 +113,8 @@ Lets 1st get a time check:`date`{{execute}}
 `nano /etc/crontab`{{execute}}
 
 and add a couple on minutes to the time:
+
+WIP  use crontab -e
 
 `13 55 * * *  root/backups/backup.sh`   
 13: hr
