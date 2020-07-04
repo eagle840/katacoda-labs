@@ -20,6 +20,11 @@ And run this script to add a admin user:
 
 `./add-user-keycloak.sh -r master -u admin -p admin`{{execute}}
 
+If you get an error, it may be the JAVA_HOME environmental variable maybe wrong, run:
+
+
+`JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/`
+
 and start the server (about 2mins)
 `./standalone.sh -b 0.0.0.0`{{execute}}
 
