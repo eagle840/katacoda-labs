@@ -3,6 +3,9 @@
 <https://www.katacoda.com/keycloak>
 <https://www.katacoda.com/sebastienblanc>
 
+
+github resource
+
 Easily secure your Front and back applications with KeyCloak by Sebastien Blanc <https://www.youtube.com/watch?v=RGp4HUKikts>
 
 github <https://github.com/keycloak>
