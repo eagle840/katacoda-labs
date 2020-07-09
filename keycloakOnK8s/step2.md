@@ -1,13 +1,13 @@
 
 Lets check that the openID connect and OAuth is working 
 
-curl -v -X POST http://localhost:8443/auth/realms/master/procotol/openid-connect/token \
+`curl -v -X POST http://localhost:8443/auth/realms/master/procotol/openid-connect/token \
 -H 'content-type: application/x-www-form-urlencoded' \
 -d grant_type=password   \
 -d client_id=testclient  \
 -d username=admin \
 -d password=admin \
-| jq -r '.access token'
+| jq -r '.access token'`
 
 
 realm settings > general > click on 'endpoints' openid endpoinnt  config     to get config file
