@@ -11,15 +11,20 @@ And send the following command to get a token.
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/admin
 
 
+`export access_token=$(\
+    curl -v -X POST http://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/katacoda/protocol/openid-connect/token \
+    -H 'content-type: application/x-www-form-urlencoded' \
+    -d 'username=testuser&password=test&grant_type=password&client_id=kube-cluster' | jq --raw-output '.access_token')`{{execute}}
 
 
+THE -d NEEDS TO BE ONE LINE - DELETEME
 `curl -v -X POST http://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/auth/realms/master/procotol/openid-connect/token \
 -H 'content-type: application/x-www-form-urlencoded' \
 -d grant_type=password   \
 -d client_id=kube-cluster  \
 -d username=testuser \
 -d password=test \
-| jq -r '.access token'`{{execute}}
+| jq -r '.access token'`
 
 
 DELETEME   
@@ -59,7 +64,7 @@ key : Authorization
 value : Bearer + $access_token
 
 `curl -v -X GET \
-  http://2886795272-3000-host08nc.environments.katacoda.com/service/secured \
+  http://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/service/secured \
   -H "Authorization: Bearer "$access_token`
 
 

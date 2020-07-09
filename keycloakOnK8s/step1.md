@@ -37,7 +37,7 @@ On the landing page, click on Administration Console. This will bring you to a l
 
 You are now on the Master realm configuration page, but let's create our own realm.   
 
-At the top of the left menu, hover over Master. When a button to add a Realm appears, click it. Give the realm a name, such as katacoda, and click create.  
+At the top of the left menu, hover over Master. When a button to add a Realm appears, click it. Give the realm a name, 'katacoda', and click create.  
 
 
 # Creating a realm role
@@ -50,8 +50,6 @@ Give the role a name, such as userrole, and save it.
 
 
 # Creating an user   
-
-The last step to complete the configuration of the realm is to create a user.
 
 On the left menu, click Users. You see a list of users. On the right of the table, look for Add user. Click that button.
 
@@ -66,13 +64,13 @@ Click on the Credentials tab and add a new password: test. Confirm the password.
 
 # Assign the Realm Role to the User   
 
-The last step is to assign the role user to our test user. Click on the tab Role Mappings. In Available Roles, you see the userrole, high light it and move it across.
+Assign the role user to our test user. Click on the tab Role Mappings. In Available Roles, you see the userrole, high light it and click 'add selected'.
 
 # Create an OAuth client
 
 On the lhs, click on clients, and then create
 
-lets call it 'kube-cluster'
+lets call it 'kube-cluster', and click save.
 
 WIP need the openID Connect discovery std end point keyclockserver.com:socket443/auth/realms/<realmName>   
 find them here: on  left hand side,   Configure>Realm Settings>General>Endpoints>'clock on OpenID...'
