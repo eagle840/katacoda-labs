@@ -1,6 +1,6 @@
 {
   "title": "Using OpenId with K8S",
-  "description": "(v0.45) In this scenario we'll setup a keycloak OpenId server and connect K8S to it, in progress",
+  "description": "(v0.46) In this scenario we'll setup a keycloak OpenId server and connect K8S to it, in progress",
   "difficulty": "Advanced",
   "time": "15",
   "details": {
