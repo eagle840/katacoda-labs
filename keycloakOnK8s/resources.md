@@ -24,3 +24,7 @@ Use Open ID Connect for Kubernetes API server     https://www.youtube.com/watch?
 
 Keycloak Deep Dive; https://www.youtube.com/watch?v=XJYy6Aq-PJ8
 https://github.com/stianst/keycloak-containers-demo
+
+
+A list of various keycloak tutorial by the sam person
+https://www.youtube.com/channel/UCZNLyi3RCF7WEHdda91LF8g/videos
