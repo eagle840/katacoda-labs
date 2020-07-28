@@ -38,14 +38,19 @@ lets copy across the data folder we created in step 1
 
 `docker-compose up -d`{{execute}}
 
-confirm ruuning  
+confirm running  
 `docker-compose ps`{{execute}}
 
 
 you can connect to the container in either way:  
 `docker exec -it compose1_mysql-dev_1 /bin/bash`{{execute}}
 
+OR
+
 `docker-compose exec  mysql-dev /bin/bash`{{execute}}
+
+and then exit the container when finished   
+`exit`{{execute}}
 
 
 ## add service to docker-compose.yml
@@ -109,6 +114,8 @@ Lets add another service to the yml
         ports:
         - 8080:8080
 ```
+
+`nano docker-compose.yml`{{execute}}
 
 `docker-compose up -d `{{execute}}
 
