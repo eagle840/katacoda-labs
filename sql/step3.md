@@ -2,8 +2,11 @@
 
 In this step we'll be using docker-compose.
 
-first create a folder to hold your composer files:
+Lets make sure we' re in the root folder
 
+`cd /root`{{execute}}
+
+first create a folder to hold your composer files:
 
 `mkdir compose1 && cd compose1`{{execute}}
 
@@ -118,6 +121,8 @@ Lets add another service to the yml
 `nano docker-compose.yml`{{execute}}
 
 `docker-compose up -d `{{execute}}
+
+And lets connect and login:
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 

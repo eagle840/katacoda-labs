@@ -83,6 +83,8 @@ copy & paste the following  into it and save
 
 `docker exec -it some-mysql -- mysqldump --add-drop-table --password=1234 --databases test1  > backups/$(/bin/date +\%Y-%m-\%d-\%H-\%M).sql.bak`
 
+(ctl-o to save, ctl-x to exit)
+
 then change the execute mode
 
 `chmod 0777 backup.sh`{{execute}}   
@@ -103,6 +105,9 @@ so we don't have to be prompted everytime we run a backup, we'll create a .my.cn
 
 store mysql root password in /root/.my.cnf   (chmod 600 .my.cnf)   
 **WIP*** needs to go into container   
+
+`nano .my.cnf`{{execute}}
+
 copy and paste into  .my.conf   
 
 ```yaml
@@ -121,26 +126,22 @@ For me it was 13:50,
 
 WIP remove :`nano /etc/crontab`{{execute}}
 
-lets edit the crontab file and add a couple on minutes to the time:
+lets edit the crontab file and add a couple of minutes to the time:
 
 `crontab -e`{{execute}}
 
-`13 55 * * *  root/backups/backup.sh`   
-13: hr
+`55 13 * * *  /root/backups/backup.sh`   
+
 55: min
-'* * * : every ....fill in'
+13: hr
+'* * * : every day'
 then the command to run 
 
-we can check the logs to see   
-
-`grep CRON /var/log/syslog`{{execute}}
-
-(8:06) How to backup
+and check the folder to confirm.
 
 
-## Reset password
+`ls backups`{{execute}}
 
-check mysql docs to add section
 
 ## remove the container
 
