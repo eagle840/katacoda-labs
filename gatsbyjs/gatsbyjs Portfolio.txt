@@ -1,0 +1,20 @@
+sudo apt install npm
+https://www.katacoda.com/scenario-examples/courses/environment-usages/nodejs
+
+
+
+How to Create and Deploy a Portfolio Site in less than 30 Minutes
+https://www.youtube.com/watch?v=TXAkP4WQVXY
+
+gatsbyjs.org/starts
+
+
+       npm install -g gatsby-cli
+    9  cd gats
+   10  mkdir gats
+   11  cd gats
+   12  gatsby new gatsby-site
+       cd gats
+		
+
+

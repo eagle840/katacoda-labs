@@ -2,7 +2,7 @@
 
 
 Lets jump over to docker hub and search for an mysql mage https://hub.docker.com/
-You should end up here: https://hub.docker.com/_/mysql
+You should end up here: https://hub.docker.com/_/mysql, we'll be using version 8.0.2 to keep things stable.
 
 Looking through the notes you'll see  how to startup mysql, 
 
@@ -40,12 +40,12 @@ lets stop and remove the container
 
 `docker rm some-mysql `{{execute}}
 
-and start it so  the database is preserved on a local volume  
+and start it again so  the database is preserved on a local volume  
 `mkdir data`{{execute}}
   
 `docker run --name some-mysql -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0.2`{{execute}}
 
-wait 30secs and connect to the container (you may have to try several times to get the mysql prompt):
+wait 30 seconds and connect to the container (you may have to try several times to get the mysql prompt):
 
 `docker exec -it  some-mysql mysql -uroot -p1234`{{execute}}  
 

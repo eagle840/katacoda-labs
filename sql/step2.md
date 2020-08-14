@@ -16,7 +16,7 @@ Since the sql data is still in the data volume from the last step, we'll be usin
 ### backup one db
 
 
-we'll use the mysqldump command to generate a txt backup file:
+we'll use the mysqldump command to generate a text backup file:
 
 Lets connect to the docker container and use the mysqldump to backup the database test1:
 
@@ -75,15 +75,22 @@ and exit the container:
 
 Lets create a command that can be run in a script.
 
-
-`docker exec -it some-mysql -- mysqldump --add-drop-table --password=1234 --databases test1  > backups/$(/bin/date +\%Y-%m-\%d-\%H-\%M).sql.bak`
-
 `cd backups`{{execute}}
 
 `nano backup.sh`{{execute}}   
-copy  the above command  into it and save, then change the execute mode   
+
+copy & paste the following  into it and save 
+
+`docker exec -it some-mysql -- mysqldump --add-drop-table --password=1234 --databases test1  > backups/$(/bin/date +\%Y-%m-\%d-\%H-\%M).sql.bak`
+
+then change the execute mode
+
 `chmod 0777 backup.sh`{{execute}}   
+
 `cd ..`{{execute}}    
+
+Lets test it 
+
 `./backups/backup.sh`{{execute}}   
 and confirm that new file is written   
 `ls backups`{{execute}}   
@@ -110,11 +117,13 @@ and allow only root
 
 Lets 1st get a time check:`date`{{execute}}   
 
-`nano /etc/crontab`{{execute}}
+For me it was 13:50, 
 
-and add a couple on minutes to the time:
+WIP remove :`nano /etc/crontab`{{execute}}
 
-WIP  use crontab -e
+lets edit the crontab file and add a couple on minutes to the time:
+
+`crontab -e`{{execute}}
 
 `13 55 * * *  root/backups/backup.sh`   
 13: hr
