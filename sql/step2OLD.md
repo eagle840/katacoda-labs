@@ -1,6 +1,6 @@
 # Save And Restore - Manual
 
-In this step we'll manually backup  the databases, remove them and then restore, and then setup to do automatically.
+In this step we'll manually backup  the databases, remove them and then restore
 
 Lets create a backup folder on the local host
 
@@ -101,9 +101,30 @@ and confirm that new file is written
 
 In this part we'll setup a cron job to automatically run backups
 
-Lets first get a time check:`date`{{execute}}   
+so we don't have to be prompted everytime we run a backup, we'll create a .my.cnf file with the un and pw
+
+store mysql root password in /root/.my.cnf   (chmod 600 .my.cnf)   
+**WIP*** needs to go into container   
+
+`nano .my.cnf`{{execute}}
+
+copy and paste into  .my.conf   
+
+```yaml
+[client]
+user=root
+password=1234
+```   
+and allow only root    
+`chmod 600 .my.cnf`{{execute}}   
+
+
+
+Lets 1st get a time check:`date`{{execute}}   
 
 For me it was 13:50, 
+
+WIP remove :`nano /etc/crontab`{{execute}}
 
 lets edit the crontab file and add a couple of minutes to the time:
 
@@ -114,10 +135,10 @@ lets edit the crontab file and add a couple of minutes to the time:
 55: min
 13: hr
 '* * * : every day'
+then the command to run 
 
-Save and exit, and wait until the time is up.   
+and check the folder to confirm.
 
-Lets check the folder to confirm.
 
 `ls backups`{{execute}}
 

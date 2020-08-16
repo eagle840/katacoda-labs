@@ -1,5 +1,6 @@
 #  Setup and create a simple DB
 
+In this step will setup MySQL in docker and use local storage:
 
 Lets jump over to docker hub and search for an mysql mage https://hub.docker.com/
 You should end up here: https://hub.docker.com/_/mysql, we'll be using version 8.0.2 to keep things stable.
@@ -14,6 +15,8 @@ It'll take a minute to pull the image, so wait until you see a container up and 
 
 ## Connect to mySQL
 
+It also takes a few seconds to get MySQL up and running, if you get an error wait a few seconds and try again.
+
 `docker exec -it  some-mysql mysql -uroot -p1234`{{execute}} 
 
 -uroot   => user root  
@@ -21,18 +24,19 @@ It'll take a minute to pull the image, so wait until you see a container up and 
 
 # create a db
 
+now we're connected lets create a new database.
+
 `show databases;`{{execute}}
 
 `create database test1;`{{execute}}
 
 `show databases;`{{execute}}
 
-
 and exit mysql/container
 
 `exit;`{{execute}} 
 
-(need some help on sql? try: https://www.w3schools.com/sql/default.asp)   
+(need some help on sql? try: https://www.w3schools.com/sql/default.asp or https://learnxinyminutes.com/docs/sql/)   
 
 lets stop and remove the container
 
@@ -45,7 +49,7 @@ and start it again so  the database is preserved on a local volume
   
 `docker run --name some-mysql -v /root/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0.2`{{execute}}
 
-wait 30 seconds and connect to the container (you may have to try several times to get the mysql prompt):
+wait 30 seconds and connect to the container:
 
 `docker exec -it  some-mysql mysql -uroot -p1234`{{execute}}  
 

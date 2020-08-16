@@ -36,3 +36,7 @@ dev.mysql.com/doc/employee/en/employees-installation.html
 
 adminer
 https://hub.docker.com/_/adminer/
+
+deleted steps four and five
+    fout: sql tutorial
+    five: engineerman hints

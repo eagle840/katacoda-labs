@@ -1,6 +1,6 @@
 ## docker compose
 
-In this step we'll be using docker-compose.
+In this step we'll be using docker-compose to start up of already created databases, show how we can run several databases at the same time and run Adminer to admin these databases.
 
 Lets make sure we' re in the root folder
 
@@ -9,6 +9,8 @@ Lets make sure we' re in the root folder
 first create a folder to hold your composer files:
 
 `mkdir compose1 && cd compose1`{{execute}}
+
+## Our first docker-compose instance
 
 create the file: docker-compose.yml  and paste the yaml file in.
 
@@ -35,13 +37,13 @@ services:
 
 lets copy across the data folder we created in step 1
 
-**WIP**  the following is breaking the docker compose
-
 `cp -r /root/data/ /root/compose1/data/`{{execute}}
+
+and tell docker-compose to start up.
 
 `docker-compose up -d`{{execute}}
 
-confirm running  
+and confirm it's running  
 `docker-compose ps`{{execute}}
 
 
@@ -56,9 +58,9 @@ and then exit the container when finished
 `exit`{{execute}}
 
 
-## add service to docker-compose.yml
+## add service to docker-compose.yml file
 
-Add   the following test to the end of the docker-compose file.
+Add   the following  to the end of the docker-compose file.
 
 `nano docker-compose.yml`{{execute}}
 
@@ -69,8 +71,6 @@ Add   the following test to the end of the docker-compose file.
             - mysql-dev
         command: mysql -uroot -p1234 -hmysql-dev test1
 ```
-
-**WIP** the following captures to terminal
 
 `docker-compose up -d`{{execute}}
 
@@ -107,9 +107,9 @@ Let's  add another legacy SQL server, but use a different port:
 `docker-compose exec mysql-legacy mysql -uroot -p1234 2014app`{{execute}}
 
 
-### adminer
+### Adminer tool
 
-Lets add another service to the yml
+Lets add the Adminer tool to the yml so we can administor those databases:
 
 ``` yaml
     admin:
@@ -126,6 +126,8 @@ And lets connect and login:
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
+Here's the login for the MySQL server. You can get the server name from using `docker-compose ps`
+
 ```
 system: mysql
 server: compose1_mysql-dev_1   (from docker-compose ps)
@@ -138,7 +140,7 @@ database: test1
 
 ## postgres
 
-Lets add a postgres db   url for postgres on docker hub 
+Add finally add a postgres if you are interested in working on that.
 
 ```yaml
     postgres1:
@@ -155,10 +157,10 @@ Lets add a postgres db   url for postgres on docker hub
 
 try connecting with adminer
 
-connect with cli:
+or connect with cli:
 
 `docker-compose exec postgres1 psql -U root -W blogapp`{{execute}}
 
-## connect to mysql and postgres with adminer
+
 
 
