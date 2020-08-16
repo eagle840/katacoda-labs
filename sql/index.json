@@ -1,6 +1,6 @@
 {
   "title": "Intro to SQL on Docker",
-  "description": "(v0.90)Setup My/Postgre/Aminer SQL on docker abd docker compose",
+  "description": "Setup MySQL, PostgreSQL and Aminer on docker abd docker compose (v1)",
   "difficulty": "Beginner",
   "time": "60 minutes",
   "details": {

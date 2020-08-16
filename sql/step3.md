@@ -58,7 +58,7 @@ and then exit the container when finished
 `exit`{{execute}}
 
 
-## add service to docker-compose.yml file
+## add 2nd & 3rd db to docker-compose.yml file
 
 Add   the following  to the end of the docker-compose file.
 
@@ -79,6 +79,8 @@ Add   the following  to the end of the docker-compose file.
 note that the client will exit
 
 `docker-compose run --rm client`{{execute}}  
+
+and `exit`{{execute}}
 
 will connect you
 
@@ -105,6 +107,8 @@ Let's  add another legacy SQL server, but use a different port:
 `docker-compose ps`{{execute}}
 
 `docker-compose exec mysql-legacy mysql -uroot -p1234 2014app`{{execute}}
+
+and `exit`{{execute}}
 
 
 ### Adminer tool
