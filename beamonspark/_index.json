@@ -1,5 +1,5 @@
 {
-  "title": "_Running Beam on Spark",
+  "title": "Running Beam on Spark",
   "description": "(v0.3)Setup Apache Beam on Spark and run a few simple tests",
   "difficulty": "Intermediate",
   "time": "60",
