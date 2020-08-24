@@ -69,8 +69,8 @@ For now it should be the same as the orginal index.html
 
 ### A little bit of Liquid
 
-Front matter in the beginning of a page tells Jekyll to process the contents of a page. This front matter can be JSON or YAML.
-Lets add some Liquid template code. In the index.html file in your home folder (not in _site - it's an easy mistake to make)
+Front Matter in the beginning of a page tells Jekyll to process the contents of a page. This front matter can be JSON or YAML.
+Lets add some Liquid template code in the index.html file in your home folder (not in _site - it's an easy mistake to make)
 
 Add the following to the top of index.html
 ```
@@ -87,6 +87,8 @@ and replace
 `<h1>{{ "Hello World!" | downcase }}</h1>`
 
 hint: ctrl-o to save and ctrl-x to exit when using nano
+
+the double curly brackets tell Jekyll to process the code inside them
 
 run `jekyll build`{{execute}}   again
 and check the _site/index.html,  and you'll see it's removed the front matter and processed Hello World to lower case.
@@ -109,7 +111,7 @@ https://[[HOST_SUBDOMAIN]]-4000-[[KATACODA_HOST]].environments.katacoda.com
 
 Note the server will output the logs straight to the terminal, and we need to ctrl-c to continue to enter commands.
 
-Lets stop the service with ctrl-c
+Lets stop the service with ctrl-c or execute the following
 `echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
 
 and start the same process, run running it in the background by adding '&' to the end of the command. 
@@ -125,7 +127,7 @@ and using the 'kill' command to end the service (with job number 1)
 
 
 
-When running jekyll serve, any changes to the directory  will automatically show (except changes to _config.yaml which needs a restart of the service)
+When running 'jekyll serve', any changes to the directory  will automatically show (except changes to _config.yaml which needs a restart of the service)
 
 
 

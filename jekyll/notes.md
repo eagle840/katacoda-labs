@@ -1,5 +1,10 @@
 # Notes on this project
 
+
+# NEW!
+stripped down to two parts,  need to add a second (and third?) labs  so I can close this project to v1
+
+
 ## add
 
 _layout    this folder contains a list of html (md?) that generates the main html for a page

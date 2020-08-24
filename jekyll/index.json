@@ -1,8 +1,8 @@
 {
   "title": "Using jekyll to generate static content",
-  "description": "(v0.6) Follow the jekyll step-by-step",
+  "description": "(v0.9) Follow the jekyll step-by-step",
   "difficulty": "Beginner",
-  "time": "15",
+  "time": "30",
   "details": {
     "steps": [
       {
@@ -12,14 +12,6 @@
       {
         "title": "Step 2",
         "text": "step2.md"
-      },
-      {
-        "title": "Step 3",
-        "text": "step3.md"
-      },
-      {
-        "title": "Step 4",
-        "text": "step4.md"
       }
     ],
     "intro": {
