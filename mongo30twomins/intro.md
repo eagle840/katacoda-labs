@@ -1,0 +1,1 @@
+In this lab we'll set up a mongo database and a web admin for it 
