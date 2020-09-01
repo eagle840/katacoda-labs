@@ -5,11 +5,11 @@
 In this lab we'll be useing the docker images mongo and mongo-express
 
 
-`mkdir compose1 && cd compse1`{{execute}}
+`mkdir compose1 && cd compose1`{{execute}}
 
 `nano docker-compose.yml`{{execute}}
 
-paste in the following and save  (ctrl-x then ctrl-s)
+paste in the following and save  (ctrl-o then ctrl-x)
 
 ```
 # Use root/example as user/password credentials
@@ -47,4 +47,5 @@ connect to the web admin:
 
 https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com
 
+And that's it you're done. Feel free to play around with the admin console.
 
