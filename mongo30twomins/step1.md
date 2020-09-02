@@ -9,7 +9,7 @@ In this lab we'll be useing the docker images mongo and mongo-express
 
 `nano docker-compose.yml`{{execute}}
 
-paste in the following and save  (ctrl-o then ctrl-x)
+Cut and paste (ctrl-inst, shft-inst) in the following then save and exit  (ctrl-o then ctrl-x)
 
 ```
 # Use root/example as user/password credentials
@@ -35,13 +35,33 @@ services:
 
 ```
 
-bring the container up:
+bring the containers up:
 
 `docker-compose up -d`{{execute}}
 
 check they are up
 
 `docker-compose ps`{{execute}}
+
+Lets connect to the server itself:
+
+you can connect to the container in either way:  
+
+`docker exec -it compose1_mongo_1 /bin/bash`{{execute}}
+
+OR
+
+`docker-compose exec mongo /bin/bash`{{execute}}
+
+lets check the version we're running:
+
+`mongo --version`{{execute}}
+
+You can enter the Mongo shell with 'mongo -uroot -pexample'
+the help command is 'help' and to exit 'exit'
+
+and then exit the container when finished   
+`exit`{{execute}}
 
 connect to the web admin:
 
