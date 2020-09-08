@@ -1,6 +1,8 @@
-# Setup a Mongo DB server and web admin in under 2 minutes
+# Setup a Mongo DB server and admin
 
-# Create your docker compose file
+
+
+### Create your docker compose file
 
 In this lab we'll be useing the docker images mongo and mongo-express
 
@@ -57,15 +59,18 @@ lets check the version we're running:
 
 `mongo --version`{{execute}}
 
-You can enter the Mongo shell with 'mongo -uroot -pexample'
-the help command is 'help' and to exit 'exit'
+You can enter the Mongo shell with:   
+  `mongo -uroot -pexample`   
+the help command is `help` and to exit `exit`
 
 If you'd like to discover more about mongo shell try: https://docs.mongodb.com/manual/tutorial/access-mongo-shell-help/
 
-and then exit the container when finished   
+When  finished with the shell exit the container:      
 `exit`{{execute}}
 
-connect to the web admin:
+### Connect to the web admin portal
+
+Lets connect to the web admin:
 
 https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com
 
