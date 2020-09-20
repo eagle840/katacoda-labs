@@ -8,14 +8,14 @@ and set a new password for them:
 
 and enter a password 1234
 
-Take a quick look at /etc/
-location of password file.
+Take a quick look at the passwd file and you'll see alexis added.
+`cat /etc/passwd`{{execute}}
 
+and the group file:
+`cat /etc/group`{{execute}}
 
 and the groups command:
-
-
-CMD to check GROUPs
+`group alexis`{{execute}}
 
 Now login to alexis
 
