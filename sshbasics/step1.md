@@ -15,7 +15,7 @@ and the group file:
 `cat /etc/group`{{execute}}
 
 and the groups command:
-`group alexis`{{execute}}
+`groups alexis`{{execute}}
 
 Now login to alexis
 
