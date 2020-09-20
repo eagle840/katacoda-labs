@@ -1,4 +1,4 @@
-In this lab we have two computer setup, master and node01
+In this lab we have two computer setup, a 'server' and  a 'client'
 
 We'll be setting up a user and the connecting via un and pw
 

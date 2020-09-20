@@ -1,8 +1,3 @@
-The top terminal is this lab we'll consider ther server and the bottom one the client.
-
-
-# Top termainal (server)
-
 You're presently logged in with root, so lets setup a new user, alexis
 
 `useradd -m -c "comment for alexis" -s /bin/bash alexis`{{execute}}
@@ -34,30 +29,17 @@ and exit back to the root account.
 
 `exit`{{execute}}
 
-# Setup the bottom terminal (client)
+Now lets jump over to node01
+
+ssh node02
 
 
-WIP  execute on host02
+www.ssh.com
 
-Lets create a new user and login
+----------
+Lets generate show ssh keys:
 
-`useradd -m -c "comment for alexis" -s /bin/bash alex`{{execute}}
-
-`useradd -m -c "comment for alexis" -s /bin/bash alex`{{execute host02}}
-
-and set a new password for them:
-
-`passwd alex`{{execute}}
-
-and enter a password 4321
-
-and login
-
-`login alex`{{execute}}
-
-Lets generate show ssh keys, with a type of rsa:
-
-`ssh-keygen -t rsa`
+`ssh-keygen`
 
 keep the default key location:  `/home/alexis/.ssh/id_rsa`
 
@@ -75,15 +57,8 @@ and id_rsa.pub is the public key
 
 `cat .ssh/id_rsa.pub`{{execute}}
 
-Now let copy the key we generated over to the server:
+run    visudo      (@6:50)
 
-`ssh-copy-id  alexis@host01`{{execute}}
-
-enter the password for alexia on the server (1234)
-
-and now we can connect to the server just using the key
-
-`ssh alexis@host01`{{execute}}
 
 
 

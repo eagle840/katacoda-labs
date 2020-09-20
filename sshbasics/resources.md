@@ -9,3 +9,5 @@ create key gen on one
 ssh-copy-id <un>&<ip> # push to server
 
 show be able to ssh to server
+
+ssh.com
