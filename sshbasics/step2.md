@@ -10,6 +10,8 @@ open putty and try to connect  using the un and pw
 
 #### create ssh keys and try to connect
 
+WIP win:cmd, win:PS, linux, mac
+
 Generate your key
 `ssh-keygen`
 Configure ssh to use the key
