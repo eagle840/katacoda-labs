@@ -22,6 +22,14 @@ and the group file:
 and the groups command:
 `groups alexis`{{execute}}
 
+
+Lets give some (all) sudo priveleges
+
+`sudo visudo`{{execute}}
+
+and add to  the end of the file:
+`alexis ALL=(ALL) NOPASSWD: ALL`
+
 Now login to alexis
 
 `login alexis`{{execute}}
@@ -37,19 +45,25 @@ and exit back to the root account.
 # Setup the bottom terminal (client)
 
 
-WIP  execute on host02
+WIP  execute on host02 
 
-Lets create a new user and login
+Lets create a slight different user name and login
 
-`useradd -m -c "comment for alexis" -s /bin/bash alex`{{execute}}
 
-`useradd -m -c "comment for alexis" -s /bin/bash alex`{{execute host02}}
+`useradd -m -c "comment for alexis" -s /bin/bash alex`{{execute HOST2}}
 
 and set a new password for them:
 
 `passwd alex`{{execute}}
 
 and enter a password 4321
+
+Lets give some (all) sudo priveleges
+
+`sudo visudo`{{execute}}
+
+and add to  the end of the file:
+`alex ALL=(ALL) NOPASSWD: ALL`
 
 and login
 
