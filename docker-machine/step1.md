@@ -75,9 +75,7 @@ Now let copy the key we generated over to the server:
 
 enter the password for alexia on the server (1234)
 
-and now we can connect to the server just using the key
 
-`ssh alexis@host01`{{execute}}
 
 
 
