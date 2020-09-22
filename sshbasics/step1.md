@@ -45,8 +45,6 @@ and exit back to the root account.
 # Setup the bottom terminal (client)
 
 
-WIP  execute on host02 
-
 Lets create a slight different user name and login
 
 
@@ -97,7 +95,7 @@ enter the password for alexia on the server (1234)
 
 and now we can connect to the server just using the key
 
-`ssh alexis@host01`{{execute}}
+`ssh alexis@host01`{{execute HOST2}}
 
 
 
