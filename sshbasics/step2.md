@@ -6,6 +6,10 @@ Let's get the IP address of the server
 
 open putty and try to connect  using the un and pw
 
+OR
+
+The lastest version of Windows 10 now has the ssh command
+
 
 
 #### create ssh keys and try to connect

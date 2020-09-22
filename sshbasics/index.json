@@ -1,8 +1,8 @@
 {
   "title": "ssh basics",
-  "description": "(v0.6) setup a user account and ssh cert login",
+  "description": "(v0.7) setup a user account and ssh cert login",
   "difficulty": "Beginner",
-  "time": "60 minutes",
+  "time": "30 minutes",
   "details": {
     "steps": [
       {
@@ -12,15 +12,7 @@
       {
         "title": "Step 2",
         "text": "step2.md"
-      },
-      {
-        "title": "Step 3",
-        "text": "step3.md"
-      },
-      {
-        "title": "Step 4",
-        "text": "step4.md"
-      }
+      }      
     ],
     "intro": {
       "text": "intro.md"

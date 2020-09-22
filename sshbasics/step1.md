@@ -50,48 +50,48 @@ WIP  execute on host02
 Lets create a slight different user name and login
 
 
-`useradd -m -c "comment for alexis" -s /bin/bash alex`{{execute HOST2}}
+`useradd -m -c "comment for alex" -s /bin/bash alex`{{execute HOST2}}
 
 and set a new password for them:
 
-`passwd alex`{{execute}}
+`passwd alex`{{execute HOST2}}
 
 and enter a password 4321
 
 Lets give some (all) sudo priveleges
 
-`sudo visudo`{{execute}}
+`sudo visudo`{{execute HOST2}}
 
 and add to  the end of the file:
 `alex ALL=(ALL) NOPASSWD: ALL`
 
 and login
 
-`login alex`{{execute}}
+`login alex`{{execute HOST2}}
 
 Lets generate show ssh keys, with a type of rsa:
 
-`ssh-keygen -t rsa`
+`ssh-keygen -t rsa`{{execute HOST2}}
 
-keep the default key location:  `/home/alexis/.ssh/id_rsa`
+keep the default key location:  `/home/alex/.ssh/id_rsa`
 
 and we'll leave the password blank
 
 Lets take a look at the two files generated:
 
-`ls -lash .ssh`{{execute}}
+`ls -lash .ssh`{{execute HOST2}}
 
-The id_rsa is the private key
+The id_rsa is the private key, note how it is marked PRIVATE KEY
 
-`cat .ssh/id_rsa`{{execute}}
+`cat .ssh/id_rsa`{{execute HOST2}}
 
 and id_rsa.pub is the public key
 
-`cat .ssh/id_rsa.pub`{{execute}}
+`cat .ssh/id_rsa.pub`{{execute HOST2}}
 
 Now let copy the key we generated over to the server:
 
-`ssh-copy-id  alexis@host01`{{execute}}
+`ssh-copy-id  alexis@host01`{{execute HOST2}}
 
 enter the password for alexia on the server (1234)
 
