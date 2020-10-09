@@ -38,6 +38,8 @@ main();
 ....................................
 
 !note: still getting an authN failed
+see:
+http://mongodb.github.io/node-mongodb-native/3.6/tutorials/connect/authenticating/
 
 
 
