@@ -4,18 +4,20 @@ Lets pretend that the top terminal, host01, is your home PC
 and host02 is your work.
 
 try curl from host 2  for workcomputer
-`curl host02`{{execute HOST2}}
+`curl host01`{{execute HOST2}}
 
 
 Let say our boss is a real meany, and blocks out interwebs access'
 (we'll block port 80 on host01)
 
-`iptables -A INPUT -p tcp --destination-port {PORT-NUMBER-HERE} -j DROP`{{execute}}
+`iptables -A INPUT -p tcp --destination-port 80 -j DROP`{{execute}}
 
 
 check
 
-`curl host02`{{execute HOST2}}
+`curl host01`{{execute HOST2}}
+
+notice there is no reponse (ctrl-c)
 
 
 We're at work on host 1
