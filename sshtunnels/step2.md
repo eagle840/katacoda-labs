@@ -4,21 +4,18 @@ Lets pretend that the top terminal, host01, is your home PC
 and host02 is your work.
 
 try curl from host 2  for workcomputer
-`curl host01`{{execute HOST2}}
+`curl host02`{{execute HOST2}}
 
 
 Let say our boss is a real meany, and blocks out interwebs access'
-WIP: run cmd to add ip of host01:
+(we'll block port 80 on host01)
 
-HOST01IP=$(cat /etc/hosts | grep host01 | awk '{print $1}')
-
-WIP: error - multiple d flags
-iptables -A OUTPUT -d $HOST01IP -p tcp --dport:80 -j REJECT
+`iptables -A INPUT -p tcp --destination-port {PORT-NUMBER-HERE} -j DROP`{{execute}}
 
 
 check
 
-`curl host01`{{execute HOST2}}
+`curl host02`{{execute HOST2}}
 
 
 We're at work on host 1
@@ -32,7 +29,7 @@ damn it, those admin's at work are blocking us!
 since 3386 is blocked outgoing from were we are, lets try port 8181 to connect to our ssh server.
 Our ssh server will then 'reconnect' to our home server with 3386
 
-`ssh -L 8181:host01:80  root@host01'{{execute HOST2}}
+`ssh -L 8181:host01:80  root@host01`{{execute HOST2}}
 
 Lets take a look at the man for ssh -L
 

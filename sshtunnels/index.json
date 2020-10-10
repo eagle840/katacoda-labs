@@ -1,6 +1,6 @@
 {
   "title": "ssh Tunnels",
-  "description": "Using ssh tunnels",
+  "description": "(v0.2) Using ssh tunnels",
   "difficulty": "Intermediate",
   "time": "15 minutes",
   "details": {
