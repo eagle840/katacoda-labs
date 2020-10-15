@@ -53,3 +53,4 @@ note that you'll get a `404 page not found` - this is Traefik telling you that p
 
 
 WIP: port 8080 isn't coming up - ?turn off the secure api?
+     check out  https://doc.traefik.io/traefik/getting-started/quick-start/
