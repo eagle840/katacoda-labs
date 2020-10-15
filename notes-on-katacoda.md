@@ -42,6 +42,10 @@ and to run a tab with a cmd:
   "terminals": [{"name": "Docker Stats", "command": "docker stats", "target": "host01"}]
 }
 
+
+add link to ext port
+https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com
+
 ## Files
 To upload and use files
 Create files in the scenario folder /assets
