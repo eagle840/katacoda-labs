@@ -13,7 +13,7 @@ Create the docker-compose file:
 `nano docker-compose.yaml`{{execute}}   
 
 
-'
+'''yaml
 version: '3'
 
 services:
@@ -30,10 +30,11 @@ services:
     volumes:
       # So that Traefik can listen to the Docker events
       - /var/run/docker.sock:/var/run/docker.sock
-'
+'''
 
 Bring the containers up:   
 `sudo docker-compose up -d`{{execute}}   
+
 and confirm:
 `sudo docker-compose ps`{{execute}}  
 
@@ -47,7 +48,8 @@ be sure to set the password within x mins
 Lets try and access the stand http port 80
 
 `curl localhoat`{{execute}}   
-note that you'' get a '404 page not found' - this is Traefik telling you that port 80 hasn't been setup
+
+note that you'll get a `404 page not found` - this is Traefik telling you that port 80 hasn't been setup
 
 
 WIP: port 8080 isn't coming up - ?turn off the secure api?
