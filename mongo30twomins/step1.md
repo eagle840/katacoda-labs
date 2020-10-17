@@ -82,7 +82,7 @@ OR
 
 start up a mongo console,
 
-`docker-compose exec mongo mongo`{{execute}}
+`docker-compose exec mongo mongo -uroot -pexample`{{execute}}
 
  and follow along with [Mongo's getting started](https://docs.mongodb.com/manual/tutorial/getting-started/)
 
