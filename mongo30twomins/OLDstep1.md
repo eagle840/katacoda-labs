@@ -76,17 +76,7 @@ Lets connect to the web admin:
 
 https://[[HOST_SUBDOMAIN]]-8081-[[KATACODA_HOST]].environments.katacoda.com
 
-And that's it you're done. Feel free to play around with the admin console,
-
-OR
-
-start up a mongo console,
-
-`docker-compose exec mongo mongo`{{execute}}
-
- and follow along with [Mongo's getting started](https://www.katacoda.com/ir4engineer/scenarios/mongo30twomins)
-
-
+And that's it you're done. Feel free to play around with the admin console.
 
 
 
