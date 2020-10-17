@@ -1,1 +1,1 @@
-A simple Ubuntu 19.04 install.
+A simple Ubuntu 18.04 install.
