@@ -7,6 +7,8 @@
 - lateral movement
 - evade
 - action
+recon-ng deals with the first part: recon
+
 
 ### MITRE PRE-ATT&CK
 recon-ng excels at Technical and Personal info gathering
@@ -22,13 +24,17 @@ You should really have permission to do this
 ## recon-ng interface
 
 ### prompt
-the cmd prompt gives you a global context.
+the cmd prompt tells you where you are in the cli
 The first part is '[recon-ng]'
-The second part shows the workspace you are in.
+The second part shows the workspace you are in. 
 Workspaces are used to contain your work.
 
 help   & help <cmdName>  will show help
 help is also context based, ie where you are in your commands
+
+### database
+recon-ng has a built in database that tracts information and has a preset set of tables
+run 'show' and you'll see the last of tables.
 
 
 ### Steps
