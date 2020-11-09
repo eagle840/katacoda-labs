@@ -1,5 +1,5 @@
 
-There are three main things to configure for a statefulSet, provision the PV's, Setup a headless service and setup a STS deployment
+There are three main things to configure for a statefulSet, provision the PV's, setup a headless service and setup a STS deployment
 
 
 # Setup the PV's
@@ -140,18 +140,6 @@ Lets scale up the replicas and see what happens:
 
 `k get pods`{{execute}}
 
-And finally we'll scale the set down to zero and delete it.
 
-`k scale --replicas=0 sts/nginx-sts`{{execute}}
 
-You can see the pods closing down one by one
 
-`k get pods`{{execute}}
-
-And delete the sts:
-
-`k delete sts nginx-sts`{{execute}}
-
-But the PV's,  PVC's, and service are still in the system.
-
-`k get pv,pvc,service`{{execute}}

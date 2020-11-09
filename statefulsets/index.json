@@ -1,6 +1,6 @@
 {
-  "title": "K8S Stateful Sets",
-  "description": "Setup a setful set on a K8S cluster(v1)",
+  "title": "Kubernetes Stateful Sets",
+  "description": "Setup a setful set on a Kubernets cluster(v1.1)",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {
