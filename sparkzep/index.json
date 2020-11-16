@@ -1,6 +1,6 @@
 {
   "title": "Setup a spark on K8S /w zeppelin",
-  "description": "(v0.6) Setup a small spark cluster on k8s with Zepelin",
+  "description": "(v0.7) Setup a small spark cluster on k8s with Zepelin",
   "difficulty": "Advanced",
   "time": "60",
   "details": {

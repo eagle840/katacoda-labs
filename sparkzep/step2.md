@@ -1,12 +1,15 @@
 # check spark
 
-k exec sparkzep-spark-master-84cd85f755-8m65s --  spark-shell --version
 
-k exec sparkzep-spark-master-84cd85f755-8m65s --  pyspark --version
+`k exec $(k get pods -o jsonpath='{.items[0].metadata.name}') --  spark-shell --version`{{execute}}
 
-k exec sparkzep-spark-master-84cd85f755-8m65s --  ls -lash /opt/spark-1.5.1-bin-hadoop2.6/examples/src/main
+`k exec $(k get pods -o jsonpath='{.items[0].metadata.name}') --  pyspark --version`{{execute}}
 
-k exec sparkzep-spark-master-84cd85f755-8m65s --  ls -lash /opt/spark-1.5.1-bin-hadoop2.6/examples/src/main/java/org/apache/spark/examples
+`k exec $(k get pods -o jsonpath='{.items[0].metadata.name}') --  ls -lash /opt/spark-1.5.1-bin-hadoop2.6/examples/src/main`{{execute}}
+
+`k exec $(k get pods -o jsonpath='{.items[0].metadata.name}') --  ls -lash /opt/spark-1.5.1-bin-hadoop2.6/examples/src/main/java/org/apache/spark/examples`{{execute}}
+
+
 
 **WIP**
 https://community.cloudera.com/t5/Support-Questions/How-to-check-a-correct-install-of-spark-Whether-spark-is/td-p/136122

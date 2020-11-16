@@ -19,6 +19,8 @@ It'll take a few minute to spin up the cluster. run to check that the pods are a
 
 `k get all`{{execute}}
 
+`helm status sparkzep`{{execute}}
+
 
 ### Adjust the service types.
 
