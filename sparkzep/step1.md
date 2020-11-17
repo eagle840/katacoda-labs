@@ -1,5 +1,12 @@
 ### install helm
 
+
+
+Lets first allow the master node be able to run pods:
+
+`k taint node controlplane node-role.kubernetes.io/master:NoSchedule-`{{execute}}
+
+
 `curl -LO https://storage.googleapis.com/kubernetes-helm/helm-v2.8.2-linux-amd64.tar.gz
 tar -xvf helm-v2.8.2-linux-amd64.tar.gz
 mv linux-amd64/helm /usr/local/bin/`{{execute}}
@@ -15,9 +22,9 @@ see: [spark chart](https://hub.helm.sh/charts/incubator/spark)
 
 `helm install incubator/spark --name sparkzep --version 0.1.1 --set Worker.Memory=256Mi`{{execute}}
 
-It'll take a few minute to spin up the cluster. run to check that the pods are all running.
+It'll take a few minute to spin up the cluster. run to check that the pods are all running (status = running).
 
-`k get all`{{execute}}
+`k get pods`{{execute}}
 
 `helm status sparkzep`{{execute}}
 
