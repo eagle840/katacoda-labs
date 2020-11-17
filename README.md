@@ -26,3 +26,5 @@ Useful training/coding links:
 * [Getting started - create scenario-101](https://katacoda.com/scenario-examples/scenarios/create-scenario-101)
 * [A list of scenarios to help you get started using Katacoda](https://katacoda.com/scenario-examples)
 * [The github repo for these scenarios](https://github.com/katacoda/scenario-examples)
+* [O'Reilly Katacoda Authoring Guide](https://docs.google.com/document/d/14rudtruZQhRxvD3zcR3g75j5nuOgKGz4CYk8hdhaV-w/edit)
+* [Creating Katacoda Content](https://www.katacoda.community/welcome.html)
