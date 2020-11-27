@@ -38,3 +38,18 @@ OR
 
 
 open pages  for  8025  and 9080  (also 50000 is open for jenkins agents)
+
+lets open up port 2375 so we can allow jenkins to interact with the docker daemon data
+
+`sudo nano /lib/systemd/system/docker.service`{{execute}}   
+
+find the line: starting with  ExecStart and add '-H tcp://0.0.0.0' just after  fd://
+
+and restart the docker daemon
+
+`sudo systemctl daemon-reload`{{execute}}
+`sudo systemctl restart docker.service`{{execute}}
+
+and make sure we're getting the data
+
+`curl localhost:2375/containers/json`{{execute}}
