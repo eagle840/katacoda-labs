@@ -8,7 +8,7 @@ click on the available tab and enter 'docker' in the search field and select jus
 
 click 'Download now and install after reboot', check the boc 'Restart jenkins...' when shown and jenkins will restart
 
-katacode will prompt you to connect to the port again (9080), and login with un/pw (admin/1234)
+katacode will prompt you to connect to the port again (9080) - click 'display port' and login with un/pw (admin/1234)
 
 goto 'manage jenkins' > 'manage nodes and clouds'
 
@@ -40,4 +40,14 @@ finally check save
 # set a job to use this agent
 
 Open your job configuration and click 'Restrict where this project can be run' in the General section, and set it to 'Agent' , the same label we gave it earlier - and 'save'
+
+running `docker ps -a` from the terminal, you should see the extra docker container
+
+If your job doesn't start make sure that you have enabled the node cloud template from above.
+
+You can also see the docker activity in the Jenkins System Log (manage jenkins > Status Info > System Log)
+
+# Select your docker image for the task at hand
+
+in this tutorial we used the jenkins image we orginally pulled down, but you may want to chose an image that correspondes to your work load.
 
