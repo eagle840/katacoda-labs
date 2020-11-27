@@ -1,11 +1,11 @@
 # Setup files/folders
 
 `mkdir jenkins`{{execute}}
-`chmod www jenkins`{{execute}}
+`chmod 777 jenkins`{{execute}}
 
 nano docker-compose.yml
 
-'''yaml
+```yaml
 version: "3.8"
 
 services:
@@ -23,6 +23,6 @@ services:
     restart: unless-stopped
     ports:
     - "8025:8025"
-'''
+```
 
 `docker-compose up`{{execute}}
