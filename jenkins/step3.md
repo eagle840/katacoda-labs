@@ -2,13 +2,17 @@
 
 be sure you changed the execstart on step 1
 
+## Add the Docker Plugin
+
 in jenkins, select 'Manage Jenkins' > 'Manage Plugins'
 
 click on the available tab and enter 'docker' in the search field and select just 'Docker'
 
 click 'Download now and install after reboot', check the boc 'Restart jenkins...' when shown and jenkins will restart
 
-katacode will prompt you to connect to the port again (9080) - click 'display port' and login with un/pw (admin/1234)
+katacode will prompt you to connect to the port again (9080) - wait 30 seconds - click 'display port' and login with un/pw (admin/1234)
+
+## Config Jenkins to startup Docker Agents
 
 goto 'manage jenkins' > 'manage nodes and clouds'
 
@@ -49,5 +53,5 @@ You can also see the docker activity in the Jenkins System Log (manage jenkins >
 
 # Select your docker image for the task at hand
 
-in this tutorial we used the jenkins image we orginally pulled down, but you may want to chose an image that correspondes to your work load.
+in this tutorial we used the jenkins image we orginally pulled down, but you can rebuild the jenkins image to add the programs/features you need
 

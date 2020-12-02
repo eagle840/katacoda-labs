@@ -1,11 +1,16 @@
 # Setup files/folders
 
+Let's first setup a folder to store our Jenkins data:   
+
 `mkdir jenkins`{{execute}}
+
 `chmod 777 jenkins`{{execute}}
 
-`docker pull jenkins/jenkins:2.255`{{execute}}    
-[WIP try pulling  jenkins/jenkins:lts  # change the one in step 3 if ness
-`docker pull mailhog/mailhog`{{execute}}
+and pull the Jenkin's Image:   
+
+`docker pull jenkins/jenkins:2.255`{{execute}}     
+[WIP try pulling  jenkins/jenkins:lts  # change the one in step 3 if ness   
+`docker pull mailhog/mailhog`{{execute}}   
 
 `nano docker-compose.yml`{{execute}}
 
@@ -65,4 +70,4 @@ and make sure we're getting the json data
 
 
 
-`curl localhost:2375/containers/json`{{execute}}
+`curl localhost:2375/containers/json | jq`{{execute}}
