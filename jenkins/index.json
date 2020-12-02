@@ -1,8 +1,11 @@
 {
   "title": "Jenkins CICD",
-  "description": "Setup a jenkins server using Docker (v.3)",
+  "description": "Setup a jenkins server using Docker (v.4)",
   "difficulty": "Intermediate",
   "time": "30",
+  "environment": {
+    "terminals": [{"name": "Terminal 2", "target": "host01"}]
+  }
   "details": {
     "steps": [
       {

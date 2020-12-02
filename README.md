@@ -4,6 +4,7 @@ Katacoda scenarios code
 ## katacoda
 Provides an enviroment for running labs and training.
 The code in this repo link over to https://www.katacoda.com/ir4engineer
+The best documentation for Katacoda can be found at: https://www.katacoda.community/welcome.html
 
 
 ## notes on getting katacoda working
