@@ -22,7 +22,7 @@ services:
   jenkins:
     image: jenkins/jenkins:2.255
     ports:
-    - "9080:8080"
+    - "8080:8080"
     volumes:
     - ./jenkins:/var/jenkins_home
     restart: unless-stopped
@@ -45,10 +45,12 @@ OR
 `docker exec root_jenkins_1 cat /var/jenkins_home/secrets/initialAdminPassword`{{execute}}
 
 
-open pages  for  8025  and 9080  (also 50000 is open for jenkins agents)
+open pages  for  8025  and 8080  
 
-  page to 9080 <<<<
-  page tp 8025
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
+
+https://[[HOST_SUBDOMAIN]]-8025-[[KATACODA_HOST]].environments.katacoda.com
+
 # configure access to port 2375
 
 lets check the status of the docker service
