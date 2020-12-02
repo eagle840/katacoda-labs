@@ -5,6 +5,7 @@
   "time": "30",
   "environment": {
     "showdashboard": true,
+    "uilayout": "terminal",
     "dashboards":[
       {"name": "Jenkins", "href": "https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com"}
     ],
@@ -32,9 +33,7 @@
       "text": "finish.md"
     }
   },
-  "environment": {
-    "uilayout": "terminal"
-  },
+  
   "backend": {
     "imageid": "ubuntu"
   }
