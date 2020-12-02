@@ -5,7 +5,7 @@
   "time": "30",
   "environment": {
     "terminals": [{"name": "Terminal 2", "target": "host01"}]
-  }
+  },
   "details": {
     "steps": [
       {
