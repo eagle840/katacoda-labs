@@ -1,6 +1,6 @@
 {
   "title": "Jenkins CICD",
-  "description": "Setup a jenkins server using Docker (v.5)",
+  "description": "Setup a jenkins server using Docker (v.51)",
   "difficulty": "Intermediate",
   "time": "30",
   "environment": {
