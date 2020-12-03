@@ -4,7 +4,7 @@ Once logged into the jenkins portal, select 'install suggested plugins'
 
 create your admin user, eg un: admin  pw: 1234  
 
-Keep the name of the jenkins URL
+Keep the name of the jenkins URL in 'Instance Configuration'
 
 # create and check a job
 
@@ -21,7 +21,7 @@ Click on the item and then 'Console Output' and you'll see that 'date' was execu
 
 lets take a quick poke around in the jenkins folder (connected to the jenkins container)
 
-`ls ./jenkins/jobs`{{execute}}
+`tree ./jenkins/jobs`{{execute}}
 
 and you'll see you're first job.
 
