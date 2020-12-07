@@ -43,7 +43,9 @@ finally check save
 
 # set a job to use this agent
 
-Open your job configuration and click 'Restrict where this project can be run' in the General section, and set it to 'Agent' , the same label we gave it earlier - and 'save'
+Open your job configuration and click 'Restrict where this project can be run' in the General section, and set it to 'Agent' ,  the same label we gave it earlier - (you should see 'Label agent matches no nodes and 1 cloud. Permissions or other restrictions provided by plugins may further reduce that list' show directly under the Label field)
+
+Click 'save'
 
 running `docker ps -a` from the terminal, you should see the extra docker container
 
