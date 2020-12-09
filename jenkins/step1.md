@@ -9,6 +9,9 @@ Let's first setup a folder to store our Jenkins data:
 and pull the Jenkin's Image:   
 
 `docker pull jenkins/jenkins:2.255`{{execute}}     
+try:   
+jenkins/jenkins:2.112-alpine # too old!
+
 [WIP try pulling  jenkins/jenkins:lts  # change the one in step 3 if ness   
 `docker pull mailhog/mailhog`{{execute}}   
 
@@ -51,6 +54,9 @@ https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
 https://[[HOST_SUBDOMAIN]]-8025-[[KATACODA_HOST]].environments.katacoda.com
 
+
+Complete the install until you're at the main page
+
 # configure access to port 2375
 
 lets check the status of the docker service
@@ -68,8 +74,10 @@ and restart the docker daemon
 `sudo systemctl daemon-reload`{{execute}}
 `sudo systemctl restart docker.service`{{execute}}
 
+recheck the docker service is running:
+
+`sudo systemctl status docker.service`{{execute}}
+
 and make sure we're getting the json data
-
-
 
 `curl localhost:2375/containers/json | jq`{{execute}}
