@@ -45,6 +45,7 @@ run 'show' and you'll see the last of tables.
 
 #### create a workspace
  Presently we are in the default workspace. Lets create a workspace for IBM and do some basic recon.
+ WIP find a smaller company (results are too big)
  `workspaces create IBM`{{execute}}   
  ?? is this actually a SQL db ??   
  ? has tables - shown in the resources folder ?
