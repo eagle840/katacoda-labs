@@ -28,6 +28,9 @@ restart the shell
 
 `exec $SHELL`{{execute}}
 
+
+`pulumi version`{{execute}}
+
 create a directory
 
 `mkdir quickstart && cd quickstart`{{execute}}
