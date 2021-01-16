@@ -28,11 +28,7 @@ restart the shell
 
 `exec $SHELL`{{execute}}
 
+and check it's working & the version
 
 `pulumi version`{{execute}}
 
-create a directory
-
-`mkdir quickstart && cd quickstart`{{execute}}
-
-`pulumi new kubernetes-python`{{execute}}
