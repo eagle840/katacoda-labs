@@ -1,0 +1,22 @@
+1  pwd
+    2  hostname
+    3  apt update
+    4  sudo apt-get -y install wget apt-transport-https gnupg lsb-release
+    5  trivy  -h
+    6  sudo apt-get -y install wget apt-transport-https gnupg lsb-release
+    7  wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+    8  echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+    9  sudo apt-get update
+   10  sudo apt-get -y install trivy
+   11  trivy -h
+   12  docker images
+   13  trivy ubuntu:18.0
+   14  trivy ubuntu:18.04
+   15  trivy ubuntu:18.04 | grep Totel
+   16  trivy ubuntu:18.04 | grep Total
+   17  trivy -s CRITICAL --ignore-unfixed ubuntu:18.04
+   18  trivy centos:7.6.1810 | grep Total
+   19  trivy debian:10.2-slim | grep Total
+   20  trivy alpine:3.11
+   21  trivy jfloff/alpine-python:3.8-slim
+   22  history
