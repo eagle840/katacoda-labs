@@ -1,6 +1,6 @@
 {
   "title": "Container CVE Scanning",
-  "description": "Scan a container image for cve's",
+  "description": "Scan a container image for cve's with trivy",
   "difficulty": "Intermediate",
   "time": "20",
   "details": {
