@@ -1,6 +1,6 @@
 {
-  "title": "Getting started with Pulumi (v.9)",
-  "description": "Create a deploy in Kubernetes with Pulumi",
+  "title": "Getting started with Pulumi",
+  "description": "Create a deploy in Kubernetes with Pulumi(v0.9)",
   "difficulty": "Intermediate",
   "time": "20",
   "details": {
