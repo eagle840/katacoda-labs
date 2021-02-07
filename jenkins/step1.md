@@ -35,6 +35,7 @@ services:
     restart: unless-stopped
     ports:
     - "8025:8025"
+    - "1025:1025"
 ```
 
 ## start the jenkins docker container
@@ -87,3 +88,18 @@ recheck the docker service is running:
 and make sure we're getting the json data
 
 `curl localhost:2375/containers/json | jq`{{execute}}
+
+## setup jenkins to send mail to mailhog
+
+Goto Manage Jenkins, then 'Configure System'. Scroll down to the bottom of the page.
+
+set the email server to 'mails' (the service in docker-compose)   
+
+expand out the advanced section and set the port to 1025, 
+
+then check the 'test configuration...', enter an email address, and click 'Test'.
+
+You should see that email show in the mailhog portal.
+
+
+
