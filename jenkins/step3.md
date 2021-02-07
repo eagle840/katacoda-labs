@@ -1,4 +1,4 @@
-# adding extra agents
+# Adding extra agents
 
 be sure you changed the execstart on step 1
 
@@ -22,8 +22,9 @@ on the drop-down select 'docker' and the page will refresh with more content
 
 Select 'Docker Cloud Details'
 
-in the Docker Host URI, enter: 'tcp://host.docker.internal:2375' (a special dns entry for the host)
-[WIP] above does not work, however pull the host IP and it it'll work. Need to find out why host.docker.internal isn't in the hosts file
+in the Docker Host URI, enter: 'tcp://172.19.0.1:2375' 
+
+If you find this address doesn't work follow the instructions at the bottom of this page
 
 and click 'test connection' and you should get back the API version
 
@@ -57,3 +58,11 @@ You can also see the docker activity in the Jenkins System Log (manage jenkins >
 
 in this tutorial we used the jenkins image we orginally pulled down, but you can rebuild the jenkins image to add the programs/features you need
 
+
+## If 172.19.0.1 doesn't work
+
+List the docker networks   
+`docker network ls`{{execute}}   
+look for root_default  bridge  
+`docker inspect network root_default`{{execute}}   
+in that output, look for the gateway address

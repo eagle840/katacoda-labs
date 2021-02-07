@@ -9,10 +9,9 @@ Let's first setup a folder to store our Jenkins data:
 and pull the Jenkin's Image:   
 
 `docker pull jenkins/jenkins:2.255`{{execute}}     
-try:   
-jenkins/jenkins:2.112-alpine # too old!
 
-[WIP try pulling  jenkins/jenkins:lts  # change the one in step 3 if ness   
+It this lab we're using a set container version, but you should use jenkins:lts 
+   
 `docker pull mailhog/mailhog`{{execute}}   
 
 `nano docker-compose.yml`{{execute}}
@@ -26,6 +25,7 @@ services:
     image: jenkins/jenkins:2.255
     ports:
     - "8080:8080"
+    - "50000:50000"
     volumes:
     - ./jenkins:/var/jenkins_home
     restart: unless-stopped
@@ -41,23 +41,29 @@ services:
 
 `docker-compose up`{{execute}}
 
-when jenkins comes up, you'll see the password in stdout
+after a minute or two, jenkins should comes, you'll see the password in stdout
 
 OR
 
 `docker exec root_jenkins_1 cat /var/jenkins_home/secrets/initialAdminPassword`{{execute}}
 
 
-open pages  for  8025  and 8080  
+open pages  for  8025  and 8080 
+
+Jenkins:
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
+
+Mailhog:
 
 https://[[HOST_SUBDOMAIN]]-8025-[[KATACODA_HOST]].environments.katacoda.com
 
 
-Complete the install until you're at the main page
+Complete the Jenkins install until you're at the main page
 
 # configure access to port 2375
+
+Once you've complete the Jenkins setup we need to configure access to dockers api
 
 lets check the status of the docker service
 
