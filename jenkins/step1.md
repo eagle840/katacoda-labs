@@ -1,4 +1,4 @@
-# Setup files/folders
+# Setup Jenkins
 
 Let's first setup a folder to store our Jenkins data:   
 
@@ -10,7 +10,7 @@ and pull the Jenkin's Image:
 
 `docker pull jenkins/jenkins:2.255`{{execute}}     
 
-It this lab we're using a set container version, but you should use jenkins:lts 
+It this lab we're using a set image version of Jenkins, you might want to try jenkins:lts
    
 `docker pull mailhog/mailhog`{{execute}}   
 
@@ -37,18 +37,18 @@ services:
     - "8025:8025"
 ```
 
-# start the jenkins docker container
+## start the jenkins docker container
 
 `docker-compose up`{{execute}}
 
-after a minute or two, jenkins should comes, you'll see the password in stdout
+after a minute or two, jenkins should come up, you'll see the password in stdout
 
-OR
+Or run in Terminal 2
 
 `docker exec root_jenkins_1 cat /var/jenkins_home/secrets/initialAdminPassword`{{execute}}
 
 
-open pages  for  8025  and 8080 
+## Open pages  for  mailhog on 8025  and jenkins on 8080 
 
 Jenkins:
 
@@ -59,9 +59,9 @@ Mailhog:
 https://[[HOST_SUBDOMAIN]]-8025-[[KATACODA_HOST]].environments.katacoda.com
 
 
-Complete the Jenkins install until you're at the main page
+Complete the Jenkins install until you're at the main page before continuing. Be sure to remember the user name and password you use.
 
-# configure access to port 2375
+## Configure access to port 2375 on the docker daemon.
 
 Once you've complete the Jenkins setup we need to configure access to dockers api
 
@@ -73,7 +73,7 @@ lets open up port 2375 so we can allow jenkins to interact with the docker daemo
 
 `sudo nano /lib/systemd/system/docker.service`{{execute}}   
 
-find the line: starting with  ExecStart in the [service] and add `-H tcp://0.0.0.0` just after  fd://
+find the line starting with  ExecStart in the [service] section and add `-H tcp://0.0.0.0` just after  fd://
 
 and restart the docker daemon
 

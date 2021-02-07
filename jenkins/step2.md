@@ -1,6 +1,6 @@
 
 
-# create and check a job
+## create and check a job
 
 'create a job' in the center section, give it a name (eg testjob) and select 'Freestyle project', then 'ok'
 'create a freestyle job
@@ -18,7 +18,7 @@ lets take a quick poke around in the jenkins folder (connected to the jenkins co
 
 `tree ./jenkins/jobs`{{execute}}
 
-and you'll see you're first job.
+and you'll see the job we just created.
 
 
 
