@@ -1,6 +1,6 @@
 ### install helm
 
-`launch.sh'{{execute}}
+`launch.sh`{{execute}}
 
 Lets first allow the master node be able to run pods:
 
@@ -10,19 +10,21 @@ Lets first allow the master node be able to run pods:
 And install helm 3
 
 `curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3`{{execute}}   
-`chmod 700 get_helm.sh`{{execute}}   
+
+`chmod 700 get_helm.sh`{{execute}} 
+
 `./get_helm.sh`{{execute}}   
 
-`helm init && helm repo update`{{execute}}
+
+`helm version`{{execute}}
 
 ### install spark
 
-see: [spark chart](https://hub.helm.sh/charts/incubator/spark)
 
 
-`helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com`{{execute}}
+`helm repo add bitnami https://charts.bitnami.com/bitnami`{{execute}}
 
-`helm install incubator/spark --name sparkzep --version 0.1.1 --set Worker.Memory=256Mi`{{execute}}
+`helm install sparkzep bitnami/spark`{{execute}}
 
 It'll take a few minute to spin up the cluster. run to check that the pods are all running (status = running).
 
