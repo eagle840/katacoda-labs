@@ -1,15 +1,17 @@
 ### install helm
 
-
+`launch.sh'{{execute}}
 
 Lets first allow the master node be able to run pods:
 
 `k taint node controlplane node-role.kubernetes.io/master:NoSchedule-`{{execute}}
 
 
-`curl -LO https://storage.googleapis.com/kubernetes-helm/helm-v2.8.2-linux-amd64.tar.gz
-tar -xvf helm-v2.8.2-linux-amd64.tar.gz
-mv linux-amd64/helm /usr/local/bin/`{{execute}}
+And install helm 3
+
+`curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3`{{execute}}   
+`chmod 700 get_helm.sh`{{execute}}   
+`./get_helm.sh`{{execute}}   
 
 `helm init && helm repo update`{{execute}}
 
