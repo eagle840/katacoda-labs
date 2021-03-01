@@ -11,6 +11,10 @@ Run directly
 `python -m apache_beam.examples.wordcount_minimal --input sonnets.txt --output counts`{{execute}}
 
 
+https://beam.apache.org/get-started/wordcount-example/
+
+https://beam.apache.org/get-started/quickstart-py/#execute-a-pipeline
+
 
 Run on spark:
 

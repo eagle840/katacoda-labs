@@ -1,3 +1,3 @@
-https://beam.apache.org/get-started/wordcount-example/
+# SET THE BEAM RUNNER
 
-https://beam.apache.org/get-started/quickstart-py/#execute-a-pipeline
+https://beam.apache.org/documentation/runners/spark/
