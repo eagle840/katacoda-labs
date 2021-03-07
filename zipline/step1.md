@@ -1,5 +1,7 @@
 `sudo apt update`{{execute}}
 
+`sudo apt-get install python3.8`{{execute}}
+
 `pip install virtualenv`{{execute}}
 
 `virtualenv --version`{{execute}}
@@ -14,7 +16,11 @@
 
 `cd ~/zipline`{{execute}}
 
-`. ../venvs/zipline36/bin/activate`{{execute}}
+`. ../virtualenvs/zipline36/bin/activate`{{execute}}
+
+`python --version`{{execute}}
+
+`python3 -V`{{execute}}
 
 `git clone https://github.com/quantopian/zipline.git`{{execute}}
 
