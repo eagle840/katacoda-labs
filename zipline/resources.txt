@@ -1,0 +1,71 @@
+    1  sudo apt updates
+    
+    3  pip install virtualenv
+    4  virtualenv --version
+    5  ls
+    6  mkdir venvs
+    7  cd venvs/
+    8  virtualenv zipline1
+    9  ls
+   10  python3 -V
+   11  pwd
+   12  ls
+   13  virtualenv -p python3.6 zipline36
+   14  pwd
+   15  cd ..
+   16  mkdir zipline
+   17  cd zipline/
+   18  . ../venvs/zipline36/bin/activate
+   19  pwd
+   20  git clone https://github.com/quantopian/zipline.git
+   21  pip3 install numpy
+   22  pip3 install cython
+   23  pip3 install -U setuptools
+pip3 install matplotlib
+   24  pip3 install zipline
+   25  python
+import zipline
+   26  pip list
+   
+   28  zipline --help
+   29  zipline ingest -b quantopian-quandl
+   30  history
+
+
+
+pip install jupyter
+jupyter notebook  --allow-root  --ip=0.0.0.0
+
+inside jupyter 
+%load_ext zipline
+no at time @11:17  https://www.youtube.com/watch?v=J4LTIixReMA
+
+
+
+from zipline.api import order, record, symbol
+
+def initialize(context):
+    pass
+
+def handle_data(context, data):
+    order(symbol('AAPL'), 10)
+    record(AAPL=data.current(symbol('AAPL'), "price"))
+
+
+
+use 
+%zipline --bundle quantopian-quandl --start 2000-1-1 --end 2012-1-1 -o backtest.pickle --benchmark-symbol AAPL
+
+
+
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib import style
+
+style.use("ggplot")
+
+backtest_df = pd.read_pickle("backtest.pickle")
+backtest_df.portfolio_value.plot()
+plt.show|()
