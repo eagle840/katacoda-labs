@@ -1,6 +1,14 @@
 `sudo apt update`{{execute}}
 
-`sudo apt-get install python3.8`{{execute}}
+`sudo apt-get install python3.6 python3.6-dev`{{execute}}
+
+install 
+    5  apt-get install python3.6-dev
+    6  apt-get install libatlas-base-dev
+    7  apt-get install gfortran
+    8  apt-get install pkg-config
+    9  
+   10  apt-get install libfreetype6
 
 `pip install virtualenv`{{execute}}
 
