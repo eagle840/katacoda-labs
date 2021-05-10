@@ -20,5 +20,12 @@ CMD ["code-server", "--bind-addr=0.0.0.0:8080"]
 
 `docker run -d --name=vsc -p 8080:8080  coder`{{execute}}
 
-Note that the password in outputed when you run `docker run`
+To get the password to login
+
+`docker exec vsc cat ~/.config/code-server/config.yaml`{{execute}}
+
+To connect
+
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
+
 
