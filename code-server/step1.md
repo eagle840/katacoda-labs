@@ -14,14 +14,16 @@ review docs  https://github.com/cdr/code-server/blob/v3.9.0/docs/guide.md
 
 Lets gets the password:
 
-'cat ~/.config/code-server/config.yaml'{{execute t2}
+`cat ~/.config/code-server/config.yaml`{{execute t2}
 
 To connect
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
 
+The password is stored in ~/.config/code-server/config.yam
 
+`cat .config/code-server/config.yam`{{execute t2}}
 
 # need to
 
