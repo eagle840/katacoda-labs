@@ -1,6 +1,6 @@
 {
   "title": "Traefik on Docker-Compose",
-  "description": "(v0.3) Setup a simple Traefik reverse proxy on Docker-Compose",
+  "description": "(v0.35) Setup a simple Traefik reverse proxy on Docker-Compose",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {
