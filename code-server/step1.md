@@ -12,16 +12,13 @@ review docs  https://github.com/cdr/code-server/blob/v3.9.0/docs/guide.md
 
 `code-server --bind-addr 0.0.0.0:8080`{{execute}}
 
-Lets gets the password:
-
-`cat ~/.config/code-server/config.yaml`{{execute t2}
 
 To connect
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
 
-The password is stored in ~/.config/code-server/config.yam
+The password is stored in ~/.config/code-server/config.yam, we'll pull it from a second terminal window
 
 `cat .config/code-server/config.yam`{{execute t2}}
 
