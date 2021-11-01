@@ -16,6 +16,11 @@ and the number of pods on the deployment
 `kubectl get deployment php-apache`{{execute}}
 
 
+check the node status
+
+`kubectl describe node node01`{{execute}}
+
+
 
 # Stop the load
 

@@ -1,6 +1,6 @@
 {
   "title": "Kubernetes HPA",
-  "description": "Setup a Horizontal Pod Autoscaler(HPA) set on a Kubernets cluster(v0.1)",
+  "description": "Setup a Horizontal Pod Autoscaler(HPA) set on a Kubernets cluster(v0.8)",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {

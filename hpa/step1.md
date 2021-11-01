@@ -78,13 +78,15 @@ spec:
     run: php-apache
 ```
 
-check the application has been started
 
-`kubectl get pods`{{execute}}
 
 Apply the application in K8S:
 
 `kubectl apply -f https://k8s.io/examples/application/php-apache.yaml`{{execute}}
+
+check the application has been started
+
+`kubectl get pods`{{execute}}
 
 
 
