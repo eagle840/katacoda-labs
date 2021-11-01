@@ -16,10 +16,27 @@ COPY index.php /var/www/html/index.php
 RUN chmod a+rx index.php
 ```
 
+create the index.php file
+
+`nano index.php`{{execute}}
+```
+<?php
+  $x = 0.0001;
+  for ($i = 0; $i <= 1000000; $i++) {
+    $x += sqrt($x);
+  }
+  echo "OK!";
+?>
+```
+
+build the docker image
+
+`docker build -t php-apache .`{{execute}}
 
 Deploy that image into K8S:
 
-`mkdir application`{{execute}}
+`mkdir application`{{execute}}   
+
 `nano application/php-apache.yaml`{{execute}}
 
 ```
@@ -60,6 +77,10 @@ spec:
   selector:
     run: php-apache
 ```
+
+check the application has been started
+
+`kubectl get pods`{{execute}}
 
 Apply the application in K8S:
 
