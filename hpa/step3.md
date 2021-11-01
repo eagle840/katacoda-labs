@@ -7,7 +7,7 @@ Lets get a copy of the HPA yaml
 Review the documentation at: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
 
 
-=============================== copied from katacode observe
+=============================== copied from katacode observe  https://www.katacoda.com/courses/kubernetes/kubernetes-observability-basics-by-javajon
 
 
 Add the Bitnami chart repository for the Helm chart to be installed.
