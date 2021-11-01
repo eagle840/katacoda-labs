@@ -2,7 +2,7 @@
 
 In the section  you'll need a api key for the Pulumi website.
 
-If you haven't already, create a Pulumi account (it's free) and create an API key. Be sure to copy it down, you won't be able to see it again in the web portal. (When you've finished the lab, you should also deplete that key since katacoda is an open environment)
+If you haven't already, create a Pulumi account (it's free) and create an API key (under settings, access tokens). Be sure to copy it down, you won't be able to see it again in the web portal. (When you've finished the lab, you should also deplete that key since katacoda is an open environment)
 
 create a directory
 
