@@ -53,6 +53,28 @@ kubectl top pods --all-namespaces
 
 
 
+# KEDA
+
+https://keda.sh/docs/2.4/concepts/
+
+we have version 2 of helm installed, lets install v3
+
+wget https://get.helm.sh/helm-v3.7.1-linux-amd64.tar.gz
+tar -zxvf helm-v3.7.1-linux-amd64.tar.gz 
+mv linux-amd64/helm /usr/local/bin/helm
+helm version
+
+## install keda
+
+see doc:  https://keda.sh/docs/1.4/deploy/
+
+helm repo add kedacore https://kedacore.github.io/cha
+helm repo update
+kubectl create namespace keda
+helm install keda kedacore/keda --version 1.4.2 --namespace keda
+
+I noted that the lastest version is 2.4!
+
 
 
 
