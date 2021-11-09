@@ -7,24 +7,41 @@ Lets get a copy of the HPA yaml
 Review the documentation at: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/
 
 
-=============================== copied from katacode observe  https://www.katacoda.com/courses/kubernetes/kubernetes-observability-basics-by-javajon
+===============================    
 
+copied from katacode observe  https://www.katacoda.com/courses/kubernetes/kubernetes-observability-basics-by-javajon
+
+
+install helm3  (from https://github.com/helm/helm/releases)
+
+`wget https://get.helm.sh/helm-v3.7.1-linux-amd64.tar.gz`{{execute}}   
+
+`tar -zxvf helm-v3.7.1-linux-amd64.tar.gz`{{execute}}
+
+`mv linux-amd64/helm /usr/local/bin/helm`{{execute}}
+
+`helm version`{{execute}}
 
 Add the Bitnami chart repository for the Helm chart to be installed.
 
-helm repo add bitnami https://charts.bitnami.com/bitnami
+`helm init`{{execute}}
+
+`helm repo add bitnami https://charts.bitnami.com/bitnami`{{execute}}
 
 Install the chart.
 
+```
 helm install metrics-server bitnami/metrics-server \
   --version=4.2.2 \
   --namespace kube-system \
   --set apiService.create=true \
   --set extraArgs.kubelet-insecure-tls=true \
   --set extraArgs.kubelet-preferred-address-types=InternalIP
+```  
+
 This will install the server in the kube-system namespace. It also add a new API endpoint named metrics.k8s.io. In a few moments you should be able to list metrics using the following command:
 
-kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq
+`kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq`{{execute}}
 
 If the metrics are not ready, this message will appear
 
@@ -32,7 +49,7 @@ Error from server (ServiceUnavailable): the server is currently unable to handle
 
 Once the metrics are ready, a JSON dump of the metrics will appear. Additional metrics also appears in the top report.
 
-kubectl top node
+`kubectl top node`{{execute}}
 
 If the metrics are not ready you may get this message.
 
@@ -49,29 +66,26 @@ controlplane   138m         6%     991Mi           52%
 node01         79m          3%     575Mi           14%
 Pod information can also be observed.
 
-kubectl top pods --all-namespaces
+`kubectl top pods --all-namespaces`{{execute}}
 
 
 
 # KEDA
 
+https://keda.sh/docs/2.4/deploy/
+
 https://keda.sh/docs/2.4/concepts/
 
-we have version 2 of helm installed, lets install v3
 
-wget https://get.helm.sh/helm-v3.7.1-linux-amd64.tar.gz
-tar -zxvf helm-v3.7.1-linux-amd64.tar.gz 
-mv linux-amd64/helm /usr/local/bin/helm
-helm version
 
 ## install keda
 
 see doc:  https://keda.sh/docs/1.4/deploy/
 
-helm repo add kedacore https://kedacore.github.io/cha
-helm repo update
-kubectl create namespace keda
-helm install keda kedacore/keda --version 1.4.2 --namespace keda
+`helm repo add kedacore https://kedacore.github.io/charts`{{execute}}   
+`helm repo update`{{execute}}   
+`kubectl create namespace keda`{{execute}}   
+`helm install keda kedacore/keda --version 1.4.2 --namespace keda`{{execute}}
 
 I noted that the lastest version is 2.4!
 
