@@ -1,55 +1,36 @@
-apt install nano
+
 
  
-
-root@babbbc922312:/temp1911# cat main.py
-
-
-
-```
-def main():
-
-        print("hello")
-
- 
-
-if __name__ == "__main__":
-
-        main()
-```
 
 instead, copy this:   
 https://click.palletsprojects.com/en/8.0.x/commands/#custom-multi-commands
 
 
-   34  which python3
+`which python3`{{execute}}
 
-   35  ln -s /usr/bin/python3 /usr/bin/python
+`ln -s /usr/bin/python3 /usr/bin/python`{{execute}}
 
-install:
+
+`curl -fsSL https://code-server.dev/install.sh | sh`{{execute}}
+
+`code-server --bind-addr 0.0.0.0:8080`{{execute}}
+
+`cat .config/code-server/config.yaml`{{execute}}
+
 
 
 https://click.palletsprojects.com/en/8.0.x/commands/#custom-multi-commands
 
+https://www.pythoncheatsheet.org/blog/python-projects-with-poetry-and-vscode-part-1/
 
-   36  curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+# Install poetry
 
- 
+`curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -`{{execute}}
 
-poetry -h
-
- 
-
-python3 -m main
+`source $HOME/.poetry/env`{{execute}}
 
  
 
-poetry new click
+`poetry -h`{{execute}}
 
  
-
-cd to ./click/click
-
- 
-
-poetry add click
