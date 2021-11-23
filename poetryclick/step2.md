@@ -22,6 +22,19 @@
 
 `poetry remove -D mypy`{{execute}}
 
+# Starting an virtual envirnoment
+
+`poetry shell`
+
+`exit`
+
+# Two ways to start python
+
+`poetry run  python`
+
+`poetry shell`   
+`python`
+
 ```
 poetry new [package-name]	Start a new Python Project.
 poetry init	Create a pyproject.toml file interactively.

@@ -1,16 +1,20 @@
 # part 3
 https://www.pythoncheatsheet.org/blog/python-projects-with-poetry-and-vscode-part-3/
 
+`tree`{{execute}}
+
 `poetry build`{{execute}}
+
+You'll see the build files in the dist folder, including the wheel file
 
 `tree`{{execute}}
 
+To publish your project to Pipy
+`poetry publish `
+`poetry publish --build`
 
-`poetry publish `{{execute}}
-`poetry publish --build`{{execute}}
 
-
-`pip install <project name>`{{execute}}
+`pip install <project name>`
 
 
 # working with a downloaded package (made with poetry)
@@ -36,6 +40,6 @@ https://pypi.org/project/how-long/#files
 
 `poetry build`{{execute}}
 
-to install the whl using pip@
+to install the wheel using pip
 
 `pip install ./dist/how_long-0.1.2-py3-none-any.whl`{{execute}}

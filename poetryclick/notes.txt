@@ -1,1 +1,8 @@
 https://www.youtube.com/watch?v=ywiFraNBTv4
+
+
+python poetry and arrow   
+https://dev.to/bowmanjd/build-command-line-tools-with-python-poetry-4mnc
+
+with click
+https://dev.to/bowmanjd/build-a-command-line-interface-with-python-poetry-and-click-1f5k
