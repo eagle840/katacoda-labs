@@ -2,21 +2,26 @@
 
 
 `mkdir learn-terraform-docker-container`{{execute}}    
+
 `cd learn-terraform-docker-container`{{execute}}   
 
 `nano main.tf`{{execute}}   
 copy the code below
 
 `terraform init`{{execute}}    
+
 `terraform plan`{{execute}}    
+
 `terraform apply`{{execute}}    
 
+check running containers
 `docker ps`{{execute}}   
 
-  
+open 8000
 
 
-```terraform {
+```yaml
+terraform {
   required_providers {
     docker = {
       source  = "kreuzwerker/docker"
