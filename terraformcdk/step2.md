@@ -1,11 +1,17 @@
+# run a cdk
 
-   `mkdir learn-terraform-docker-container`{{execute}}    
-   17  `cd learn-terraform-docker-container`{{execute}}    
-   18  `nano main.tf`{{execute}}    
-   19  `terraform init`{{execute}}    
-   20  `terraform plan`{{execute}}    
-   21  `terraform apply`{{execute}}    
-   22 ` history`{{execute}}    
+
+`mkdir learn-terraform-docker-container`{{execute}}    
+`cd learn-terraform-docker-container`{{execute}}   
+
+`nano main.tf`{{execute}}   
+copy the code below
+
+`terraform init`{{execute}}    
+`terraform plan`{{execute}}    
+`terraform apply`{{execute}}    
+
+`docker ps`{{execute}}   
 
   
 

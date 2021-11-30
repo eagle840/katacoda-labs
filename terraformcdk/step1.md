@@ -1,19 +1,22 @@
 # initial setup
 
+
+## install terraform
 `sudo apt update`{{execute}}    
-2  `curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -`{{execute}}    
-3  `apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"`{{execute}}    
+`curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -`{{execute}}    
+`apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"`{{execute}}    
 
-7  `apt install terraform`{{execute}}    
-8  `terraform version`{{execute}}    
+`apt install terraform`{{execute}}    
+`terraform version`{{execute}}    
 
-9  `npm install --global cdktf-cli`{{execute}}    
-10  `cdftf help`{{execute}}    
+## install cdk
+`npm install --global cdktf-cli`{{execute}}    
+`cdftf help`{{execute}}    
 
-11  `cdktf help`{{execute}}    
-12 ` cdktf deploy help`{{execute}}    
-13  `touch ~/.bashrc`{{execute}}    
-14  `terraform -install-autocomplete`{{execute}}    
-15 `open -a Docker`{{execute}}    
+`cdktf help`{{execute}}    
+` cdktf deploy help`{{execute}}    
+`touch ~/.bashrc`{{execute}}    
+`terraform -install-autocomplete`{{execute}}    
+`open -a Docker`{{execute}}    
 
    
