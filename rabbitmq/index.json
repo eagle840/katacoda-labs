@@ -11,6 +11,14 @@
           "target": "~/"
         },
         {
+          "file": "new_task.py",
+          "target": "~/"
+        },
+        {
+          "file": "worker.py",
+          "target": "~/"
+        },
+        {
           "file": "receive.py",
           "target": "~/"
         }
