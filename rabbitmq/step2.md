@@ -4,6 +4,10 @@ https://www.rabbitmq.com/tutorials/tutorial-one-python.html
 
 `python -m pip install pika --upgrade`{{execute}}
 
+`apt install pip`{{execute}}
+
+`pip install pika`{{execute}}
+
 https://pypi.org/project/pika/
 
 
@@ -21,17 +25,17 @@ And replace 'localhost' in each python file
 
 Now send a message to RabbitMQ:
 
-`python send.py`{{execute}}
+`python3 send.py`{{execute}}
 
 If you jump over to the management page, you'll see the msg in the queue in the Overview and the Queues tab.
 
 Let's receive that msg,
 
-`python receive.py`{{execute}}
+`python3 receive.py`{{execute}}
 
  Lets another terminal and exe send 3 times:
 
-`python send.py`{{execute T2}}
+`python3 send.py`{{execute T2}}
 
 In the orginal terminal you'll see them coming back, and the msg rate's in the mgmnt console changing.
 
