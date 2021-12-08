@@ -9,6 +9,19 @@ https://www.rabbitmq.com/tutorials/tutorial-two-python.html
 
 # open 2 terminals and run in each
 
+
+`cat work.py`{{execute}}
+
+we need to replace localhost with an ip
+
+`RabbitIP=$(docker inspect some-rabbit | jq -r .[0].NetworkSettings.IPAddress)`{{execute}}
+
+`echo $RabbitIP`{{execute}}
+
+`sed -i "s/localhost/$RabbitIP/g" worker.py`{{execute}}
+
+and run the worker
+
 `python3 worker.py`{{execute}}
 
 # in another
