@@ -2,11 +2,8 @@
 
 https://www.rabbitmq.com/tutorials/tutorial-one-python.html
 
-`python -m pip install pika --upgrade`{{execute}}
 
-`apt install pip`{{execute}}
-
-`pip install pika`{{execute}}
+`pip3 install pika`{{execute}}
 
 https://pypi.org/project/pika/
 
