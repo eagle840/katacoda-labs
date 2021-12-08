@@ -18,7 +18,7 @@ we need to replace localhost with an ip
 
 `echo $RabbitIP`{{execute}}
 
-`sed -i "s/localhost/$RabbitIP/g" worker.py`{{execute}}
+`sed -i "s/localhost/$RabbitIP/g" worker.py new_task.py`{{execute}}
 
 and run the worker
 
