@@ -17,11 +17,11 @@ If you jump over to the management page, you'll see the msg in the queue in the 
 
 Let's receive that msg in a new terminal window,
 
-`python3 receive.py`{{execute}}
+`python3 receive.py`{{execute T2}}
 
  Lets another terminal and exe send 3 times:
 
-`python3 send.py`{{execute T2}}
+`python3 send.py`{{execute}}
 
 In the orginal terminal you'll see them coming back, and the msg rate's in the mgmnt console changing.
 
