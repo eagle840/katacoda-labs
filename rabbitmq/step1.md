@@ -22,3 +22,7 @@ pw:guest
 
 https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
 
+Next we'll update the python files with the new IP address of the docker container.
+
+`sed -i "s/localhost/$RabbitIP/g" send.py receive worker.py new_task.py`{{execute}}
+
