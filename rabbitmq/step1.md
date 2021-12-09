@@ -28,5 +28,5 @@ Next we'll update the python files with the new IP address of the docker contain
 
 `echo $RabbitIP`{{execute}}
 
-`sed -i "s/localhost/$RabbitIP/g" send.py receive worker.py new_task.py`{{execute}}
+`sed -i "s/localhost/$RabbitIP/g" send.py receive.py worker.py new_task.py`{{execute}}
 
