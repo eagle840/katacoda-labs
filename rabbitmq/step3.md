@@ -10,23 +10,18 @@ https://www.rabbitmq.com/tutorials/tutorial-two-python.html
 # open 2 terminals and run in each
 
 
-`cat work.py`{{execute}}
+`cat worker.py`{{execute}}
 
-we need to replace localhost with an ip
 
-`RabbitIP=$(docker inspect some-rabbit | jq -r .[0].NetworkSettings.IPAddress)`{{execute}}
-
-`echo $RabbitIP`{{execute}}
-
-`sed -i "s/localhost/$RabbitIP/g" worker.py new_task.py`{{execute}}
-
-and run the worker
+open a couple of terminals and and run the worker in them.
 
 `python3 worker.py`{{execute}}
 
 # in another
 
-each . represents a second
+in the orginal terminal window you can start sending tasks.
+
+each . represents a second that the work will 'work', ie sleep.
 
 `python3 new_task.py First message.`{{execute}}
 
@@ -37,4 +32,6 @@ each . represents a second
 `python3 new_task.py Fourth message....`{{execute}}
 
 `python3 new_task.py Fifth message.....`{{execute}}
+
+you can run these tasks as many times as you want and see them go through the rabbit mq management console.
 

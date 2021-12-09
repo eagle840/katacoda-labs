@@ -2,23 +2,12 @@
 
 https://www.rabbitmq.com/tutorials/tutorial-one-python.html
 
+We need to install the pika python package:
 
 `pip3 install pika`{{execute}}
 
 https://pypi.org/project/pika/
 
-
-we need the ip of the rabbit container
-
-`RabbitIP=$(docker inspect some-rabbit | jq -r .[0].NetworkSettings.IPAddress)`{{execute}}
-
-`echo $RabbitIP`{{execute}}
-
-And replace 'localhost' in each python file
-
-`sed -i "s/localhost/$RabbitIP/g" send.py`{{execute}}
-
-`sed -i "s/localhost/$RabbitIP/g" receive.py`{{execute}}
 
 Now send a message to RabbitMQ:
 
@@ -26,7 +15,7 @@ Now send a message to RabbitMQ:
 
 If you jump over to the management page, you'll see the msg in the queue in the Overview and the Queues tab.
 
-Let's receive that msg,
+Let's receive that msg in a new terminal window,
 
 `python3 receive.py`{{execute}}
 
