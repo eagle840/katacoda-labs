@@ -26,7 +26,7 @@ check running containers
 open 8000
 
 
-```yaml
+```sh
 terraform {
   required_providers {
     docker = {

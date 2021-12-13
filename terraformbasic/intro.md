@@ -1,5 +1,4 @@
-Introduction to terraform with cdk, using python
+Introduction to terraform basic commands
 
-In this lab we will install terraform, cdk and run a simple docker setup
-
+In this lab we will install terraform, and setup a simple docker container
 v.01
