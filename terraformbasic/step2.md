@@ -18,12 +18,18 @@ note the new terraform state file
 
 `tree`{{execute}}
 
-`terraform state`{{execute}}
+`terraform state list`{{execute}}
+
+`terraform state show`{{execute}}
 
 check running containers
 `docker ps`{{execute}}   
 
 open 8000
+
+lets generate a graph
+
+`terraform graph | dot -Tpng > graph.png`{{execute}}
 
 
 ```sh
