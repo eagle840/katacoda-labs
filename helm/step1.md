@@ -5,8 +5,12 @@ Run Ubuntu updates:
 
 `apt-get update -y`{{execute}}
 
+Check k8s is running
 
-# install metrics-server
+`kubectl cluster-info`{{execute}}
+
+
+# install helm
 
 install helm3  (from https://github.com/helm/helm/releases)
 
@@ -17,6 +21,8 @@ install helm3  (from https://github.com/helm/helm/releases)
 `mv linux-amd64/helm /usr/local/bin/helm`{{execute}}
 
 `helm version`{{execute}}
+
+
 
 
 `helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/`
@@ -30,17 +36,31 @@ helm install metrics-server metrics-server/metrics-server \
   --set extraArgs.kubelet-preferred-address-types=InternalIP
 ``` 
 
+search the repo (all repos that have been added), note each has a chart version and an app version
+
+`helm search repo`{{execute}}
+
 
 `helm repo add bitnami https://charts.bitnami.com/bitnami`{{execute}}   
-```
+
+` 
 helm install metrics-server bitnami/metrics-server \
   --version=4.2.2 \
   --namespace kube-system \
   --set apiService.create=true \
   --set extraArgs.kubelet-insecure-tls=true \
   --set extraArgs.kubelet-preferred-address-types=InternalIP
-``` 
+` {{execute}}
 
+let check it's installed, since it's installed in the kube-system namespace, we have to add the --namespace argument
+
+`helm list --namespace kube-system`{{execute}}
+
+`helm get notes metrics-server --namespace kube-system`{{execute}}
+
+and lets check what values have been used:
+
+`helm get values metrics-server --namespace kube-system`{{execute}}
 
 Lets check the endpoint is up
 
