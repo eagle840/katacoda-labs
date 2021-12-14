@@ -43,6 +43,8 @@ search the repo (all repos that have been added), note each has a chart version 
 
 `helm repo add bitnami https://charts.bitnami.com/bitnami`{{execute}}   
 
+`helm search repo`{{execute}}
+
 ` 
 helm install metrics-server bitnami/metrics-server \
   --version=4.2.2 \
@@ -69,6 +71,16 @@ Lets check the endpoint is up
 and check the top command (will take a couple of minutes to set getting metrics)
 
 `kubectl top node`{{execute}}
+
+# check layout of helm chart
+
+`helm pull bitnami/metrics-server`{{execute}}
+
+`tar -zxvf metrics-server-5.10.11.tgz`{{execute}}
+
+`tree metrics-server`{{execute}}
+
+
 
 
 # setup docker images
