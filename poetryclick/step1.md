@@ -29,6 +29,9 @@ https://www.pythoncheatsheet.org/blog/python-projects-with-poetry-and-vscode-par
 
 `source $HOME/.poetry/env`{{execute}}
 
+If you want to run poetry install the code server terminal, you'll need to run:
+
+`source $HOME/.poetry/env`
  
 
 `poetry -h`{{execute}}
