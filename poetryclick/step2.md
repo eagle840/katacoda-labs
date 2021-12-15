@@ -10,7 +10,7 @@
 
 `poetry install`{{execute}}
 
-`poetry add pendulum coo`{{execute}}
+`poetry add click coo`{{execute}}
 
 `poetry add -D flake8 mypy`{{execute}}
 
@@ -56,3 +56,26 @@ IN VSC
 
 poetry shell   
 code .
+
+
+```
+import click
+
+@click.command()
+@click.option('--count', default=1, help='Number of greetings.')
+@click.option('--name', prompt='Your name',
+              help='The person to greet.')
+def hello(count, name):
+    """Simple program that greets NAME for a total of COUNT times."""
+    for x in range(count):
+        click.echo(f"Hello {name}!")
+
+if __name__ == '__main__':
+    hello()
+
+```
+GET PYTHON RUN WORKING
+
+`python hello.py --count=3`{{execute}}
+
+`python hello.py --help`{{execute}}
