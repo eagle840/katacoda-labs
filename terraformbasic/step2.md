@@ -32,6 +32,8 @@ lets generate a graph
 `terraform graph | dot -Tpng > graph.png`{{execute}}
 
 
+
+
 ```sh
 terraform {
   required_providers {
