@@ -57,6 +57,10 @@ IN VSC
 poetry shell   
 code .
 
+# first click program
+
+`nano pyclick/hello.py`{{execute}}
+
 
 ```
 import click
@@ -75,6 +79,8 @@ if __name__ == '__main__':
 
 ```
 GET PYTHON RUN WORKING
+
+`poetry run python pyclick/hello.py --count=3`{{execute}}
 
 `python hello.py --count=3`{{execute}}
 

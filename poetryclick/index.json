@@ -1,6 +1,6 @@
 {
   "title": "poetryclick",
-  "description": "setup a command line python tool using click (v0.5)",
+  "description": "setup a command line python tool using click (v0.5.1)",
   "difficulty": "Intermediate",
   "time": "1",
   "details": {
