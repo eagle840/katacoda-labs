@@ -20,7 +20,7 @@ note the new terraform state file
 
 `terraform state list`{{execute}}
 
-`terraform state show`{{execute}}
+`terraform state show docker_image.nginx`{{execute}}
 
 check running containers
 `docker ps`{{execute}}   

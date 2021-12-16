@@ -4,6 +4,8 @@ Lets make this easier to read by breaking the single file into multiple
 
 create a providers.tf file to just include a set of providers:
 
+`nano providers.tf`{{execute}}
+
 ```sh
 terraform {
   required_providers {
@@ -18,6 +20,8 @@ provider "docker" {}
 ```
 
 create a main block for the main terraform resources, ie remove the provider section so that all your have left is:
+
+`nano main.tf`{{execute}}
 
 ```sh
 resource "docker_image" "nginx" {
