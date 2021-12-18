@@ -43,6 +43,12 @@ GOTO 8090 and /graph.png
 
 ## code
 
+```
+this is a code block
+why is the below not working?
+```
+
+
 
 ```
 terraform {
