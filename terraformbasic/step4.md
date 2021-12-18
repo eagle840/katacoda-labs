@@ -16,30 +16,49 @@ variable "port" {
 }
 ```
 
+and change the main.tf to include the variable in the external port number
+
+```
+  ports {
+    internal = 80
+    external = var.port
+  }
+```
+
+when you run terraform apply it will ask for a port number. Give it the port number 8080
+
 `terraform apply`{{execute}}
 
 lets check that the docker port has been ajusted:
 `docker ps`{{execute}}
 
+## using command line arugments for variables
+
+`terraform plan -var="port=8084"`{{execute}}
+
+## using environment variables
+
+you set set environment variables for terraform:
+
+`export TF_VAR_port=8083`{{execute}}
+
+running `terraform plan`{{execute}} you'll see that terraform has picked up that variable
+
+
+## using a .tfvars file
+
+we can include that port varible in a tfvar file for terraform to pick up
+
+`nano test.tfvars`{{execute}}
 
 ```
-variable "image_id" {
-  type = string
-}
+port=8085
+```
+
+`terraform plan -var-file=test.tfvars`{{exeute}}
+
+# hierachce of varaible setting
+
+FIND AND DEFINE/LINK HERE
 
 
-variable "docker_ports" {
-  type = list(object({
-    internal = number
-    external = number
-    protocol = string
-  }))
-  default = [
-    {
-      internal = 8300
-      external = 8300
-      protocol = "tcp"
-    }
-  ]
-}
-```{{copy}}

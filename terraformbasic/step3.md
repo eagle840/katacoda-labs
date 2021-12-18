@@ -39,8 +39,13 @@ resource "docker_container" "nginx" {
 }
 ```
 
-Now when you run terraform commands, it will run all the files in this block.
+Now when you run terraform commands, it will run all the files in this folder.
 
+`terraform plan`{{execute}}    
+
+`terraform apply`{{execute}}    
+
+In this case there are no changes
 
 
 

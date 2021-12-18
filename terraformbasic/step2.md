@@ -27,14 +27,24 @@ check running containers
 
 open 8000
 
+## Graph
+
 lets generate a graph
+
+we'll need to inside a pkg `apt install graphviz -y`{{execute}}
 
 `terraform graph | dot -Tpng > graph.png`{{execute}}
 
+and we can run a quick docker to view it
+
+`docker run -p 80:8090 -v ./:/www/ nginx`
+
+GOTO 8090 and /graph.png
+
+## code
 
 
-
-```sh
+```
 terraform {
   required_providers {
     docker = {
