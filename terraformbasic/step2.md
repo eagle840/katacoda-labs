@@ -41,7 +41,7 @@ we'll need to inside a pkg `apt install graphviz -y`{{execute}}
 
 and we can run a quick docker to view it
 
-`docker run -p 80:8090 -v ./:/www/ nginx`
+`docker run -p 80:8090 -v ./:/usr/share/nginx/html nginx`
 
 GOTO 8090 and /graph.png
 
