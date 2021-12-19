@@ -14,11 +14,15 @@ copy the code below
 
 `terraform apply`{{execute}}    
 
-note the new terraform state file
+note the new terraform state file, a json file
 
 `tree`{{execute}}
 
+we can list the components,
+
 `terraform state list`{{execute}}
+
+or get a full description of one of the compoents,
 
 `terraform state show docker_image.nginx`{{execute}}
 
@@ -46,6 +50,15 @@ GOTO 8090 and /graph.png
 ```
 this is a code block
 why is the below not working?
+
+terraform {
+  required_providers {
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "~> 2.13.0"
+    }
+  }
+}
 ```
 
 
