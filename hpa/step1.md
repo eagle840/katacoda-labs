@@ -18,6 +18,13 @@ install helm3  (from https://github.com/helm/helm/releases)
 
 `helm version`{{execute}}
 
+# install by script
+
+`curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3`{{execute}}
+
+`chmod 700 get_helm.sh`{{execute}}
+
+`./get_helm.sh`{{execute}}
 
 `helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/`
 
