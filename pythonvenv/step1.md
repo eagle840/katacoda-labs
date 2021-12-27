@@ -1,34 +1,34 @@
 
     
-`python -V`{execute}
+`python -V`{{execute}}
    
-`python3 -V`{execute}
+`python3 -V`{{execute}}
 
-`apt update`{execute}
+`apt update`{{execute}}
 
-`/usr/bin/python3 -m pip install --upgrade pip`{execute}
+`/usr/bin/python3 -m pip install --upgrade pip`{{execute}}
 
-`apt install python3.8-venv`{execute}
+`apt install python3.8-venv`{{execute}}
 
-`pip freeze`{execute}
+`pip freeze`{{execute}}
 
-# activate`{execute}
+# activate`{{execute}}
 
 win:
     `tutorial-env\Scripts\activate.bat`
 
 unix:
-    `source tutorial-env/bin/activate`{execute}
+    `source tutorial-env/bin/activate`{{execute}}
 
-`which python3`{execute}
+`which python3`{{execute}}
 
-`which pip`{execute}
+`which pip`{{execute}}
 
-`pip freeze`{execute}
+`pip freeze`{{execute}}
 
-`pip install click`{execute}
+`pip install click`{{execute}}
 
-`pip freeze`{execute}
+`pip freeze`{{execute}}
 
  
 
