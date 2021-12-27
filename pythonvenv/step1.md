@@ -1,5 +1,11 @@
 
-    
+
+# setup
+
+see:
+https://docs.python.org/3/tutorial/venv.html
+
+
 `python -V`{{execute}}
    
 `python3 -V`{{execute}}
@@ -13,6 +19,8 @@
 `pip freeze`{{execute}}
 
 # activate`{{execute}}
+
+`python3 -m venv tutorial-env`{{execute}}
 
 win:
     `tutorial-env\Scripts\activate.bat`
