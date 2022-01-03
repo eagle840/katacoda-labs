@@ -2,6 +2,8 @@
 
 # part 1
 
+Poetry can create a new scaffold for us for a new project
+
 `poetry new pyclick`{{execute}}
 
 `cd pyclick`{{execute}}
@@ -26,14 +28,30 @@
 
 `poetry shell`
 
-`exit`
+Run `which poetry`{{execute}} to show where the python binary is.
+
+Exit the shell:  `exit`{{execute}}
+
+and run  `which poetry`{{execute}} again
+
+
 
 # Two ways to start python
 
 `poetry run  python`
 
-`poetry shell`   
-`python`
+`poetry install`{{execute}}
+
+`poetry shell`{{execute}}
+
+Note that the command line now contains the python 
+
+`poetry run python pyclick/hello.py --count=3`{{execute}}
+
+
+to exit out of the poetry shell
+
+`exit`{{execute}}
 
 ```
 poetry new [package-name]	Start a new Python Project.
@@ -58,6 +76,8 @@ poetry shell
 code .
 
 # first click program
+
+UPDATE THIS SECTION FROM YOUR NOTES 
 
 `nano pyclick/hello.py`{{execute}}
 

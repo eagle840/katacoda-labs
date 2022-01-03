@@ -1,3 +1,5 @@
+Work in progress!
+
 Set up poetry, use click 
 
 This lab is in progress of being written
