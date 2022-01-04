@@ -10,7 +10,7 @@ Check k8s is running
 `kubectl cluster-info`{{execute}}
 
 
-# install helm
+# install helm Maually
 
 install helm3  (from https://github.com/helm/helm/releases)
 
@@ -21,6 +21,14 @@ install helm3  (from https://github.com/helm/helm/releases)
 `mv linux-amd64/helm /usr/local/bin/helm`{{execute}}
 
 `helm version`{{execute}}
+
+# by script
+
+`curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3`{{execute}}
+
+`chmod 700 get_helm.sh`{{execute}}
+
+`./get_helm.sh`{{execute}}
 
 
 

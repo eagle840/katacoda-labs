@@ -14,7 +14,7 @@ https://docs.python.org/3/tutorial/venv.html
 
 `/usr/bin/python3 -m pip install --upgrade pip`{{execute}}
 
-`apt install python3.8-venv`{{execute}}
+`apt install -y python3.8-venv`{{execute}}
 
 `pip freeze`{{execute}}
 

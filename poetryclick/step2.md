@@ -26,7 +26,7 @@ Poetry can create a new scaffold for us for a new project
 
 # Starting an virtual envirnoment
 
-`poetry shell`
+`poetry shell`{{execute}}
 
 Run `which poetry`{{execute}} to show where the python binary is.
 
