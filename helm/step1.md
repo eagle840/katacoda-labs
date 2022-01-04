@@ -74,6 +74,16 @@ and check the top command (will take a couple of minutes to set getting metrics)
 
 # check layout of helm chart
 
+The following gets the users supplied values:
+
+`helm get values metrics-server -n kube-system`{{execute}}
+
+The following get all the values:
+
+`helm get values metrics-server -n kube-system --all`{{execute}}
+
+To get a pervious release, you can use `--revision <release number>`
+
 `helm pull bitnami/metrics-server`{{execute}}
 
 `tar -zxvf metrics-server-5.10.11.tgz`{{execute}}
