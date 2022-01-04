@@ -29,7 +29,8 @@ Note: JupyterLab is the new and upgraded version of Jypyter Note
 
 lets start jupyter with the --ip option, since the default it only for localhost:888
 
-`jupyter lab --allow-root --no-browser --ip=0.0.0.0`{{execute}}
+`jupyter lab --allow-root --no-browser --ip=0.0.0.0 &`{{execute}}
+
 
 In the stdout you'll see the url and token needed to access the website, copy it (ctrl-insert)
 
@@ -39,5 +40,5 @@ Once you copy the token, goto the following link and copy the token (shift-inser
 
 If you can't find the token, the following cmd will exe in a seperate terminal and pull the token 
 
-`cat .local/share/jupyter/runtime/nbserver-*.json | jq .token -r`{{execute T2}}
+`cat /root/.local/share/jupyter/runtime/jpserver-*.json | jq .token -r`{{execute T2}}
 
