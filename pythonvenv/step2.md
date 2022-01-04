@@ -2,13 +2,19 @@
 
 `pip install pip-tools`{{execute}}
 
-`pip install pip`{{execute}}
+this installs 2 tools
+
+`pip-compile -h`{{execute}}
+
+`pip-sync -h`{{execute}}
+
+`pip install pip`{{execute}} 
 
 `pip install pipdeptree`{{execute}}
 
 `pipdeptree -h`{{execute}}
 
-`pip-compile -h`{{execute}}
+
 
 # downloading and installing
 
@@ -33,3 +39,27 @@ rpy2>=2.4.3,<3.0.0
 
 
 pulled from: https://stackoverflow.com/questions/32302379/could-not-find-a-version-that-satisfies-the-requirement-package
+
+The above appears incorrect, used the following
+
+   15  mkdir tmp1
+   16  cd tmp1/
+   17  pip download jsmin==2.2.2
+   18  ls
+   19  tar -zxvf jsmin-2.2.2.tar.gz 
+   20  ls
+   21  pip install jsmin-2.2.2
+   22  pip install jsmin-2.2.2.tar.gz 
+   23  tree
+   24  ls
+   25  python -V
+   26  python3 setup.py install
+   27  cd jsmin-2.2.2/
+   28  ls
+   29  python3 setup.py install
+   30  pip freeze
+
+# goto pipy.org and get the specific version file
+
+   31  wget https://files.pythonhosted.org/packages/17/73/615d1267a82ed26cd7c124108c3c61169d8e40c36d393883eaee3a561852/jsmin-2.2.2.tar.gz
+  

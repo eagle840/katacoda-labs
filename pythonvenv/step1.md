@@ -10,6 +10,8 @@ https://docs.python.org/3/tutorial/venv.html
    
 `python3 -V`{{execute}}
 
+`ln -s /usr/bin/python3 /usr/bin/python`{{execute}}
+
 `apt update`{{execute}}
 
 `/usr/bin/python3 -m pip install --upgrade pip`{{execute}}
