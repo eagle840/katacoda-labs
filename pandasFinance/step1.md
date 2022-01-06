@@ -1,4 +1,16 @@
 
+This lab completements 
+
+Github repo: https://github.com/nickmccullum/algorithmic-trading-python
+
+youtube instructional video: https://www.youtube.com/watch?v=xfzGZB4HhEE
+
+download the source files from:
+
+https://drive.google.com/file/d/1ZJSpbY69DVckVZlO9cC6KkgfSufybcHN/view?usp=sharing
+
+`wget https://drive.google.com/file/d/1ZJSpbY69DVckVZlO9cC6KkgfSufybcHN/view?usp=sharing`{{execute}}
+
 
 Lets update Ubuntu first:
 
