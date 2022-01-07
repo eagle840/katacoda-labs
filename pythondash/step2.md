@@ -14,6 +14,10 @@ https://dash.plotly.com/introduction
 
 https://dash.plotly.com/dash-core-components
 
+CHECKOUT
+
+https://towardsdatascience.com/dash-for-beginners-create-interactive-python-dashboards-338bfcb6ffa4
+
 
 `git clone https://github.com/Coding-with-Adam/Dash-by-Plotly.git`{{execute}}
 
