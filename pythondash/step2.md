@@ -24,7 +24,7 @@ https://towardsdatascience.com/dash-for-beginners-create-interactive-python-dash
 `cd Dash-by-Plotly/Other/Dash_Introduction/`{{execute}}
 
 
-`nano intro.py``{{execute}}
+`nano intro.py`{{execute}}
 
 change last line to
 
@@ -33,4 +33,4 @@ change last line to
 
 run
 
-`python python -m intro`{{execute}}
+`python -m intro`{{execute}}
