@@ -20,9 +20,13 @@ https://docs.python.org/3/tutorial/venv.html
 
 `pip freeze`{{execute}}
 
-# activate`{{execute}}
+# activate virtual enviroment
 
 `python3 -m venv tutorial-env`{{execute}}
+
+a quick look at `tree`{{execute}} shows what has been setup.
+
+Now lets activate the virtual envirnoment
 
 win:
     `tutorial-env\Scripts\activate.bat`
@@ -30,34 +34,25 @@ win:
 unix:
     `source tutorial-env/bin/activate`{{execute}}
 
-`which python3`{{execute}}
+`which python3`{{execute}} shows the location on the python binary
 
 `which pip`{{execute}}
 
-`pip freeze`{{execute}}
+`pip freeze`{{execute}} shows no packages installed
 
 `pip install click`{{execute}}
 
 `pip freeze`{{execute}}
 
+if you open a python command prompt and look for the click module, you'll see it in the virtual environment you created.
+
+`python`{{execute}}
+
+`import click`{{execute}}
+
+`click`{{execute}}
+
+`quit()`{{execute}}
  
 
-
-
-    3  pip -V
-    4  python3 -m venv tutorial-env
-    5  pip
-    6  pip install venv
-    7  pip install virtualenv
-    8  /usr/bin/python3 -m pip install --upgrade pip
-    9  pip install virtualenv
-   10  python3 -m venv tutorial-env
-   11  venv -h
-   12  pythpn -V
-   13  python -V
-   14  python3 -V
-   15  apt install python3.8-venv
-   16  apt update
-   17  apt install python3.8-venv
-   18  history
 
