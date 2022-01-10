@@ -20,6 +20,8 @@ You can the output that into requirements in order to get an exacte pakage inven
 
 `pip-sync -h`{{execute}}
 
+Using Pip sync in virtual environments installs only and just the items in the supplied file, so  it is different for pip install -r.  CHECK THIS
+
 `pip install pip`{{execute}} 
 
 # dependancy checking 
