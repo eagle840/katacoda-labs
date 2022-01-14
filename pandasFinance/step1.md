@@ -33,6 +33,12 @@ Install pandas
 
 `pip install pandas`{{execute}}
 
+`pip installrequests==2.22.0`{{execute}}
+
+`pip installscipy==1.5.2`{{execute}}
+
+`pip installXlsxWriter==1.2.2`{{execute}}
+
 Info on pandas: https://pypi.org/project/pandas/
 
 Note that there webpage and docs are linked on this page
