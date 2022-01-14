@@ -11,6 +11,8 @@ https://drive.google.com/file/d/1ZJSpbY69DVckVZlO9cC6KkgfSufybcHN/view?usp=shari
 
 `wget https://drive.google.com/file/d/1ZJSpbY69DVckVZlO9cC6KkgfSufybcHN/view?usp=sharing`{{execute}}
 
+`git clone https://github.com/nickmccullum/algorithmic-trading-python`{{execute}}
+
 
 Lets update Ubuntu first:
 
