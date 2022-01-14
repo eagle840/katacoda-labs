@@ -29,6 +29,10 @@
         {
           "file": "IBM.csv",
           "target": "~/"
+        },
+        {
+          "file": "sp_500_stocks.csv",
+          "target": "~/"
         }
       ]
     },
