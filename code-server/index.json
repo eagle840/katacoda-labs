@@ -1,6 +1,6 @@
 {
   "title": "Running vs code server",
-  "description": "Setup Visual Studio Code Server on a Linux and Docker",
+  "description": "Setup Visual Studio Code Server on a Linux, PyEnv and Docker (v0.5)",
   "difficulty": "Beginner",
   "time": "20",
   "details": {

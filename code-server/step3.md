@@ -18,7 +18,10 @@ CMD ["code-server", "--bind-addr=0.0.0.0:8080"]
 
 `docker build -t coder .`{{execute}}
 
-`docker run -d --name=vsc -p 8080:8080  coder`{{execute}}
+`docker run -d --name=vsc -p 8088:8080  coder`{{execute}}
+
+confirm the doccker container is up:
+`docker ps`{{execute}}
 
 To get the password to login
 
@@ -26,6 +29,6 @@ To get the password to login
 
 To connect
 
-https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com
+https://[[HOST_SUBDOMAIN]]-8088-[[KATACODA_HOST]].environments.katacoda.com
 
 
