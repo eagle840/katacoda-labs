@@ -17,13 +17,13 @@ confirm it's running:
 
 ##  https://linuxhint.com/setup_git_http_server_docker/
 
-`docker-compose version`{{eecute}}
+`docker-compose version`{{execute}}
 
-`mkdir -p ~/docker/gitserver/{repos,etc}`{{eecute}}
+`mkdir -p ~/docker/gitserver/{repos,etc}`{{execute}}
 
-`cd ~/docker/gitserver`{{eecute}}
+`cd ~/docker/gitserver`{{execute}}
 
-`nano gitserver.Dockerfile`{{eecute}}
+`nano gitserver.Dockerfile`{{execute}}
 
 ```
 FROM ubuntu:18.04
@@ -48,7 +48,7 @@ CMD /usr/sbin/apache2ctl -D FOREGROUND
 EXPOSE 80/tcp
 ```
 
-`nano etc/git.conf`{{eecute}}
+`nano etc/git.conf`{{execute}}
 
 ```
 <VirtualHost *:80>
@@ -79,7 +79,7 @@ CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 ```
 
-`nano etc/git-create-repo.sh`{{eecute}}
+`nano etc/git-create-repo.sh`{{execute}}
 
 ```
 #!/bin/bash
@@ -98,7 +98,7 @@ chown -Rf www-data:www-data "${GIT_DIR}/${REPO_NAME}.git"
 echo "Git repository '${REPO_NAME}' created in ${GIT_DIR}/${REPO_NAME}.git"
 ```
 
-`nano docker-compose.yaml`{{eecute}}
+`nano docker-compose.yaml`{{execute}}
 
 ```
 version: "3.7"
@@ -115,15 +115,15 @@ services:
       
 ```
 
-`docker-compose build`{{eecute}}
+`docker-compose build`{{execute}}
 
-`docker-compose up -d`{{eecute}}
+`docker-compose up -d`{{execute}}
 
-`docker-compose ps`{{eecute}}
+`docker-compose ps`{{execute}}
 
 
 
 To create a new Git repository test (let’s say) on the Git HTTP server container, run the following command:
 
-`docker-compose exec git-server mkrepo test`{{eecute}}
+`docker-compose exec git-server mkrepo test`{{execute}}
 
