@@ -22,7 +22,7 @@ install helm3  (from https://github.com/helm/helm/releases)
 
 `helm version`{{execute}}
 
-# by script
+# OR by script
 
 `curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3`{{execute}}
 
@@ -32,35 +32,41 @@ install helm3  (from https://github.com/helm/helm/releases)
 
 
 
-
-`helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/`
-
-```
-helm install metrics-server metrics-server/metrics-server \
-  --version=4.2.2 \
-  --namespace kube-system \
-  --set apiService.create=true \
-  --set extraArgs.kubelet-insecure-tls=true \
-  --set extraArgs.kubelet-preferred-address-types=InternalIP
-``` 
+# Install bitnami metrics-server
 
 search the repo (all repos that have been added), note each has a chart version and an app version
 
-`helm search repo`{{execute}}
+`helm search repo`{{execute}} - None found, so lets add one
 
 
 `helm repo add bitnami https://charts.bitnami.com/bitnami`{{execute}}   
 
 `helm search repo`{{execute}}
 
-` 
-helm install metrics-server bitnami/metrics-server \
+We'll install the metrics-server:
+
+`helm install metrics-server bitnami/metrics-server \
   --version=4.2.2 \
   --namespace kube-system \
   --set apiService.create=true \
   --set extraArgs.kubelet-insecure-tls=true \
   --set extraArgs.kubelet-preferred-address-types=InternalIP
-` {{execute}}
+`{{execute}}
+
+# OR Install k8s metrics=server
+
+`helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/`
+
+`helm install metrics-server metrics-server/metrics-server \
+  --version=4.2.2 \
+  --namespace kube-system \
+  --set apiService.create=true \
+  --set extraArgs.kubelet-insecure-tls=true \
+  --set extraArgs.kubelet-preferred-address-types=InternalIP
+`{{execute}}
+
+
+# Check metrics-server
 
 let check it's installed, since it's installed in the kube-system namespace, we have to add the --namespace argument
 
