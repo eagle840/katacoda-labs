@@ -1,4 +1,3 @@
-`wget https://www.gutenberg.org/ebooks/2264.txt.utf-8 -O macbeth.txt` WIP blocked by gdpr
 
 
 `wget https://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt -O sonnets.txt`{{execute}}

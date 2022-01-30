@@ -15,15 +15,15 @@ and update it:
 `pip3 install --upgrade pip`{{execute}}
 
 
-Download Spark (we're using release 2.4, package 2.7):
-`curl -O https://dlcdn.apache.org/spark/spark-3.2.0/spark-3.2.0-bin-hadoop2.7.tgz`{{execute}}
+Download Spark (https://spark.apache.org/downloads.html):
+`curl -O https://downloads.apache.org/spark/spark-3.2.1/spark-3.2.1-bin-hadoop3.2.tgz`{{execute}}
 
 
 Extract it:
-`tar -xvf spark-3.2.0-bin-hadoop2.7.tgz`{{execute}}
+`tar -xvf spark-3.2.1-bin-hadoop3.2.tgz`{{execute}}
 
 And set it up for execution:
-`mv spark-3.2.0-bin-hadoop2.7.tgz  /usr/local/spark`{{execute}} 
+`mv spark-3.2.1-bin-hadoop3.2  /usr/local/spark`{{execute}} 
 
 wip REMOVE THIS LINE sudo ln -s /usr/local/spark-2.4.4-bin-hadoop2.7/ /usr/local/spark   # create link
 
@@ -43,6 +43,8 @@ And finally lets check spark (for scala) is installed and working:
 `spark-shell --version`{{execute}} 
 
 and for python:
+
+
 `pyspark --version`{{execute}}
 
 
