@@ -1,25 +1,33 @@
-#Set up a python env with pyenv
+# setup all into a docker container
+
+Dockerfile
 
 
-Not sure why this line here
-`#apt  install -y --skip-broken git gcc zlib-devel bzip2-devel readline-devel sqlite-devel`{{execute}}
+create a Dockerfile and paste in:
 
-`git clone https://github.com/pyenv/pyenv.git ~/.pyenv`{{execute}}
+```
+FROM ubuntu:20.04
+RUN apt --version
+RUN apt-get update
+RUN apt-get install -y curl
+RUN curl -fsSL https://code-server.dev/install.sh | sh
+EXPOSE 8080
+# CMD code-server
+CMD ["code-server", "--bind-addr=0.0.0.0:8080"]
+```
 
-`echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc`{{execute}}
-`echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc`{{execute}}
-`echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc`{{execute}}
+`docker build -t coder .`{{execute}}
 
-`exec $SHELL`{{execute}}
+`docker run -d --name=vsc -p 8088:8080  coder`{{execute}}
 
-`pyenv install 3.7.6`{{execute}}
+confirm the doccker container is up:
+`docker ps`{{execute}}
 
-`pyenv versions`{{execute}}
+To get the password to login
 
-To change our active version, we'll use pyenv shell <VERSION>:
+`docker exec vsc cat ~/.config/code-server/config.yaml`{{execute}}
 
-`pyenv shell 3.7.6`{{execute}}
+To connect
 
-`python --version`{{execute}}
+https://[[HOST_SUBDOMAIN]]-8088-[[KATACODA_HOST]].environments.katacoda.com
 
-`pip3.7 install --upgrade pip`{{execute}}

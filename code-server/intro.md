@@ -1,1 +1,1 @@
-This lab is presently in construction phase
+This lab shows how to setup VS Code on a webservice using 'code-server'

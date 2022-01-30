@@ -22,14 +22,4 @@ The password is stored in ~/.config/code-server/config.yam, we'll pull it from a
 
 `cat .config/code-server/config.yaml`{{execute t2}}
 
-# need to
 
-secure with password
-
-use with ssh (as in docs)
-
-add cert - lets encrypt
-
-setup python 
-
-put in a docker container
