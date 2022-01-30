@@ -10,7 +10,7 @@ review docs  https://github.com/cdr/code-server/blob/v3.9.0/docs/guide.md
 
 'code-server' will start, but only on local host, lets expose it on the internet so you can access it.
 
-`code-server --bind-addr 0.0.0.0:8080`{{execute}}
+`code-server --bind-addr 0.0.0.0:8080 &`{{execute}}
 
 
 To connect

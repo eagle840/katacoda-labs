@@ -7,9 +7,11 @@ youtube instructional video: https://www.youtube.com/watch?v=xfzGZB4HhEE
 
 download the source files from:
 
-https://drive.google.com/file/d/1ZJSpbY69DVckVZlO9cC6KkgfSufybcHN/view?usp=sharing
 
-`wget https://drive.google.com/file/d/1ZJSpbY69DVckVZlO9cC6KkgfSufybcHN/view?usp=sharing`{{execute}}
+
+`git clone https://github.com/nickmccullum/algorithmic-trading-python`{{execute}}
+
+`cp sp_500_stocks.csv ./algorithmic-trading-python/starter_files/`{{execute}}
 
 
 Lets update Ubuntu first:
@@ -30,6 +32,12 @@ and update it:
 Install pandas
 
 `pip install pandas`{{execute}}
+
+`pip install requests==2.22.0`{{execute}}
+
+`pip install scipy==1.5.2`{{execute}}
+
+`pip install XlsxWriter==1.2.2`{{execute}}
 
 Info on pandas: https://pypi.org/project/pandas/
 

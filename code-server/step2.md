@@ -1,6 +1,8 @@
 #Set up a python env with pyenv
 
-`sudo yum install -y --skip-broken git gcc zlib-devel bzip2-devel readline-devel sqlite-devel`{{execute}}
+
+Not sure why this line here
+`#apt  install -y --skip-broken git gcc zlib-devel bzip2-devel readline-devel sqlite-devel`{{execute}}
 
 `git clone https://github.com/pyenv/pyenv.git ~/.pyenv`{{execute}}
 

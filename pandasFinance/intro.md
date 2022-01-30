@@ -6,4 +6,4 @@ In this lab we'll install pandas for python and install jupyter to work with pyt
 https://pypi.org/project/pandas/
 
 
-last update: 2505202
+
