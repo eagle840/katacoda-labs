@@ -57,8 +57,10 @@ port=8085
 
 `terraform plan -var-file=test.tfvars`{{exeute}}
 
-# hierachce of varaible setting
+# Documentation on variables
 
-FIND AND DEFINE/LINK HERE
+https://www.terraform.io/language/values/variables
+
+
 
 
