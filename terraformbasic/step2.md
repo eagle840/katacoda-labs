@@ -29,7 +29,8 @@ or get a full description of one of the compoents,
 check running containers
 `docker ps`{{execute}}   
 
-open 8000
+https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com
+
 
 ## Graph
 
@@ -41,9 +42,11 @@ we'll need to inside a pkg `apt install graphviz -y`{{execute}}
 
 and we can run a quick docker to view it
 
-`docker run -p 8090:80 -v $(pwd):/usr/share/nginx/html nginx`
+`docker run  -d -p 8090:80 -v $(pwd):/usr/share/nginx/html nginx`
 
-https://[[HOST_SUBDOMAIN]]-8025-[[KATACODA_HOST]].environments.katacoda.com/graph.png
+
+
+https://[[HOST_SUBDOMAIN]]-8090-[[KATACODA_HOST]].environments.katacoda.com/graph.png
 
 ## code
 
@@ -67,7 +70,7 @@ resource "docker_image" "nginx" {
   keep_locally = false
 }
 
-resouce "docker_container" "nginx" {
+resource "docker_container" "nginx" {
   image = docker_image.nginx.latest
   name = "tutorial"
   ports {
