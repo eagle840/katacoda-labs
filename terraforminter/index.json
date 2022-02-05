@@ -1,9 +1,21 @@
 {
-  "title": "terraformbasic",
-  "description": "terraform basic (v0.9.1)",
+  "title": "terraformintermediate",
+  "description": "terraform intermediate (v0.2)",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {
+    "assets":{
+      "host01": [
+        {
+          "file": "main.tf",
+          "target": "~/"
+        },
+        {
+          "file": "providers.tf",
+          "target": "~/"
+        }
+      ]
+    },
     "steps": [
       {
         "title": "Step 1",

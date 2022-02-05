@@ -29,7 +29,8 @@ or get a full description of one of the compoents,
 check running containers
 `docker ps`{{execute}}   
 
-open 8000
+https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com
+
 
 ## Graph
 
@@ -41,15 +42,15 @@ we'll need to inside a pkg `apt install graphviz -y`{{execute}}
 
 and we can run a quick docker to view it
 
-`docker run -p 80:8090 -v ./:/usr/share/nginx/html nginx`
+`docker run  -d -p 8090:80 -v $(pwd):/usr/share/nginx/html nginx`
 
-GOTO 8090 and /graph.png
+
+
+https://[[HOST_SUBDOMAIN]]-8090-[[KATACODA_HOST]].environments.katacoda.com/graph.png
 
 ## code
 
 ```
-this is a code block
-why is the below not working?
 
 terraform {
   required_providers {
@@ -60,27 +61,7 @@ terraform {
   }
 }
 
-GOOD TO HERE
 
-provider "docker" {}
-
-resource "docker_image" "nginx" {
-  name         = "nginx:latest"
-  keep_locally = false
-}
-```
-
-
-
-```
-terraform {
-  required_providers {
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "~> 2.13.0"
-    }
-  }
-}
 
 provider "docker" {}
 
@@ -91,10 +72,14 @@ resource "docker_image" "nginx" {
 
 resource "docker_container" "nginx" {
   image = docker_image.nginx.latest
-  name  = "tutorial"
+  name = "tutorial"
   ports {
     internal = 80
     external = 8000
   }
 }
+
 ```
+
+
+

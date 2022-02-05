@@ -55,10 +55,22 @@ we can include that port varible in a tfvar file for terraform to pick up
 port=8085
 ```
 
-`terraform plan -var-file=test.tfvars`{{exeute}}
+`terraform plan -var-file=test.tfvars`{{execute}}
 
-# hierachce of varaible setting
+You'll notice that terraform requested and out put file
 
-FIND AND DEFINE/LINK HERE
+`terraform plan -var-file=test.tfvars -out plan.tfplan`{{execute}}
+
+`ls`{{execute}}
+
+we can now use that file, with the varaibles includes to execute an 'apply' without having to require varaiables again
+
+`terraform apply plan.tfplan`{{execute}}
+
+# Documentation on variables
+
+https://www.terraform.io/language/values/variables
+
+
 
 
