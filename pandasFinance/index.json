@@ -31,6 +31,10 @@
           "target": "~/"
         },
         {
+          "file": "requirements.txt",
+          "target": "~/"
+        },
+        {
           "file": "sp_500_stocks.csv",
           "target": "~/"
         }

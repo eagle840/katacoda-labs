@@ -1,0 +1,7 @@
+pandas
+requests
+scipy
+XlsWriter
+yfinanace
+SQLAlchemy
+jupyterlab
