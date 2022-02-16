@@ -39,7 +39,17 @@ Install pandas
 
 `pip install XlsxWriter==1.2.2`{{execute}}
 
+`python3 -m pip install SQLAlchemy`{{execute}}
+
+`docker run --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0.2`{{execute}}
+
+`docker exec -it some-mysql mysql -uroot -p1234`{{execute}}
+
 Info on pandas: https://pypi.org/project/pandas/
+
+### To connect to from the host
+
+`mysql --host=127.0.0.1 -uroot -p1234  --ssl-mode=disabled`{{execute}}
 
 Note that there webpage and docs are linked on this page
 
