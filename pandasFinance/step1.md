@@ -49,6 +49,8 @@ Info on pandas: https://pypi.org/project/pandas/
 
 ### To connect to from the host
 
+`apt install mysql-client-core-8.0`{{execute}}
+
 `mysql --host=127.0.0.1 -uroot -p1234  --ssl-mode=disabled`{{execute}}
 
 Note that there webpage and docs are linked on this page
