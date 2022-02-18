@@ -1,30 +1,103 @@
 
-# Lets increase the load:
-
-In a second terminal:
+# Create a work load
 
 
-`kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done"`{{ execute T1 }}
+## setup docker images
+
+Create a custom Dockerfile
 
 
-wait a minute and then check the status of the HPA and return to the orginal terminal
+`nano Dockerfile`{{execute}}
 
-`kubectl get hpa`{{execute}} 
+```
+FROM php:5-apache
+COPY index.php /var/www/html/index.php
+RUN chmod a+rx index.php
+```
 
-and the number of pods on the deployment
+create the index.php file
 
-`kubectl get deployment php-apache`{{execute}}
+`nano index.php`{{execute}}
+```
+<?php
+  $x = 0.0001;
+  for ($i = 0; $i <= 1000000; $i++) {
+    $x += sqrt($x);
+  }
+  echo "OK!";
+?>
+```
+
+build the docker image
+
+`docker build -t php-apache .`{{execute}}
+
+Deploy that image into K8S:
+
+`mkdir application`{{execute}}   
+
+`nano application/php-apache.yaml`{{execute}}
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-apache
+spec:
+  selector:
+    matchLabels:
+      run: php-apache
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: php-apache
+    spec:
+      containers:
+      - name: php-apache
+        image: k8s.gcr.io/hpa-example
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 500m
+          requests:
+            cpu: 200m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: php-apache
+  labels:
+    run: php-apache
+spec:
+  ports:
+  - port: 80
+  selector:
+    run: php-apache
+```
 
 
-check the node status
 
-`kubectl describe node node01`{{execute}}
+Apply the application in K8S:
+
+`kubectl apply -f https://k8s.io/examples/application/php-apache.yaml`{{execute}}
+
+check the application has been started
+
+`kubectl get pods`{{execute}}
 
 
 
-# Stop the load
 
-Return to the second terminal and terminate the program using <ctrl>+c
+
+Create the HPA, which is using the metrics-server.
+
+`kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10`{{execute}}
+
+
+`kubectl get hpa`{{execute}}
+
 
 
 

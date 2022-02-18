@@ -39,6 +39,8 @@ Install pandas
 
 `pip install XlsxWriter==1.2.2`{{execute}}
 
+`pip install yfinanace`{{execute}}
+
 `python3 -m pip install SQLAlchemy`{{execute}}
 
 `docker run --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0.2`{{execute}}
