@@ -1,7 +1,7 @@
 pandas
 requests
 scipy
-XlsWriter
-yfinanace
+XlsxWriter
+yfinance
 SQLAlchemy
 jupyterlab
