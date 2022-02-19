@@ -9,6 +9,8 @@ Check k8s is running
 
 `kubectl cluster-info`{{execute}}
 
+it might take a couple of minutes, but your should get 'Kubernetes master is running at'
+
 
 # install helm Maually
 
@@ -100,7 +102,7 @@ To get a pervious release, you can use `--revision <release number>`
 
 `helm pull bitnami/metrics-server`{{execute}}
 
-`tar -zxvf metrics-server-5.10.11.tgz`{{execute}}
+`tar -zxvf metrics-server-5.11.1.tgz`{{execute}}
 
 `tree metrics-server`{{execute}}
 
