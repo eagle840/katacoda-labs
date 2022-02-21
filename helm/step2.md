@@ -1,106 +1,50 @@
+# Install bitnami metrics-server
 
-# Create a work load
+search the repo (all repos that have been added), note each has a chart version and an app version
 
-
-## setup docker images
-
-Create a custom Dockerfile
+`helm search repo`{{execute}} - None found, so lets add one
 
 
-`nano Dockerfile`{{execute}}
+`helm repo add bitnami https://charts.bitnami.com/bitnami`{{execute}}   
 
-```
-FROM php:5-apache
-COPY index.php /var/www/html/index.php
-RUN chmod a+rx index.php
-```
+`helm search repo`{{execute}}
 
-create the index.php file
+We'll install the metrics-server:
 
-`nano index.php`{{execute}}
-```
-<?php
-  $x = 0.0001;
-  for ($i = 0; $i <= 1000000; $i++) {
-    $x += sqrt($x);
-  }
-  echo "OK!";
-?>
-```
-
-build the docker image
-
-`docker build -t php-apache .`{{execute}}
-
-Deploy that image into K8S:
-
-`mkdir application`{{execute}}   
-
-`nano application/php-apache.yaml`{{execute}}
-
-```
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: php-apache
-spec:
-  selector:
-    matchLabels:
-      run: php-apache
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        run: php-apache
-    spec:
-      containers:
-      - name: php-apache
-        image: k8s.gcr.io/hpa-example
-        ports:
-        - containerPort: 80
-        resources:
-          limits:
-            cpu: 500m
-          requests:
-            cpu: 200m
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: php-apache
-  labels:
-    run: php-apache
-spec:
-  ports:
-  - port: 80
-  selector:
-    run: php-apache
-```
+`helm install metrics-server bitnami/metrics-server \
+  --version=4.2.2 \
+  --namespace kube-system \
+  --set apiService.create=true \
+  --set extraArgs.kubelet-insecure-tls=true \
+  --set extraArgs.kubelet-preferred-address-types=InternalIP
+`{{execute}}
 
 
 
-Apply the application in K8S:
+# Check metrics-server
 
-`kubectl apply -f https://k8s.io/examples/application/php-apache.yaml`{{execute}}
+let check it's installed, since it's installed in the kube-system namespace, we have to add the --namespace argument
 
-check the application has been started
+`helm list --namespace kube-system`{{execute}}
 
-`kubectl get pods`{{execute}}
+`helm get notes metrics-server --namespace kube-system`{{execute}}
 
+and lets check what values have been used:
 
+`helm get values metrics-server --namespace kube-system`{{execute}}
 
+The following get all the values:
 
+`helm get values metrics-server -n kube-system --all`{{execute}}
 
-Create the HPA, which is using the metrics-server.
+To get a pervious release, you can use `--revision <release number>`
 
-`kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10`{{execute}}
+`helm pull bitnami/metrics-server`{{execute}}
 
+`tar -zxvf metrics-server-5.11.1.tgz`{{execute}}
 
-`kubectl get hpa`{{execute}}
+`tree metrics-server`{{execute}}
 
+Lets check the endpoint is up
 
-
-
-
-
-
+`kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq`{{execute}}

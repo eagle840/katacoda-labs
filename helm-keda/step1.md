@@ -5,7 +5,14 @@ Run Ubuntu updates:
 
 `apt-get update -y`{{execute}}
 
+# HELM
 
+
+`curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3`{{execute}}
+
+`chmod 700 get_helm.sh`{{execute}}
+
+`./get_helm.sh`{{execute}}
 
 # KEDA
 
@@ -20,8 +27,11 @@ https://keda.sh/docs/2.4/concepts/
 see doc:  https://keda.sh/docs/1.4/deploy/
 
 `helm repo add kedacore https://kedacore.github.io/charts`{{execute}}   
+
 `helm repo update`{{execute}}   
+
 `kubectl create namespace keda`{{execute}}   
+
 `helm install keda kedacore/keda --version 1.4.2 --namespace keda`{{execute}}
 
 I noted that the lastest version is 2.4!

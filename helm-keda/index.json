@@ -1,6 +1,6 @@
 {
   "title": "Kubernetes KEDA",
-  "description": "Setup KEDA set on a Kubernets cluster(v0.1)",
+  "description": "Setup KEDA set on a Kubernets cluster(v0.2)",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {
