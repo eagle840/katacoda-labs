@@ -1,5 +1,10 @@
-Stateful sets require dynamic provisioning to use volumes,  however in this scenario will be using NFS to get around this
+In this lab we will install Helm and explore setting up a chart to install a complex application (frontend and backend)
 
+Docs and sources:
+
+https://artifacthub.io/
+
+https://helm.sh
 
 Run Ubuntu updates:
 
