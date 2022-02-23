@@ -1,4 +1,4 @@
-# Install bitnami metrics-server
+## Install bitnami metrics-server
 
 search the repo (all repos that have been added), note each has a chart version and an app version
 
@@ -19,9 +19,13 @@ We'll install the metrics-server:
   --set extraArgs.kubelet-preferred-address-types=InternalIP
 `{{execute}}
 
+Lets check the endpoint is up
+
+`kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq`{{execute}}
 
 
-# Check metrics-server
+
+## Check metrics-server
 
 let check it's installed, since it's installed in the kube-system namespace, we have to add the --namespace argument
 
@@ -39,12 +43,11 @@ The following get all the values:
 
 To get a pervious release, you can use `--revision <release number>`
 
+## Pull down and exmine the chart
+
 `helm pull bitnami/metrics-server`{{execute}}
 
-`tar -zxvf metrics-server-5.11.1.tgz`{{execute}}
+`tar -zxvf metrics-server-5.11.*.tgz`{{execute}}
 
 `tree metrics-server`{{execute}}
 
-Lets check the endpoint is up
-
-`kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq`{{execute}}
