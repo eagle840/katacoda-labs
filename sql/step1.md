@@ -7,7 +7,7 @@ You should end up here: https://hub.docker.com/_/mysql, we'll be using version 8
 
 Looking through the notes you'll see  how to startup mysql, 
 
-`docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0.2`{{execute}}
+`docker run --name some-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=1234 -d mysql:8.0.2`{{execute}}
 
 It'll take a minute to pull the image, so wait until you see a container up and running with
 
@@ -21,6 +21,14 @@ It also takes a few seconds to get MySQL up and running, if you get an error wai
 
 -uroot   => user root  
 -p       => prompt for password, or -p1234
+
+## To connect from the host
+
+`apt update`{{execute}}
+
+`apt install mysql-client-core-5.7`{{execute}}
+
+`mysql -h 0.0.0.0  -P3306  -uroot -p1234`{{execute}}
 
 # create a db
 
