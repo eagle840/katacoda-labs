@@ -18,6 +18,18 @@ Lets update Ubuntu first:
 
 `sudo apt-get update`{{execute}}
 
+## install a sql
+
+`apt install sqlite`{{execute}}
+
+`sqlite3 -help`{{execute}}
+
+`sqlite3 test1.db`{{execute}}
+
+`.help`{{execute}}
+
+`.exit`{{execute}}
+
 check  python
 
 `python -V`{{execute}}
