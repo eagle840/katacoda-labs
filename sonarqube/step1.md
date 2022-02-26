@@ -1,5 +1,7 @@
 # setup
 
+## Sonarcube
+
 `git clone https://github.com/SonarSource/docker-sonarqube.git`{{execute}}
 
 `cd docker-sonarqube/example-compose-files/sq-with-postgres/`{{execute}}
@@ -19,3 +21,13 @@ connect to 9000 web page
 https://[[HOST_SUBDOMAIN]]-9000-[[KATACODA_HOST]].environments.katacoda.com
 
 un and password is admin
+
+## GIT server
+
+`docker run -d -p 2222:22 -v ~/git-server/keys:/git-server/keys -v ~/git-server/repos:/git-server/repos jkarlos/git-server-docker`{{execute}}
+
+`cp ~/.ssh/id_rsa ~/git-server/keys`{{execute}} # Keys need to me made
+
+Now restart that docker container : docker retart <###>
+
+`ssh git@0.0.0.0 -p 2222`{{execute}}
