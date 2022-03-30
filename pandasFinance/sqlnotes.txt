@@ -1,0 +1,11 @@
+import pandas as pd
+import sqlite3
+
+bike_df = pd.read_csv('https://s3.amazonaws.com/tripdata/201307-citibike-tripdata.zip', nrows=10)
+bike_df
+
+db = sqlite3.connect('citibike.db')
+
+pd.DataFrame.to_sql?
+
+pd.DataFrame.to_sql(bike_df, 'bikes', db)
