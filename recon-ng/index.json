@@ -1,6 +1,6 @@
 {
   "title": "Setup and run Recon-ng",
-  "description": "Setup and run recon-ng in a docker container(v0.41)",
+  "description": "Setup and run recon-ng in a docker container(v0.42)",
   "difficulty": "Intermediate",
   "time": "1",
   "details": {
@@ -29,6 +29,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "ubuntu2004"
+    "imageid": "ubuntu:2004"
   }
 }
