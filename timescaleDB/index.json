@@ -1,7 +1,7 @@
 {
-  "title": "Setup and run Recon-ng",
-  "description": "Setup and run recon-ng in a docker container(v0.41)",
-  "difficulty": "Intermediate",
+  "title": "timescaleDB",
+  "description": "Introduction to timescale DB",
+  "difficulty": "Beginner",
   "time": "1",
   "details": {
     "steps": [
@@ -29,6 +29,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "ubuntu2004"
+    "imageid": "ubuntu:2004"
   }
 }
