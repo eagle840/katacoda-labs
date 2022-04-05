@@ -21,12 +21,13 @@ enter code block  cdktf.json and the ts scrip
 from
 https://github.com/hashicorp/terraform-cdk/tree/main/examples/typescript/docker
 
-rm cdktf.json
+`rm cdktf.json`{{execute}}
 
-wget https://raw.githubusercontent.com/hashicorp/terraform-cdk/main/examples/typescript/docker/cdktf.json
+`wget https://raw.githubusercontent.com/hashicorp/terraform-cdk/main/examples/typescript/docker/cdktf.json`{{execute}}
 
-rm main.ts
-wget https://raw.githubusercontent.com/hashicorp/terraform-cdk/main/examples/typescript/docker/main.ts
+`rm main.ts`{{execute}}
+
+`wget https://raw.githubusercontent.com/hashicorp/terraform-cdk/main/examples/typescript/docker/main.ts`{{execute}}
 
 
 

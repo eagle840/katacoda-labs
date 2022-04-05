@@ -32,6 +32,10 @@ enter code block  from
 
 https://github.com/hashicorp/terraform-cdk/blob/main/examples/python/docker/main.py
 
+`rm main.py`{{execute}}
+
+`wget https://raw.githubusercontent.com/hashicorp/terraform-cdk/main/examples/python/docker/main.py`{{execute}}
+
 
 
 `cdktf get`{{execute}}  (before or after python code?)

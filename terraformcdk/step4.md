@@ -1,28 +1,7 @@
-# python 
 
-`cd ~`{{execute}}   
+see if you can deploy an azure functions container with a python script (lambda)
 
-`mkdir learn-cdktf-docker`{{execute}}
-
-`cd learn-cdktf-docker`{{execute}}
-
-`pip3 install pipenv`{{execute}}
-
-`cdktf init --template=python --local`{{execute}}
-
-enter a project name and description
-
-`npm install @cdktf/provider-docker`{{execute}}
+`docker run --rm -p 8080:80 mcr.microsoft.com/azure-functions/dotnet:3.0`{{execute}}
 
 
-enter code block 
-
-
-
-`cdktf get`{{execute}}
-
-`cdktf deploy`{{execute}}
-
-`docker ps`{{execute}}
-
-`cdktf destroy`{{execute}}
+see https://hub.docker.com/_/microsoft-azure-functions
