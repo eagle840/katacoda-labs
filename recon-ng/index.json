@@ -1,6 +1,6 @@
 {
   "title": "Setup and run Recon-ng",
-  "description": "Setup and run recon-ng in a docker container(v0.42)",
+  "description": "Setup and run recon-ng in a docker container(v0.8)",
   "difficulty": "Intermediate",
   "time": "1",
   "details": {

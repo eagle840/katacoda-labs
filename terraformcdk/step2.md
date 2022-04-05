@@ -1,48 +1,33 @@
-# run a cdk
+# Using Typescript
 
 
-`mkdir learn-terraform-docker-container`{{execute}}    
+taken from:   
+https://learn.hashicorp.com/tutorials/terraform/cdktf-install
 
-`cd learn-terraform-docker-container`{{execute}}   
+`cd ~`{{execute}}
 
-`nano main.tf`{{execute}}   
-copy the code below
+`mkdir learn-cdktf-docker`{{execute}}
 
-`terraform init`{{execute}}    
+`cd learn-cdktf-docker`{{execute}}
 
-`terraform plan`{{execute}}    
+`cdktf init --template=typescript --local`{{execute}}
 
-`terraform apply`{{execute}}    
+enter a project name and description
 
-check running containers
-`docker ps`{{execute}}   
-
-open 8000
+`npm install @cdktf/provider-docker`{{execute}}
 
 
-```yaml
-terraform {
-  required_providers {
-    docker = {
-      source  = "kreuzwerker/docker"
-      version = "~> 2.13.0"
-    }
-  }
-}
+enter code block 
 
-provider "docker" {}
 
-resource "docker_image" "nginx" {
-  name         = "nginx:latest"
-  keep_locally = false
-}
 
-resource "docker_container" "nginx" {
-  image = docker_image.nginx.latest
-  name  = "tutorial"
-  ports {
-    internal = 80
-    external = 8000
-  }
-}
-```
+`cdktf get`{{execute}}
+
+`cdktf deploy`{{execute}}
+
+`docker ps`{{execute}}
+
+`cdktf list`{{execute}}
+
+`cdktf destroy`{{execute}}
+

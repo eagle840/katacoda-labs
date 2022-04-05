@@ -1,0 +1,19 @@
+
+https://techyrick.com/recon-ng/
+
+-------------
+removed, since doesn't work correctly
+
+WIP: check https://github.com/lanmaster53/recon-ng/wiki/Getting-Started#using-docker   
+and match with what do do below
+DO NOT Pull the docker hub image, it is the old version 4
+
+`mkdir .recon-ng`{{execute}}   
+
+We can generate our own docker image, or pull one I've pre-built
+
+`docker run --rm -it -p 5000:5000 -v $(pwd):/recon-ng -v ~/.recon-ng:/root/.recon-ng --entrypoint "./recon-ng" eagle840/recon-ng`{{execute}} 
+
+## OR  (~5 minutes)
+
+--------------

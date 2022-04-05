@@ -30,15 +30,16 @@ Once the docker container is running you should see intro logo and a command pro
 ### prompt
 the cmd prompt tells you where you are in the cli   
 The first part is '[recon-ng]'   
-The second part shows the workspace you are in.    
+The second part shows the workspace you are in, and the third shows you the module your are in. To go back, use `'back'   
 Workspaces are used to contain your work.   
 
 help   & help (cmdName)  will show help.   
-help is also context based, ie where you are in your commands.   
+help is also context based, ie where you are in your commands.  
+
 
 ### database
 recon-ng has a built in database that tracts information and has a preset set of tables
-run 'show' and you'll see the last of tables.
+run `show` and you'll see the last of tables.
 
 
 ## Setup a workspace and recon
@@ -47,8 +48,7 @@ run 'show' and you'll see the last of tables.
  Presently we are in the default workspace. Lets create a workspace for IBM and do some basic recon.
  WIP find a smaller company (results are too big)
  `workspaces create IBM`{{execute}}   
- ?? is this actually a SQL db ??   
- ? has tables - shown in the resources folder ?
+ 
 
  #### Get seed/data
 
@@ -59,9 +59,17 @@ Lets enter the company into the companies table:
 
  `show companies`{{execute}}  to confirm
 
+Now lets add the domain for the company (multiple if needed)
+
+ `db insert domains`{{execute}}  ENTER, then   enter the domain, eg example.com , and any notes.
+
+ `show domains`{{execute}}
+
+
+
  #### find and install modules
 
- General you'll search the marketplace for modules, install from the marketplace, and then load that module to run it - 
+ Generally  you'll search the marketplace for modules, install from the marketplace, and then load that module to run it - 
  to back out of a module use `back`
 
 
@@ -69,9 +77,11 @@ Lets enter the company into the companies table:
 
   ! note dependiences and keys
 
+  For keys, you'll need to get a API key to use that module.
+
   module names are in the form   recon/<inputtable>-<outputTable>/<modulename>
 
-  `marketplace search companies-`{{execute}} to find things it can fo with companies
+  `marketplace search companies-`{{execute}} to find things it can do with companies
 
   `marketplace install whois_miner`{{execute}}
 
@@ -88,27 +98,10 @@ lets look at the contacts table that it has inserted data into
 
 `show contacts`{{execute}}
 
-See any domains into the list of contacts? insert them into the db
 
-`db insert domains`{{execute}}  ENTER, then   enter the domain, eg example.com , and any notes.
 
-Lets search the marketplace to run modules against the contacts
 
-`marketplace search contacts-`{{execute}}
 
-Lets install `marketplace install scylla`{{execute}}   which will install the 2 modules with scylla in their name
-
-`modules load recon/cont`{{execute}} and use tab completion
-
-run `info`{{execute}} to look at info on it
-
-`run`{{execute}} to run module, and not the data groups added into the tables
-
-lets load and run the other scylla module
-
-`module load recon/doma`{{execute}} and use tab completion
-
-and run it `run`{{execute}}
 
 #### Get a summary
 
