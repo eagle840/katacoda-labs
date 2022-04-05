@@ -1,5 +1,12 @@
 # setup
 
+## Git server#
+#
+follow https://hub.docker.com/r/jkarlos/git-server-docker/
+
+You'll have to do a 
+`ssh-keygen -t rsa`
+
 ## Sonarcube
 
 `git clone https://github.com/SonarSource/docker-sonarqube.git`{{execute}}
