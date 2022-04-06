@@ -5,7 +5,29 @@
 follow https://hub.docker.com/r/jkarlos/git-server-docker/
 
 You'll have to do a 
-`ssh-keygen -t rsa`
+
+`ssh-keygen -t rsa`{{execute}}
+
+`docker run -d -p 2222:22 --name gitserve -v ~/git-server/keys:/git-server/keys -v ~/git-server/repos:/git-server/repos jkarlos/git-server-docker`{{execute}}
+
+`cp ~/.ssh/id_rsa.pub ~/git-server/keys`{{execute}}
+
+`docker restart gitserve`{{execute}}
+
+
+--- this point it testing
+
+`cd myrepo`{{execute}}
+
+`git init --shared=true`{{execute}}
+
+`git add .`{{execute}}
+
+`git commit -m "my first commit"`{{execute}}
+
+`cd ..`{{execute}}
+
+`git clone --bare myrepo myrepo.git`{{execute}}
 
 ## Sonarcube
 
