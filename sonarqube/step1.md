@@ -49,7 +49,7 @@ move the repo over to the container
 
 Lets create a new directory and clone the repo!
 
-`cd ^`{{execute}}
+`cd ~`{{execute}}
 
 `mkdir test`{{execute}}
 
@@ -66,6 +66,8 @@ Lets create a new directory and clone the repo!
 
 
 ## Sonarcube
+
+`cd ~`{{execute}}
 
 `git clone https://github.com/SonarSource/docker-sonarqube.git`{{execute}}
 
@@ -89,10 +91,6 @@ un and password is admin
 
 ## GIT server
 
-`docker run -d -p 2222:22 -v ~/git-server/keys:/git-server/keys -v ~/git-server/repos:/git-server/repos jkarlos/git-server-docker`{{execute}}
+`docker stats`{{execute}}
 
-`cp ~/.ssh/id_rsa ~/git-server/keys`{{execute}} # Keys need to me made
-
-Now restart that docker container : docker retart <###>
-
-`ssh git@0.0.0.0 -p 2222`{{execute}}
+ check memory usage!
