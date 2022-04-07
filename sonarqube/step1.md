@@ -8,7 +8,11 @@ You'll have to do a
 
 `ssh-keygen -t rsa`{{execute}}
 
+note that we are using the /git-serve folder as  a container volume
+
 `docker run -d -p 2222:22 --name gitserve -v ~/git-server/keys:/git-server/keys -v ~/git-server/repos:/git-server/repos jkarlos/git-server-docker`{{execute}}
+
+copy our keys over to the container
 
 `cp ~/.ssh/id_rsa.pub ~/git-server/keys`{{execute}}
 
@@ -16,18 +20,32 @@ You'll have to do a
 
 
 --- this point it testing
+`mkdir myrepo`
 
 `cd myrepo`{{execute}}
 
 `git init --shared=true`{{execute}}
 
+`touch text.txt`{{execute}}
+
+
 `git add .`{{execute}}
+
+`git config --global user.email "you@example.com"`{{execute}}
+
+`git commit -m "my first commit"`{{execute}}
 
 `git commit -m "my first commit"`{{execute}}
 
 `cd ..`{{execute}}
 
 `git clone --bare myrepo myrepo.git`{{execute}}
+
+move the repo over to the container
+
+`mv myrepo.git ~/git-server/repos`{{execute}}
+
+`git clone ssh://git@localhost:2222/git-server/repos/myrepo.git`{{execute}}
 
 ## Sonarcube
 
