@@ -20,7 +20,8 @@ copy our keys over to the container
 
 
 --- this point it testing
-`mkdir myrepo`
+
+`mkdir myrepo`{{execute}}
 
 `cd myrepo`{{execute}}
 
@@ -33,9 +34,10 @@ copy our keys over to the container
 
 `git config --global user.email "you@example.com"`{{execute}}
 
-`git commit -m "my first commit"`{{execute}}
+`git config --global user.name "Your Name"`{{execute}}
 
 `git commit -m "my first commit"`{{execute}}
+
 
 `cd ..`{{execute}}
 
@@ -45,7 +47,23 @@ move the repo over to the container
 
 `mv myrepo.git ~/git-server/repos`{{execute}}
 
+Lets create a new directory and clone the repo!
+
+`cd ^`{{execute}}
+
+`mkdir test`{{execute}}
+
+`cd test`{{execute}}
+
 `git clone ssh://git@localhost:2222/git-server/repos/myrepo.git`{{execute}}
+
+`ls`{{execute}}
+
+### create a new repo using ssh(thats above right?) or git cmd
+
+...content
+
+
 
 ## Sonarcube
 
