@@ -9,6 +9,8 @@ search the repo (all repos that have been added), note each has a chart version 
 
 `helm search repo`{{execute}}
 
+If you ever need to update: `helm repo update`
+
 We'll install the metrics-server:
 
 `helm install metrics-server bitnami/metrics-server \

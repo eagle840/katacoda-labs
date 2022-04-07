@@ -16,6 +16,10 @@ The charts folder is for dependant charts for this chart, but we won't using the
 
 The values yaml file is for values that you'll want to change every now and then. EG a service port number.
 
+Lets run a helm lint on this chart to make sure its ok
+
+`helm lint`{{exeute}}
+
 Now
 
 `cd ..`{{execute}}
@@ -24,3 +28,8 @@ Now
 
 `helm list -A`{{execute}}
 
+`k get svc -A`{{execute}}
+
+to remove
+
+`helm uninstall new-chart`
