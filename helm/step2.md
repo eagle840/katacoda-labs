@@ -23,6 +23,10 @@ Lets check the endpoint is up
 
 `kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq`{{execute}}
 
+And chect the helm chart is installed (-A shows all namespaces)
+
+`helm list -A`{{execute}}
+
 
 
 ## Check metrics-server

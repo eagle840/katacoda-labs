@@ -1,48 +1,26 @@
 # create your own
 
-`helm create example`{{execute}}
+we'll install the sample chart provided by helm. 
 
-`cd example`{{execute}}
+`helm create examplechart`{{execute}}
+
+`cd examplechart`{{execute}}
 
 `tree`{{execute}}
 
-`nano ./templates/deployment.yaml`{{execute}}
+take a read of the chart file
 
+`cat Chart.yaml`{{execute}}
 
-paste the following:
+The charts folder is for dependant charts for this chart, but we won't using these in this demo.
 
-```
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: {{ .Values.postgres.name }}
-  labels:
-    app: {{ .Values.postgres.name }}
-    group: {{ .Values.postgres.group }}
-spec:
-  replicas: {{ .Values.replicaCount }}
-  selector:
-    matchLabels:
-      app: {{ .Values.postgres.name }}
-  template:
-    metadata:
-      labels:
-        app: {{ .Values.postgres.name }}
-        group: {{ .Values.postgres.group }}
-    spec:
-      volumes:
-        - name: {{ .Values.postgres.volume.name }}
-          persistentVolumeClaim:
-            claimName: {{ .Values.postgres.volume.pvc.name }}
-      containers:
-        - name: {{ .Values.postgres.name }}
-          image: {{ .Values.postgres.container.image }}  
-          ports:
-            - containerPort: {{ .Values.postgres.container.port }}
-          envFrom:
-            - configMapRef:
-                name: {{ .Values.postgres.config.name }}
-          volumeMounts:             
-            - name: {{ .Values.postgres.volume.name }}
-              mountPath: {{ .Values.postgres.volume.mountPath }} 
-```
+The values yaml file is for values that you'll want to change every now and then. EG a service port number.
+
+Now
+
+`cd ..`{{execute}}
+
+`helm install new-chart examplechart/ --values examplechart/values.yaml`{{execute}}
+
+`helm list -A`{{execute}}
+
