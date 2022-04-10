@@ -10,6 +10,7 @@ Taked from:  https://docs.microsoft.com/en-us/samples/azure-samples/functions-py
 # Activate virtualenv
 `mkdir start`{{execute}}
 `cd start`{{execute}}
+`pip install virtualenv`{{execute}}
 `python -m venv .venv`{{execute}}
 `source .venv/bin/activate`{{execute}}
 
@@ -23,6 +24,12 @@ Copy resources into the classify folder, assuming you run these commands from st
 ADD the text in the github page to the requirements 
 
 `pip install --no-cache-dir -r requirements.txt`{{execute}}
+
+!the pip install is failing,
+try this:
+
+
+pip install -f https://download.pytorch.org/whl/torch_stable.html torch==1.5.0+cpu torchvision==0.6.0+cpu
 
 FOLLOW OTHER INSTRUCTIONS
 
