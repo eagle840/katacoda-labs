@@ -17,7 +17,27 @@
 
 `terraform -install-autocomplete`{{execute}}    
 
+`exec bash`{{execute}}
+
 `ls`{{execute}}
+
+# basic docker
+
+copy the tf file in to the assets folder
+
+!REVIEW THE .tf files before running init
+
+`terraform init`{{execute}} 
+
+now look at the 
+
+`tree -a`{{execute}}
+
+`cat .terraform.lock.hcl`{{execute}}
+
+`terraform plan`{{execute}}    
+
+`terraform apply`{{execute}} 
 
 # Terraform Output
 

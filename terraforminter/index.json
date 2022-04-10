@@ -1,6 +1,6 @@
 {
   "title": "terraform intermediate",
-  "description": "terraform intermediate (v0.2.2)",
+  "description": "terraform intermediate (v0.2.3)",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {
@@ -8,6 +8,10 @@
       "host01": [
         {
           "file": "main.tf",
+          "target": "~/"
+        },
+        {
+          "file": "docker.tf",
           "target": "~/"
         },
         {
