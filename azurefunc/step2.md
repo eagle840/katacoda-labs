@@ -2,6 +2,8 @@
 
 Taked from:  https://docs.microsoft.com/en-us/samples/azure-samples/functions-python-pytorch-tutorial/functions-python-pytorch-tutorial/
 
+https://docs.microsoft.com/en-us/azure/azure-functions/machine-learning-pytorch?tabs=bash
+
 `cd ~`{{execute}}
 
 `git clone https://github.com/Azure-Samples/functions-python-pytorch-tutorial.git`{{execute}}
