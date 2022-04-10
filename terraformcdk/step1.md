@@ -1,5 +1,12 @@
 # initial setup
 
+You'll need:
+
+- npm (node packet manager)
+- pipenv
+- tf client
+- python
+
 
 ## install terraform
 `sudo apt update`{{execute}}    
@@ -23,6 +30,8 @@
 `touch ~/.bashrc`{{execute}}    
 
 `terraform -install-autocomplete`{{execute}}    
+
+`exec bash`{{execute}}
 
   
 
