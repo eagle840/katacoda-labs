@@ -11,10 +11,6 @@
           "target": "~/"
         },
         {
-          "file": "docker.tf",
-          "target": "~/"
-        },
-        {
           "file": "providers.tf",
           "target": "~/"
         }

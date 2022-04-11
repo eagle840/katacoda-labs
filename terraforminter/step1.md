@@ -19,13 +19,13 @@
 
 `exec bash`{{execute}}
 
+# Basic Setup
+
 `ls`{{execute}}
 
-# basic docker
+a main file, containing the provisoners and a providers file have been provided.
 
-copy the tf file in to the assets folder
 
-!REVIEW THE .tf files before running init
 
 `terraform init`{{execute}} 
 
@@ -33,7 +33,11 @@ now look at the
 
 `tree -a`{{execute}}
 
+You'll set a lock file, which locks down which versions you can use, and you'll see the downloaded provider in the `.terraform` folder.
+
 `cat .terraform.lock.hcl`{{execute}}
+
+Notice the provider and the version and constraints.
 
 `terraform plan`{{execute}}    
 
@@ -41,14 +45,18 @@ now look at the
 
 # Terraform Output
 
-https://learn.hashicorp.com/tutorials/terraform/outputs
+Docs: https://www.terraform.io/language/values/outputs
+
+Learn more: https://learn.hashicorp.com/tutorials/terraform/outputs
+
+While the outputs declaration can appear anywhere, we'll follow best practice and create an output.tf file.
 
 `nano output.tf`{{execute}}
 
 ```
 output "ext_port" {
   description = "External port of docker container"
-  value       =  resource.docker_container.nginx.ports.external
+  value       =  resource.docker_container.nginx.ports
 }
 ```
 
@@ -60,11 +68,15 @@ output "ext_port" {
 
 `terraform plan`{{execute}}
 
-`terrform apply`{{execute}}
+`terraform apply`{{execute}}
+
+We can now query the output held in the state file:
 
 `terraform output`{{execute}}
 
-`terrform output ext_port`{{execute}}
+Lets dump out a set of values in json (for format them with jq)
+
+`terrform output -json ext_port | jq`{{execute}}
 
 Starting with version 0.14, Terraform wraps string outputs in quotes by default. You can use the -raw flag when querying a specified output for machine-readable format.,,   also -json
 
