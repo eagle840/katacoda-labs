@@ -1,1 +1,1 @@
-under construction
+JSON Resume is a standard created to empower developers.

@@ -1,3 +1,16 @@
+
+# resources:
+
+https://jsonresume.org/
+
+https://github.com/jsonresume/resume-cli
+
+https://www.npmjs.com/package/resume-cli
+
+
+
+
+
 # setup Node and the resume-cli program
 
 `curl -fsSL https://deb.nodesource.com/setup_16.x | bash -`{{execute}}
