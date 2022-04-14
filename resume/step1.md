@@ -14,4 +14,6 @@
 
 `npm install puppeteer --unsafe-perm=true --allow-root`{{execute}}
 
-`resume `{{execute}}
+`npm install resume-cli -g --unsafe-perm=true --allow-root`{{execute}}
+
+`resume -V`{{execute}}
