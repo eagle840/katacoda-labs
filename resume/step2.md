@@ -27,10 +27,6 @@ Now tell resume to process the json into a html document.
 
 `resume export resume.html -t jsonresume-theme-flat`{{execute}}
 
-You can also export into a pdf:
-
-
-(the pdf export appears not to be working at this time)
 
 # serve it - should refresh automatically
 
