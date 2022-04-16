@@ -24,7 +24,7 @@ In order to generate pdf's with `resume`, we  need to run the following:
 
 # Generate a pdf
 
-`resume export resume.html -t jsonresume-theme-flat`{{execute}}
+`resume export resume.pdf -t jsonresume-theme-flat`{{execute}}
 
 and view in the browser
 
