@@ -1,11 +1,11 @@
 # modules
 
-In terraform, a 'resource' is part of a 'provider', for example, for the docker provider, we  can see what resources we can use my looking at that resources docs [Docker Provider]{https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs} - in the left hand side you can expand out the list of resources.
+In terraform, a 'resource' is part of a 'provider', for example, for the docker provider, we  can see what resources we can use my looking at that resources docs [Docker Provider](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs) - in the left hand side you can expand out the list of resources.
 
 Tn this section will create a local custom type of resource called a module, which it's self can use other modules and resources. "Modules are self-contained packages of Terraform configurations that are managed as a group."
 
 
-The Terraform repo contains an extensive collections of [modules]{https://registry.terraform.io/browse/modules} that have been uploaded, but you can store modules in many other places.
+The Terraform repo contains an extensive collections of [modules](https://registry.terraform.io/browse/modules) that have been uploaded, but you can store modules in many other places.
 
 To learn even more see the module learning docs: https://learn.hashicorp.com/tutorials/terraform/module?in=terraform/modules
 
@@ -78,7 +78,7 @@ in the main root tf file, you'll call a module, using the `module` keyword
 }
 
 ```
-`cd ~`{{execue}}
+`cd ~`{{execute}}
 
 change the main.tf file to include the module:
 
@@ -86,14 +86,30 @@ change the main.tf file to include the module:
 
 ```
 module "mywebpage" {
-    source = "modules/nginxsite" 
+    source = "./modules/nginxsite" 
 }
 ```
 ?is nginxsite the name of the 'module' or the dir?
 
+Because this is an added module/resource, we need to rerun init, to allow tf to add it
+
+`terraform init`{{execute}}
+
+
+Running plan will now show the added module/file
+`terraform plan`{{execute}}
+
+`terraform apply`{{execute}}
+
+You'll now see the index.html added to the module directory
+
+`tree`{{execute}}
+
 
 
 # add the resource into the contain binding volume
+
+https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/container
 
 
 
