@@ -43,6 +43,10 @@ Notice the provider and the version and constraints.
 
 `terraform apply`{{execute}} 
 
+and check the container is running:
+
+`docker ps`{{execute}}
+
 # Terraform Output
 
 Docs: https://www.terraform.io/language/values/outputs
@@ -60,14 +64,18 @@ output "ext_port" {
 }
 ```
 
+Format the tf files:   
 `terraform fmt`{{execute}}
 
+Validate the tf files:   
 `terraform validate`{{execute}}
 
 `terraform init`{{execute}}
 
 `terraform plan`{{execute}}
 
+
+This time we run the apply, you'll see the added 'output'   
 `terraform apply`{{execute}}
 
 We can now query the output held in the state file:
@@ -76,7 +84,7 @@ We can now query the output held in the state file:
 
 Lets dump out a set of values in json (for format them with jq)
 
-`terrform output -json ext_port | jq`{{execute}}
+`terraform output -json ext_port | jq`{{execute}}
 
 Starting with version 0.14, Terraform wraps string outputs in quotes by default. You can use the -raw flag when querying a specified output for machine-readable format.,,   also -json
 
