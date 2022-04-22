@@ -2,7 +2,7 @@
 
 In terraform, a 'resource' is part of a 'provider', for example, for the docker provider, we  can see what resources we can use my looking at that resources docs [Docker Provider](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs) - in the left hand side you can expand out the list of resources.
 
-Tn this section will create a local custom type of resource called a module, which it's self can use other modules and resources. "Modules are self-contained packages of Terraform configurations that are managed as a group."
+In this section will create a local custom type of resource called a module, which it's self can use other modules and resources. "Modules are self-contained packages of Terraform configurations that are managed as a group."
 
 
 The Terraform repo contains an extensive collections of [modules](https://registry.terraform.io/browse/modules) that have been uploaded, but you can store modules in many other places.
@@ -34,7 +34,7 @@ A typical module will contain:
 
 # create module   -- JUST KEEP TE nginx container in the main for now
 
-`nano nginxsite.tf`{{execute}}
+WIP `nano nginxsite.tf`
 
 ```
 code
@@ -91,9 +91,9 @@ module "mywebpage" {
 ```
 ?is nginxsite the name of the 'module' or the dir?
 
-Because this is an added module/resource, we need to rerun init, to allow tf to add it
+Because this is an added module/resource, we can rerun init, or get to install the modules/providers
 
-`terraform init`{{execute}}
+`terraform get`{{execute}}
 
 
 Running plan will now show the added module/file
