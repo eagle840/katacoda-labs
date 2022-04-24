@@ -111,8 +111,16 @@ You'll now see the index.html added to the module directory
 
 https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/container
 
+------------------------------
 
+Pulling output from  module.
 
+In the resource you want to use a module output
+
+    x = module.<y1>.<y2>
+
+y1: is the name of the module you called it in the root tf foleder
+y2: is the outputname you used in the <module>.<var> 
 --------------------------------
 If the module is actually in the terraform repo, you'll use the name of the module instead of <path> , you'll also have to include a key=value for the version number.
 

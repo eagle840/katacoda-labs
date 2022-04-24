@@ -29,6 +29,11 @@ And chect the helm chart is installed (-A shows all namespaces)
 
 `helm list -A`{{execute}}
 
+***App version:*** this is the version of the actual app
+***Chart Version:*** this is the version of the chart, every time there is a change to the chart, the chart version is incremented
+
+tip: you can add the --debug  argument to troubleshoot
+
 
 
 ## Check metrics-server
@@ -53,7 +58,7 @@ To get a pervious release, you can use `--revision <release number>`
 
 `helm pull bitnami/metrics-server`{{execute}}
 
-`tar -zxvf metrics-server-5.11.*.tgz`{{execute}}
+`tar -zxvf metrics-server-*.tgz`{{execute}}
 
 `tree metrics-server`{{execute}}
 

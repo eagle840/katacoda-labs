@@ -1,5 +1,14 @@
 # resources used
 
+Seaborn   https://www.youtube.com/watch?v=ooqXQ37XHMM
+    pip install seaborn
+
+    import seaborn as sns
+
+    sns.get_dataset_names()
+    sns.load_dataset("iris")
+
+    
 
 
 
