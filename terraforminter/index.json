@@ -11,6 +11,10 @@
           "target": "~/"
         },
         {
+          "file": "var.tf",
+          "target": "~/"
+        },
+        {
           "file": "providers.tf",
           "target": "~/"
         }

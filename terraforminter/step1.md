@@ -21,11 +21,11 @@
 
 # Basic Setup
 
+Some terraform file have already been created:
+
 `ls`{{execute}}
 
 a main file, containing the provisoners and a providers file have been provided.
-
-
 
 `terraform init`{{execute}} 
 
