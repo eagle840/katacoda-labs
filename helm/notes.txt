@@ -10,18 +10,11 @@ video on keda,
 https://www.youtube.com/watch?v=H5eZEq_wqSE
 
 
-wget https://get.helm.sh/helm-v3.7.1-linux-amd64.tar.gz
-tar -zxvf helm-v3.7.1-linux-amd64.tar.gz 
-mv linux-amd64/helm /usr/local/bin/helm
-helm version
+
 
 helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/
 helm repo update
 
-wget https://get.helm.sh/helm-v3.7.1-linux-amd64.tar.gz
-tar -zxvf helm-v3.7.1-linux-amd64.tar.gz 
-mv linux-amd64/helm /usr/local/bin/helm
-helm version
 
 
 helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/

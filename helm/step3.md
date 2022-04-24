@@ -13,6 +13,7 @@ take a read of the chart file
 `cat Chart.yaml`{{execute}}
 
 The charts folder is for dependant charts for this chart, but we won't using these in this demo.
+Note  the `version: 0.1.0`  that defines the chart version
 
 The values yaml file is for values that you'll want to change every now and then. EG a service port number.
 
@@ -22,11 +23,13 @@ Lets run a helm lint on this chart to make sure its ok
 
 Now
 
-`cd ..`{{execute}}
+`cd ~`{{execute}}
 
 `helm install new-chart examplechart/ --values examplechart/values.yaml`{{execute}}
 
 `helm list -A`{{execute}}
+
+`helm status new-chart`{{execute}}
 
 `k get svc -A`{{execute}}
 
@@ -40,4 +43,4 @@ We'll port forward to this machine:
 
 to remove
 
-`helm uninstall new-chart`
+`helm uninstall new-chart`{{execute}}

@@ -10,16 +10,10 @@ Run Ubuntu updates:
 
 `apt-get update -y`{{execute}}
 
-Check k8s is running
-
-`kubectl cluster-info`{{execute}}
-
-it might take a couple of minutes, but your should get `Kubernetes master is running at`
-
 
 # INSTALL HELM TWO WAYS:
 
-## 1: install helm Maually
+## 1: install helm Maually (v3.8.2)
 
 
 install helm3  (from https://github.com/helm/helm/releases)
@@ -48,4 +42,11 @@ install helm3  (from https://github.com/helm/helm/releases)
 and check the top command (will take a couple of minutes to set getting metrics)
 
 `helm version`{{execute}}
+
+Check k8s is running
+
+`kubectl cluster-info`{{execute}}
+
+it might take a couple of minutes, but your should get `Kubernetes master is running at`
+
 
