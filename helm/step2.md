@@ -11,7 +11,7 @@ search the repo (all repos that have been added), note each has a chart version 
 
 If you ever need to update: `helm repo update`
 
-We'll install the metrics-server:
+We'll install the metrics-server:  WHAT VERSION COMES UP?
 
 `helm install metrics-server bitnami/metrics-server \
   --version=4.2.2 \
@@ -21,16 +21,32 @@ We'll install the metrics-server:
   --set extraArgs.kubelet-preferred-address-types=InternalIP
 `{{execute}}
 
-Lets check the endpoint is up
 
-`kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq`{{execute}}
+`helm install metrics-server bitnami/metrics-server \
+  --version=4.2.2 \
+  --namespace kube-system \
+  --set apiService.create=true \
+  --set extraArgs.kubelet-insecure-tls=true \
+  --set extraArgs.kubelet-preferred-address-types=InternalIP
+`{{execute}}
 
-And chect the helm chart is installed (-A shows all namespaces)
+
+
+You can view the charts for bitnami at: https://bitnami.com/stacks/helm
+
+
+Lets check the helm chart is installed (-A shows all namespaces)
 
 `helm list -A`{{execute}}
 
 ***App version:*** this is the version of the actual app
-***Chart Version:*** this is the version of the chart, every time there is a change to the chart, the chart version is incremented
+***Chart Version:*** this is the version of the chart, every time there is a change to the chart, the chart version is incremented, and you'll see it in the end of the chart name
+
+`helm status metrics-server -n kube-system`{{execute}}
+
+Lets check the endpoint is up
+
+`kubectl get --raw /apis/metrics.k8s.io/v1beta1/nodes | jq`{{execute}}
 
 tip: you can add the --debug  argument to troubleshoot
 

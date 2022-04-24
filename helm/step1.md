@@ -19,22 +19,15 @@ it might take a couple of minutes, but your should get `Kubernetes master is run
 
 # INSTALL HELM TWO WAYS:
 
-## 1: install helm Maually (v3.7.1)
+## 1: install helm Maually
 
-! This install doesn't deploy helm charts right - investigate - try 3.8.2
 
 install helm3  (from https://github.com/helm/helm/releases)
 
-`wget https://get.helm.sh/helm-v3.7.1-linux-amd64.tar.gz`{{execute}}   
 
 `wget https://get.helm.sh/helm-v3.8.2-linux-amd64.tar.gz`{{execute}}   
 
-
-`tar -zxvf helm-v3.7.1-linux-amd64.tar.gz`{{execute}}
-
 `tar -zxvf helm-v3.8.2-linux-amd64.tar.gz`{{execute}}
-
-
 
 `mv linux-amd64/helm /usr/local/bin/helm`{{execute}}
 

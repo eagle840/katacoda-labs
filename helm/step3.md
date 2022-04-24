@@ -1,6 +1,6 @@
 # create your own
 
-we'll install the sample chart provided by helm. 
+we'll install the sample chart provided by helm, this example automatically uses an nginx image:
 
 `helm create examplechart`{{execute}}
 
@@ -18,7 +18,7 @@ The values yaml file is for values that you'll want to change every now and then
 
 Lets run a helm lint on this chart to make sure its ok
 
-`helm lint`{{exeute}}
+`helm lint`{{execute}}
 
 Now
 
@@ -29,6 +29,14 @@ Now
 `helm list -A`{{execute}}
 
 `k get svc -A`{{execute}}
+
+
+We'll port forward to this machine:
+
+`export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=examplechart,app.kubernetes.io/instance=new-chart" -o jsonpath="{.items[0].metadata.name}")`{{execute}}     
+`export CONTAINER_PORT=$(kubectl get pod --namespace default $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort}")`
+`echo "Visit http://127.0.0.1:8080 to use your application"`{{execute}}   
+`kubectl --namespace default port-forward $POD_NAME 8080:$CONTAINER_PORT`{{execute}}   
 
 to remove
 
