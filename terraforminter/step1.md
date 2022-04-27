@@ -39,6 +39,8 @@ You'll set a lock file, which locks down which versions you can use, and you'll 
 
 Notice the provider and the version and constraints.
 
+When we run 'plan' & 'apply' we'll be prompted for a port since we have set one yet. Enter 8080.
+
 `terraform plan`{{execute}}    
 
 `terraform apply`{{execute}} 
@@ -72,11 +74,17 @@ Validate the tf files:
 
 `terraform init`{{execute}}
 
+Lets change the port used, enter 8090 when prompted for a variable
+
 `terraform plan`{{execute}}
 
 
 This time we run the apply, you'll see the added 'output'   
 `terraform apply`{{execute}}
+
+check docker:
+
+`docker ps`{{execute}}
 
 We can now query the output held in the state file:
 

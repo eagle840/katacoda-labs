@@ -117,6 +117,8 @@ Pulling output from  module.
 
 In the resource you want to use a module output
 
+    syntax: module.<MODULE NAME>.<OUTPUT NAME>
+
     x = module.<y1>.<y2>
 
 y1: is the name of the module you called it in the root tf foleder
