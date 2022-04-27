@@ -1,5 +1,7 @@
 # Terraform Workspaces
 
+`cd ~`{{execute}}
+
 `docker ps`{{execute}}   
 
 `terraform workspace list`{{execute}}   
