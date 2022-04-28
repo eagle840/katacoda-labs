@@ -2,9 +2,12 @@
 
 https://www.terraform.io/language/settings/backends/pg
 
-docker run -it -p 5432:5432 -e POSTGRES_PASSWORD=1234 postgres
+docker run -it -p 5432:5432 --name psgdb -e POSTGRES_PASSWORD=1234 postgres
 
   localhost:5432
+
+docker exec -it psgdb psql -U postgres
+docker exec -it psgdb psql -U postgres
 
 
   # docker exec 'to the container - with '  psql -U postgres
