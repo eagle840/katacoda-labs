@@ -1,14 +1,26 @@
-#
+# Terraform State
+
+Lets look at the present state:
 
 `terraform state list`{{execute}}
 
 `docker ps`{{execute}}
 
+We can kill the docker container:
+
 `docker stop tutorial`{{execute}}
+
+And you'll see it's still in the state list:
 
 `terraform state list`{{execute}}
 
+Runnng 'refresh' will refresh that terraform state
+
 `terraform refresh`{{execute}}
+
+`terraform state list`{{execute}}
+
+Lets for the state back to what it should me:
 
 `terraform apply`{{execute}}
 
@@ -23,7 +35,11 @@ Terraform taint will mark an object for replacement (destroy and build) at the n
 you can untaint using terraform untaint cmd
 `terraform state list`{{execute}}
 
-`terraform show docker_container.nginx`{{execute}}
+`terraform state show docker_container.nginx`{{execute}}
+
+we can also review the whole stack state with
+
+`terraform show`{{execute}}
 
 `terraform plan`{{execute}}
 
@@ -31,3 +47,15 @@ you can untaint using terraform untaint cmd
 when you run 'terraform plan' you can see in the output that the container will be replaced.
 
 `terraform apply -var="port=8080"`{{execute}}
+
+# using a terraform plan file
+
+`terraform plan -var="port=8080" -out myplan.tfplan`{{execute}}
+
+you can view the contents of that plan:
+
+`terraform show myplan.tfplan`{{execute}}
+
+and to apply that plan:
+
+`terraform apply myplan.tfplan`{{execute}}

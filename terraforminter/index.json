@@ -1,6 +1,6 @@
 {
   "title": "terraform intermediate",
-  "description": "terraform intermediate (v0.2.7)",
+  "description": "terraform intermediate (v0.6)",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {
@@ -36,6 +36,10 @@
       {
         "title": "Step 4",
         "text": "step4.md"
+      },
+      {
+        "title": "Step 5",
+        "text": "step5.md"
       }
     ],
     "intro": {

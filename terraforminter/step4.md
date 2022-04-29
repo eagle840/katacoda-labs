@@ -65,6 +65,26 @@ resource "local_file" "index" {
 }
 ```
 
+`nano httpcontainer.tf`{{execute}}
+
+```
+resource "docker_image" "httpd" {
+  name         = "httpd:latest"
+  keep_locally = false
+}
+
+resource "docker_container" "httpd" {
+  image = docker_image.httpd.latest
+  name  = "httpdcontainer"
+  ports {
+    internal = 80
+    external = 80
+  }
+}
+```
+
+???? is the provider needed in the module -- I think it is - test it
+
 # Call a module
 
 in the main root tf file, you'll call a module, using the `module` keyword
@@ -93,7 +113,7 @@ module "mywebpage" {
 
 Because this is an added module/resource, we can rerun init, or get to install the modules/providers
 
-`terraform get`{{execute}}
+`terraform init`{{execute}}
 
 
 Running plan will now show the added module/file

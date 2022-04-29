@@ -1,6 +1,6 @@
 # Terraform Workspaces
 
-add:
+lets make a few adjustments so we can add a 2nd container:
 
 `nano var.tf`{{execute}}
 
@@ -25,8 +25,11 @@ resource "docker_container" "nginx" {
   }
 }
 ```
+before we output a plan file, lets create a variable file to set the variable values
 
+>>>>>   MAKE A VARIABLE FILE 
 
+`terraform plan -out=xxx   -varfile ==xxx`
 
 `terraform plan -out=myplan.tfplan`{{execute}}
 
@@ -49,25 +52,5 @@ We'll create a new workspace
 
 `terraform apply "myplan.tfplan"`{{execute}}
 
-`docker ps`{{execute}}
-
-
-`cd ~`{{execute}}
-
-`docker ps`{{execute}}   
-
-`terraform workspace list`{{execute}}   
-
-`terraform workspace `{{execute}}   
-
-`terraform workspace -h`{{execute}}   
-
-`terraform workspace new new1`{{execute}}   
-
-`terraform workspace list`{{execute}}   
-
-`docker ps`{{execute}}   
-
-`terraform plan`{{execute}}
-
-`terraform apply`{{execute}}
+`docker ps`{{execute}}  
+ 
