@@ -32,6 +32,6 @@ Run `func start`{{execute}} from within the start folder with the virtual enviro
 
 `docker run -p 8080:80 azurefunc`{{execute}}
 
-`https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
 
 
