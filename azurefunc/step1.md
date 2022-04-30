@@ -1,16 +1,25 @@
 
-see if you can deploy an azure functions container with a python script (lambda)
+# Run a quick Azure Functions container:
+
+See if you can deploy an azure functions container with a python script (lambda)
 
 `docker run --rm -p 8080:80 mcr.microsoft.com/azure-functions/dotnet:3.0`
 
 now access that webpage at 8080
 
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+
+and close the container with `ctrl-c`
 
 
-see https://hub.docker.com/_/microsoft-azure-functions
+
+Resources: 
+- https://hub.docker.com/_/microsoft-azure-functions
+- https://docs.microsoft.com/en-us/learn/modules/functions-python
+- https://azure.microsoft.com/en-gb/services/functions/#features
 
 
-### remove to a seperate tutorial
+
 
 # install func tools
 
@@ -48,6 +57,8 @@ see:  https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-fu
    
 `curl http://localhost:7071/api/HttpExample?name=Functions`{{execute}}
 
+`https://2886928389-7071-cykoria04.environments.katacoda.com/api/HttpExample?name=Functions`{{execute}}
+
 
 
 # build and run docker image
@@ -57,7 +68,7 @@ see:  https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-fu
 `docker run -p 8080:80  func`
 
 
-https://2886928389-8080-cykoria04.environments.katacoda.com/api/HttpExample?name=Functions
+`https://2886928389-8080-cykoria04.environments.katacoda.com/api/HttpExample?name=Functions`{{execute}}
 
 
 

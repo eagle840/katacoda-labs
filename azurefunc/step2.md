@@ -17,8 +17,13 @@ Taked from:  https://github.com/Azure-Samples/flask-app-on-azure-functions
 
 
 
-# Run the local function
+# Initiate and  Run the local function
+
+`func init --worker-runtime python --docker`{{execute}}
+
 Run `func start`{{execute}} from within the start folder with the virtual environment activated.
+
+DELETE NEXT LINE?
 Run http://localhost:7071/api/classify?img=https://raw.githubusercontent.com/gvashishtha/functions-pytorch/master/resources/assets/Bernese-Mountain-Dog-Temperament-long.jpg
 
 # BUILD AND RUN

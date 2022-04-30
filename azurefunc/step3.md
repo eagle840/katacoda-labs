@@ -19,6 +19,9 @@ https://docs.microsoft.com/en-us/azure/azure-functions/machine-learning-pytorch?
 # Initialize function app
 `func init --worker-runtime python`{{execute}}
 `func new --name classify --template "HTTP trigger"`{{execute}}
+
+THE FOLLOWING IS MISSING THE SECOND ARD - are these cmds needed?
+
 Copy resources into the classify folder, assuming you run these commands from start
 `cp ../resources/predict.py classify`{{execute}}
 `cp ../resources/labels.txt classify`{{execute}}
@@ -38,13 +41,26 @@ FOLLOW OTHER INSTRUCTIONS
 
 # Run the local function
 Run `func start`{{execute}} from within the start folder with the virtual environment activated.
+
+we're going to classify the following picture: https://raw.githubusercontent.com/gvashishtha/functions-pytorch/master/resources/assets/Bernese-Mountain-Dog-Temperament-long.jpg
+
 Run http://localhost:7071/api/classify?img=https://raw.githubusercontent.com/gvashishtha/functions-pytorch/master/resources/assets/Bernese-Mountain-Dog-Temperament-long.jpg
+
+not sure the above will work, try    
+- curl -v http://localhost:7071/api/classify?img=https://raw.githubusercontent.com/gvashishtha/functions-pytorch/master/resources/assets/Bernese-Mountain-Dog-Temperament-long.jpg
+- `https://2886928389-8080-cykoria04.environments.katacoda.com/api/HttpExample?name=Functions`{{execute}}
+- `https://2886928389-8080-cykoria04.environments.katacoda.com/api/HttpExample?name=Functions/api/classify?img=https://raw.githubusercontent.com/gvashishtha/functions-pytorch/master/resources/assets/Bernese-Mountain-Dog-Temperament-long.jpg`{{execute}}
+
+Not getting the response I want
+
+`curl -v http://localhost:7071/api/classify?img=https://raw.githubusercontent.com/gvashishtha/functions-pytorch/master/resources/assets/Bernese-Mountain-Dog-Temperament-long.jpg`{{execute}}
+
 
 # BUILD AND RUN
 
 
 `docker build . --tag azurefunc`{{execute}}
 
-`docker run -p 8080:80 azurefunc`
+`docker run -p 8080:80 azurefunc`{{execute}}
 
 
