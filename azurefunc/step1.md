@@ -40,7 +40,7 @@ Confirm it's installed
 
 # create a custom image for docker
 
-see:  https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?tabs=in-process%2Cbash%2Cazure-cli&pivots=programming-language-python
+Learn more about:  https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?tabs=in-process%2Cbash%2Cazure-cli&pivots=programming-language-python
 
 
 `mkdir ~/azurefunc`{{execute}}
@@ -53,11 +53,12 @@ see:  https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-fu
 
 `func new --name HttpExample --template "HTTP trigger" --authlevel anonymous`{{execute}}
 
-`func start`{{execcute}}
+`func start`{{execute}}
    
-`curl http://localhost:7071/api/HttpExample?name=Functions`{{execute}}
+`curl http://localhost:7071/api/HttpExample?name=Functions`
 
-`https://2886928389-7071-cykoria04.environments.katacoda.com/api/HttpExample?name=Functions`{{execute}}
+
+`https://[[HOST_SUBDOMAIN]]-7071-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
 
 
@@ -67,8 +68,10 @@ see:  https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-fu
 
 `docker run -p 8080:80  func`
 
+`https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
-`https://2886928389-8080-cykoria04.environments.katacoda.com/api/HttpExample?name=Functions`{{execute}}
+
+
 
 
 

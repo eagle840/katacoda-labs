@@ -1,6 +1,6 @@
 {
   "title": "Azure Functions on Docker",
-  "description": "Create a python function in an Azure Function Docker image (v.0.6)",
+  "description": "Create a python function in an Azure Function Docker image (v0.1)",
   "difficulty": "Intermediate",
   "time": "60 minutes",
   "details": {
