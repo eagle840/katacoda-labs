@@ -2,6 +2,8 @@
 
 
 ## install terraform
+`apt upgrade`{{execute}}   # takes too long!
+
 `sudo apt update`{{execute}}    
 
 `curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -`{{execute}}    
@@ -36,3 +38,15 @@
 `chmod 700 get_helm.sh`{{execute}}
 
 `./get_helm.sh`{{execute}}
+
+`helm version`{{execute}}
+
+# install a demo chart (nginx)
+
+`helm create nginx`{{execute}}
+
+`helm install new-chart nginx/ --values nginx/values.yaml`{{execute}}
+
+`helm list -A`{{execute}}
+
+`k get deploy`{{execute}}
