@@ -1,6 +1,8 @@
 # Terraform Workspaces
 
-lets make a few adjustments so we can add a 2nd container:
+lets make a few adjustments so we can add a 2nd container:   
+
+Add:
 
 `nano var.tf`{{execute}}
 
@@ -53,4 +55,16 @@ We'll create a new workspace
 `terraform apply "myplan.tfplan"`{{execute}}
 
 `docker ps`{{execute}}  
+
+Lets take a look at the tree structure, and you'll see an added folder for the workspace: ./terraform.tfstate.d/ws  
+
+`tree -a` {{execute}}
+ 
+
+`docker ps`{{execute}}
+
+ # LINK TO the page running httpd
+
+# add the index.thml to the httpd container
+
  
