@@ -1,20 +1,28 @@
 
-see if you can deploy an azure functions container with a python script (lambda)
+# Run a quick Azure Functions container:
 
-`docker run --rm -p 8080:80 mcr.microsoft.com/azure-functions/dotnet:3.0`
+See if you can deploy an azure functions container with a python script (lambda)
+
+`docker run --rm -p 8080:80 mcr.microsoft.com/azure-functions/dotnet:3.0`{{execute}}
 
 now access that webpage at 8080
 
+https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/
+
+and close the container with `ctrl-c`
 
 
-see https://hub.docker.com/_/microsoft-azure-functions
+
+Resources: 
+- https://hub.docker.com/_/microsoft-azure-functions
+- https://docs.microsoft.com/en-us/learn/modules/functions-python
+- https://azure.microsoft.com/en-gb/services/functions/#features
+- https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=v4%2Clinux%2Ccsharp%2Cportal%2Cbash#v2
 
 
-### remove to a seperate tutorial
+
 
 # install func tools
-
-see https://docs.microsoft.com/en-us/azure/azure-functions/functions-run-local?tabs=v4%2Clinux%2Ccsharp%2Cportal%2Cbash#v2
 
 `curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg`{{execute}}
@@ -31,7 +39,7 @@ Confirm it's installed
 
 # create a custom image for docker
 
-see:  https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?tabs=in-process%2Cbash%2Cazure-cli&pivots=programming-language-python
+Learn more about:  https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-function-linux-custom-image?tabs=in-process%2Cbash%2Cazure-cli&pivots=programming-language-python
 
 
 `mkdir ~/azurefunc`{{execute}}
@@ -44,9 +52,14 @@ see:  https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-fu
 
 `func new --name HttpExample --template "HTTP trigger" --authlevel anonymous`{{execute}}
 
-`func start`{{execcute}}
+`func start`{{execute}}
+
+In a new terminal: 
    
-`curl http://localhost:7071/api/HttpExample?name=Functions`{{execute}}
+`curl http://localhost:7071/api/HttpExample?name=Functions`{{execute "T2"}}
+
+
+https://[[HOST_SUBDOMAIN]]-7071-[[KATACODA_HOST]].environments.katacoda.com/
 
 
 
@@ -56,8 +69,10 @@ see:  https://docs.microsoft.com/en-us/azure/azure-functions/functions-create-fu
 
 `docker run -p 8080:80  func`
 
+`https://[[HOST_SUBDOMAIN]]-8080-[[KATACODA_HOST]].environments.katacoda.com/`{{execute}}
 
-https://2886928389-8080-cykoria04.environments.katacoda.com/api/HttpExample?name=Functions
+
+
 
 
 
