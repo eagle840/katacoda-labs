@@ -14,9 +14,10 @@ And you'll see it's still in the state list:
 
 `terraform state list`{{execute}}
 
-Runnng 'refresh' will refresh that terraform state
+Runnng 'refresh' will refresh that terraform state (Warning: This command is deprecated)
 
 `terraform refresh`{{execute}}
+
 
 `terraform state list`{{execute}}
 
@@ -47,6 +48,22 @@ we can also review the whole stack state with
 when you run 'terraform plan' you can see in the output that the container will be replaced.
 
 `terraform apply -var="port=8080"`{{execute}}
+
+# terraform taint
+
+`terraform state list`{{execute}}
+
+`terraform taint docker_container.nginx`{{execute}}
+
+`terraform plan -var="port=8090"`{{execute}}
+
+Note that the top of the output shows the resource that will be replaced
+
+`terraform apply -var="port=8090`{{execute}}
+
+# add a variable file  (to store vars)
+
+## remove the -var from the next section
 
 # using a terraform plan file
 

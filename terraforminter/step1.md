@@ -1,5 +1,7 @@
 # initial setup
 
+In this lab we'll be working with Terraform and Docker to deploy a container on the localhost.
+
 
 ## install terraform
 `sudo apt update`{{execute}}    
@@ -39,7 +41,7 @@ You'll set a lock file, which locks down which versions you can use, and you'll 
 
 Notice the provider and the version and constraints.
 
-When we run 'plan' & 'apply' we'll be prompted for a port since we have set one yet. Enter 8080.
+When we run 'plan' & 'apply':
 
 `terraform plan`{{execute}}    
 
@@ -76,11 +78,11 @@ Validate the tf files:
 
 Lets change the port used, enter 8090 when prompted for a variable
 
-`terraform plan`{{execute}}
+`terraform plan -var="port=8090"`{{execute}}
 
 
 This time we run the apply, you'll see the added 'output'   
-`terraform apply`{{execute}}
+`terraform apply -var="port=8090"`{{execute}}
 
 check docker:
 

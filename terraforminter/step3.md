@@ -48,6 +48,8 @@ We'll create a new workspace
 
 `terraform workspace list`{{execute}}
 
+Notice the workspace we're using is marked with a *
+
 `terraform apply "myplan.tfplan"`{{execute}}   # it won't work, so create a new plan
 
 `terraform plan -out=myplan.tfplan`{{execute}}
