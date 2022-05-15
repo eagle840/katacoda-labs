@@ -46,3 +46,11 @@ terraform init -backend-config="conn_str=postgres:1234@localhost/terraform_backe
 
   # docker exec 'to the container - with '  psql -U postgres
   CREATE DATABASE terraform_backend;
+
+
+
+  terraform rover:
+
+  https://github.com/im2nguyen/rover
+
+  https://www.youtube.com/watch?v=zIwZ6XEeCAo

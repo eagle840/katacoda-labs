@@ -101,7 +101,33 @@ Starting with version 0.14, Terraform wraps string outputs in quotes by default.
 
 sensitive   = true
 
+## Setting variables
 
+Terraform can take variables from several locations, in this order: https://www.terraform.io/language/values/variables#variable-definition-precedence
+
+- Environment variables
+- The terraform.tfvars file, if present.
+- The terraform.tfvars.json file, if present.
+- Any *.auto.tfvars or *.auto.tfvars.json files, processed in lexical order of their filenames.
+- Any -var and -var-file options on the command line, in the order they are provided. (This includes variables set by a Terraform Cloud workspace.)
+
+Lets creat a terraform.tfvars file
+
+`nano terraform.tfvars`
+
+```
+variable "port" {
+  type = number
+  description = "the port that docker will publish on (-p)"
+  default = 8090
+}
+```
+
+`terraform validate`{{execute}}
+
+`terraform apply`{{execute}}
+
+we can always over ride this using the -var argument when using plan/apply
 
   
 

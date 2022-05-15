@@ -1,4 +1,4 @@
-# Terraform State
+## Terraform State
 
 Lets look at the present state:
 
@@ -49,7 +49,7 @@ when you run 'terraform plan' you can see in the output that the container will 
 
 `terraform apply -var="port=8080"`{{execute}}
 
-# terraform taint
+## terraform taint
 
 `terraform state list`{{execute}}
 
@@ -61,11 +61,7 @@ Note that the top of the output shows the resource that will be replaced
 
 `terraform apply -var="port=8090`{{execute}}
 
-# add a variable file  (to store vars)
-
-## remove the -var from the next section
-
-# using a terraform plan file
+## using a terraform plan file
 
 `terraform plan -var="port=8080" -out myplan.tfplan`{{execute}}
 
@@ -76,3 +72,41 @@ you can view the contents of that plan:
 and to apply that plan:
 
 `terraform apply myplan.tfplan`{{execute}}
+
+## Functions & Console
+
+Terraform office a range of functions: https://www.terraform.io/language/functions.
+
+Lets open a terraform console, and try one out:
+
+`terraform console`{{execute}}
+
+`help`{{execute}}
+
+`timestamp()`{{execute}}
+
+lets discover the type of `timestamp`
+
+`type(timestamp())`{{execute}}
+
+lets exit out of the console `exit`{{execute}}
+
+and add the function to our terraform output, so it stores the deployment time
+
+`nano output.tf`{{execute}}
+
+and add the following:
+
+```
+output "deploy_time" {
+    type = string
+    description = "the deployement time, in utc"
+    default = timestamp()
+}
+```{{copy}}
+
+and validate/apply
+
+`terraform validate`{{execute}}
+
+`terraform apply -var="port=8090`{{execute}}
