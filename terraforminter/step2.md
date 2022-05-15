@@ -21,7 +21,7 @@ Runnng 'refresh' will refresh that terraform state (Warning: This command is dep
 
 `terraform state list`{{execute}}
 
-Lets for the state back to what it should me:
+Lets put the state back to what it should me:
 
 `terraform apply`{{execute}}
 
@@ -29,12 +29,17 @@ note that the command is requesting a port - we should have outputed a plan
 
 `terraform state list`{{execute}}
 
+## terraform taint
+
 Terraform taint will mark an object for replacement (destroy and build) at the next plan/apply
 
 `terraform taint docker_container.nginx`{{execute}}
 
-you can untaint using terraform untaint cmd
+(you can untaint using terraform untaint cmd)
+
 `terraform state list`{{execute}}
+
+Looking close at the show command, we can see that the state is marked as tainted
 
 `terraform state show docker_container.nginx`{{execute}}
 
@@ -42,26 +47,20 @@ we can also review the whole stack state with
 
 `terraform show`{{execute}}
 
+Lets review the changes that will be applied:
+
 `terraform plan`{{execute}}
 
 
 when you run 'terraform plan' you can see in the output that the container will be replaced.
 
-`terraform apply -var="port=8080"`{{execute}}
+`terraform apply`{{execute}}
 
-## terraform taint
 
-`terraform state list`{{execute}}
-
-`terraform taint docker_container.nginx`{{execute}}
-
-`terraform plan -var="port=8090"`{{execute}}
-
-Note that the top of the output shows the resource that will be replaced
-
-`terraform apply -var="port=8090`{{execute}}
 
 ## using a terraform plan file
+
+We can also create a plan file, so it can be applied directly, without having to add parameters
 
 `terraform plan -var="port=8080" -out myplan.tfplan`{{execute}}
 
@@ -99,9 +98,8 @@ and add the following:
 
 ```
 output "deploy_time" {
-    type = string
     description = "the deployement time, in utc"
-    default = timestamp()
+    value = timestamp()
 }
 ```{{copy}}
 
@@ -110,3 +108,5 @@ and validate/apply
 `terraform validate`{{execute}}
 
 `terraform apply -var="port=8090`{{execute}}
+
+`terraform output deploy_time`{{execute}}

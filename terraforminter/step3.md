@@ -11,7 +11,7 @@ variable "container_name" {
   type        = string
   description = "enter the container name"
 }
-```
+```{{copy}}
 
 add update
 
@@ -26,15 +26,9 @@ resource "docker_container" "nginx" {
     external = var.port
   }
 }
-```
-before we output a plan file, lets create a variable file to set the variable values
+```{{copy}}
 
->>>>>   MAKE A VARIABLE FILE 
-
-`terraform plan -out=xxx   -varfile ==xxx`
-
-`terraform plan -out=myplan.tfplan`{{execute}}
-
+UPDATE var files:
 use container_name=mycontainer,  and port=8090
 
 you'll notice that the docker container will have running will be replaced.

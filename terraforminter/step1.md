@@ -66,7 +66,7 @@ output "ext_port" {
   description = "External port of docker container"
   value       =  resource.docker_container.nginx.ports
 }
-```
+```{{copy}}
 
 Format the tf files:   
 `terraform fmt`{{execute}}
@@ -113,19 +113,17 @@ Terraform can take variables from several locations, in this order: https://www.
 
 Lets creat a terraform.tfvars file
 
-`nano terraform.tfvars`
+`nano terraform.tfvars`{{execute}}
 
 ```
-variable "port" {
-  type = number
-  description = "the port that docker will publish on (-p)"
-  default = 8090
-}
+port = 8090
 ```
 
 `terraform validate`{{execute}}
 
 `terraform apply`{{execute}}
+
+Note the the default value in the var.tf file has been over written my the tfvars value.
 
 we can always over ride this using the -var argument when using plan/apply
 
