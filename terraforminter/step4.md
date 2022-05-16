@@ -22,7 +22,7 @@ We'll create a folder to store the modules:
 and create a new module(folder) called 'nginxsite', just a simple webserver, with a static html file:   
 `mkdir nginxsite`{{execute}}
 
-`cd nginxsite`{{execute}}
+`cd httpdsite`{{execute}}
 
 A typical module will contain:
 
@@ -37,7 +37,7 @@ A typical module will contain:
 
 # create module   -- JUST KEEP TE nginx container in the main for now
 
-WIP `nano nginxsite.tf`
+WIP `nano httpdsite.tf`
 
 ```
 code
@@ -118,7 +118,7 @@ in the main root tf file, you'll call a module, using the `module` keyword
 }
 
 ```
-`cd ~`{{execute}}
+`cd ~/mytf`{{execute}}
 
 change the main.tf file to include the module:
 
@@ -126,7 +126,7 @@ change the main.tf file to include the module:
 
 ```
 module "mywebpage" {
-    source = "./modules/nginxsite" 
+    source = "./modules/httpdsite" 
 }
 ```
 ?is nginxsite the name of the 'module' or the dir?
@@ -138,6 +138,11 @@ Because this is an added module/resource, we can rerun init, or get to install t
 
 Running plan will now show the added module/file
 `terraform plan`{{execute}}
+
+
+Notice that the plan is asking for a container name, lets add an output to the module to supply the container name
+
+`cd ./modules/httpdsite`{{execute}}
 
 `terraform apply`{{execute}}
 
