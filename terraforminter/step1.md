@@ -116,7 +116,7 @@ Lets creat a terraform.tfvars file
 `nano terraform.tfvars`{{execute}}
 
 ```
-port = 8080
+port = 8070
 ```
 
 `terraform validate`{{execute}}
@@ -126,6 +126,10 @@ port = 8080
 Note the the default value in the var.tf file has been over written my the tfvars value.
 
 we can always over ride this using the -var argument when using plan/apply
+
+## wip
+
+- terraform files should be in a folder (not root)
 
   
 

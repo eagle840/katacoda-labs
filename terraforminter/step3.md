@@ -13,14 +13,14 @@ variable "container_name" {
 }
 ```{{copy}}
 
-add update
+add update ***var.container_name*** in 
 
 `nano main.tf`{{execute}}
 
 ```
 resource "docker_container" "nginx" {
   image = docker_image.nginx.latest
-  name  = ***var.container_name***
+  name  = var.container_name
   ports {
     internal = 80
     external = var.port
@@ -28,8 +28,7 @@ resource "docker_container" "nginx" {
 }
 ```{{copy}}
 
-UPDATE var files:
-use container_name=mycontainer,  and port=8090
+
 
 you'll notice that the docker container will have running will be replaced.
 
@@ -48,11 +47,13 @@ Notice the workspace we're using is marked with a *
 
 `terraform plan -out=myplan.tfplan`{{execute}}
 
+since we didn't provide a name in the var file, it will prompt us for one, use `nginx1`
+
 `terraform apply "myplan.tfplan"`{{execute}}
 
 `docker ps`{{execute}}  
 
-Lets take a look at the tree structure, and you'll see an added folder for the workspace: ./terraform.tfstate.d/ws  
+Lets take a look at the tree structure, and you'll see an added folder for the workspace: `./terraform.tfstate.d/ws1`  
 
 `tree -a`{{execute}}
 
@@ -60,6 +61,10 @@ take note where the orginal (default) tf state was stored, and where the new ws2
  
 
 `docker ps`{{execute}}
+
+and finally lets kill  the running containers
+
+`docker kill $(docker ps -q)`{{execute}}
 
 WIP:
 - LINK TO the page running httpd

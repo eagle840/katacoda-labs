@@ -4,6 +4,9 @@ In terraform, a 'resource' is part of a 'provider', for example, for the docker 
 
 In this section will create a local custom type of resource called a module, which it's self can use other modules and resources. "Modules are self-contained packages of Terraform configurations that are managed as a group."
 
+WIP
+- create a docker nginx container, and generated a tf doc for the module it's self
+
 
 The Terraform repo contains an extensive collections of [modules](https://registry.terraform.io/browse/modules) that have been uploaded, but you can store modules in many other places.
 
@@ -38,6 +41,23 @@ WIP `nano nginxsite.tf`
 
 ```
 code
+```
+
+# specify providers used
+
+even though the provider is supplied in the root folder, we need to specify the providers needed:
+
+`nano providers.tf`{{execute}}
+
+```
+terraform {
+  required_providers {
+    docker = {
+      source  = "kreuzwerker/docker"
+      version = "~> 2.13.0"
+    }
+  }
+}
 ```
 
 # create a file for the website
