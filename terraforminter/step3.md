@@ -20,7 +20,7 @@ add update
 ```
 resource "docker_container" "nginx" {
   image = docker_image.nginx.latest
-  name  = var.container_name
+  name  = ***var.container_name***
   ports {
     internal = 80
     external = var.port
@@ -54,13 +54,15 @@ Notice the workspace we're using is marked with a *
 
 Lets take a look at the tree structure, and you'll see an added folder for the workspace: ./terraform.tfstate.d/ws  
 
-`tree -a` {{execute}}
+`tree -a`{{execute}}
+
+take note where the orginal (default) tf state was stored, and where the new ws2 state is stored
  
 
 `docker ps`{{execute}}
 
- # LINK TO the page running httpd
-
-# add the index.thml to the httpd container
+WIP:
+- LINK TO the page running httpd
+- add the index.thml to the httpd container
 
  

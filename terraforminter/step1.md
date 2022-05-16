@@ -27,7 +27,7 @@ Some terraform file have already been created:
 
 `ls`{{execute}}
 
-a main file, containing the provisoners and a providers file have been provided.
+a main file, containing the provisoners and a providers file have been provided, with a var file that will set a port varible for the docker container to 8080
 
 `terraform init`{{execute}} 
 
@@ -76,7 +76,7 @@ Validate the tf files:
 
 `terraform init`{{execute}}
 
-Lets change the port used, enter 8090 when prompted for a variable
+Lets change the port used, using an argument override
 
 `terraform plan -var="port=8090"`{{execute}}
 
@@ -116,7 +116,7 @@ Lets creat a terraform.tfvars file
 `nano terraform.tfvars`{{execute}}
 
 ```
-port = 8090
+port = 8080
 ```
 
 `terraform validate`{{execute}}

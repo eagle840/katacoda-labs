@@ -72,9 +72,11 @@ and to apply that plan:
 
 `terraform apply myplan.tfplan`{{execute}}
 
+note that you didn't have to confirm the apply
+
 ## Functions & Console
 
-Terraform office a range of functions: https://www.terraform.io/language/functions.
+Terraform has a range of functions: https://www.terraform.io/language/functions.
 
 Lets open a terraform console, and try one out:
 
@@ -107,6 +109,6 @@ and validate/apply
 
 `terraform validate`{{execute}}
 
-`terraform apply -var="port=8090`{{execute}}
+`terraform apply -var="port=8090"`{{execute}}
 
 `terraform output deploy_time`{{execute}}
