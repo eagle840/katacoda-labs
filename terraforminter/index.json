@@ -7,16 +7,16 @@
     "assets":{
       "host01": [
         {
-          "file": "main.tf",
-          "target": "~/"
+          "file": "./mytf/main.tf",
+          "target": "~/mytf/"
         },
         {
           "file": "var.tf",
-          "target": "~/"
+          "target": "~/mytf/"
         },
         {
           "file": "providers.tf",
-          "target": "~/"
+          "target": "~/mytf/"
         }
       ]
     },
