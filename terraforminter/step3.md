@@ -10,10 +10,10 @@ Add:
 variable "container_name" {
   type        = string
   description = "enter the container name"
+  default     = "nginx1"
 }
 ```{{copy}}
 
-add update ***var.container_name*** in 
 
 `nano main.tf`{{execute}}
 
@@ -53,7 +53,7 @@ since we didn't provide a name in the var file, it will prompt us for one, use `
 
 `docker ps`{{execute}}  
 
-Lets take a look at the tree structure, and you'll see an added folder for the workspace: `./terraform.tfstate.d/ws1`  
+Lets take a look at the tree structure, and you'll see an added folder for the workspace: `./terraform.tfstate.d/ws2`  
 
 `tree -a`{{execute}}
 
@@ -62,11 +62,17 @@ take note where the orginal (default) tf state was stored, and where the new ws2
 
 `docker ps`{{execute}}
 
+## remove resourses
+
+`terraform apply -destroy`{{execute}}
+
 and finally lets kill  the running containers
 
 `docker kill $(docker ps -q)`{{execute}}
 
 WIP:
+- terraform destroy (you can't use a plan, so you have to remember varibles you entered)
+- delete ws2 workstate
 - LINK TO the page running httpd
 - add the index.thml to the httpd container
 

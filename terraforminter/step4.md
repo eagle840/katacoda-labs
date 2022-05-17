@@ -13,14 +13,19 @@ The Terraform repo contains an extensive collections of [modules](https://regist
 To learn even more see the module learning docs: https://learn.hashicorp.com/tutorials/terraform/module?in=terraform/modules
 
 
-We'll create a folder to store the modules:   
+We'll create a folder to store the modules:  
+
+`terraform workspace new ws3`{{execute}}
+
+`cd ~/mytf`{{execute}}
+
 `mkdir modules`{{execute}}
 
 `cd modules`{{execute}}
 
 
 and create a new module(folder) called 'nginxsite', just a simple webserver, with a static html file:   
-`mkdir nginxsite`{{execute}}
+`mkdir httpdsite`{{execute}}
 
 `cd httpdsite`{{execute}}
 
@@ -85,6 +90,18 @@ resource "local_file" "index" {
 }
 ```
 
+Lets create a var file, also used for the module inputs
+
+`nano var.tf`{{execute}}
+
+```
+variable "external" {
+    type    = number
+    description = "container published port"
+    default     = 8080
+}
+```
+
 `nano httpcontainer.tf`{{execute}}
 
 ```
@@ -127,9 +144,9 @@ change the main.tf file to include the module:
 ```
 module "mywebpage" {
     source = "./modules/httpdsite" 
+    external = 8090
 }
 ```
-?is nginxsite the name of the 'module' or the dir?
 
 Because this is an added module/resource, we can rerun init, or get to install the modules/providers
 
@@ -140,9 +157,6 @@ Running plan will now show the added module/file
 `terraform plan`{{execute}}
 
 
-Notice that the plan is asking for a container name, lets add an output to the module to supply the container name
-
-`cd ./modules/httpdsite`{{execute}}
 
 `terraform apply`{{execute}}
 
@@ -150,6 +164,8 @@ You'll now see the index.html added to the module directory
 
 `tree`{{execute}}
 
+
+`terraform state show module.mywebpage.docker_container.httpd`{{execute}}
 
 
 # add the resource into the contain binding volume

@@ -129,10 +129,6 @@ Note the the default value in the var.tf file has been over written my the tfvar
 
 we can always over ride this using the -var argument when using plan/apply
 
-## wip
 
-- terraform files should be in a folder (not root)
-
-  
 
    
