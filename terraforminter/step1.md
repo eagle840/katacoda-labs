@@ -23,7 +23,9 @@ In this lab we'll be working with Terraform and Docker to deploy a container on 
 
 # Basic Setup
 
-Some terraform file have already been created:
+Some terraform file have already been created, in there own directory
+
+`cd mytf`{{execute}}
 
 `ls`{{execute}}
 
