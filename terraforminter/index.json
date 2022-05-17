@@ -11,11 +11,11 @@
           "target": "~/mytf/"
         },
         {
-          "file": "var.tf",
+          "file": "./mytf/var.tf",
           "target": "~/mytf/"
         },
         {
-          "file": "providers.tf",
+          "file": "./mytf/providers.tf",
           "target": "~/mytf/"
         }
       ]
