@@ -9,6 +9,8 @@ https://www.youtube.com/watch?v=3BnrXapY7zo
 video on keda, 
 https://www.youtube.com/watch?v=H5eZEq_wqSE
 
+https://polarsquad.com/blog/check-your-helm-deployments
+
 
 
 
@@ -29,3 +31,5 @@ kubectl edit deploy metrics-server -n kube-system
         - --secure-port=8448
         - --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname
         - --kubelet-insecure-tls
+
+

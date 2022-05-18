@@ -8,5 +8,7 @@ Use terraform to deploy helm charts using modules
 
 Store state on Postgress
 
+Run some static analysis on the terraform file
+
 
 

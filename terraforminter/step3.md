@@ -47,7 +47,6 @@ Notice the workspace we're using is marked with a *
 
 `terraform plan -out=myplan.tfplan`{{execute}}
 
-since we didn't provide a name in the var file, it will prompt us for one, use `nginx1`
 
 `terraform apply "myplan.tfplan"`{{execute}}
 

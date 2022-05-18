@@ -4,3 +4,6 @@
 
 
 [Kafka on Kubernetes - From Evaluation to Production at Intuit - Shrinand Javadekar, Intuit](https://www.youtube.com/watch?v=1SBxxMzlLAc)
+
+
+running kafka (and zookeeper) with Python  go docker: https://needablackcoffee.medium.com/learn-apache-kafka-with-these-python-examples-454b5275109e

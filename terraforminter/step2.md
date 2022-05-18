@@ -43,6 +43,8 @@ Looking close at the show command, we can see that the state is marked as tainte
 
 `terraform state show docker_container.nginx`{{execute}}
 
+`terraform state show docker_container.nginx | grep taint`{{execute}}
+
 we can also review the whole stack state with
 
 `terraform show`{{execute}}

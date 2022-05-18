@@ -15,9 +15,9 @@ To learn even more see the module learning docs: https://learn.hashicorp.com/tut
 
 We'll create a folder to store the modules:  
 
-`terraform workspace new ws3`{{execute}}
-
 `cd ~/mytf`{{execute}}
+
+`terraform workspace new ws3`{{execute}}
 
 `mkdir modules`{{execute}}
 
@@ -90,7 +90,7 @@ resource "local_file" "index" {
 }
 ```
 
-Lets create a var file, also used for the module inputs
+Lets create a var file, also used for the module inputs, because it has a 'default' the input is optional.
 
 `nano var.tf`{{execute}}
 
@@ -115,12 +115,17 @@ resource "docker_container" "httpd" {
   name  = "httpdcontainer"
   ports {
     internal = 80
-    external = 80
+    external = var.external
+  }
+  mounts {
+    target       = "/usr/share/nginx/html"
+    type         = "bind"
+    source       = "/root/mytf/modules/httpdsite"
   }
 }
 ```
 
-???? is the provider needed in the module -- I think it is - test it
+- wip change mount to the terraform file resource / or relative 
 
 # Call a module
 
@@ -154,11 +159,10 @@ Because this is an added module/resource, we can rerun init, or get to install t
 
 
 Running plan will now show the added module/file
-`terraform plan`{{execute}}
 
+`terraform plan -out tfplan-ws3.tfplan`{{execute}}
 
-
-`terraform apply`{{execute}}
+`terraform apply "tfplan-ws3.tfplan"`{{execute}}
 
 You'll now see the index.html added to the module directory
 
@@ -166,6 +170,9 @@ You'll now see the index.html added to the module directory
 
 
 `terraform state show module.mywebpage.docker_container.httpd`{{execute}}
+
+
+- wip   link web page
 
 
 # add the resource into the contain binding volume

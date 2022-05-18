@@ -50,3 +50,23 @@
 `helm list -A`{{execute}}
 
 `k get deploy`{{execute}}
+
+# install a postgres backend
+
+docker run progress
+
+# 3rd party tools
+
+we'll be using some 3rd party tools, to improve the tf experience/process
+
+https://github.com/shuaibiyy/awesome-terraform
+
+`pip install checkov`{{execute}}
+
+# static analysis
+
+- WIP move to requested step
+
+https://github.com/aquasecurity/tfsec
+
+`docker run --rm -it -v "$(pwd):/src" aquasec/tfsec /src`{{execute}}
