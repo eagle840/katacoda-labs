@@ -5,3 +5,6 @@ Shifting Terraform Configuration Security Left
 section on terraform logging
 
 section on terraform 'dynamic blocks`
+
+
+https://docs.microsoft.com/en-us/azure/developer/terraform/create-base-template-using-yeoman

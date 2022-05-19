@@ -33,11 +33,15 @@ confirm cluster is running
 
 # install helm
 
+- wip see if helm is already installed
+
 `curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3`{{execute}}
 
 `chmod 700 get_helm.sh`{{execute}}
 
-`./get_helm.sh`{{execute}}`curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3`{{execute}}
+`./get_helm.sh`{{execute}}
+
+`curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3`{{execute}}
 
 `chmod 700 get_helm.sh`{{execute}}
 
@@ -59,7 +63,11 @@ confirm cluster is running
 
 docker run progress
 
-`docker run -it -p 5432:5432 --name psgdb -e POSTGRES_PASSWORD=1234 postgres`{{execute}}
+`docker run -it -p 5432:5432 --name psgdb -e POSTGRES_PASSWORD=1234 postgres`{{copy}}
+
+`docker run -it  -d -p 5432:5432 --name psgdb -e POSTGRES_PASSWORD=1234 postgres`{{execute}}
+
+
 
 `docker exec -it psgdb psql -U postgres`{{copy}}
 
