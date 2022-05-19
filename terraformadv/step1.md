@@ -2,9 +2,13 @@
 
 
 ## install terraform
-`apt upgrade`{{execute}}   # takes too long!
+`apt upgrade`  # takes too long!
 
-`sudo apt update`{{execute}}    
+`sudo apt update`{{execute}}
+
+confirm cluster is running
+
+`launch.sh`{{execute}}
 
 `curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -`{{execute}}    
 
@@ -54,6 +58,17 @@
 # install a postgres backend
 
 docker run progress
+
+`docker run -it -p 5432:5432 --name psgdb -e POSTGRES_PASSWORD=1234 postgres`{{execute}}
+
+`docker exec -it psgdb psql -U postgres`{{copy}}
+
+  # docker exec 'to the container - with '  psql -U postgres
+  `CREATE DATABASE terraform_backend;`{{copy}}
+
+  \l # to list databases
+
+`docker exec -it psgdb pqsl -U postgres -U 1234 -e "CREATE DATABASE terraform_backend;"`{{copy}}
 
 # 3rd party tools
 

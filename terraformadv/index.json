@@ -1,6 +1,6 @@
 {
   "title": "Terraform Advanced",
-  "description": "Deploy to K8s with Helm and console use (v.01)",
+  "description": "Deploy to K8s with Helm and console use (v.02)",
   "difficulty": "Advanced",
   "time": "60 minutes",
   "details": {
@@ -33,6 +33,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "kubernetes-cluster:1.18"
+    "imageid": "kubernetes-cluster-running:1.18"
   }
 }
