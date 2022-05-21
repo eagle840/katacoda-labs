@@ -31,21 +31,7 @@ confirm cluster is running
 
 `python3 -V`{{execute}}
 
-# install helm
-
-- wip see if helm is already installed
-
-`curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3`{{execute}}
-
-`chmod 700 get_helm.sh`{{execute}}
-
-`./get_helm.sh`{{execute}}
-
-`curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3`{{execute}}
-
-`chmod 700 get_helm.sh`{{execute}}
-
-`./get_helm.sh`{{execute}}
+# check helm
 
 `helm version`{{execute}}
 

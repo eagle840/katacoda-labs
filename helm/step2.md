@@ -11,6 +11,8 @@ search the repo (all repos that have been added), note each has a chart version 
 
 If you ever need to update: `helm repo update`
 
+To find more charts, try: https://artifacthub.io/
+
 We'll install the metrics-server:  WHAT VERSION COMES UP?
 
 `helm install metrics-server bitnami/metrics-server \
