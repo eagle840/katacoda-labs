@@ -1,3 +1,8 @@
+# Katacoda is shutting down on the 15th June 2022.
+
+ I'll be using killercoda from now on, labs will be moved over as needed.
+
+
 # katacoda-labs
 Katacoda scenarios code 
 
