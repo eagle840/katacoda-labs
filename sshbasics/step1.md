@@ -1,4 +1,6 @@
-The top terminal is this lab we'll consider ther server and the bottom one the client.
+The top terminal is this lab we'll consider the server and the bottom one the client.
+
+If you have an issue with commands rolling of the screen, use 'ctrl-L'
 
 
 # Top termainal (server)
@@ -38,9 +40,7 @@ double check who we are
 
 `whoami`{{execute}}
 
-and exit back to the root account.
-
-`exit`{{execute}}
+Leave the user logged in for now.
 
 # Setup the bottom terminal (client)
 
@@ -67,13 +67,13 @@ and login
 
 `login alex`{{execute HOST2}}
 
-Lets generate show ssh keys, with a type of rsa:
+Lets generate the ssh keys, with a type of rsa:
 
 `ssh-keygen -t rsa`{{execute HOST2}}
 
 keep the default key location:  `/home/alex/.ssh/id_rsa`
 
-and we'll leave the password blank
+and we'll leave the password blank, WIP SHOULD NOT BE BLANK, as someone could steal your laptop/Key
 
 Lets take a look at the two files generated:
 
@@ -91,11 +91,17 @@ Now let copy the key we generated over to the server:
 
 `ssh-copy-id  alexis@host01`{{execute HOST2}}
 
+The first time you login to an ssh server, you'll be requested to accept the server ssh key fingerprint. 
+
 enter the password for alexia on the server (1234)
 
 and now we can connect to the server just using the key
 
 `ssh alexis@host01`{{execute HOST2}}
+
+Now on the server terminal window, you'll see that the public key has been added to your 'authorized_keys' file. (note that each key is on a single line!)
+
+`cat ./.ssh/authorized_keys`{{execute}}
 
 
 

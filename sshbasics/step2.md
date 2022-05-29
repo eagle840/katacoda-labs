@@ -2,7 +2,7 @@
 
 Let's get the IP address of the server
 
-`curl diagnostic.opendns.com/myip`{{execute}}
+`curl -k https://diagnostic.opendns.com/myip`{{execute}}
 
 open putty and try to connect  using the un and pw
 
