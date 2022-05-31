@@ -93,6 +93,8 @@ Now let copy the key we generated over to the server:
 
 The first time you login to an ssh server, you'll be requested to accept the server ssh key fingerprint. 
 
+To check the key on the server, run as root  `ssh-keygen -lv -f /etc/ssh/ssh_host_ecdsa_key.pub`
+
 enter the password for alexia on the server (1234)
 
 and now we can connect to the server just using the key
