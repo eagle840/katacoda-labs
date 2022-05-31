@@ -14,7 +14,7 @@ in this first file, it will ask for the port number when tf plan/apply is run
 variable "port" {
   type = number
 }
-```
+```{{copy}}
 
 and change the main.tf to include the variable in the external port number
 
@@ -23,7 +23,7 @@ and change the main.tf to include the variable in the external port number
     internal = 80
     external = var.port
   }
-```
+```{{copy}}
 
 when you run terraform apply it will ask for a port number. Give it the port number 8080
 
@@ -57,7 +57,7 @@ port=8085
 
 `terraform plan -var-file=test.tfvars`{{execute}}
 
-You'll notice that terraform requested and out put file
+You'll notice that terraform requested an output file
 
 `terraform plan -var-file=test.tfvars -out plan.tfplan`{{execute}}
 
@@ -67,9 +67,15 @@ we can now use that file, with the varaibles includes to execute an 'apply' with
 
 `terraform apply plan.tfplan`{{execute}}
 
-# Documentation on variables
+## Documentation on variables
 
 https://www.terraform.io/language/values/variables
+
+# Finally Destroy
+
+To remove the infrastructure we've created:
+
+`terraform destroy`{{execut}}
 
 
 

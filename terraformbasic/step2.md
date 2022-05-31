@@ -1,4 +1,4 @@
-# run a cdk
+# Basic Work Flow
 
 
 `mkdir learn-terraform-docker-container`{{execute}}    
@@ -24,7 +24,7 @@ we can list the components,
 
 or get a full description of one of the compoents,
 
-`terraform state show docker_image.nginx`{{execute}}
+`terraform state show docker_container.nginx`{{execute}}
 
 check running containers
 `docker ps`{{execute}}   
@@ -36,13 +36,13 @@ https://[[HOST_SUBDOMAIN]]-8000-[[KATACODA_HOST]].environments.katacoda.com
 
 lets generate a graph
 
-we'll need to inside a pkg `apt install graphviz -y`{{execute}}
+we'll need to install a pkg `apt install graphviz -y`{{execute}} so we can get a nice image from the output
 
 `terraform graph | dot -Tpng > graph.png`{{execute}}
 
 and we can run a quick docker to view it
 
-`docker run  -d -p 8090:80 -v $(pwd):/usr/share/nginx/html nginx`
+`docker run  -d -p 8090:80 -v $(pwd):/usr/share/nginx/html nginx`{{execute}}
 
 
 
@@ -78,8 +78,7 @@ resource "docker_container" "nginx" {
     external = 8000
   }
 }
-
-```
+```{{copy}}
 
 
 
