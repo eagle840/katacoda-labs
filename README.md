@@ -1,6 +1,8 @@
 # Katacoda is shutting down on the 15th June 2022.
 
  I'll be using killercoda from now on, labs will be moved over as needed.
+ You can find the repo here: https://github.com/eagle840/killercoda-labs
+ And the web site at :  https://killercoda.com/ir4engineer/
 
 
 # katacoda-labs
